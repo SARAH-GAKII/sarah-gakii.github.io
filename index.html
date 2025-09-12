@@ -60,11 +60,21 @@
     .btn.primary { background: linear-gradient(180deg, var(--brand), #9ef0d1); color:#0b0c10; border-color: transparent; }
     .btn.primary:hover { filter: brightness(.95); }
     .btn.ghost:hover { background:#151a28; }
-    .portrait { aspect-ratio: 1/1; border-radius: 18px; overflow:hidden; border:1px solid #202433; }
-    .portrait .frame { height:100%; background:
-      radial-gradient(60% 60% at 20% 20%, rgba(110,231,183,.08), transparent 60%),
-      radial-gradient(60% 60% at 80% 0%, rgba(167,139,250,.08), transparent 60%),
-      #0e1019; display:grid; place-items:center; color:#99a2bd; font-size:.9rem; text-align:center; padding:1rem }
+    .portrait {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.portrait img {
+  width: 220px;        /* size — adjust as you like */
+  height: 220px;
+  border-radius: 50%;  /* makes it a circle */
+  object-fit: cover;   /* ensures the face fills the circle nicely */
+  border: 3px solid #6ee7b7;   /* optional accent border */
+  box-shadow: 0 6px 20px rgba(0,0,0,0.35); /* soft shadow */
+}
+
 
     /* --- Sections --- */
     section { padding: 2.5rem 0; }
@@ -95,7 +105,7 @@
   <!-- Header / Navigation -->
   <header>
     <div class="container nav">
-      <div class="brand">Sarah <b>Gakii</b></div>
+      <div class="brand">Sarah Gakii</div>
       <nav aria-label="Primary">
         <ul>
           <li><a href="#about">About</a></li>
