@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sarah Gakii | Portfolio</title>
+  <meta name="description" content="Portfolio of Sarah Gakii — Applied Mathematics, Data Analytics, Mathematical Modeling, and Teaching." />
+  <meta property="og:title" content="Sarah Gakii | Portfolio" />
+  <meta property="og:description" content="Applied Math • Data Analytics • PDEs • Teaching" />
+  <meta property="og:type" content="website" />
+  <style>
+    /* --- Design tokens (easy theme editing) --- */
+    :root{
+      --bg: #0b0c10;
+      --panel: #111217;
+      --text: #e7e9ee;
+      --muted: #aab0c0;
+      --brand: #6ee7b7;    /* mint */
+      --brand-ink: #0f766e; /* teal-ink for accents */
+      --accent: #a78bfa;   /* soft purple */
+      --maxw: 1024px;
+      --radius: 18px;
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+    }
+
+    /* --- Reset & base --- */
+    *, *::before, *::after { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell,
+      Noto Sans, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      background: linear-gradient(180deg, var(--bg), #0f1220 55%, #0b0c10);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    .container { width: min(100% - 2rem, var(--maxw)); margin-inline: auto; }
+    .tag { display: inline-block; padding:.25rem .6rem; border:1px solid #2b2f3b; border-radius:999px; color: var(--muted); font-size:.85rem }
+
+    /* --- Header --- */
+    header { position: sticky; top: 0; backdrop-filter: blur(10px); background: rgba(11,12,16,.6); z-index: 50; border-bottom: 1px solid #202433; }
+    .nav { display:flex; align-items:center; justify-content:space-between; padding: .85rem 0; }
+    .brand { font-weight: 700; letter-spacing:.3px; }
+    .brand b { color: var(--brand); }
+    nav ul { display:flex; gap:1rem; list-style:none; padding:0; margin:0; }
+    nav a { color: var(--muted); padding:.5rem .8rem; border-radius:10px; }
+    nav a:hover, nav a:focus { background:#161925; color: var(--text); }
+
+    /* --- Hero --- */
+    .hero { display:grid; gap:2rem; grid-template-columns: 1.2fr .8fr; align-items:center; padding: 3.5rem 0 2.5rem; }
+    .card { background: var(--panel); border:1px solid #202433; border-radius: var(--radius); box-shadow: var(--shadow); }
+    .hero .intro { padding: 2rem; }
+    .eyebrow { color: var(--brand); letter-spacing: .12em; font-size:.85rem; text-transform: uppercase; display:block; margin-bottom:.6rem }
+    .title { font-size: clamp(1.8rem, 1.1rem + 2.5vw, 3rem); line-height:1.15; margin: 0 0 .75rem; }
+    .title .accent { color: var(--accent); }
+    .lead { color: var(--muted); max-width: 60ch; }
+    .cta { margin-top: 1.25rem; display:flex; gap:.8rem; flex-wrap:wrap; }
+    .btn { display:inline-flex; align-items:center; gap:.5rem; padding:.75rem 1rem; border-radius: 12px; border:1px solid #273048; font-weight:600; }
+    .btn.primary { background: linear-gradient(180deg, var(--brand), #9ef0d1); color:#0b0c10; border-color: transparent; }
+    .btn.primary:hover { filter: brightness(.95); }
+    .btn.ghost:hover { background:#151a28; }
+    .portrait { aspect-ratio: 1/1; border-radius: 18px; overflow:hidden; border:1px solid #202433; }
+    .portrait .frame { height:100%; background:
+      radial-gradient(60% 60% at 20% 20%, rgba(110,231,183,.08), transparent 60%),
+      radial-gradient(60% 60% at 80% 0%, rgba(167,139,250,.08), transparent 60%),
+      #0e1019; display:grid; place-items:center; color:#99a2bd; font-size:.9rem; text-align:center; padding:1rem }
+
+    /* --- Sections --- */
+    section { padding: 2.5rem 0; }
+    section h2 { font-size: clamp(1.3rem, 1rem + 1.2vw, 2rem); margin:0 0 1rem; }
+    .grid { display:grid; gap:1rem; }
+    .grid.cards { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+    .card .body { padding: 1.1rem; }
+    .card h3 { margin:.2rem 0 .35rem; font-size:1.05rem }
+    .meta { color: var(--muted); font-size:.9rem }
+    .card a.more { display:inline-flex; gap:.35rem; align-items:center; margin-top:.6rem; color: var(--brand); font-weight:600 }
+    .split { display:grid; gap:1rem; grid-template-columns: 1fr 1fr; }
+
+    /* --- Footer --- */
+    footer { border-top:1px solid #202433; padding: 2rem 0 4rem; color: var(--muted); font-size:.95rem }
+
+    /* --- Utilities --- */
+    .spacer { height: .25rem }
+    .hide { display:none }
+
+    /* --- Responsive --- */
+    @media (max-width: 900px) {
+      .hero { grid-template-columns: 1fr; }
+      .split { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header / Navigation -->
+  <header>
+    <div class="container nav">
+      <div class="brand">Sarah <b>Gakii</b></div>
+      <nav aria-label="Primary">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#research">Research</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#teaching">Teaching</a></li>
+          <li><a href="#volunteering">Volunteering</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <main class="container">
+    <section class="hero" id="about">
+      <div class="card intro">
+        <span class="eyebrow">Applied Math • Data Analytics • PDEs</span>
+        <h1 class="title">Hi, I’m <span class="accent">Sarah Gakii</span> — I build and explain models that turn data into decisions.</h1>
+        <p class="lead">M.A. in Applied Mathematics (BGSU, 2025). I specialize in <strong>mathematical modeling</strong>, <strong>data analysis</strong>, and <strong>AI training</strong>. My recent thesis developed a <em>Newton–Finite Difference</em> method for PDEs with nonlinear interface jumps; I also build dashboards and analytic tools that are clean, fast, and decision‑ready.</p>
+        <div class="cta">
+          <a class="btn primary" href="#projects">Explore my work</a>
+          <a class="btn ghost" href="resume.pdf" download>Download CV</a>
+          <span class="tag">Open to roles in Data / Analytics / Research</span>
+        </div>
+      </div>
+      <div class="portrait card" aria-hidden="true">
+        <div class="frame">Add a professional photo here (replace this box with <code>img src="/headshot.jpg" alt="Sarah Gakii"</code>)</div>
+      </div>
+    </section>
+
+    <!-- Research & Thesis -->
+    <section id="research">
+      <h2>Research & Thesis</h2>
+      <div class="grid cards">
+        <article class="card">
+          <div class="body">
+            <div class="meta">Elliptic &amp; Parabolic PDEs • 2025</div>
+            <h3>A Newton–Finite Difference Method for Nonlinear Interface Jumps</h3>
+            <p>Developed and implemented a robust Newton–Finite Difference scheme to solve PDEs with nonlinear interface conditions. Demonstrated accuracy and stability via extensive numerical tests; applications include materials with discontinuous media and transport across biological barriers.</p>
+            <a class="more" href="http://rave.ohiolink.edu/etdc/view?acc_num=bgsu1750284991046446" target="_blank" rel="noopener">Read on OhioLINK →</a>
+          </div>
+        </article>
+        <article class="card">
+          <div class="body">
+            <div class="meta">Modeling • 2023</div>
+            <h3>Modeling Vaccine Uptake with Behavior &amp; Epidemics</h3>
+            <p>Coupled an evolutionary game perspective on human behavior with epidemic dynamics to study vaccine acceptance patterns across scenarios.</p>
+            <a class="more" href="https://github.com/SARAH-GAKII/Modelling-the-impact-of-human-behaviour-to-COVID-19-vaccine-uptake" target="_blank" rel="noopener">View code on GitHub →</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+      <h2>Selected Projects</h2>
+      <div class="grid cards">
+        <article class="card">
+          <div class="body">
+            <div class="meta">Excel • Analytics • 2025</div>
+            <h3>Business Intelligence Dashboard</h3>
+            <p>Advanced Excel dashboard integrating PivotTables, dynamic charts, and custom financial metrics to deliver actionable insights from a multi‑dimensional dataset.</p>
+            <a class="more" href="https://github.com/SARAH-GAKII/Excel-Business-Intelligence-Dashboard-From-Raw-Data-to-Insight." target="_blank" rel="noopener">View project →</a>
+          </div>
+        </article>
+        <article class="card">
+          <div class="body">
+            <div class="meta">Stochastic Processes • 2022</div>
+            <h3>Competing Species — Stochastic Model</h3>
+            <p>Explored coexistence/competition regimes under randomness and initial conditions; presented insights in a mentorship program setting.</p>
+          </div>
+        </article>
+        <article class="card">
+          <div class="body">
+            <div class="meta">Crime Dynamics • 2023</div>
+            <h3>Cooperative Policing Model</h3>
+            <p>Team research on crime dynamics emphasizing the impact of cooperative policing; presented at AMU School 2023.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Teaching & Mentoring / Experience -->
+    <section id="teaching">
+      <h2>Teaching & Mentoring</h2>
+      <div class="split">
+        <div class="card"><div class="body">
+          <h3>BGSU Graduate Teaching Assistant (2023–2025)</h3>
+          <p>Instructed Precalculus &amp; College Algebra; designed assessments; supported research/administration.</p>
+          <div class="meta">Bowling Green, Ohio</div>
+        </div></div>
+        <div class="card"><div class="body">
+          <h3>DeKUT &amp; TU‑K (2021–2024)</h3>
+          <p>Tutorials in Calculus I/II, Discrete Math, and Intro Statistics; assessment and student support.</p>
+          <div class="meta">Nyeri &amp; Nairobi, Kenya</div>
+        </div></div>
+      </div>
+      <div class="spacer"></div>
+      <div class="card"><div class="body">
+        <h3>Industry & AI Training</h3>
+        <p>Mathematics/Data Analysis Expert at Mercor (2025– ), contributing mathematical and data prompts for AI datasets. Prior experience in automotive manufacturing operations (Grammer Americas, 2024) and data/records (NSSF, 2019).</p>
+      </div></div>
+    </section>
+
+    <!-- Volunteering -->
+    <section id="volunteering">
+      <h2>Volunteering</h2>
+      <div class="card"><div class="body">
+        <h3>Habitat for Humanity — Women Build</h3>
+        <p>Hands‑on contributions to residential construction: siding, framing, hurricane ties, soffits, ventilation piping; assisted with electrical/plumbing preparations and exterior finishing. Team‑oriented, safety‑first work advancing affordable housing.</p>
+      </div></div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <h2>Resume & Contact</h2>
+      <div class="grid cards">
+        <article class="card"><div class="body">
+          <h3>Resume</h3>
+          <p>Prefer a downloadable PDF? Grab the current version below.</p>
+          <a class="btn primary" href="resume.pdf" download>Download CV (PDF)</a>
+        </div></article>
+        <article class="card"><div class="body">
+          <h3>Connect</h3>
+          <p class="meta">I’m open to opportunities in data analytics, research, and teaching.</p>
+          <p>
+            <a class="more" href="mailto:sgakii@bgsu.edu">Email →</a><br>
+            <a class="more" href="https://www.linkedin.com/in/sarah-gakii/" target="_blank" rel="noopener">LinkedIn →</a><br>
+            <a class="more" href="https://github.com/SARAH-GAKII" target="_blank" rel="noopener">GitHub →</a>
+          </p>
+        </div></article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div>© <span id="y"></span> Sarah Gakii • Built with lightweight, accessible HTML/CSS. No frameworks, no tracking.</div>
+    </div>
+  </footer>
+
+  <script>
+    // Simple enhancement: current year + smooth scrolling for same‑page anchors
+    document.getElementById('y').textContent = new Date().getFullYear();
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const id = a.getAttribute('href').slice(1);
+        const el = document.getElementById(id);
+        if (el) { e.preventDefault(); el.scrollIntoView({ behavior:'smooth', block:'start' }); }
+      });
+    });
+  </script>
+</body>
+</html>
