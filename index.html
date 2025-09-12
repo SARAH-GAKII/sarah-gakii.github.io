@@ -53,9 +53,6 @@
     nav a { color: var(--muted); padding:.5rem .8rem; border-radius:10px; }
     nav a:hover{ background:#eef2ff; color:#111827; border-radius:10px; }
 
-    /* --- Hero --- */
-    .hero { display:grid; gap:2rem; grid-template-columns: 1.2fr .8fr; align-items:center; padding: 3.5rem 0 2.5rem; }
-    
     /* Cards */
     .card{  background: var(--panel);  border: 1px solid #e5e7eb;  border-radius: var(--radius);  box-shadow: var(--shadow);}
     .meta{ color: var(--muted); }
@@ -88,7 +85,9 @@
     }
 
     .portrait img{
-      width: 180px; height: 180px;     
+    /* Grows/shrinks with screen size: min 160px, typical ~22vw, max 320px */
+      width: clamp(160px, 22vw, 320px);
+      height: clamp(160px, 22vw, 320px);     
       border-radius: 50%;
       object-fit: cover;
       border: 3px solid #e2e8f0;        /* soft neutral ring */
@@ -115,7 +114,7 @@
     .split { display:grid; gap:1rem; grid-template-columns: 1fr 1fr; }
 
     /* --- Footer --- */
-    footer { border-top:1px solid #202433; padding: 2rem 0 4rem; color: var(--muted); font-size:.95rem }
+    footer { border-top:1px solid #e5e7eb; padding: 2rem 0 4rem; color: var(--muted); font-size:.95rem; text-align: center; background: #f9fafb; }
 
     /* --- Utilities --- */
     .spacer { height: .25rem }
@@ -151,7 +150,7 @@
     <section class="hero" id="about">
       <div class="card intro">
         <span class="eyebrow">Applied Mathematics, Data Analytics, Mathematical Modeling, Quantitative Research </span>
-        <h2 class="title">Hi, I’m <span class="accent">Sarah Gakii</span> — I build and explain models that turn data into decisions.</h1>
+        <h2 class="title">Hi, I’m <span class="accent">Sarah Gakii</span> — I build and explain models that turn data into decisions.</h2>
         <p class="lead">M.A. in Applied Mathematics &amp; Scientific Computation (BGSU, 2025). I specialize in <strong>mathematical modeling</strong>, <strong>data analysis</strong>, and <strong>AI training</strong>. My recent thesis developed a <em>Newton–Finite Difference</em> method for PDEs with nonlinear interface jumps; I also build dashboards and analytic tools that are clean, fast, and decision‑ready.</p>
         <div class="cta">
           <a class="btn primary" href="#projects">Explore my work</a>
@@ -245,7 +244,7 @@
     <section id="volunteering">
       <h2>Volunteering</h2>
       <div class="card"><div class="body">
-        <h3>Habitat for Humanity — Womens Build Initiative</h3>
+        <h3>Habitat for Humanity — Women Build Initiative</h3>
         <p>Hands‑on contributions to residential construction: siding, framing, hurricane ties, soffits, ventilation piping; assisted with electrical/plumbing preparations and exterior finishing. Team‑oriented, safety‑first work advancing affordable housing.</p>
       </div></div>
     </section>
