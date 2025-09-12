@@ -13,28 +13,31 @@
   <style>
     /* --- Design tokens (easy theme editing) --- */
     :root{
-      --bg: #0b0c10;
-      --panel: #111217;
-      --text: #e7e9ee;
-      --muted: #aab0c0;
-      --brand: #6ee7b7;    /* mint green */
-      --brand-ink: #0f766e; /* teal-ink for accents */
-      --accent: #a78bfa;   /* soft purple */
-      --maxw: 1024px;
-      --radius: 18px;
-      --shadow: 0 10px 30px rgba(0,0,0,.35);
-    }
+  /* Light theme palette */
+  --bg: #f7f9fc;           /* page background */
+  --panel: #ffffff;        /* card background */
+  --text: #0f172a;         /* main text (slate-900) */
+  --muted: #475569;        /* secondary text */
+  --brand: #16a34a;        /* green accent (buttons/links) */
+  --accent: #7c3aed;       /* purple accent (optional) */
+  --radius: 18px;
+  --shadow: 0 8px 24px rgba(2, 6, 23, .08);
+  --maxw: 1024px;
+}
 
     /* --- Reset & base --- */
     *, *::before, *::after { box-sizing: border-box; }
     html, body { height: 100%; }
-    body {
-      margin: 0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell,
-      Noto Sans, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
-      background: linear-gradient(135deg, #d9fbe5, #ffffff);
-      color: var(--text);
-      line-height: 1.6;
-    }
+    
+    /* Body background: light gradient or solid */
+  body{
+    margin: 0;
+    font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell,
+                 Noto Sans, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+    background: linear-gradient(135deg, #ffffff, #eef5ff 60%, #f7f9fc);
+    color: var(--text);
+    line-height: 1.6;
+  }
     a { color: inherit; text-decoration: none; }
     img { max-width: 100%; display: block; }
     
@@ -42,41 +45,54 @@
     .tag { display: inline-block; padding:.25rem .6rem; border:1px solid #2b2f3b; border-radius:999px; color: var(--muted); font-size:.85rem }
 
     /* --- Header --- */
-    header { position: sticky; top: 0; backdrop-filter: blur(10px); background: rgba(11,12,16,.6); z-index: 50; border-bottom: 1px solid #202433; }
+    header{ position: sticky; top:0; z-index:50; background: rgba(255,255,255,.8); backdrop-filter: blur(8px); border-bottom: 1px solid #e5e7eb; }
     .nav { display:flex; align-items:center; justify-content:space-between; padding: .85rem 0; }
     .brand { font-weight: 700; letter-spacing:.3px; }
     .brand b { color: var(--brand); }
     nav ul { display:flex; gap:1rem; list-style:none; padding:0; margin:0; }
     nav a { color: var(--muted); padding:.5rem .8rem; border-radius:10px; }
-    nav a:hover, nav a:focus { background:#161925; color: var(--text); }
+    nav a:hover{ background:#eef2ff; color:#111827; border-radius:10px; }
 
     /* --- Hero --- */
     .hero { display:grid; gap:2rem; grid-template-columns: 1.2fr .8fr; align-items:center; padding: 3.5rem 0 2.5rem; }
-    .card { background: var(--panel); border:1px solid #202433; border-radius: var(--radius); box-shadow: var(--shadow); }
+    
+    /* Cards */
+    .card{  background: var(--panel);  border: 1px solid #e5e7eb;  border-radius: var(--radius);  box-shadow: var(--shadow);}
+    .meta{ color: var(--muted); }
     .hero .intro { padding: 2rem; }
     .eyebrow { color: var(--brand); letter-spacing: .12em; font-size:.85rem; text-transform: uppercase; display:block; margin-bottom:.6rem }
     .title { font-size: clamp(1.8rem, 1.1rem + 2.5vw, 3rem); line-height:1.15; margin: 0 0 .75rem; }
     .title .accent { color: var(--accent); }
     .lead { color: var(--muted); max-width: 60ch; }
     .cta { margin-top: 1.25rem; display:flex; gap:.8rem; flex-wrap:wrap; }
-    .btn { display:inline-flex; align-items:center; gap:.5rem; padding:.75rem 1rem; border-radius: 12px; border:1px solid #273048; font-weight:600; }
-    .btn.primary { background: linear-gradient(180deg, var(--brand), #9ef0d1); color:#0b0c10; border-color: transparent; }
-    .btn.primary:hover { filter: brightness(.95); }
-    .btn.ghost:hover { background:#151a28; }
-    .portrait {
-  display: flex;
-  justify-content: center;
-  margin: 0 auto;
-}
+    
+    /* Buttons */
+    .btn{ display:inline-flex; align-items:center; gap:.5rem;
+          padding:.75rem 1rem; border-radius:12px; font-weight:600; }
+    .btn.primary{ background: var(--brand); color:#fff; border: none; }
+    .btn.primary:hover{ filter: brightness(.96); }
+    .btn.ghost{ border:1px solid #e5e7eb; color:#0f172a; }
+    .btn.ghost:hover{ background:#f1f5f9; }
+        .portrait {
+      display: flex;
+      justify-content: center;
+      margin: 0 auto;
+    }
 
-.portrait img {
-  width: 220px;        /* size — adjust as you like */
-  height: 220px;
-  border-radius: 50%;  /* makes it a circle */
-  object-fit: cover;   /* ensures the face fills the circle nicely */
-  border: 3px solid #6ee7b7;   /* optional accent border */
-  box-shadow: 0 6px 20px rgba(0,0,0,0.35); /* soft shadow */
-}
+    .portrait img{
+      width: 180px; height: 180px;     
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #e2e8f0;        /* soft neutral ring */
+      box-shadow: var(--shadow);
+      display:block; margin:0 auto;
+    }
+    
+    /* On small screens, make it a bit smaller */
+    @media (max-width: 480px){
+      .portrait img{ width:140px; height:140px; }
+    }
+
 
 
     /* --- Sections --- */
