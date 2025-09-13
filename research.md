@@ -2,7 +2,7 @@
 layout: default
 title: Research
 ---
-
+Green Roofs to Mitigate the Urban Heat Island (MISG 2023, South Africa)
 
 <div class="page-shell">
   <!-- Left sticky quick jumps -->
@@ -10,6 +10,7 @@ title: Research
     <h2>Quick jumps</h2>
     <a href="#a-newton–finite-difference-method-for-pdes-with-nonlinear-interface-jump-conditions">A Newton–Finite Difference Method for PDEs with Nonlinear Interface Jump Conditions</a>
     <a href="#modeling-the-impact-of-human-behavior-to-covid-19-vaccine-uptake">Modeling the Impact of Human Behavior to COVID-19 Vaccine Uptake</a>
+    <a href="#green-roofs-to-mitigate-the-urban-heat-island">Green Roofs to Mitigate the Urban Heat Island</a>
     <a href="#crime-dynamics-cooperative-policing-2023">Crime Dynamics</a>
     <a href="#stochastic-competing-species-2022">Stochastic Species</a>
   </aside>
@@ -19,7 +20,7 @@ title: Research
 
 # Research and Thesis  
 
-## A Newton–Finite Difference Method for PDEs with Nonlinear Interface Jump Conditions  
+## A Newton–Finite Difference Method for PDEs with Nonlinear Interface Jump Conditions 
 
 **From cracked bridges to solar panels to the blood–brain barrier — boundaries matter.**  
 My master’s thesis addressed the challenge of modeling *nonlinear interface jump conditions* in *elliptic and parabolic PDEs*, where standard numerical schemes often break down.  
@@ -94,7 +95,31 @@ Team research exploring **cooperation** between communities and law enforcement,
 - Examined deterrence, reporting, and cooperation rates.
 - Presented at AMU School 2023.
 
+
 ---
+
+
+### Green Roofs to Mitigate the Urban Heat Island   
+
+As part of the Mathematics in Industry Study Group (MISG 2023) in South Africa, I collaborated with peers and industry experts on a project examining the role of green roofs in reducing the Urban Heat Island effect.  
+
+#### The Problem  
+Urban areas experience higher temperatures due to heat absorption by concrete, asphalt, and other building materials. Green roofs (vegetation layers on rooftops) are a proposed mitigation strategy. Our task was to study an existing mathematical model of heat transfer in green roofs to understand and test its predictions.  
+
+#### The Approach  
+We worked with a 1-D heat transfer PDE model incorporating:  
+- Solar irradiance, convection, radiation, and evapotranspiration terms  
+- Boundary conditions representing energy balance at the soil–air interface  
+- Non-dimensionalization to simplify the system  
+- Analytical techniques (Laplace transforms) and finite difference numerical methods for solutions  
+
+#### Results & Insights  
+- The model showed that vegetative cover significantly lowers roof surface temperatures.  
+- Green roofs with higher albedo and evapotranspiration reflected more energy, storing less heat and releasing less at night.  
+- While the core model was provided, our team contributed by working through, solving, and validating both analytical and numerical solutions, and by interpreting results in the context of urban sustainability and policy.   
+
+---
+
 
 ## Stochastic Competing Species (2022)
 Explored **coexistence vs. competitive exclusion** under stochasticity.
