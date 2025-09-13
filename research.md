@@ -16,11 +16,11 @@ title: Research
   <!-- Main content -->
   <div class="content" markdown="1">
 
-# Research & Thesis  
+# Research and Thesis  
 
 ## A Newton–Finite Difference Method for PDEs with Nonlinear Interface Jump Conditions  
 
-*From cracked bridges to solar panels to the blood–brain barrier — boundaries matter.*  
+**From cracked bridges to solar panels to the blood–brain barrier — boundaries matter.**  
 My master’s thesis addressed the challenge of modeling *nonlinear interface jump conditions* in *elliptic and parabolic PDEs*, where standard numerical schemes often break down.  
 
 ### The Problem  
@@ -44,21 +44,42 @@ The method was tested through a series of benchmark problems with known exact so
 
 This research demonstrates how advanced numerical analysis can bridge the gap between *theory and application*, creating tools that are mathematically rigorous and computationally practical.  
 
+*Special thanks to my advisor, Dr. So-Hsiang Chou, whose mentorship not only strengthened the quality of this research but also shaped me as a mathematician and researcher.*
 
 **Keywords:** PDEs, Interface conditions, Finite difference, Newton iteration, Numerical analysis  
-📄  [Read on OhioLINK →](http://rave.ohiolink.edu/etdc/view?acc_num=bgsu1750284991046446)
+📄 [Read the full thesis on OhioLINK →](http://rave.ohiolink.edu/etdc/view?acc_num=bgsu1750284991046446)
+
 
 ---
 
-## Modeling Vaccine Uptake with Behavior & Epidemics (2023)
-Coupled **evolutionary game dynamics** (human behavior) with an **epidemic model** to analyze how perceived costs/benefits drive vaccine acceptance.
 
-**What I did**
-- Built behavior–epidemics coupled system; explored equilibria.
-- Ran parameter sweeps to study sensitivity and threshold effects.
-- Interpreted policy implications for outreach and incentives.
+## Modeling the Impact of Human Behavior on COVID-19 Vaccine Uptake  
 
-**Repo:** [View code on GitHub →](https://github.com/SARAH-GAKII/Modelling-the-impact-of-human-behaviour-to-COVID-19-vaccine-uptake)
+During the COVID-19 pandemic, one of the biggest challenges was not just vaccine availability, but whether people were willing to take it. Uptake was highly shaped by trust, misinformation, social influence, and perceived risk, among other factors. My research project focused on developing a *Python-based predictive model* that combined *epidemic modeling* with *evolutionary game theory* to capture how human behavior influences vaccine uptake.  
+
+### The Problem  
+Classical epidemic models often assume vaccines are uniformly adopted once available. In reality, vaccination is a strategic choice: individuals weigh perceived benefits, risks, and costs of vaccination vs non-vaccination. This mismatch can lead to models that *underpredict infection peaks* or *overestimate the success* of vaccine campaigns.  
+
+### The Approach  
+I developed a Python-based predictive model that:  
+- Integrated a compartmental epidemic model with behavioral dynamics using evolutionary game theory.  
+- Represented individuals as “players” choosing between vaccination and non-vaccination, influenced by infection risk, perceived vaccine safety, and peer behavior.  
+- Simulated multiple scenarios of vaccine acceptance, capturing how uptake evolves over time under different conditions.  
+- Produced numerical simulations and visualizations to study the feedback between epidemic spread and human decision-making.  
+
+### Key Insights  
+- Vaccine uptake is not purely medical — it is also a social process.  
+- Peer influence can amplify or suppress uptake depending on initial conditions.  
+- If misinformation spreads faster than the virus, uptake collapses, leading to higher infection peaks.  
+- Policies that build trust and counter misinformation measurably improve long-term vaccine coverage.  
+
+### Broader Impact  
+This research highlights how mathematical models of human behavior can strengthen public health planning. By linking epidemic dynamics with decision-making processes, it shows that effective interventions must combine biological tools (such as vaccines and treatments) with social strategies (such as education, trust-building, transparent communication).  
+
+📊 [Explore the full project on GitHub →](https://drive.google.com/file/d/19TXbXPjAJ3T5Eq59psV8N86TiFoCG8ht/view)  
+
+ 
+
 
 ---
 
