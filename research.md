@@ -76,7 +76,9 @@ I developed a Python-based predictive model that:
 ### Broader Impact  
 This research highlights how mathematical models of human behavior can strengthen public health planning. By linking epidemic dynamics with decision-making processes, it shows that effective interventions must combine biological tools (such as vaccines and treatments) with social strategies (such as education, trust-building, transparent communication).  
 
-📊 [Explore the full project on GitHub →](https://drive.google.com/file/d/19TXbXPjAJ3T5Eq59psV8N86TiFoCG8ht/view)  
+*Grateful to Dr. Josephine Kagunda, whose thoughtful supervision, sharp insights, and constant encouragement made this project both rigorous and deeply rewarding.* 
+
+📄 [Explore the full research project on AIMS Thesis Repository →](https://drive.google.com/file/d/19TXbXPjAJ3T5Eq59psV8N86TiFoCG8ht/view)  
 
  
 
