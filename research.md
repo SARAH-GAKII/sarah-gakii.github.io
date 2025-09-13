@@ -3,9 +3,20 @@ layout: default
 title: Research
 ---
 
-# Research & Thesis
+<div class="page-shell">
+  <!-- Left sticky quick jumps -->
+  <aside class="sidebar">
+    <h2>Quick jumps</h2>
+    <a href="#thesis-newton–finite-difference-method-2025">Thesis — Newton–Finite Difference</a>
+    <a href="#modeling-vaccine-uptake-with-behavior--epidemics-2023">Vaccine Uptake Modeling</a>
+    <a href="#crime-dynamics-cooperative-policing-2023">Crime Dynamics</a>
+    <a href="#stochastic-competing-species-2022">Stochastic Species</a>
+  </aside>
 
-> Quick jumps: [Thesis](#thesis-newton–finite-difference-method-2025) • [Vaccine Uptake Modeling](#modeling-vaccine-uptake-with-behavior--epidemics-2023) • [Crime Dynamics](#crime-dynamics-cooperative-policing-2023) • [Stochastic Species](#stochastic-competing-species-2022)
+  <!-- Main content -->
+  <div class="content" markdown="1">
+
+# Research & Thesis
 
 ## Thesis: Newton–Finite Difference Method (2025)
 **Area:** Elliptic & Parabolic PDEs, nonlinear interface problems  
@@ -49,3 +60,6 @@ Explored **coexistence vs. competitive exclusion** under stochasticity.
 **Notes**
 - Simulated noise-driven dynamics and stability regions.
 - Identified regimes sensitive to initial conditions/carrying capacities.
+
+  </div>
+</div>
