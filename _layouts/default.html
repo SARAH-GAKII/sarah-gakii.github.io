@@ -115,6 +115,9 @@
 
     /* --- Footer --- */
     footer { border-top:1px solid #e5e7eb; padding: 2rem 0 4rem; color: var(--muted); font-size:.95rem; text-align: center; background: #f9fafb; }
+    footer .contact-info p{  margin: 0 0 .5rem;}
+    footer a{ color: var(--brand); font-weight: 600;
+    footer a:hover{ text-decoration: underline;}
 
     /* --- Utilities --- */
     .spacer { height: .25rem }
@@ -146,10 +149,21 @@
 
  
   <footer>
-    <div class="container">
-      <div>© <span id="y"></span> Sarah Gakii • Built with lightweight, accessible HTML/CSS. No frameworks, no tracking.</div>
+  <div class="container">
+    <div class="contact-info">
+      <p>
+        <strong>Contact:</strong><br>
+        <a href="mailto:sgakii@bgsu.edu">sgakii@bgsu.edu</a> • 
+        <a href="https://www.linkedin.com/in/sarah-gakii/" target="_blank" rel="noopener">LinkedIn</a> • 
+        <a href="https://github.com/SARAH-GAKII" target="_blank" rel="noopener">GitHub</a>
+      </p>
     </div>
-  </footer>
+    <div class="footer-note">
+      © <span id="y"></span> Sarah Gakii • Built with lightweight, accessible HTML/CSS. No frameworks, no tracking.
+    </div>
+  </div>
+</footer>
+
 
   <script>
     // Simple enhancement: current year + smooth scrolling for same‑page anchors
