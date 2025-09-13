@@ -7,15 +7,6 @@ title: Home
 <div class="hero" id="about">
   <div class="portrait">
     <img src="/assets/headshot.jpg" alt="Sarah Gakii" />
-    <div class="id-badge" aria-label="Sarah Gakii — Applied mathematics and Data analyst">
-      <div class="id-name">Sarah Gakii</div>
-      <div class="id-roles">
-        <div class="track">
-          <span>Applied mathematics</span>
-          <span>Data analyst</span>
-        </div>
-      </div>
-    </div>
   </div>
 
 <div class="card intro">
@@ -36,12 +27,6 @@ title: Home
   <p>
     I’m motivated by problems that blend mathematics, data, and impact, and enjoy finding practical solutions through quantitative thinking and collaborating across disciplines. Feel free to explore my experiences, and connect if you’d like to collaborate.
   </p>
-
-  <div class="cta">
-    <a class="btn primary" href="/research.html">Explore Research</a>
-    <a class="btn ghost" href="/projects.html">See Projects</a>
-    <span class="tag">Open to roles in Data / Analytics / Research</span>
-  </div>
 </div>
 
 
