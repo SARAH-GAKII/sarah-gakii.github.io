@@ -7,7 +7,7 @@ title: Research
   <!-- Left sticky quick jumps -->
   <aside class="sidebar">
     <h2>Quick jumps</h2>
-    <a href="#thesis-newton–finite-difference-method-2025">Thesis — Newton–Finite Difference</a>
+    <a href="#a-newton–finite-difference-method-for-pdes-with-nonlinear-interface-jump-conditions">A Newton–Finite Difference Method for PDEs with Nonlinear Interface Jump Conditions</a>
     <a href="#modeling-vaccine-uptake-with-behavior--epidemics-2023">Vaccine Uptake Modeling</a>
     <a href="#crime-dynamics-cooperative-policing-2023">Crime Dynamics</a>
     <a href="#stochastic-competing-species-2022">Stochastic Species</a>
