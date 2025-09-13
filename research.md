@@ -99,7 +99,7 @@ Team research exploring **cooperation** between communities and law enforcement,
 ---
 
 
-### Green Roofs to Mitigate the Urban Heat Island   
+## Green Roofs to Mitigate the Urban Heat Island   
 
 As part of the Mathematics in Industry Study Group (MISG 2023) in South Africa, I collaborated with peers and industry experts on a project examining the role of green roofs in reducing the Urban Heat Island effect.  
 
