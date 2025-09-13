@@ -3,9 +3,17 @@ layout: default
 title: Projects
 ---
 
-# Selected Projects
+<div class="page-shell">
+  <aside class="sidebar">
+    <h2>Quick jumps</h2>
+    <a href="#excel-bi-dashboard-2025">Excel BI Dashboard</a>
+    <a href="#cooperative-policing-model-2023">Cooperative Policing</a>
+    <a href="#competing-species-stochastic-2022">Stochastic Species</a>
+  </aside>
 
-> Quick jumps: [Excel BI Dashboard](#excel-bi-dashboard-2025) • [Cooperative Policing](#cooperative-policing-model-2023) • [Stochastic Species](#competing-species-stochastic-2022)
+  <div class="content" markdown="1">
+
+# Selected Projects
 
 ## Excel BI Dashboard (2025)
 **Stack:** Excel (Power Query, PivotTables, dynamic charts)  
@@ -33,9 +41,5 @@ Investigated **noise-driven** coexistence/competition outcomes.
 - Parameter sweeps; visualization of phase behavior under stochasticity.
 - Communication-friendly write-up for mentorship setting.
 
----
-
-## More
-- Numerical PDE solvers (finite difference) for interface problems.  
-- Coursework mini-projects in probability, statistics, and optimization.  
-(Add links/screenshots as you publish repos.)
+  </div>
+</div>
