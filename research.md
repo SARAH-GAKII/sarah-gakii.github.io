@@ -53,7 +53,7 @@ This research demonstrates how advanced numerical analysis can bridge the gap be
 ---
 
 
-## Modeling the Impact of Human Behavior on COVID-19 Vaccine Uptake  
+## Modeling the Impact of Human Behavior to COVID-19 Vaccine Uptake  
 
 During the COVID-19 pandemic, one of the biggest challenges was not just vaccine availability, but whether people were willing to take it. Uptake was highly shaped by trust, misinformation, social influence, and perceived risk, among other factors. My research project focused on developing a *Python-based predictive model* that combined *epidemic modeling* with *evolutionary game theory* to capture how human behavior influences vaccine uptake.  
 
@@ -76,14 +76,14 @@ I developed a Python-based predictive model that:
 ### Broader Impact  
 This research highlights how mathematical models of human behavior can strengthen public health planning. By linking epidemic dynamics with decision-making processes, it shows that effective interventions must combine biological tools (such as vaccines and treatments) with social strategies (such as education, trust-building, transparent communication).  
 
+
 *Grateful to Dr. Josephine Kagunda, whose thoughtful supervision, sharp insights, and constant encouragement made this project both rigorous and deeply rewarding.* 
 
 📄 [Explore the full research project on AIMS Thesis Repository →](https://drive.google.com/file/d/19TXbXPjAJ3T5Eq59psV8N86TiFoCG8ht/view)  
 
  
-
-
 ---
+
 
 ## Crime Dynamics: Cooperative Policing (2023)
 Team research exploring **cooperation** between communities and law enforcement, and its effect on crime prevalence.
