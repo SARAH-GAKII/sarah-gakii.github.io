@@ -26,7 +26,7 @@ My master’s thesis addressed the challenge of modeling *nonlinear interface ju
 ### The Problem  
 At an *interface*, two domains with different material properties or physical behaviors meet. In many cases, the jump in solution or flux across that interface is *nonlinear*, meaning it cannot be captured with simple linear assumptions. Traditional finite difference and interface methods struggle here, either losing accuracy or requiring excessive computational cost.  
 
-### My Contribution  
+### My thesis  
 I designed and implemented a *Newton–Finite Difference Method (NFDM)* that:  
 - Formulates the nonlinear jump condition directly into the discretized scheme.  
 - Uses *Newton’s iteration* to update interface values until convergence, ensuring stability and efficiency.  
