@@ -88,7 +88,7 @@ This research highlights how mathematical models of human behavior can strengthe
 
 
 ## Crime Dynamics: Cooperative Policing (2023)
-Team research exploring **cooperation** between communities and law enforcement, and its effect on crime prevalence.
+Team research exploring cooperation between communities and law enforcement, and its effect on crime prevalence.
 
 **Focus**
 - Simple dynamical model with transitions among states.
@@ -119,6 +119,7 @@ We worked with a 1-D heat transfer PDE model incorporating:
 - While the core model was provided, our team contributed by working through, solving, and validating both analytical and numerical solutions, and by interpreting results in the context of urban sustainability and policy.   
 
 **Supervisor:** Prof. N. Fowkes 
+
 ---
 
 
