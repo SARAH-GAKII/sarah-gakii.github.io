@@ -118,6 +118,7 @@ We worked with a 1-D heat transfer PDE model incorporating:
 - Green roofs with higher albedo and evapotranspiration reflected more energy, storing less heat and releasing less at night.  
 - While the core model was provided, our team contributed by working through, solving, and validating both analytical and numerical solutions, and by interpreting results in the context of urban sustainability and policy.   
 
+**Supervisor:** Prof. N. Fowkes 
 ---
 
 
