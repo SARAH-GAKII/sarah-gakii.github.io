@@ -58,7 +58,7 @@
     .title .accent { color: var(--accent); }
 
     /* --- Lead text --- */
-    .lead { color: var(--muted); max-width: 60ch; }
+    .lead { color: var(--muted); max-width: none; }
     .cta { margin-top: 1.25rem; display:flex; gap:.8rem; flex-wrap:wrap; }
     
     /* Buttons */
