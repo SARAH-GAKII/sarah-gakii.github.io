@@ -13,16 +13,13 @@ title: Home
     <span class="eyebrow">Applied Mathematics • Data Analytics • Mathematical Modeling • Quantitative Research</span>
     <h2 class="title">Hi, I’m <span class="accent">Sarah Gakii</span></h2>
 
-I’m an applied mathematician and data analyst who turns complex problems into clear, actionable insights.  
-I recently earned my **M.A. in Applied Mathematics & Scientific Computation** from Bowling Green State University, where my thesis introduced a **Newton–Finite Difference Method** for solving elliptic and parabolic PDEs with nonlinear interface jump conditions.  
+I’m an applied mathematician and data analyst who turns complex problems into clear, actionable insights. I recently earned my M.A. in Applied Mathematics & Scientific Computation from Bowling Green State University, where my thesis introduced a Newton–Finite Difference Method for solving elliptic and parabolic PDEs with nonlinear interface jump conditions.  
 {: .lead }
 
-My work sits at the intersection of **mathematical modeling, data analytics, and applied research**.  
-I’ve taught Precalculus, College Algebra, Calculus, and Statistics using active-learning approaches.  
-Beyond academia, I’ve worked as a **Math & Data Analysis Expert in AI training**, shaping high-quality reasoning datasets for advanced models.  
+My work sits at the intersection of mathematical modeling, data analytics, and applied research. I’ve taught Precalculus, College Algebra, Calculus, and Statistics using active-learning approaches. Beyond academia, I’ve worked as a Math & Data Analysis Expert in AI training, shaping high-quality reasoning datasets for advanced models.  
 {: .lead }
 
-I’m motivated by challenges that blend mathematics, data, and impact—across **research, education, and industry**.  
+I’m motivated by problems that blend mathematics, data, and impact across research, education, and industry.  
 Explore my portfolio to see how I approach problems end-to-end, and feel free to connect if our interests align.  
 {: .lead }
 
@@ -74,15 +71,3 @@ Teaching & mentorship plus industry roles in data, AI training, and operations.
   </div>
 </section>
 
-
-
-
-
-
-
-
-
-
-    </div></article>
-  </div>
-</section>
