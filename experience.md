@@ -52,11 +52,10 @@ title: Experience
 - Handled fingerprinting duties.  
 - Supported issuance of duplicate membership cards, amended member records, and assisted with searches for members who had lost their membership numbers.  
 - Maintained careful documentation and filing of fingerprint binder slips for record retrieval.  
-  
-
 
 ---
 ---
+
 
 # Teaching & Mentorship  
 
@@ -90,6 +89,7 @@ I value teaching not just as the transfer of knowledge, but as an opportunity to
 - Personalized study plans for students with test anxiety/time-management issues.  
 - Emphasis on growth mindset and question-driven learning.
 
+---
     
   </div>
 </div>
