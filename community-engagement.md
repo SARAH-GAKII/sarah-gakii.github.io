@@ -1,9 +1,7 @@
 ---
 layout: default
-title: Volunteering
+title: community-engagement
 ---
-
-# Volunteering  
 
 ## Habitat for Humanity – Women Build (Aug 2025-)
 
