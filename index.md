@@ -45,9 +45,9 @@ title: Home
       <a class="more" href="/projects.html">See projects →</a>
     </div></article>
     <article class="card"><div class="body">
-      <h3>Teaching</h3>
+      <h3>Experience</h3>
       <p>Making math clear and practical for students.</p>
-      <a class="more" href="/teaching.html">View teaching →</a>
+      <a class="more" href="/experience.html">View experience →</a>
     </div></article>
   </div>
 </section>
