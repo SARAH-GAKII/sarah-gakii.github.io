@@ -15,15 +15,21 @@ title: Projects
 
 # Selected Projects
 
-## Excel BI Dashboard (2025)
-**Stack:** Excel (Power Query, PivotTables, dynamic charts)  
-Built a **decision-ready dashboard** from raw financial/ops data.
+### Excel Business Intelligence Dashboard  
 
-- Automated data cleaning and shaping (Power Query).
-- Clean KPI cards (MoM/YoY, variance), interactive slicers.
-- Dynamic charts tied to filters; documented assumptions.
+Developed a full Excel-based Business Intelligence dashboard to demonstrate advanced data analysis and visualization skills. The project transformed raw financial data into actionable insights through:  
 
-**Repo:** [View project →](https://github.com/SARAH-GAKII/Excel-Business-Intelligence-Dashboard-From-Raw-Data-to-Insight.)
+- Data cleaning and preparation.  
+- Building PivotTables and PivotCharts for multi-dimensional analysis.  
+- Creating interactive dashboards with slicers and dynamic charts.  
+- Designing custom financial metrics to track performance and trends.  
+
+This project showcases my ability to take raw datasets and build a tool that supports decision-making and business insights.  
+
+<img width="1417" height="743" alt="image" src="https://github.com/user-attachments/assets/e31d165d-1c4b-4584-9464-499ee260c408" />
+
+🔗 [View the project on GitHub](https://github.com/SARAH-GAKII/Excel-Business-Intelligence-Dashboard-From-Raw-Data-to-Insight)  
+
 
 ---
 
@@ -53,7 +59,7 @@ This project was a valuable opportunity to apply mathematical thinking to a live
 
 ## A Stochastic Version of a Competing Species Model  
 
-During the Mfano Africa – Oxford Mathematics Virtual Mentorship Programme, I completed a mini research project under the mentorship of Dr. Robert A. McDonald, exploring mathematical models of species competition.  
+During the Mfano Africa – Oxford Mathematics Virtual Mentorship Programme (2022), I completed a mini research project under the mentorship of Dr. Robert A. McDonald, exploring mathematical models of species competition.  
 
 #### Context  
 The project examined the competition between native red squirrels and invasive grey squirrels in the UK. Grey squirrels carry the squirrelpox virus, which is harmless to them but fatal to red squirrels, contributing to the decline of red squirrel populations. We sought to study these dynamics through mathematical modeling.  
@@ -69,7 +75,7 @@ The project examined the competition between native red squirrels and invasive g
 - Simulations showed that initial conditions strongly influence survival: whichever species begins with an advantage tends to dominate.  
 - Highlighted that randomness in a stochastic model could delay or modify extinction outcomes, offering a natural direction for future research.  
 
-#### Contribution  
+#### Reflection  
 This project strengthened my ability to translate ecological principles into dynamical systems models, perform computational simulations, and present technical findings in an international mentorship setting.  
 
 **Mentor:** Dr. Robert A. McDonald  
