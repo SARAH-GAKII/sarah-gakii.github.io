@@ -10,7 +10,7 @@ title: Research
     <a href="#a-newton–finite-difference-method-for-pdes-with-nonlinear-interface-jump-conditions">A Newton–Finite Difference Method for PDEs with Nonlinear Interface Jump Conditions</a>
     <a href="#modeling-the-impact-of-human-behavior-to-covid-19-vaccine-uptake">Modeling the Impact of Human Behavior to COVID-19 Vaccine Uptake</a>
     <a href="#green-roofs-to-mitigate-the-urban-heat-island">Green Roofs to Mitigate the Urban Heat Island</a>
-    <a href="#crime-dynamics-cooperative-policing-2023">Crime Dynamics</a>
+    <a href="#a-mathematical-model-for-crime-with-cooperative-policing">A Mathematical Model for Crime with Cooperative Policing</a>
     <a href="#a-stochastic-version-of-a-competing-species-model">A Stochastic Version of a Competing Species Model</a>
   </aside>
 
@@ -85,15 +85,27 @@ This research highlights how mathematical models of human behavior can strengthe
  
 ---
 
+## A Mathematical Model for Crime with Cooperative Policing  
 
-## Crime Dynamics: Cooperative Policing (2023)
-Team research exploring cooperation between communities and law enforcement, and its effect on crime prevalence.
+Crime prevention isn’t only about catching criminals — it’s also about how police forces work together. At the African Mathematical Schools (AMS) 2023, I collaborated in a group project under the supervision of Prof. Farai Nyabadza to study the impact of cooperative policing on crime dynamics.  
 
-**Focus**
-- Simple dynamical model with transitions among states.
-- Examined deterrence, reporting, and cooperation rates.
-- Presented at AMU School 2023.
+#### Focus  
+Traditional crime models often account for policing as a single force acting against crime. Our project set out to explore how introducing a cooperation mechanism — representing coordination among police units or with communities — changes the predicted outcomes of crime dynamics.  
 
+#### Approach  
+- Built a nonlinear system of differential equations to represent the system.  
+- Incorporated a cooperation function to quantify how police collaboration strengthens crime reduction.  
+- Examined system properties (positivity, boundedness, and equilibrium states) and carried out a sensitivity analysis.  
+
+#### Insights  
+- The model admitted two possible outcomes: a crime-free equilibrium and a persistent-crime equilibrium.  
+- Cooperation among police had a measurable effect on reducing the criminal reproduction number, tipping the system toward the crime-free state.  
+- Sensitivity results highlighted the parameters that mattered most in shifting outcomes.  
+
+#### Reflection  
+This experience gave me valuable practice in linking mathematical modeling with social policy questions, and in communicating findings that could inform strategies for public safety.  
+
+**Supervisor:** Prof. Farai Nyabadza   
 
 ---
 
