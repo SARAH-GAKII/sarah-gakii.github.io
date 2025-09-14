@@ -4,7 +4,6 @@ title: Research
 ---
 
 <div class="page-shell">
-  <!-- Left sticky quick jumps -->
   <aside class="sidebar">
     <h2>Quick jumps</h2>
     <a href="#a-newton–finite-difference-method-for-pdes-with-nonlinear-interface-jump-conditions">A Newton–Finite Difference Method for PDEs with Nonlinear Interface Jump Conditions</a>
