@@ -15,7 +15,7 @@ title: Projects
 
 # Selected Projects
 
-### Excel Business Intelligence Dashboard  
+## Excel Business Intelligence Dashboard  
 
 Developed a full Excel-based Business Intelligence dashboard to demonstrate advanced data analysis and visualization skills. The project transformed raw financial data into actionable insights through:  
 
@@ -80,5 +80,6 @@ This project strengthened my ability to translate ecological principles into dyn
 
 **Mentor:** Dr. Robert A. McDonald  
 
+    
   </div>
 </div>
