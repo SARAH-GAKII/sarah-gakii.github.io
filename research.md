@@ -85,6 +85,7 @@ This research highlights how mathematical models of human behavior can strengthe
  
 ---
 
+
 ## A Mathematical Model for Crime with Cooperative Policing  
 
 Crime prevention isn’t only about catching criminals — it’s also about how police forces work together. At the African Mathematical Schools (AMS) 2023, I collaborated in a group project under the supervision of Prof. Farai Nyabadza to study the impact of cooperative policing on crime dynamics.  
@@ -103,7 +104,7 @@ Traditional crime models often account for policing as a single force acting aga
 - Sensitivity results highlighted the parameters that mattered most in shifting outcomes.  
 
 #### Reflection  
-This experience gave me valuable practice in linking mathematical modeling with social policy questions, and in communicating findings that could inform strategies for public safety.  
+Although the project was not completed to full depth due to time, this experience gave me valuable practice in linking mathematical modeling with social policy questions, and in communicating findings that could inform strategies for public safety.  
 
 **Supervisor:** Prof. Farai Nyabadza   
 
