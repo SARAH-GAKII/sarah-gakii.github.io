@@ -46,7 +46,7 @@ title: Experience
 
 ---
 
-## Data & Records Intern  
+## Data & Records Management Intern  
 **National Social Security Fund (NSSF), Kenya (2019)**  
 - Processed and verified account registrations and identity records.  
 - Handled fingerprinting duties.  
