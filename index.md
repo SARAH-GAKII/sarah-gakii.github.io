@@ -28,18 +28,9 @@ Explore my portfolio to see how I approach problems end-to-end, and feel free to
   </div>
 </div>
 
----
-
-# Education
-- **M.A., Applied Mathematics & Scientific Computation**, Bowling Green State University, USA (2025)  
-- **M.S., Mathematical Sciences**, AIMS / Stellenbosch University, South Africa (2023)  
-- **B.S., Mathematics (Pure & Applied)**, Technical University of Kenya (2021)  
-
----
-
-# What I do
-
-<div class="grid cards">
+<!-- QUICK LINKS just below hero -->
+<section class="container" id="quick-links">
+  <div class="grid cards">
 
 <article class="card" markdown="1">
 ### Research  
@@ -59,4 +50,13 @@ Teaching & mentorship plus industry roles in data, AI training, and operations.
 [**View experience →**](/experience.html)
 </article>
 
-</div>
+  </div>
+</section>
+
+<!-- EDUCATION continues under intro -->
+<section class="container" id="education" markdown="1">
+# Education  
+- **M.A., Applied Mathematics & Scientific Computation**, Bowling Green State University, USA (2025)  
+- **M.S., Mathematical Sciences**, AIMS / Stellenbosch University, South Africa (2023)  
+- **B.S., Mathematics (Pure & Applied)**, Technical University of Kenya (2021)  
+</section>
