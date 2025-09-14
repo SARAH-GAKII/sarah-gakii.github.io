@@ -3,6 +3,17 @@ layout: default
 title: Experience
 ---
 
+
+<div class="page-shell">
+  <aside class="sidebar">
+    <h2>Quick jumps</h2>
+    <a href="#excel-bi-dashboard-2025">Excel Business Intelligence Dashboard</a>
+    <a href="#tourism-attractions-capping-numbers">Tourism Attractions Capping Numbers</a>
+    <a href="#a-stochastic-version-of-a-competing-species-model">A Stochastic Version of a Competing Species Model</a>
+  </aside>
+
+  <div class="content" markdown="1">
+
 # Professional & Industry
 
 
@@ -42,6 +53,6 @@ I value teaching not just as the transfer of knowledge, but as an opportunity to
 - Personalized study plans for students with test anxiety/time-management issues.  
 - Emphasis on growth mindset and question-driven learning.
 
----
-
-
+    
+  </div>
+</div>
