@@ -26,7 +26,7 @@ Developed a full Excel-based Business Intelligence dashboard to demonstrate adva
 
 This project showcases my ability to take raw datasets and build a tool that supports decision-making and business insights.  
 
-<img width="200" height="150" alt="image" src="https://github.com/user-attachments/assets/e31d165d-1c4b-4584-9464-499ee260c408" />
+<img width="400" height="150" alt="image" src="https://github.com/user-attachments/assets/e31d165d-1c4b-4584-9464-499ee260c408" />
 
 🔗 [View the project on GitHub](https://github.com/SARAH-GAKII/Excel-Business-Intelligence-Dashboard-From-Raw-Data-to-Insight)  
 
