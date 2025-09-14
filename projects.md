@@ -8,7 +8,7 @@ title: Projects
     <h2>Quick jumps</h2>
     <a href="#excel-bi-dashboard-2025">Excel BI Dashboard</a>
     <a href="#tourism-attractions-capping-numbers">Tourism Attractions Capping Numbers</a>
-    <a href="#competing-species-stochastic-2022">Stochastic Species</a>
+    <a href="#a-stochastic-version-of-a-competing-species-model">A Stochastic Version of a Competing Species Model</a>
   </aside>
 
   <div class="content" markdown="1">
