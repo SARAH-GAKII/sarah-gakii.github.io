@@ -6,7 +6,7 @@ title: Projects
 <div class="page-shell">
   <aside class="sidebar">
     <h2>Quick jumps</h2>
-    <a href="#excel-bi-dashboard-2025">Excel BI Dashboard</a>
+    <a href="#excel-bi-dashboard-2025">Excel Business Intelligence Dashboard</a>
     <a href="#tourism-attractions-capping-numbers">Tourism Attractions Capping Numbers</a>
     <a href="#a-stochastic-version-of-a-competing-species-model">A Stochastic Version of a Competing Species Model</a>
   </aside>
@@ -26,7 +26,7 @@ Developed a full Excel-based Business Intelligence dashboard to demonstrate adva
 
 This project showcases my ability to take raw datasets and build a tool that supports decision-making and business insights.  
 
-<img width="1417" height="743" alt="image" src="https://github.com/user-attachments/assets/e31d165d-1c4b-4584-9464-499ee260c408" />
+<img width="700" height="500" alt="image" src="https://github.com/user-attachments/assets/e31d165d-1c4b-4584-9464-499ee260c408" />
 
 🔗 [View the project on GitHub](https://github.com/SARAH-GAKII/Excel-Business-Intelligence-Dashboard-From-Raw-Data-to-Insight)  
 
