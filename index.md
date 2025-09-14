@@ -28,9 +28,29 @@ Explore my portfolio to see how I approach problems end-to-end, and feel free to
   </div>
 </div>
 
-<!-- QUICK LINKS just below hero -->
-<section class="container" id="quick-links">
-  <div class="grid cards">
+<!-- BODY: SIDEBAR + CONTENT (mirrors Research page layout) -->
+<div class="page-shell">
+  <aside class="sidebar" markdown="1">
+## Quick links
+- [Research →](/research.html)
+- [Projects →](/projects.html)
+- [Experience →](/experience.html)
+- [Community →](/volunteering.html)
+- [GitHub →](https://github.com/SARAH-GAKII)
+- [LinkedIn →](https://www.linkedin.com/in/sarah-gakii/)
+- [Email →](mailto:sgakii@bgsu.edu)
+  </aside>
+
+  <div class="content" markdown="1">
+
+## Education
+- **M.A., Applied Mathematics & Scientific Computation**, Bowling Green State University, USA (2025)
+- **M.S., Mathematical Sciences**, AIMS / Stellenbosch University, South Africa (2023)
+- **B.S., Mathematics (Pure & Applied)**, Technical University of Kenya (2021)
+
+## What I do
+
+<div class="grid cards">
 
 <article class="card" markdown="1">
 ### Research  
@@ -50,13 +70,7 @@ Teaching & mentorship plus industry roles in data, AI training, and operations.
 [**View experience →**](/experience.html)
 </article>
 
-  </div>
-</section>
+</div>
 
-<!-- EDUCATION continues under intro -->
-<section class="container" id="education" markdown="1">
-# Education  
-- **M.A., Applied Mathematics & Scientific Computation**, Bowling Green State University, USA (2025)  
-- **M.S., Mathematical Sciences**, AIMS / Stellenbosch University, South Africa (2023)  
-- **B.S., Mathematics (Pure & Applied)**, Technical University of Kenya (2021)  
-</section>
+  </div>
+</div>
