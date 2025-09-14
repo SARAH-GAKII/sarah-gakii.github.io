@@ -7,8 +7,8 @@ title: Experience
 <div class="page-shell">
   <aside class="sidebar">
     <h2>Quick jumps</h2>
-    <a href="#professional-&-industry">Professional & Industry</a>
-    <a href="#teaching-&-mentorship">Teaching & Mentorship</a>
+    <a href="#professional-and-industry">Professional & Industry</a>
+    <a href="#teaching-and-mentorship">Teaching & Mentorship</a>
   </aside>
 
   <div class="content" markdown="1">
