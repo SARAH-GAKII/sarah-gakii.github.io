@@ -11,7 +11,6 @@ title: Research
     <a href="#modeling-the-impact-of-human-behavior-to-covid-19-vaccine-uptake">Modeling the Impact of Human Behavior to COVID-19 Vaccine Uptake</a>
     <a href="#green-roofs-to-mitigate-the-urban-heat-island">Green Roofs to Mitigate the Urban Heat Island</a>
     <a href="#a-mathematical-model-for-crime-with-cooperative-policing">A Mathematical Model for Crime with Cooperative Policing</a>
-    <a href="#a-stochastic-version-of-a-competing-species-model">A Stochastic Version of a Competing Species Model</a>
   </aside>
 
   <!-- Main content -->
