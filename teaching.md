@@ -3,22 +3,31 @@ layout: default
 title: Teaching
 ---
 
-# Teaching & Mentoring
+# Teaching & Mentorship  
 
-## BGSU Graduate Teaching Assistant (2023–2025)
-**Courses:** Precalculus, College Algebra  
-- Designed worksheets/quizzes; aligned with learning outcomes.  
-- Led review sessions with active-learning strategies.  
-- Supported 1:1 office hours; tracked progress and provided feedback.
-
-**Impact:** Improved pass rates for students attending structured reviews; strong student feedback on clarity and patience.
+I value teaching not just as the transfer of knowledge, but as an opportunity to create inclusive, engaging learning spaces. My approach combines clear explanations, active learning, and mentorship to help students build both confidence and problem-solving skills. To strengthen this approach, I completed the Active Learning Certificate Program (BGSU, 2025), where I designed and presented an inclusive lesson plan that applied active learning strategies in practice.
 
 ---
 
-## Dedan Kimathi & TU-K Tutorials (2021–2024)
-**Topics:** Calculus I/II, Discrete Math, Intro Statistics  
-- Problem-solving sessions; graded assignments with rubric-based feedback.  
-- Helped students connect theory to computation (Excel, Python snippets where appropriate).
+## Bowling Green State University (2023–2025)  
+**Graduate Teaching Assistant, Mathematics**  
+- Instructed Precalculus and College Algebra, combining lectures with interactive tutorials.  
+- Designed and graded assessments, ensuring fair and accurate evaluations.  
+- Supported faculty through research assistance and administrative tasks.  
+
+---
+
+## Technical University of Kenya (2023–2024)  
+**Graduate Assistant, Mathematics** 
+- Led tutorials for Introduction to Statistics, developing and reviewing instructional materials.  
+- Assessed student progress and provided constructive feedback.  
+
+---
+
+## Dedan Kimathi University of Technology (2021–2022)  
+**Graduate Teaching Assistant, Mathematics**  
+- Conducted tutorials and lectures in Calculus and Discrete Mathematics.  
+- Proctored and graded assignments and exams.  
 
 ---
 
@@ -28,5 +37,4 @@ title: Teaching
 
 ---
 
-## Materials (on request)
-Sample worksheets, problem sets, and review slides available upon request.
+
