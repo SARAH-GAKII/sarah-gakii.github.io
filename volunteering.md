@@ -22,7 +22,7 @@ This experience allowed me to connect my problem-solving and technical mindset t
 Beyond structured volunteering, I have taken part in a range of campus and community activities that connected me with people, science, and culture in meaningful ways:  
 
 - **Bowling Green Community Holiday Parade (Nov 2024):** Marched with the community to celebrate local traditions and connect with residents.  
-- **BGSU Campus Restore (Mar 2024):** Assisted in a campus-wide sustainability initiative, supporting recycling and reuse efforts.  
+- **BGSU Campus Restore (Mar 2024, May 2025):** Assisted in a campus-wide sustainability initiative, supporting recycling and reuse efforts.  
 - **Total Solar Eclipse Watch Party (Apr 2024, BGSU):** Helped organize and guide participants during this rare celestial event, sharing in science outreach and community excitement.  
 - **Northwest Ohio Science Olympiad (Mar 2024, BGSU):** Volunteered in a STEM competition that brought together students to showcase problem-solving and innovation.  
 - **Student Leader, AIMS (2023, South Africa):** Provided peer leadership and mentorship during academic and extracurricular activities at the African Institute for Mathematical Sciences.  
