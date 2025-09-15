@@ -122,7 +122,7 @@
     .hide { display:none }
 
     /* --- Two-column page shell for long pages (sticky sidebar) --- */
-    .page-shell{ display: grid; grid-template-columns: 280px 1fr; gap: .75rem;}
+    .page-shell{ display: grid; grid-template-columns: 280px 1fr; column-gap: .75rem; row-gap: 1.5rem; }
     @media (min-width: 1200px){ .page-shell .content { max-width: 95ch; } }
     .sidebar{ position: sticky; top: 72px; align-self: start; background: var(--panel); border: 1px solid #e5e7eb; border-radius: 12px; padding-right: .5rem ;}
     .sidebar h2{ font-size: 1rem; margin: .25rem .25rem .5rem; color: #0b1324;}
@@ -130,11 +130,13 @@
     .sidebar a:hover{ background: #eef2ff; color: #111827;}
     
     [id]{ scroll-margin-top: 84px;}
-    
+
+
+    @media (min-width: 1200px){ .page-shell .content { max-width: 95ch; } }
     @media (max-width: 900px){
       .page-shell{ grid-template-columns: 1fr; }
-      .sidebar{ position: static; }
-      .page-shell .content{ max-width: none; }
+      .sidebar{ position: static; margin-bottom: 1rem; }
+      .page-shell .content{ max-width: none100%; padding-inline: 1rem; }
     }
 
     /* About layout: 1/4 sidebar (sticky) + 3/4 content */
