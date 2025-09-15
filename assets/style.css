@@ -8,6 +8,7 @@
   --muted: #475569;        /* secondary text */
   --brand: #16a34a;        /* green accent (buttons/links) */
   --accent: #7c3aed;       /* purple accent (optional) */
+  --header-h: 64px;
   --radius: 18px;
   --shadow: 0 8px 24px rgba(2, 6, 23, .08);
   --maxw: 1200px;
@@ -33,7 +34,9 @@
     .tag { display: inline-block; padding:.25rem .6rem; border:1px solid #2b2f3b; border-radius:999px; color: var(--muted); font-size:.85rem }
 
     /* --- Header --- */
-    header{ position: sticky; top:0; z-index:50; background: rgba(255,255,255,.8); backdrop-filter: blur(8px); border-bottom: 1px solid #e5e7eb; }
+    header{ position: fixed; top:0; z-index:100; background: rgba(255,255,255,.85); backdrop-filter: blur(8px); border-bottom: 1px solid #e5e7eb; }
+    /* push page content below the fixed header */
+    main.container{ padding-top: var(--header-h); }
     .nav { display:flex; align-items:center; justify-content:space-between; padding: .85rem 0; }
     .brand { font-weight: 700; letter-spacing:.3px; }
     .brand b { color: var(--brand); }
