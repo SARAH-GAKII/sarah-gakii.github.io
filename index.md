@@ -13,34 +13,32 @@ title: Home
 
     <hr style="border:none; border-top:1px solid #e5e7eb; margin:.75rem 0 1rem;">
 
-    <div markdown="1">
-    ### Research & Thesis  
-    PDEs, mathematical modeling, and applied methods for real-world problems.  
-    [**Dive into research →**](/research.html)
-    </div>
+    <!-- What I do (HTML headings + paragraphs = no markdown parsing needed) -->
+    <h3>Research &amp; Thesis</h3>
+    <p>PDEs, mathematical modeling, and applied methods for real-world problems.<br>
+      <a href="{{ '/research' | relative_url }}"><strong>Dive into research →</strong></a>
+    </p>
 
     <hr style="border:none; border-top:1px solid #e5e7eb; margin:.75rem 0 1rem;">
 
-    <div markdown="1">
-    ### Projects  
-    Dashboards and simulations that turn raw data into decisions.  
-    [**See projects →**](/projects.html)
-    </div>
+    <h3>Projects</h3>
+    <p>Dashboards and simulations that turn raw data into decisions.<br>
+      <a href="{{ '/projects' | relative_url }}"><strong>See projects →</strong></a>
+    </p>
 
     <hr style="border:none; border-top:1px solid #e5e7eb; margin:.75rem 0 1rem;">
 
-    <div markdown="1">
-    ### Experience  
-    Data, AI training, teaching, and mentorship across academia and industry.  
-    [**View experience →**](/experience.html)
-    </div>
+    <h3>Experience</h3>
+    <p>Data, AI training, teaching, and mentorship across academia and industry.<br>
+      <a href="{{ '/experience' | relative_url }}"><strong>View experience →</strong></a>
+    </p>
 
     <hr style="border:none; border-top:1px solid #e5e7eb; margin:1rem 0;">
 
-    <!-- Social icons -->
+    <!-- Social icons (small, horizontal) -->
     <div class="sidebar-icons">
       <a href="mailto:sgakii@bgsu.edu" aria-label="Email" title="Email">
-        <svg viewBox="0 0 24 24" width="18" height="18">
+        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
           <path d="M3 6h18a1 1 0 0 1 1 1v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V7a1 1 0 0 1 1-1z"
             fill="none" stroke="currentColor" stroke-width="1.6"/>
           <path d="M3 7l9 6 9-6"
@@ -49,13 +47,13 @@ title: Home
       </a>
 
       <a href="https://www.linkedin.com/in/sarah-gakii/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn">
-        <svg viewBox="0 0 24 24" width="18" height="18">
+        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
           <path fill="currentColor" d="M20.45 3H3.55A.55.55 0 003 3.55v16.9c0 .3.25.55.55.55h16.9c.3 0 .55-.25.55-.55V3.55A.55.55 0 0020.45 3zM8.2 19H5.6V9.76h2.6V19zM6.9 8.52a1.51 1.51 0 110-3.02 1.51 1.51 0 010 3.02zM19 19h-2.6v-4.86c0-1.16-.42-1.95-1.47-1.95-.81 0-1.3.55-1.52 1.08-.08.2-.1.48-.1.76V19h-2.6s.03-8.38 0-9.24H13l.02 1.43c.35-.54.98-1.31 2.38-1.31 1.74 0 3.6 1.14 3.6 3.82V19z"/>
         </svg>
       </a>
 
       <a href="https://github.com/SARAH-GAKII" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub">
-        <svg viewBox="0 0 24 24" width="18" height="18">
+        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
           <path fill="currentColor" d="M12 .5A11.5 11.5 0 0 0 .5 12c0 5.08 3.29 9.39 7.86 10.9.58.1.79-.26.79-.57v-2.01c-3.2.7-3.87-1.36-3.87-1.36-.53-1.34-1.3-1.7-1.3-1.7-1.06-.73.08-.72.08-.72 1.17.08 1.78 1.2 1.78 1.2 1.05 1.8 2.76 1.28 3.43.98.11-.78.41-1.28.75-1.57-2.55-.29-5.23-1.28-5.23-5.71 0-1.26.45-2.29 1.19-3.1-.12-.3-.52-1.52.11-3.17 0 0 .98-.31 3.2 1.18a11 11 0 0 1 5.82 0c2.22-1.49 3.19-1.18 3.19-1.18.63 1.65.23 2.87.11 3.17.74.81 1.18 1.84 1.18 3.1 0 4.44-2.69 5.41-5.25 5.7.42.36.8 1.07.8 2.16v3.19c0 .31.21.68.8.56A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5z"/>
         </svg>
       </a>
@@ -63,8 +61,8 @@ title: Home
   </aside>
 
   <!-- RIGHT: main content -->
-  <div class="content" markdown="1">
-
+  <div class="content">
+    {% capture main_md %}
 # <span class="accent">Sarah Gakii</span> {#about-summary}
 <span class="eyebrow">Applied Mathematics • Data Analytics • Mathematical Modeling</span>
 
@@ -95,6 +93,7 @@ My work sits at the intersection of research, analytics, and impact. I’ve taug
 - **M.A., Applied Mathematics & Scientific Computation**, Bowling Green State University (2025)  
 - **M.S., Mathematical Sciences**, AIMS / Stellenbosch University (2023)  
 - **B.S., Mathematics (Pure & Applied)**, Technical University of Kenya (2021)
-
+    {% endcapture %}
+    {{ main_md | markdownify }}
   </div>
 </div>
