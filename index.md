@@ -16,6 +16,10 @@ title: Home
     <a href="{{ '/research' | relative_url }}">Research & Thesis</a>
     <a href="{{ '/projects' | relative_url }}">Projects</a>
     <a href="{{ '/experience' | relative_url }}">Experience</a>
+
+  <a class="btn ghost" href="https://www.linkedin.com/in/sarah-gakii/" target="_blank" rel="noopener">🔗 LinkedIn</a>
+  <a class="btn ghost" href="https://github.com/SARAH-GAKII" target="_blank" rel="noopener">📊 GitHub</a>
+
   </aside>
 
   <!-- RIGHT: main content -->
@@ -28,11 +32,6 @@ I’m an applied mathematician and data analyst with experience spanning mathema
 I recently earned my M.A. in Applied Mathematics & Scientific Computation from Bowling Green State University, where my thesis introduced a Newton–Finite Difference Method for elliptic and parabolic PDEs with nonlinear interface jump conditions.
 
 My work sits at the intersection of research, analytics, and impact. I’ve taught Precalculus, College Algebra, Calculus, and Statistics using active-learning methods, and contributed as a Math & Data Analysis Expert in AI training, shaping high-quality reasoning datasets for advanced models.
-
-<div class="cta">
-  <a class="btn ghost" href="https://www.linkedin.com/in/sarah-gakii/" target="_blank" rel="noopener">🔗 LinkedIn</a>
-  <a class="btn ghost" href="https://github.com/SARAH-GAKII" target="_blank" rel="noopener">📊 GitHub</a>
-</div>
 
 ---
 
