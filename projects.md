@@ -6,7 +6,7 @@ title: Projects
 <div class="page-shell">
   <aside class="sidebar">
     <h2>Quick jumps</h2>
-    <a href="#excel-bi-dashboard-2025">Excel Business Intelligence Dashboard</a>
+    <a href="#excel-bi-dashboard-2025">Excel Business Intelligence Dashboard (2025)</a>
     <a href="#tourism-attractions-capping-numbers">Tourism Attractions Capping Numbers</a>
     <a href="#a-stochastic-version-of-a-competing-species-model">A Stochastic Version of a Competing Species Model</a>
   </aside>
@@ -15,7 +15,7 @@ title: Projects
 
 # Selected Projects
 
-## Excel Business Intelligence Dashboard  
+## Excel Business Intelligence Dashboard (2025) {#excel-bi-dashboard-2025} 
 
 Developed a full Excel-based Business Intelligence dashboard to demonstrate advanced data analysis and visualization skills. The project transformed raw financial data into actionable insights through:  
 
