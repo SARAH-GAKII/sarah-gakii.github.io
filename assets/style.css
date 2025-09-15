@@ -108,6 +108,23 @@
 
     /* --- Footer --- */
     footer { border-top:1px solid #e5e7eb; padding: 2rem 0 4rem; color: var(--muted); font-size:.95rem; text-align: center; background: #f9fafb; }
+    /* Footer icons */
+    .footer-icons{
+      display:flex; gap:.75rem; justify-content:center; align-items:center;
+      margin-bottom:.5rem;
+    }
+    .footer-icons a{
+      display:inline-flex; padding:.5rem; border-radius:12px;
+    }
+    .footer-icons a:hover{ background:#eef2ff; }
+    .footer-icons svg{
+      width:24px; height:24px;
+      fill:none; stroke: var(--brand); stroke-width:1.6;
+    }
+    .footer-icons a:hover svg{ stroke: var(--accent); }
+    .footer-icons a[aria-label="GitHub"] svg{ fill: var(--brand); stroke: none; }
+    .footer-icons a[aria-label="GitHub"]:hover svg{ fill: var(--accent); }
+
 
     /* --- Utilities --- */
     .spacer { height: .25rem }
