@@ -114,19 +114,57 @@
     .hide { display:none }
 
     /* --- Two-column page shell for long pages (sticky sidebar) --- */
-.page-shell{ display: grid; grid-template-columns: 280px 1fr; gap: 2rem;}
-@media (min-width: 1200px){ .page-shell .content { max-width: 95ch; } }
-.sidebar{ position: sticky; top: 72px; align-self: start; background: var(--panel); border: 1px solid #e5e7eb; border-radius: 12px; padding: 1rem;}
-.sidebar h2{ font-size: 1rem; margin: .25rem .25rem .5rem; color: #0b1324;}
-.sidebar a{ display: block; padding: .5rem .7rem; border-radius: 8px; color: var(--muted);}
-.sidebar a:hover{ background: #eef2ff; color: #111827;}
+    .page-shell{ display: grid; grid-template-columns: 280px 1fr; gap: 2rem;}
+    @media (min-width: 1200px){ .page-shell .content { max-width: 95ch; } }
+    .sidebar{ position: sticky; top: 72px; align-self: start; background: var(--panel); border: 1px solid #e5e7eb; border-radius: 12px; padding: 1rem;}
+    .sidebar h2{ font-size: 1rem; margin: .25rem .25rem .5rem; color: #0b1324;}
+    .sidebar a{ display: block; padding: .5rem .7rem; border-radius: 8px; color: var(--muted);}
+    .sidebar a:hover{ background: #eef2ff; color: #111827;}
+    
+    [id]{ scroll-margin-top: 84px;}
+    
+    @media (max-width: 900px){
+      .page-shell{ grid-template-columns: 1fr; }
+      .sidebar{ position: static; }
+      .page-shell .content{ max-width: none; }
+    }
 
-[id]{ scroll-margin-top: 84px;}
+    /* About layout: 1/4 sidebar (sticky) + 3/4 content */
+.about-shell{
+  display: grid;
+  grid-template-columns: 1fr 3fr;   /* 25% / 75% split */
+  gap: 2rem;
+  align-items: start;
+  padding: 3rem 0 2rem;
+}
+
+.about-shell .sidebar{
+  position: sticky;
+  top: 72px;             
+  align-self: start;
+  background: var(--panel);
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+.about-shell .sidebar .portrait img{
+  width: 100%;
+  max-width: 240px;
+  height: auto;
+  border-radius: 50%;
+  border: 3px solid #e2e8f0;
+  box-shadow: var(--shadow);
+  margin: 0 auto;
+}
 
 @media (max-width: 900px){
-  .page-shell{ grid-template-columns: 1fr; }
-  .sidebar{ position: static; }
-  .page-shell .content{ max-width: none; }
+  .about-shell{
+    grid-template-columns: 1fr;
+  }
+  .about-shell .sidebar{
+    position: static;
+  }
 }
 
 
