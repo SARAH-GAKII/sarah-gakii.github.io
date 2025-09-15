@@ -179,4 +179,49 @@ a:hover{
 @media (min-width: 1200px){
   .page-shell .content{ max-width: 95ch; }
 }
+
+/* === FINAL OVERRIDES: sidebar proximity + smaller sidebar icons === */
+
+/* Desktop/tablet: pull the LEFT sidebar rightward without moving content */
+@media (min-width: 900px){
+  .page-shell{
+    column-gap: .25rem;           /* make the space between columns tiny */
+  }
+  .sidebar{
+    justify-self: end;            /* stick to the RIGHT edge of its column */
+    margin-right: -1.5rem;        /* nudge INTO the gap (doesn't move content) */
+    padding-right: 0;             /* no extra internal padding on the right edge */
+  }
+}
+
+/* Sidebar social icons: small, horizontal */
+.sidebar-icons{
+  display: flex;
+  gap: .4rem;
+  margin-top: .5rem;
+  justify-content: flex-start;    /* keep them in a row */
+}
+.sidebar-icons a{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;                    /* smaller buttons */
+  height: 28px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background: var(--panel);
+  color: var(--brand);
+  padding: .25rem;                /* tight inner padding */
+}
+.sidebar-icons a:hover{
+  background: #eef2ff;
+  color: var(--accent);
+}
+.sidebar-icons svg{
+  width: 16px;                    /* smaller icons */
+  height: 16px;
+  display: block;
+}
+
+
 </style>
