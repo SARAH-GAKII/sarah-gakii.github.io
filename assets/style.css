@@ -34,15 +34,16 @@
     .tag { display: inline-block; padding:.25rem .6rem; border:1px solid #2b2f3b; border-radius:999px; color: var(--muted); font-size:.85rem }
 
     /* --- Header --- */
-    header{ position: fixed; top:0; z-index:100; background: rgba(255,255,255,.85); backdrop-filter: blur(8px); border-bottom: 1px solid #e5e7eb; }
+    header{ position: sticky; top:0; z-index:50; background: rgba(255,255,255,.9); backdrop-filter: blur(8px); border-bottom: 1px solid #e5e7eb; }
     /* push page content below the fixed header */
     main.container{ padding-top: var(--header-h); }
-    .nav { display:flex; align-items:center; justify-content:space-between; padding: .85rem 0; }
+    .nav { display:flex; align-items:center; justify-content:flex-start; gap: 2rem; padding: .85rem 1rem; }
     .brand { font-weight: 700; letter-spacing:.3px; }
     .brand b { color: var(--brand); }
-    nav ul { display:flex; gap:1rem; list-style:none; padding:0; margin:0; }
+    nav ul { display:flex; gap:1rem; list-style:none; padding:0; margin-left: 1rem;; }
     nav a { color: var(--muted); padding:.5rem .8rem; border-radius:10px; }
     nav a:hover{ background:#eef2ff; color:#111827; border-radius:10px; }
+    main { padding-top: 4rem; }
 
     /* Cards */
     .card{  background: var(--panel);  border: 1px solid #e5e7eb;  border-radius: var(--radius);  box-shadow: var(--shadow);}
@@ -107,14 +108,11 @@
 
     /* --- Footer --- */
     footer { border-top:1px solid #e5e7eb; padding: 2rem 0 4rem; color: var(--muted); font-size:.95rem; text-align: center; background: #f9fafb; }
-    .footer-icons{
-      display:flex; gap:.75rem; justify-content:center; align-items:center;
-      margin-bottom:.5rem;
-    }
+    .footer-icons{display:flex; gap:.75rem; justify-content:center; align-items:center; margin-bottom:.5rem; }
     .footer-icons a{ display:inline-flex; padding:.5rem; border-radius:12px; }
     .footer-icons a:hover{ background:#eef2ff; }
-    .footer-icons svg{width:24px; height:24px; fill:none; stroke: var(--brand); stroke-width:1.6; }
-    .footer-icons a:hover svg{ stroke: var(--accent); }
+    .footer-icons svg{width:24px; height:24px; fill:currentColor; stroke: none; stroke-width:1.6; }
+    .footer-icons a:hover svg{ color: var(--accent); }
     .footer-icons a[aria-label="GitHub"] svg{ fill: var(--brand); stroke: none; }
     .footer-icons a[aria-label="GitHub"]:hover svg{ fill: var(--accent); }
 
@@ -124,9 +122,9 @@
     .hide { display:none }
 
     /* --- Two-column page shell for long pages (sticky sidebar) --- */
-    .page-shell{ display: grid; grid-template-columns: 280px 1fr; gap: 1rem;}
+    .page-shell{ display: grid; grid-template-columns: 280px 1fr; gap: .75rem;}
     @media (min-width: 1200px){ .page-shell .content { max-width: 95ch; } }
-    .sidebar{ position: sticky; top: 72px; align-self: start; background: var(--panel); border: 1px solid #e5e7eb; border-radius: 12px; padding: 1rem;}
+    .sidebar{ position: sticky; top: 72px; align-self: start; background: var(--panel); border: 1px solid #e5e7eb; border-radius: 12px; padding: 1rem .75rem 1rem 1rem;}
     .sidebar h2{ font-size: 1rem; margin: .25rem .25rem .5rem; color: #0b1324;}
     .sidebar a{ display: block; padding: .5rem .7rem; border-radius: 8px; color: var(--muted);}
     .sidebar a:hover{ background: #eef2ff; color: #111827;}
