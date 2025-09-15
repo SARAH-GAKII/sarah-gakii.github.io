@@ -17,7 +17,7 @@ title: Research
 
 # Research and Thesis  
 
-## A Newton–Finite Difference Method for PDEs with Nonlinear Interface Jump Conditions 
+## A Newton–Finite Difference Method for PDEs with Nonlinear Interface Jump Conditions {#nfdm} 
 
 **From cracked bridges to solar panels to the blood–brain barrier — boundaries matter.**  
 My master’s thesis addressed the challenge of modeling *nonlinear interface jump conditions* in *elliptic and parabolic PDEs*, where standard numerical schemes often break down.  
