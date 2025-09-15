@@ -3,6 +3,8 @@ layout: default
 title: community-engagement
 ---
 
+<div class="content content-narrow" markdown="1">
+ 
 ## Habitat for Humanity – Women Build (Aug 2025-)
 
 Contributed to residential construction projects as part of Habitat for Humanity’s Women Build initiative. My work supported affordable housing efforts while giving me hands-on exposure to building systems and teamwork in the field.  
@@ -29,4 +31,4 @@ Beyond structured volunteering, I have taken part in a range of campus and commu
 - *Student Leader, AIMS (2023, South Africa):* Provided peer leadership and mentorship during academic and extracurricular activities at the African Institute for Mathematical Sciences.  
 - *House of Science, AIMS (2022–2023, South Africa):* Supported science communication and outreach to local communities, helping make mathematics and science more accessible.  
  
-
+</div>
