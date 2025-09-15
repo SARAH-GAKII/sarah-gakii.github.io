@@ -62,18 +62,14 @@
     .cta { margin-top: 1.25rem; display:flex; gap:.8rem; flex-wrap:wrap; }
     
     /* Buttons */
-    .btn{ display:inline-flex; align-items:center; gap:.5rem;
-          padding:.75rem 1rem; border-radius:12px; font-weight:600; }
+    .btn{ display:inline-flex; align-items:center; gap:.5rem; padding:.75rem 1rem; border-radius:12px; font-weight:600; }
     .btn.primary{ background: var(--brand); color:#fff; border: none; }
     .btn.primary:hover{ filter: brightness(.96); }
     .btn.ghost{ border:1px solid #e5e7eb; color:#0f172a; }
     .btn.ghost:hover{ background:#f1f5f9; }
-        .portrait {
-      display: flex;
-      justify-content: center;
-      margin: 0 auto;
-    }
 
+    /* Portarit */
+    .portrait { display: flex; justify-content: center; margin: 0 auto; }
     .portrait{ place-self: start; }
     .portrait img{
     /* Grows/shrinks with screen size: min 160px, typical ~22vw, max 320px */
@@ -108,19 +104,13 @@
 
     /* --- Footer --- */
     footer { border-top:1px solid #e5e7eb; padding: 2rem 0 4rem; color: var(--muted); font-size:.95rem; text-align: center; background: #f9fafb; }
-    /* Footer icons */
     .footer-icons{
       display:flex; gap:.75rem; justify-content:center; align-items:center;
       margin-bottom:.5rem;
     }
-    .footer-icons a{
-      display:inline-flex; padding:.5rem; border-radius:12px;
-    }
+    .footer-icons a{ display:inline-flex; padding:.5rem; border-radius:12px; }
     .footer-icons a:hover{ background:#eef2ff; }
-    .footer-icons svg{
-      width:24px; height:24px;
-      fill:none; stroke: var(--brand); stroke-width:1.6;
-    }
+    .footer-icons svg{width:24px; height:24px; fill:none; stroke: var(--brand); stroke-width:1.6; }
     .footer-icons a:hover svg{ stroke: var(--accent); }
     .footer-icons a[aria-label="GitHub"] svg{ fill: var(--brand); stroke: none; }
     .footer-icons a[aria-label="GitHub"]:hover svg{ fill: var(--accent); }
@@ -176,12 +166,8 @@
 }
 
 @media (max-width: 900px){
-  .about-shell{
-    grid-template-columns: 1fr;
-  }
-  .about-shell .sidebar{
-    position: static;
-  }
+  .about-shell{grid-template-columns: 1fr; }
+  .about-shell .sidebar{position: static; }
 }
 
 
@@ -197,30 +183,41 @@ a:hover {
   text-decoration: none;          /* cleaner hover effect */
 }
 
-/* ---- Global readable width & gutters ---- */
+/* ---- Global readable width & gutters (refined) ---- */
+/* Neutral default: don't constrain entire pages by default */
 .prose{
-  /* readable line length everywhere */
-  max-width: 95ch;           /* consistent right-side whitespace */
-  margin-inline: auto;       /* center the content block */
-  padding-inline: 1rem;      /* extra left/right gutter inside the block */
+  max-width: none;
+  padding-inline: 0;
 }
 
-/* On very small screens, increase gutters so text never touches edges */
+/* Simple pages (no .page-shell grid): limit each top-level section/block */
+.prose > :not(.page-shell){
+  max-width: 95ch;           /* comfy line length like Community page */
+  margin-inline: auto;       /* center the block */
+  padding-inline: 1rem;      /* inner left/right gutters */
+}
+
 @media (max-width: 480px){
-  .prose{ padding-inline: 1.25rem; }
+  .prose > :not(.page-shell){ padding-inline: 1.25rem; }
 }
 
-/* Ensure page-shell layouts keep the same readable width for the text column */
-.page-shell .content{
-  max-width: 95ch;           /* match the prose width */
-  margin-inline: auto;       /* center inside the available column */
-  padding-inline: .5rem;     /* small inner gutter */
-}
-
-/* Keep the sidebar column fixed while allowing the text column to shrink gracefully */
+/* Two-column pages: constrain ONLY the right content column */
 .page-shell{
-  grid-template-columns: 280px minmax(0, 1fr);
+  grid-template-columns: 280px minmax(0, 1fr);  /* keep sidebar fixed */
+  gap: 2rem;
 }
+
+.page-shell .content{
+  max-width: 95ch;           /* same readable width as single-column pages */
+  margin-inline: auto;       /* center within its column */
+  padding-inline: .5rem;     /* gentle inner gutter so text never hugs the edge */
+}
+
+/* Optional: add a tiny outer breathing room so the sidebar never feels flush */
+@media (min-width: 901px){
+  .container{ width: min(100% - 2.5rem, var(--maxw)); } /* site gutter ~1.25rem/side */
+}
+
 
 
   </style>
