@@ -16,15 +16,15 @@ title: Home
 
 ### 📖 Research & Thesis
 PDEs, interface problems, and applied modeling with clear methods and results.  
-[**Dive into research →**](/research.html)
+[Dive into research](/research.html)
 
 ### 📊 Projects
 From raw data to decisions: dashboards, simulations, and reproducible workflows.  
-[**See projects →**](/projects.html)
+[See projects](/projects.html)
 
 ### 👩‍🏫 Experience & Teaching
 Teaching & mentorship plus industry roles in data, AI training, and operations.  
-[**View experience →**](/experience.html)
+[View experience](/experience.html)
     {% endcapture %}
     {{ sidebar_md | markdownify }}
   </aside>
