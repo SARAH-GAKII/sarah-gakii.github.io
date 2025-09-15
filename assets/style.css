@@ -124,7 +124,7 @@
     .hide { display:none }
 
     /* --- Two-column page shell for long pages (sticky sidebar) --- */
-    .page-shell{ display: grid; grid-template-columns: 280px 1fr; gap: 2rem;}
+    .page-shell{ display: grid; grid-template-columns: 280px 1fr; gap: 1rem;}
     @media (min-width: 1200px){ .page-shell .content { max-width: 95ch; } }
     .sidebar{ position: sticky; top: 72px; align-self: start; background: var(--panel); border: 1px solid #e5e7eb; border-radius: 12px; padding: 1rem;}
     .sidebar h2{ font-size: 1rem; margin: .25rem .25rem .5rem; color: #0b1324;}
