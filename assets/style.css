@@ -227,7 +227,7 @@ a:hover {
   padding-inline: .5rem;     /* gentle inner gutter so text never hugs the edge */
 }
 
-/* Optional: add a tiny outer breathing room so the sidebar never feels flush */
+/* Add a tiny outer breathing room so the sidebar never feels flush */
 @media (min-width: 901px){
   .container{ width: min(100% - 2.5rem, var(--maxw)); } /* site gutter ~1.25rem/side */
 }
