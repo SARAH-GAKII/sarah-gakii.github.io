@@ -10,11 +10,6 @@ title: Home
       <img src="/assets/headshot.jpg" alt="Sarah Gakii headshot" />
     </div>
 
-    <h2>Quick jumps</h2>
-    <a href="#about-summary">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#education">Education</a>
-
     <hr style="border:none; border-top:1px solid #e5e7eb; margin:.75rem 0 1rem;">
 
     <h2>What I do</h2>
