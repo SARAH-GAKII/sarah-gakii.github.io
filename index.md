@@ -19,7 +19,7 @@ title: Home
   ---
 
   ### Projects  
-  Dashboards, simulations, and workflows that turn raw data into decisions.  
+  Dashboards and simulations that turn raw data into decisions.  
   [**See projects →**](/projects.html)
 
   ---
