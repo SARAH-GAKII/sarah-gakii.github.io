@@ -168,4 +168,17 @@
 }
 
 
+/* --- Global link styling --- */
+a {
+  color: var(--brand);            /* green accent for all links */
+  text-decoration: underline;     /* make links visibly different */
+  font-weight: 500;               /* slightly bolder */
+}
+
+a:hover {
+  color: var(--accent);           /* purple on hover */
+  text-decoration: none;          /* cleaner hover effect */
+}
+
+
   </style>
