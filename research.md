@@ -46,7 +46,7 @@ This research demonstrates how advanced numerical analysis can bridge the gap be
 *Special thanks to my advisor, Dr. So-Hsiang Chou, whose mentorship not only strengthened the quality of this research but also shaped me as a mathematician and researcher.*
 
 **Keywords:** PDEs, Interface conditions, Finite difference, Newton iteration, Numerical analysis  
-📄 [Read the full thesis on OhioLINK →](http://rave.ohiolink.edu/etdc/view?acc_num=bgsu1750284991046446)
+📄 [Read the full thesis on OhioLINK](http://rave.ohiolink.edu/etdc/view?acc_num=bgsu1750284991046446)
 
 
 ---
@@ -78,7 +78,7 @@ This research highlights how mathematical models of human behavior can strengthe
 
 *Grateful to Dr. Josephine Kagunda, whose thoughtful supervision, sharp insights, and constant encouragement made this project both rigorous and deeply rewarding.* 
 
-📄 [Explore the full research project on AIMS Thesis Repository →](https://drive.google.com/file/d/19TXbXPjAJ3T5Eq59psV8N86TiFoCG8ht/view)  
+📄 [Explore the full research project on AIMS Thesis Repository](https://drive.google.com/file/d/19TXbXPjAJ3T5Eq59psV8N86TiFoCG8ht/view)  
 
  
 ---
