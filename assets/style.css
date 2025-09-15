@@ -17,14 +17,6 @@
 *, *::before, *::after { box-sizing: border-box; }
 
 
-html {
-  height: 100%;
-  html {
-  height: 100%;
-  background: linear-gradient(135deg, #ffffff, #eef5ff 60%, #f7f9fc);
-  background-attachment: fixed; /* keeps it continuous while scrolling */
-}
-
 html, body {
   margin: 0;
   height: 100%;
@@ -32,15 +24,14 @@ html, body {
                Noto Sans, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
   color: var(--text);
   line-height: 1.6;
+
+  /* Continuous gradient background */
   background: linear-gradient(135deg, #ffffff, #eef5ff 60%, #f7f9fc);
-  background-attachment: fixed; /* keeps gradient smooth on scroll */
+  background-attachment: fixed;   /* makes gradient continuous on scroll */
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-
-  background-attachment: fixed; /* keeps it continuous while scrolling */
-}
 
 
 
