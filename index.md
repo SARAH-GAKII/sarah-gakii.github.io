@@ -22,7 +22,7 @@ PDEs, interface problems, and applied modeling with clear methods and results.
 From raw data to decisions: dashboards, simulations, and reproducible workflows.  
 [See projects](/projects.html)
 
-### 👩‍🏫 Experience & Teaching
+### 👩‍🏫 Experience
 Teaching & mentorship plus industry roles in data, AI training, and operations.  
 [View experience](/experience.html)
     {% endcapture %}
