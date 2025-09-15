@@ -13,7 +13,7 @@ title: Experience
 
   <div class="content" markdown="1">
 
-# Professional & Industry  
+# Professional & Industry {#professional-and-industry}
 
 ## Mathematics / Data Analysis Expert (AI Training)  
 **Mercor (2025)**  
@@ -57,7 +57,7 @@ title: Experience
 ---
 
 
-# Teaching & Mentorship  
+# Teaching & Mentorship {#teaching-and-mentorship}
 
 I value teaching not just as the transfer of knowledge, but as an opportunity to create inclusive, engaging learning spaces. My approach combines clear explanations, active learning, and mentorship to help students build both confidence and problem-solving skills. To strengthen this approach, I completed the Active Learning Certificate Program (BGSU, 2025), where I designed and presented an inclusive lesson plan that applied active learning strategies in practice.
 
