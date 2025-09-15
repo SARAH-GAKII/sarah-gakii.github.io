@@ -223,5 +223,47 @@ a:hover{
   display: block;
 }
 
+/* === Responsive nav: shrink spacing + font for small screens === */
+@media (max-width: 650px){
+  nav ul{
+    gap: .5rem;             /* reduce space between links */
+  }
+  nav a{
+    font-size: .85rem;      /* smaller text */
+    padding: .35rem .5rem;  /* tighter padding */
+  }
+}
+
+@media (max-width: 480px){
+  nav ul{
+    gap: .35rem;
+  }
+  nav a{
+    font-size: .8rem;       /* even smaller text on very narrow phones */
+    padding: .3rem .45rem;
+  }
+}
+
+/* === Responsive nav: shrink spacing + font for small screens === */
+@media (max-width: 650px){
+  nav ul{
+    gap: .5rem;             /* reduce space between links */
+  }
+  nav a{
+    font-size: .85rem;      /* smaller text */
+    padding: .35rem .5rem;  /* tighter padding */
+  }
+}
+
+@media (max-width: 480px){
+  nav ul{
+    gap: .35rem;
+  }
+  nav a{
+    font-size: .8rem;       /* even smaller text on very narrow phones */
+    padding: .3rem .45rem;
+  }
+}
+
 
 </style>
