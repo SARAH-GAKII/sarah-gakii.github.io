@@ -4,7 +4,7 @@ title: Home
 ---
 
 <div class="page-shell">
-  <!-- LEFT: sticky sidebar (headshot + quick jumps + what I do) -->
+  <!-- LEFT: sticky sidebar (headshot + what I do) -->
   <aside class="sidebar">
     <div class="portrait" style="margin-bottom:1rem;">
       <img src="/assets/headshot.jpg" alt="Sarah Gakii headshot" />
@@ -12,10 +12,22 @@ title: Home
 
     <hr style="border:none; border-top:1px solid #e5e7eb; margin:.75rem 0 1rem;">
 
-    <h2>What I do</h2>
-    <a href="{{ '/research' | relative_url }}">Research & Thesis</a>
-    <a href="{{ '/projects' | relative_url }}">Projects</a>
-    <a href="{{ '/experience' | relative_url }}">Experience</a>
+    ### Research & Thesis
+    PDEs, mathematical modeling, and applied methods for real-world problems.  
+    [**Dive into research →**](/research.html)
+    
+    ---
+    
+    ### Projects  
+    Dashboards, simulations, and workflows that turn raw data into decisions.  
+    [**See projects →**](/projects.html)
+    
+    ---
+    
+    ### Experience  
+    Data, AI training, teaching, and mentorship across academia and industry.  
+    [**View experience →**](/experience.html)
+
 
   <a class="btn ghost" href="https://www.linkedin.com/in/sarah-gakii/" target="_blank" rel="noopener">🔗 LinkedIn</a>
   <a class="btn ghost" href="https://github.com/SARAH-GAKII" target="_blank" rel="noopener">📊 GitHub</a>
