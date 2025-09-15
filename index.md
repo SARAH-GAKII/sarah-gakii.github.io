@@ -30,7 +30,6 @@ I recently earned my M.A. in Applied Mathematics & Scientific Computation from B
 My work sits at the intersection of research, analytics, and impact. I’ve taught Precalculus, College Algebra, Calculus, and Statistics using active-learning methods, and contributed as a Math & Data Analysis Expert in AI training, shaping high-quality reasoning datasets for advanced models.
 
 <div class="cta">
-  <a class="btn primary" href="/assets/resume.pdf" target="_blank" rel="noopener">📄 Download Resume</a>
   <a class="btn ghost" href="https://www.linkedin.com/in/sarah-gakii/" target="_blank" rel="noopener">🔗 LinkedIn</a>
   <a class="btn ghost" href="https://github.com/SARAH-GAKII" target="_blank" rel="noopener">📊 GitHub</a>
 </div>
