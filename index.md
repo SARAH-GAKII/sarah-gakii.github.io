@@ -95,11 +95,11 @@ My work sits at the intersection of research, analytics, and impact. I’ve taug
 Honored to be featured as a recipient of the *James Robert & Gretchen Overman Graduate Scholarship* for academic excellence, highlighted alongside departmental student achievements, faculty recognition, and research contributions, by the BGSU Departrment of Mathematics and Statistics 2023-2024 News and Highlights.
 [Read feature →](https://www.bgsu.edu/arts-and-sciences/mathematics-and-statistics/department-and-alumni-news/2023-2024.html)
 
-- **M.S., Mathematical Sciences**, Stellenbosch University - African Institute for Mathematical Sciences (AIMS) Program, South Africa(2023)  
+- **M.S., Mathematical Sciences**, Stellenbosch University - African Institute for Mathematical Sciences (AIMS) Program, South Africa (2023)  
 Recognized as the recipient of the *Paul G. Allen Family Foundation Scholarship* during the graduation of the AIMS South Africa Class of 2023, for my academic performance and research project *“Modeling the Impact of Human Behaviour on COVID-19 Vaccine Uptake”* supervised by Dr. Josephine Wairimu Kagunda.
 [Read feature →](https://aims.ac.za/2023/07/03/aims-south-africa-hosts-its-20th-graduation-and-recognition-of-achievement-ceremony/)
 
-- **B.S., Mathematics (Pure & Applied)**, Technical University of Kenya (2021)
+- **B.S., Mathematics (Pure & Applied)**, The Technical University of Kenya (2021)
     {% endcapture %}
     {{ main_md | markdownify }}
   </div>
