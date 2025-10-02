@@ -91,8 +91,29 @@ My work sits at the intersection of research, analytics, and impact. I’ve taug
 ---
 
 ## Education {#education}
-- **M.A., Applied Mathematics & Scientific Computation**, Bowling Green State University (2025)  
-- **M.S., Mathematical Sciences**, AIMS / Stellenbosch University (2023)  
+- **M.A., Applied Mathematics & Scientific Computation**, Bowling Green State University (2025)
+  <div class="recognition">
+  <a href="https://www.bgsu.edu/arts-and-sciences/mathematics-and-statistics/department-and-alumni-news/2023-2024.html" target="_blank" rel="noopener">
+    <img src="/assets/bgsu-thumb.jpg" alt="BGSU Math & Stats News recognition photo" />
+    <div>
+      <strong>BGSU Department of Mathematics and Statistics – 2023–2024 News & Highlights</strong><br>
+      Departmental highlights from the academic year, featuring student achievements, faculty recognition, and research contributions.  
+      Honored to be featured as a recipient of the <em>James Robert & Gretchen Overman Graduate Scholarship</em> for academic excellence.
+    </div>
+  </a>
+</div>
+
+- **M.S., Mathematical Sciences**, AIMS / Stellenbosch University (2023)
+  <div class="recognition">
+  <a href="https://aims.ac.za/2023/07/03/aims-south-africa-hosts-its-20th-graduation-and-recognition-of-achievement-ceremony/" target="_blank" rel="noopener">
+    <img src="/assets/aims-thumb.jpg" alt="AIMS South Africa 2023 graduation ceremony photo" />
+    <div>
+      <strong>AIMS South Africa Graduation Ceremony (2023)</strong><br>
+      Celebrating the graduation of the AIMS South Africa Class of 2023, highlighting student excellence and research contributions.  
+      Recognized as the recipient of the <em>Paul G. Allen Family Foundation Scholarship</em> for my research project on COVID-19 vaccine uptake, supervised by Dr. Josephine Wairimu Kagunda.
+    </div>
+  </a>
+</div>
 - **B.S., Mathematics (Pure & Applied)**, Technical University of Kenya (2021)
     {% endcapture %}
     {{ main_md | markdownify }}
