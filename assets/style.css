@@ -141,12 +141,12 @@ footer{ border-top:1px solid #e5e7eb; padding:2rem 0 4rem; color:var(--muted); f
 
 /* --- Global link styling --- */
 a{
-  color: var(--brand);
+  color: #7c3aed;
   text-decoration: underline;
   font-weight: 500;
 }
 a:hover{
-  color: var(--accent);
+  color: #a78bfa;
   text-decoration: none;
 }
 
