@@ -64,7 +64,8 @@ title: Home
   <div class="content">
     {% capture main_md %}
 # <span class="accent">Sarah Gakii</span> {#about-summary}
-<span class="eyebrow">Applied Mathematics • Data Analytics • Mathematical Modeling</span>
+<div class="tagline-animate"> Applied Mathematics • Data Analytics • Mathematical Modeling • AI </div>
+
 
 I’m an applied mathematician and data analyst with experience spanning mathematical modeling, AI training, and analytics.  
 I recently earned my M.A. in Applied Mathematics & Scientific Computation from Bowling Green State University, where my thesis introduced a Newton–Finite Difference Method for elliptic and parabolic PDEs with nonlinear interface jump conditions.
