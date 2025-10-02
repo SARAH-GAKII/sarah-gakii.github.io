@@ -274,5 +274,37 @@ a:hover{
   }
 }
 
+/* Tagline letter-pop animation */
+.tagline-animate {
+  display: inline-block;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  line-height: 1.25;
+}
+
+.tagline-animate .pop {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(6px) scale(0.96);
+  animation: sg-pop-in 0.55s cubic-bezier(.2,.7,.2,1.1) forwards;
+  /* stagger based on index set in JS */
+  animation-delay: calc(var(--i) * 40ms);
+  will-change: transform, opacity;
+}
+
+@keyframes sg-pop-in {
+  60% { opacity: 1; transform: translateY(-2px) scale(1.02); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .tagline-animate .pop {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
 
 </style>
