@@ -312,8 +312,8 @@ a:hover{
   transform: translateY(6px) scale(0.96);
   animation: sg-pop-in 0.55s cubic-bezier(.2,.7,.2,1.1) forwards;
   animation-delay: calc(var(--i) * 40ms);
-  will-change: transform, opacity;
-  color: var(--accent); /* change to --brand for green */
+  will-change: transform, opacity, color;
+  color: var(--accent); 
 }
 
 @keyframes sg-pop-in {
