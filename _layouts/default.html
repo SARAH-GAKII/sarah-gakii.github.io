@@ -80,5 +80,24 @@
       });
     });
   </script>
+
+  <script>
+document.addEventListener('DOMContentLoaded', () => {
+  const el = document.querySelector('.tagline-animate');
+  if (!el) return;
+
+  const text = el.textContent;
+  el.textContent = '';
+  [...text].forEach((ch, i) => {
+    const span = document.createElement('span');
+    span.textContent = ch;
+    span.className = 'pop';
+    span.style.setProperty('--i', i);
+    el.appendChild(span);
+  });
+});
+</script>
+
+  
 </body>
 </html>
