@@ -306,5 +306,29 @@ a:hover{
   }
 }
 
+.tagline-animate .pop {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(6px) scale(0.96);
+  animation: sg-pop-in 0.55s cubic-bezier(.2,.7,.2,1.1) forwards;
+  animation-delay: calc(var(--i) * 40ms);
+  will-change: transform, opacity;
+  color: var(--accent); /* change to --brand for green */
+}
+
+@keyframes sg-pop-in {
+  0% { opacity: 0; transform: translateY(6px) scale(0.96); color: #c4b5fd; } /* lighter purple */
+  60% { opacity: 1; transform: translateY(-2px) scale(1.02); }
+  100% { opacity: 1; transform: translateY(0) scale(1); color: var(--accent); }
+}
+
+/* Gradient style for name */
+#accent-name {
+  font-size: clamp(2rem, 1rem + 3vw, 3rem); /* bigger & responsive */
+  background: linear-gradient(90deg, var(--accent), var(--brand));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 
 </style>
