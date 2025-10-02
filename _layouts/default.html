@@ -88,15 +88,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const text = el.textContent;
   el.textContent = '';
+
   [...text].forEach((ch, i) => {
     const span = document.createElement('span');
     span.textContent = ch;
+
+    // If it's a space, keep it visible and prevent collapsing
+    if (ch === ' ') {
+      span.innerHTML = '&nbsp;'; 
+    }
+
     span.className = 'pop';
     span.style.setProperty('--i', i);
     el.appendChild(span);
   });
 });
 </script>
+
 
   
 </body>
