@@ -66,20 +66,6 @@ title: Home
 # <span id="accent-name">Sarah Gakii</span> {#about-summary}
 <div class="tagline-animate"> APPLIED MATHEMATICS • DATA ANALYTICS • MATHEMATICAL MODELING • AI </div>
 
-#### Featured In
-
-<span class="badge">
-  <a href="https://www.bgsu.edu/arts-and-sciences/mathematics-and-statistics/department-and-alumni-news/2023-2024.html" target="_blank" rel="noopener">
-    BGSU Math & Stats News
-  </a>
-</span>
-
-<span class="badge">
-  <a href="https://aims.ac.za/2023/07/03/aims-south-africa-hosts-its-20th-graduation-and-recognition-of-achievement-ceremony/" target="_blank" rel="noopener">
-    AIMS South Africa
-  </a>
-</span>
-
 
 I’m an applied mathematician and data analyst with experience spanning mathematical modeling, AI training, and analytics.  
 I recently earned my M.A. in Applied Mathematics & Scientific Computation from Bowling Green State University, where my thesis introduced a Newton–Finite Difference Method for elliptic and parabolic PDEs with nonlinear interface jump conditions.
@@ -105,29 +91,14 @@ My work sits at the intersection of research, analytics, and impact. I’ve taug
 ---
 
 ## Education {#education}
-- **M.A., Applied Mathematics & Scientific Computation**, Bowling Green State University (2025)
-  <div class="recognition">
-  <a href="https://www.bgsu.edu/arts-and-sciences/mathematics-and-statistics/department-and-alumni-news/2023-2024.html" target="_blank" rel="noopener">
-    <img src="/assets/bgsu-thumb.jpg" alt="BGSU Math & Stats News recognition photo" />
-    <div>
-      <strong>BGSU Department of Mathematics and Statistics – 2023–2024 News & Highlights</strong><br>
-      Departmental highlights from the academic year, featuring student achievements, faculty recognition, and research contributions.  
-      Honored to be featured as a recipient of the <em>James Robert & Gretchen Overman Graduate Scholarship</em> for academic excellence.
-    </div>
-  </a>
-</div>
+- **M.A., Applied Mathematics & Scientific Computation**, Bowling Green State University (2025)  
+Honored to be featured as a recipient of the *James Robert & Gretchen Overman Graduate Scholarship* for academic excellence, highlighted alongside departmental student achievements, faculty recognition, and research contributions, by the BGSU Departrment of Mathematics and Statistics 2023-2024 News and Highlights.
+[Read feature →](https://www.bgsu.edu/arts-and-sciences/mathematics-and-statistics/department-and-alumni-news/2023-2024.html)
 
-- **M.S., Mathematical Sciences**, AIMS / Stellenbosch University (2023)
-  <div class="recognition">
-  <a href="https://aims.ac.za/2023/07/03/aims-south-africa-hosts-its-20th-graduation-and-recognition-of-achievement-ceremony/" target="_blank" rel="noopener">
-    <img src="/assets/aims-thumb.jpg" alt="AIMS South Africa 2023 graduation ceremony photo" />
-    <div>
-      <strong>AIMS South Africa Graduation Ceremony (2023)</strong><br>
-      Celebrating the graduation of the AIMS South Africa Class of 2023, highlighting student excellence and research contributions.  
-      Recognized as the recipient of the <em>Paul G. Allen Family Foundation Scholarship</em> for my research project on COVID-19 vaccine uptake, supervised by Dr. Josephine Wairimu Kagunda.
-    </div>
-  </a>
-</div>
+- **M.S., Mathematical Sciences**, Stellenbosch University - African Institute for Mathematical Sciences (AIMS) Program, South Africa(2023)  
+Recognized as the recipient of the *Paul G. Allen Family Foundation Scholarship* during the graduation of the AIMS South Africa Class of 2023, for my academic performance and research project *“Modeling the Impact of Human Behaviour on COVID-19 Vaccine Uptake”* supervised by Dr. Josephine Wairimu Kagunda.
+[Read feature →](https://aims.ac.za/2023/07/03/aims-south-africa-hosts-its-20th-graduation-and-recognition-of-achievement-ceremony/)
+
 - **B.S., Mathematics (Pure & Applied)**, Technical University of Kenya (2021)
     {% endcapture %}
     {{ main_md | markdownify }}
