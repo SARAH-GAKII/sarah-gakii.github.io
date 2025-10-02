@@ -64,7 +64,7 @@ title: Home
   <div class="content">
     {% capture main_md %}
 # <span class="accent">Sarah Gakii</span> {#about-summary}
-<div class="tagline-animate"> Applied Mathematics • Data Analytics • Mathematical Modeling • AI </div>
+<div class="tagline-animate"> APPLIED MATHEMATICS • DATA ANALYTICS • MATHEMATICAL MODELING • AI </div>
 
 
 I’m an applied mathematician and data analyst with experience spanning mathematical modeling, AI training, and analytics.  
