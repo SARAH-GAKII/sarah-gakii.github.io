@@ -66,6 +66,20 @@ title: Home
 # <span id="accent-name">Sarah Gakii</span> {#about-summary}
 <div class="tagline-animate"> APPLIED MATHEMATICS • DATA ANALYTICS • MATHEMATICAL MODELING • AI </div>
 
+#### Featured In
+
+<span class="badge">
+  <a href="https://www.bgsu.edu/arts-and-sciences/mathematics-and-statistics/department-and-alumni-news/2023-2024.html" target="_blank" rel="noopener">
+    BGSU Math & Stats News
+  </a>
+</span>
+
+<span class="badge">
+  <a href="https://aims.ac.za/2023/07/03/aims-south-africa-hosts-its-20th-graduation-and-recognition-of-achievement-ceremony/" target="_blank" rel="noopener">
+    AIMS South Africa
+  </a>
+</span>
+
 
 I’m an applied mathematician and data analyst with experience spanning mathematical modeling, AI training, and analytics.  
 I recently earned my M.A. in Applied Mathematics & Scientific Computation from Bowling Green State University, where my thesis introduced a Newton–Finite Difference Method for elliptic and parabolic PDEs with nonlinear interface jump conditions.
