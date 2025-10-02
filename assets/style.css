@@ -342,15 +342,8 @@ a:hover{
 }
 
 /* Style main section headings */
-.content h1,
 .content h2 {
-  color: var(--accent);   /* purple headings */
-}
-
-.content h1 {
-  font-size: clamp(1.6rem, 1.2rem + 2vw, 2.2rem);
-  margin-top: 2rem;
-  margin-bottom: 1rem;
+  color: #5b21b6;   /* purple headings */
 }
 
 .content h2 {
