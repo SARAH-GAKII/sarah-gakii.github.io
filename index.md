@@ -63,7 +63,7 @@ title: Home
   <!-- RIGHT: main content -->
   <div class="content">
     {% capture main_md %}
-# <span class="accent">Sarah Gakii</span> {#about-summary}
+# <span id="accent-name">Sarah Gakii</span> {#about-summary}
 <div class="tagline-animate"> APPLIED MATHEMATICS • DATA ANALYTICS • MATHEMATICAL MODELING • AI </div>
 
 
