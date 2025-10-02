@@ -1,4 +1,4 @@
-<style>
+
 /* --- Design tokens (easy theme editing) --- */
 :root{
   --bg: #f7f9fc;          /* page background */
@@ -323,15 +323,22 @@ a:hover{
   100% { opacity: 1; transform: translateY(0) scale(1); color: var(--accent); }
 }
 
-/* Gradient style for name */
+/* Gradient style for name — safe fallback first */
 #accent-name {
-  font-size: clamp(2rem, 1rem + 3vw, 3rem); /* bigger & responsive */
-  background: linear-gradient(90deg, var(--accent), var(--brand));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  display: inline-block; 
-  color: var(--accent); 
+  font-size: clamp(2rem, 1rem + 3vw, 3rem);
+  display: inline-block;
+  color: var(--accent);               /* Fallback: solid purple */
+}
+
+/* Only apply the gradient when text-clip is supported */
+@supports (-webkit-background-clip: text) or (background-clip: text) {
+  #accent-name {
+    background: linear-gradient(90deg, var(--accent), var(--brand));
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;               /* Hide solid color only when gradient works */
+  }
 }
 
 
-</style>
