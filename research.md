@@ -133,7 +133,7 @@ We worked with a 1-D heat transfer PDE model incorporating:
 
 ---
 
-## Academic Workshops & Research Schools
+## Academic Workshops & Research Schools {#academic-workshops}
 
 ### African Mathematical Modeling Union (AMU) School – Nairobi, Kenya (2023)
 Participated in an intensive modeling program bringing together researchers and students from across Africa.  
