@@ -115,15 +115,16 @@ A 14-week professional certificate program covering applied machine learning, da
 Building expertise in supervised and unsupervised learning, model deployment, and ethical AI applications, with an emphasis on translating data into strategic business insights.  
 *Status: In Progress*  
 
-### Active Learning Certificate Program – BGSU (2025)
-<a href="https://badgr.com/public/assertions/PT6lV0f6RPeM2ibQ4swgHA" target="_blank" rel="noopener">
-  <img src="https://api.eu.badgr.io/public/assertions/PT6lV0f6RPeM2ibQ4swgHA/image" alt="Active Learning Certificate Program Badge" width="120" style="border-radius:12px; margin-right:10px;">
-</a> 
+### Active Learning Certificate Program – BGSU (July 2025) 
 Designed and presented an inclusive active-learning course module for undergraduate mathematics.  
 Explored frameworks for improving student engagement, equity, and performance through experiential learning approaches.  
 
+<a href="https://badgr.com/public/assertions/PT6lV0f6RPeM2ibQ4swgHA" target="_blank" rel="noopener">
+  <img src="https://api.eu.badgr.io/public/assertions/PT6lV0f6RPeM2ibQ4swgHA/image" alt="Active Learning Certificate Program Badge" width="120" style="border-radius:12px; margin-right:10px;">
+</a>
 
-### Excel Advanced Analytics Workshop – BGSU (2025)
+
+### Excel Advanced Analytics Workshop – BGSU (April 2025)
 Hands-on professional workshop focused on advanced data visualization, dashboard design, and analytical reporting using Excel’s Power Query, PivotTables, and custom formulas.  
 
 
