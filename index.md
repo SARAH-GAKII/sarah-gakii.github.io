@@ -90,14 +90,27 @@ My work sits at the intersection of research, analytics, and impact. I’ve taug
 
 ## Education {#education}
 - **M.A., Applied Mathematics & Scientific Computation**, Bowling Green State University (2025)  
-Honored to be featured as a recipient of the *James Robert & Gretchen Overman Graduate Scholarship* for academic excellence, highlighted alongside departmental student achievements, faculty recognition, and research contributions, by the BGSU Departrment of Mathematics and Statistics 2023-2024 News and Highlights.
-[Read feature →](https://www.bgsu.edu/arts-and-sciences/mathematics-and-statistics/department-and-alumni-news/2023-2024.html)
-
 - **M.S., Mathematical Sciences**, Stellenbosch University - African Institute for Mathematical Sciences (AIMS) Program, South Africa (2023)  
 Recognized as the recipient of the *Paul G. Allen Family Foundation Scholarship* during the graduation of the AIMS South Africa Class of 2023, for my academic performance and research project *“Modeling the Impact of Human Behaviour on COVID-19 Vaccine Uptake”* supervised by Dr. Josephine Wairimu Kagunda.
 [Read feature →](https://aims.ac.za/2023/07/03/aims-south-africa-hosts-its-20th-graduation-and-recognition-of-achievement-ceremony/)
 
 - **B.S., Mathematics (Pure & Applied)**, The Technical University of Kenya (2021)
+
+---
+
+## Awards & Recognitions
+
+### 🎓 James Robert & Gretchen Overman Graduate Scholarship – Bowling Green State University (2024)
+Awarded by the Department of Mathematics and Statistics at Bowling Green State University in recognition of academic excellence.  
+Featured in the department’s [2023–2024 News & Highlights](https://www.bgsu.edu/arts-and-sciences/mathematics-and-statistics/department-and-alumni-news/2023-2024.html), which spotlighted student achievements, faculty recognition, and research contributions.
+
+
+### 🎓 Paul G. Allen Family Foundation Scholarship – AIMS South Africa (2023)
+Granted by the African Institute for Mathematical Sciences (AIMS) South Africa for academic distinction and research excellence during the structured Master’s program in Mathematical Sciences.  
+Recognized during the 20th AIMS South Africa Graduation and Achievement Ceremony for my research project *“Modeling the Impact of Human Behaviour on COVID-19 Vaccine Uptake”*, supervised by Dr. Josephine Wairimu Kagunda.  
+[Read feature →](https://aims.ac.za/2023/07/03/aims-south-africa-hosts-its-20th-graduation-and-recognition-of-achievement-ceremony/)
+
+
     {% endcapture %}
     {{ main_md | markdownify }}
   </div>
