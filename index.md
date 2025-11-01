@@ -91,9 +91,6 @@ My work sits at the intersection of research, analytics, and impact. I’ve taug
 ## Education {#education}
 - **M.A., Applied Mathematics & Scientific Computation**, Bowling Green State University (2025)  
 - **M.S., Mathematical Sciences**, Stellenbosch University - African Institute for Mathematical Sciences (AIMS) Program, South Africa (2023)  
-Recognized as the recipient of the *Paul G. Allen Family Foundation Scholarship* during the graduation of the AIMS South Africa Class of 2023, for my academic performance and research project *“Modeling the Impact of Human Behaviour on COVID-19 Vaccine Uptake”* supervised by Dr. Josephine Wairimu Kagunda.
-[Read feature →](https://aims.ac.za/2023/07/03/aims-south-africa-hosts-its-20th-graduation-and-recognition-of-achievement-ceremony/)
-
 - **B.S., Mathematics (Pure & Applied)**, The Technical University of Kenya (2021)
 
 ---
