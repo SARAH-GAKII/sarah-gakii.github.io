@@ -97,7 +97,7 @@ My work sits at the intersection of research, analytics, and impact. I’ve taug
 
 ## Awards & Recognitions {#awards-and-recognitions}
 
-### James Robert & Gretchen Overman Graduate Scholarship – Bowling Green State University (2024)
+### James Robert & Gretchen Overman Graduate Scholarship – BGSU (2024)
 Awarded by the Department of Mathematics and Statistics at Bowling Green State University in recognition of academic excellence.  
 Featured in the department’s [2023–2024 News & Highlights](https://www.bgsu.edu/arts-and-sciences/mathematics-and-statistics/department-and-alumni-news/2023-2024.html), which spotlighted student achievements, faculty recognition, and research contributions.
 
@@ -110,7 +110,7 @@ Recognized during the [20th AIMS South Africa Graduation and Achievement Ceremon
 
 ## Professional Development & Certifications {#professional-development-and-certifications}
 
-### MIT Professional Education – Applied AI & Data Science Program (2025)
+### Applied AI & Data Science Program - MIT Professional Education (2025 - 2026)
 A 14-week professional certificate program covering applied machine learning, data engineering, and AI-driven decision-making.  
 Building expertise in supervised and unsupervised learning, model deployment, and ethical AI applications, with an emphasis on translating data into strategic business insights.  
 *Status: In Progress*  
