@@ -15,6 +15,8 @@ Contributed to residential construction projects as part of Habitat for Humanity
 
 This experience allowed me to connect my problem-solving and technical mindset to real-world community impact, while working in hands-on environments.  
 
+Construction lead: Daniel Cane
+
 ---
 
 ## Community & Campus Involvement  
