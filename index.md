@@ -89,9 +89,9 @@ My work sits at the intersection of research, analytics, and impact. I’ve taug
 ---
 
 ## Education {#education}
-🎓 **M.A., Applied Mathematics & Scientific Computation**, Bowling Green State University (2025)  
-🎓 **M.S., Mathematical Sciences**, Stellenbosch University - African Institute for Mathematical Sciences (AIMS) Program, South Africa (2023)  
-🎓 **B.S., Mathematics (Pure & Applied)**, The Technical University of Kenya (2021)
+🎓 **M.A., Applied Mathematics & Scientific Computation**, Bowling Green State University (Aug. 2025)  
+🎓 **M.S., Mathematical Sciences**, Stellenbosch University - African Institute for Mathematical Sciences (AIMS) Program, South Africa (June 2023)  
+🎓 **B.S., Mathematics (Pure & Applied)**, The Technical University of Kenya (July 2021)
 
 ---
 
