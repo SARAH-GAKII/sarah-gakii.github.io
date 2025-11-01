@@ -120,7 +120,7 @@ Designed and presented an inclusive active-learning course module for undergradu
 Explored frameworks for improving student engagement, equity, and performance through experiential learning approaches.  
 
 <a href="https://badgr.com/public/assertions/PT6lV0f6RPeM2ibQ4swgHA" target="_blank" rel="noopener">
-  <img src="https://api.eu.badgr.io/public/assertions/PT6lV0f6RPeM2ibQ4swgHA/image" alt="Active Learning Certificate Program Badge" width="120" style="border-radius:12px; margin-right:10px;">
+  <img src="https://api.badgr.io/public/assertions/PT6lV0f6RPeM2ibQ4swgHA/image" alt="Active Learning Certificate Program Badge" width="120" style="border-radius:12px; margin-right:10px;">
 </a>
 
 
