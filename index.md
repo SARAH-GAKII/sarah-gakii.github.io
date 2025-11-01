@@ -116,6 +116,9 @@ Building expertise in supervised and unsupervised learning, model deployment, an
 *Status: In Progress*  
 
 ### Active Learning Certificate Program – BGSU (2025)
+<a href="https://badgr.com/public/assertions/PT6lV0f6RPeM2ibQ4swgHA" target="_blank" rel="noopener">
+  <img src="https://api.eu.badgr.io/public/assertions/PT6lV0f6RPeM2ibQ4swgHA/image" alt="Active Learning Certificate Program Badge" width="120" style="border-radius:12px; margin-right:10px;">
+</a> 
 Designed and presented an inclusive active-learning course module for undergraduate mathematics.  
 Explored frameworks for improving student engagement, equity, and performance through experiential learning approaches.  
 
