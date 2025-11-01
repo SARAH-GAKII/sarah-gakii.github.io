@@ -5,7 +5,7 @@ title: community-engagement
 
 <div class="content content-narrow" markdown="1">
  
-## Habitat for Humanity – Women Build (Aug 2025-Present)
+## Habitat for Humanity – Women Build (Aug 2025 - Present)
 
 Contributed to residential construction projects as part of Habitat for Humanity’s Women Build initiative. My work supported affordable housing efforts while giving me hands-on exposure to building systems and teamwork in the field.  
 
