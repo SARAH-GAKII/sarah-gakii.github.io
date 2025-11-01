@@ -111,8 +111,8 @@ Recognized during the [20th AIMS South Africa Graduation and Achievement Ceremon
 ## Professional Development & Certifications {#professional-development-and-certifications}
 
 ### MIT Professional Education – Applied AI & Data Science Program (2025)
-A 14-week professional certificate program covering **applied machine learning, data engineering, and AI-driven decision-making**.  
-Building expertise in **supervised and unsupervised learning, model deployment, and ethical AI applications**, with an emphasis on translating data into strategic business insights.  
+A 14-week professional certificate program covering applied machine learning, data engineering, and AI-driven decision-making.  
+Building expertise in supervised and unsupervised learning, model deployment, and ethical AI applications, with an emphasis on translating data into strategic business insights.  
 *Status: In Progress*  
 
 ### Active Learning Certificate Program – Bowling Green State University (2025)
