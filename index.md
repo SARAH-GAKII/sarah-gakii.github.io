@@ -81,9 +81,7 @@ My work sits at the intersection of research, analytics, and impact. I’ve taug
 - Computational & Statistical Modeling  
 - Data Cleaning, Transformation & Insights  
 - Business Analytics & Reporting: Dashboards, KPIs, Forecasting  
-- Data Interpretation & Trend Analysis  
-- U.S. Individual Tax Preparation  
-- Taxable Income Determination & Compliance  
+- Data Interpretation & Trend Analysis    
 - Hypothesis Testing and Regression Analysis  
 - Research, Technical Writing & Presentation  
 - Education & Mentorship: Teaching, active learning, student support  
