@@ -14,7 +14,7 @@ title: Home
     <hr style="border:none; border-top:1px solid #e5e7eb; margin:.75rem 0 1rem;">
 
     <!-- What I do (HTML headings + paragraphs = no markdown parsing needed) -->
-    <h3>Research &amp; Thesis</h3>
+    <h3>Research &amp; Workshops</h3>
     <p>PDEs, mathematical modeling, and applied methods for real-world problems.<br>
       <a href="{{ '/research' | relative_url }}"><strong>Dive into research →</strong></a>
     </p>
@@ -98,7 +98,7 @@ Recognized as the recipient of the *Paul G. Allen Family Foundation Scholarship*
 
 ---
 
-## Awards & Recognitions
+## Awards & Recognitions {#awards-and-recognitions}
 
 ### 🎓 James Robert & Gretchen Overman Graduate Scholarship – Bowling Green State University (2024)
 Awarded by the Department of Mathematics and Statistics at Bowling Green State University in recognition of academic excellence.  
@@ -107,8 +107,8 @@ Featured in the department’s [2023–2024 News & Highlights](https://www.bgsu.
 
 ### 🎓 Paul G. Allen Family Foundation Scholarship – AIMS South Africa (2023)
 Granted by the African Institute for Mathematical Sciences (AIMS) South Africa for academic distinction and research excellence during the structured Master’s program in Mathematical Sciences.  
-Recognized during the 20th AIMS South Africa Graduation and Achievement Ceremony for my research project *“Modeling the Impact of Human Behaviour on COVID-19 Vaccine Uptake”*, supervised by Dr. Josephine Wairimu Kagunda.  
-[Read feature →](https://aims.ac.za/2023/07/03/aims-south-africa-hosts-its-20th-graduation-and-recognition-of-achievement-ceremony/)
+Recognized during the [20th AIMS South Africa Graduation and Achievement Ceremony](https://aims.ac.za/2023/07/03/aims-south-africa-hosts-its-20th-graduation-and-recognition-of-achievement-ceremony/) for my research project *“Modeling the Impact of Human Behaviour on COVID-19 Vaccine Uptake”*, supervised by Dr. Josephine Wairimu Kagunda.  
+
 
 
     {% endcapture %}
