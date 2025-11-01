@@ -106,6 +106,24 @@ Featured in the department’s [2023–2024 News & Highlights](https://www.bgsu.
 Granted by the African Institute for Mathematical Sciences (AIMS) South Africa for academic distinction and research excellence during the structured Master’s program in Mathematical Sciences.  
 Recognized during the [20th AIMS South Africa Graduation and Achievement Ceremony](https://aims.ac.za/2023/07/03/aims-south-africa-hosts-its-20th-graduation-and-recognition-of-achievement-ceremony/) for my research project *“Modeling the Impact of Human Behaviour on COVID-19 Vaccine Uptake”*, supervised by Dr. Josephine Wairimu Kagunda.  
 
+---
+
+## Professional Development & Certifications
+
+### MIT Professional Education – Applied AI & Data Science Program (2025)
+A 14-week professional certificate program covering **applied machine learning, data engineering, and AI-driven decision-making**.  
+Building expertise in **supervised and unsupervised learning, model deployment, and ethical AI applications**, with an emphasis on translating data into strategic business insights.  
+*Status: In Progress*  
+
+### Active Learning Certificate Program – Bowling Green State University (2025)
+Designed and presented an inclusive active-learning course module for undergraduate mathematics.  
+Explored frameworks for improving student engagement, equity, and performance through experiential learning approaches.  
+
+
+### Excel Advanced Analytics Workshop – Bowling Green State University (2025)
+Hands-on professional workshop focused on advanced data visualization, dashboard design, and analytical reporting using Excel’s Power Query, PivotTables, and custom formulas.  
+
+
 
 
     {% endcapture %}
