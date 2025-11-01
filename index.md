@@ -115,12 +115,12 @@ A 14-week professional certificate program covering applied machine learning, da
 Building expertise in supervised and unsupervised learning, model deployment, and ethical AI applications, with an emphasis on translating data into strategic business insights.  
 *Status: In Progress*  
 
-### Active Learning Certificate Program – Bowling Green State University (2025)
+### Active Learning Certificate Program – BGSU (2025)
 Designed and presented an inclusive active-learning course module for undergraduate mathematics.  
 Explored frameworks for improving student engagement, equity, and performance through experiential learning approaches.  
 
 
-### Excel Advanced Analytics Workshop – Bowling Green State University (2025)
+### Excel Advanced Analytics Workshop – BGSU (2025)
 Hands-on professional workshop focused on advanced data visualization, dashboard design, and analytical reporting using Excel’s Power Query, PivotTables, and custom formulas.  
 
 
