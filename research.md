@@ -10,12 +10,13 @@ title: Research
     <a href="#modeling-the-impact-of-human-behavior-to-covid-19-vaccine-uptake">Modeling the Impact of Human Behavior to COVID-19 Vaccine Uptake</a>
     <a href="#a-mathematical-model-for-crime-with-cooperative-policing">A Mathematical Model for Crime with Cooperative Policing</a>
     <a href="#green-roofs-to-mitigate-the-urban-heat-island">Green Roofs to Mitigate the Urban Heat Island</a>
+    <a href="#academic-workshops">Academic Workshops</a>
   </aside>
 
   <!-- Main content -->
   <div class="content" markdown="1">
 
-# Research and Thesis  
+# Research and Workshops  
 
 ## A Newton–Finite Difference Method for PDEs with Nonlinear Interface Jump Conditions {#nfdm} 
 
@@ -129,6 +130,36 @@ We worked with a 1-D heat transfer PDE model incorporating:
 - While the core model was provided, our team contributed by working through, solving, and validating both analytical and numerical solutions, and by interpreting results in the context of urban sustainability and policy.   
 
 **Supervisor:** Prof. N. Fowkes 
+
+---
+
+## Academic Workshops & Research Schools
+
+### African Mathematical Modeling Union (AMU) School – Nairobi, Kenya (2023)
+Participated in an intensive modeling program bringing together researchers and students from across Africa.  
+Worked collaboratively on mathematical models for crime dynamics, examining how cooperation between policing units can reduce criminal activity.  
+Presented project outcomes to peers and faculty during final symposium.  
+
+
+### Africa Scientifique Workshop – AIMS South Africa (2023)
+Designed and presented a community outreach proposal on financial literacy.  
+Engaged with peers from multiple disciplines to explore how data, policy, and outreach can intersect for sustainable development.  
+
+
+### Mathematics in Industry Study Group (MISG) – South Africa (2023)
+Collaborated with peers and industry experts during a two-weeks-long intensive program focused on applying mathematics to real-world industrial problems.  
+
+- **Green Roof Energy Dynamics:** Modeled the heat transfer and energy balance in green roofs using partial differential equations (PDEs), incorporating factors such as convection, radiation, and evapotranspiration. Delivered analytical and numerical results that demonstrated how green roofs mitigate urban heat island effects and enhance climate resilience in urban environments.  
+
+- **Tourism Attractions Capping Numbers:** Worked on a problem presented by an industry representative, addressing the challenge of determining fair and sustainable visitor caps for tourism attractions. Formulated a mathematical model to balance environmental impact, visitor experience, and economic viability, contributing insights toward effective resource management and sustainability policy design.  
+
+
+### Mfano Africa – Oxford Mathematics Virtual Mentorship Programme (2022)
+Completed a mentorship project under Dr. Robert A. McDonald (University of Oxford) on stochastic models of species competition.  
+Explored red vs. grey squirrel dynamics through stochastic ODE simulations, analyzing coexistence and extinction conditions.  
+Presented findings during the program’s final symposium.  
+
+
 
   </div>
 </div>
