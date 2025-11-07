@@ -103,7 +103,7 @@ Featured in the department’s [2023–2024 News & Highlights](https://www.bgsu.
 
 
 ### Paul G. Allen Family Foundation Scholarship – AIMS South Africa (2023)
-Granted by the African Institute for Mathematical Sciences (AIMS) South Africa for academic excellence and for my research project *“Modeling the Impact of Human Behaviour on COVID-19 Vaccine Uptake”*, supervised by Dr. Josephine Wairimu Kagunda, during the structured Master’s program in Mathematical Sciences.  
+Granted by the African Institute for Mathematical Sciences (AIMS) South Africa for academic excellence and for my research project *“Modeling the Impact of Human Behaviour on COVID-19 Vaccine Uptake”* during the structured Master’s program in Mathematical Sciences.  
 Recognized during the [20th AIMS South Africa Graduation and Achievement Ceremony](https://aims.ac.za/2023/07/03/aims-south-africa-hosts-its-20th-graduation-and-recognition-of-achievement-ceremony/).  
 
 ---
