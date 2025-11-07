@@ -132,5 +132,5 @@ Hands-on professional workshop focused on advanced data visualization, dashboard
 
     {% endcapture %}
     {{ main_md | markdownify }}
- % </div> %
+  </div> 
 </div>
