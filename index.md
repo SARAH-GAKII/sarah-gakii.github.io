@@ -89,8 +89,8 @@ My work sits at the intersection of research, analytics, and impact. I’ve taug
 ---
 
 ## Education {#education}
-🎓 **M.A., Applied Mathematics & Scientific Computation**, Bowling Green State University (Aug. 2025) 
-Courses taken: 
+🎓 **M.A., Applied Mathematics & Scientific Computation**, Bowling Green State University (Aug. 2025)  
+Courses taken: Numerical Analysis series, Real Analysis series, Probability & Statistics series, Linear Algebra with its Applications, Iterative Solutions (MATLAB), Topics in Applied Mathematics (Partial Differential Equations) series, Boundary Value Differential Equations, Curriculum Analytics Classroom Behavior, Overview College Math Teaching
 
 🎓 **M.S., Mathematical Sciences**, Stellenbosch University - African Institute for Mathematical Sciences (AIMS) Program, South Africa (June 2023)  
 Courses taken: Intro. to Pryogramming using Python, Machine Learning for Particle Physics, NetworkX, Experimental mathematics with SageMath, Statistics (Intro to Statistical analysis using R), Computing & Latex, Mathematical Problem Solving, Concepts and Problem Solving in Physics, Open Quantum Systems, Lie Groups and Lie Algebra, Graph Theory, Numerical Mathematics, Measurement Interpretation & Mathematics, Analytical Techniques in Mathematical Biology, Algebraic Biology, Analytical Techniques in Mathematical Biology, Applying Logic, Algebraic Methods
