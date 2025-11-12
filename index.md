@@ -90,8 +90,11 @@ My work sits at the intersection of research, analytics, and impact. I’ve taug
 
 ## Education {#education}
 🎓 **M.A., Applied Mathematics & Scientific Computation**, Bowling Green State University (Aug. 2025) 
-Courses taken: Intro. to Pryogramming using Python, Machine Learning for Particle Physics, NetworkX, Experimental mathematics with SageMath, Statistics (Intro to Statistical analysis using R), Computing & Latex, Mathematical Problem Solving, Concepts and Problem Solving in Physics, Open Quantum Systems, Lie Groups and Lie Algebra, Graph Theory, Numerical Mathematics, Measurement Interpretation & Mathematics, Analytical Techniques in Mathematical Biology, Algebraic Biology, Analytical Techniques in Mathematical Biology, Applying Logic, Algebraic Methods
+Courses taken: 
+
 🎓 **M.S., Mathematical Sciences**, Stellenbosch University - African Institute for Mathematical Sciences (AIMS) Program, South Africa (June 2023)  
+Courses taken: Intro. to Pryogramming using Python, Machine Learning for Particle Physics, NetworkX, Experimental mathematics with SageMath, Statistics (Intro to Statistical analysis using R), Computing & Latex, Mathematical Problem Solving, Concepts and Problem Solving in Physics, Open Quantum Systems, Lie Groups and Lie Algebra, Graph Theory, Numerical Mathematics, Measurement Interpretation & Mathematics, Analytical Techniques in Mathematical Biology, Algebraic Biology, Analytical Techniques in Mathematical Biology, Applying Logic, Algebraic Methods
+
 🎓 **B.S., Mathematics (Pure & Applied)**, The Technical University of Kenya (July 2021)
 
 ---
