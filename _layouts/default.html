@@ -8,8 +8,20 @@
   <title>{{ page.title }} | {{ site.title }}</title>
 
    <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
+<!-- Google Analytics -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1KWTK4LBST"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'G-1KWTK4LBST');
+</script>
+<!-- End Google Analytics -->
+  
 </head>
+  
 <body>
   <!-- Header / Navigation -->
   <header>
