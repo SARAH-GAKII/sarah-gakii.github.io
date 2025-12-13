@@ -75,7 +75,9 @@ My work sits at the intersection of research, analytics, and impact. I’ve taug
 ---
 
 ## Technical Skills {#skills}
-- Analytics & Visualization: Excel, SQL, Power BI, Python  
+- Analytics & Visualization: Excel, SQL, Power BI, Python
+- Exploratory Data Analysis
+- Python: NumPy, Pandas, Seaborn, Statistics, scikit-learn
 - Modeling & Computing: MATLAB, PDEs, Statistical & Computational Modeling  
 - Machine Learning & AI: Prompt engineering, dataset validation, model evaluation   
 - Computational & Statistical Modeling  
