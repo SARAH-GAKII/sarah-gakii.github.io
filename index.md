@@ -8,7 +8,7 @@ title: Home
   <aside class="sidebar">
 
     <div class="portrait" style="margin-bottom:1rem;">
-      <img src="/assets/Headshot2.jpg" alt="Sarah Randol headshot" />
+      <img src="/assets/Headshot2.PNG" alt="Sarah Randol headshot" />
     </div>
 
     <hr style="border:none; border-top:1px solid #e5e7eb; margin:.75rem 0 1rem;">
