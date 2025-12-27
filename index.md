@@ -8,7 +8,7 @@ title: Home
   <aside class="sidebar">
 
     <div class="portrait" style="margin-bottom:1rem;">
-      <img src="/assets/Headshot2.jpg" alt="Sarah Gakii headshot" />
+      <img src="/assets/Headshot2.jpg" alt="Sarah Randol headshot" />
     </div>
 
     <hr style="border:none; border-top:1px solid #e5e7eb; margin:.75rem 0 1rem;">
@@ -63,7 +63,7 @@ title: Home
   <!-- RIGHT: main content -->
   <div class="content">
     {% capture main_md %}
-# <span id="accent-name">Sarah Gakii</span> {#about-summary}
+# <span id="accent-name">Sarah G. Randol</span> {#about-summary}
 <div class="tagline-animate"> APPLIED MATHEMATICS • DATA ANALYTICS • MATHEMATICAL MODELING • AI </div>
 
 
