@@ -8,7 +8,7 @@ title: Home
   <aside class="sidebar">
 
     <div class="portrait" style="margin-bottom:1rem;">
-      <img src="/assets/headshot.jpg" alt="Sarah Gakii headshot" />
+      <img src="/assets/Headshot2.jpg" alt="Sarah Gakii headshot" />
     </div>
 
     <hr style="border:none; border-top:1px solid #e5e7eb; margin:.75rem 0 1rem;">
@@ -117,10 +117,28 @@ Recognized during the [20th AIMS South Africa Graduation and Achievement Ceremon
 
 ## Professional Development & Certifications {#professional-development-and-certifications}
 
-### Applied AI & Data Science Program - MIT Professional Education (2025 - 2026)
+### Applied AI & Data Science Program - MIT Professional Education (Nov. 2025 - April. 2026)
 A professional certificate program covering applied machine learning, data engineering, and AI-driven decision-making.  
 Building expertise in supervised and unsupervised learning, model deployment, and ethical AI applications, with an emphasis on translating data into strategic business insights.  
 *Status: In Progress*  
+
+### Introduction to Artificial Intelligence on Cloud - MIT Professional Education (Dec. 2025)
+A professional certificate offered by Great Learning, focused on building, training, and deploying AI/ML solutions in cloud environments, with hands-on exposure to AWS AI services.
+- Covered cloud fundamentals and AI service ecosystems, with emphasis on AWS.
+- Implemented an end-to-end ML workflow: data preparation, model training, prediction, and deployment.
+- Trained and deployed a machine learning model using AWS SageMaker, including pre-built algorithms and custom problem setups.
+- Worked with NLP services (Amazon Textract, Comprehend, Translate) for text extraction, sentiment analysis, and language processing.
+- Explored computer vision services (Amazon Rekognition) for image analysis, face comparison, and text detection in images.
+- Completed hands-on notebooks using XGBoost for model training and prediction, including train/test data pipelines.
+- Evaluated real-world use cases for cloud-based AI APIs and deployment strategies.
+
+<a href="https://www.mygreatlearning.com/certificate/FGBULNYE" target="_blank" rel="noopener">
+  <img src="/assets/intro-ai-cloud-certificate.png"
+       alt="Introduction to Artificial Intelligence on Cloud Certificate"
+       width="120"
+       style="border-radius:12px; margin-right:10px;">
+</a>
+
 
 ### Active Learning Certificate Program – BGSU (July 2025) 
 Designed and presented an inclusive active-learning course module for undergraduate mathematics.  
