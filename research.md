@@ -49,13 +49,13 @@ This research demonstrates how advanced numerical analysis can bridge the gap be
 **Keywords:** PDEs, Interface conditions, Finite difference, Newton iteration, Numerical analysis  
 📄 [Read the full thesis on OhioLINK](http://rave.ohiolink.edu/etdc/view?acc_num=bgsu1750284991046446)
 
-
 ---
-
 
 ## Modeling the Impact of Human Behavior to COVID-19 Vaccine Uptake  
 
 During the COVID-19 pandemic, one of the biggest challenges was not just vaccine availability, but whether people were willing to take it. Uptake was highly shaped by trust, misinformation, social influence, and perceived risk, among other factors. My research project focused on developing a *Python-based predictive model* that combined *epidemic modeling* with *evolutionary game theory* to capture how human behavior influences vaccine uptake.  
+
+<img width="400" height="200" alt="AIMS Research Project Thumbnail" src="assets/AIMS Research Project Thumbnail.png" />
 
 ### The Problem  
 Classical epidemic models often assume vaccines are uniformly adopted once available. In reality, vaccination is a strategic choice: individuals weigh perceived benefits, risks, and costs of vaccination vs non-vaccination. This mismatch can lead to models that *underpredict infection peaks* or *overestimate the success* of vaccine campaigns.  
