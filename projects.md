@@ -16,7 +16,7 @@ title: Projects
 
 # Selected Projects
 
-## FoodHub Customer & Operations Analytics (2025) 
+## FoodHub Customer & Operations Analytics (2025) {#foodhub-customer-and-operations-analytics-2025}
 
 *Applied AI & Data Science Program — MIT Professional Education (delivered via Great Learning)*
 
