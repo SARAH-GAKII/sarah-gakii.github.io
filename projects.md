@@ -58,7 +58,7 @@ Developed a full Excel-based Business Intelligence dashboard to demonstrate adva
 -	Transformed raw financial data into an interactive decision-support tool for performance monitoring and strategic insights.
 -	Developed novel numerical algorithms; applied computational modeling to nonlinear boundary problems. 
   
-<img width="400" height="200" alt="image" src="assets/excel-bi-project.png" />
+<img width="400" height="200" alt="Excel BI Analytics thumbnail" src="assets/excel-bi-project-thumbnail.png" />
 
 This project showcases my ability to take raw datasets and build a tool that supports decision-making and business insights.  
 
