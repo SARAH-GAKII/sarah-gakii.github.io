@@ -6,7 +6,7 @@ title: Projects
 <div class="page-shell">
   <aside class="sidebar">
     <h2>Quick jumps</h2>
-    <a href="#foodhub-customer-&-operations-analytics-2025">FoodHub Customer & Operations Analytics (2025)</a>
+    <a href="#foodhub-customer-and-operations-analytics-2025">FoodHub Customer & Operations Analytics (2025)</a>
     <a href="#excel-bi-dashboard-2025">Excel Business Intelligence Dashboard (2025)</a>
     <a href="#tourism-attractions-capping-numbers">Tourism Attractions Capping Numbers </a>
     <a href="#a-stochastic-version-of-a-competing-species-model">A Stochastic Version of a Competing Species Model</a>
