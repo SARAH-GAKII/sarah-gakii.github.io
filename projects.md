@@ -35,7 +35,7 @@ This project analyzed customer behavior, pricing dynamics, and operational effic
 - Implemented a rule-based revenue model in Python to estimate platform earnings and delivered data-driven recommendations on staffing, promotions, and revenue optimization.
 
 ### Key Insights  
-- High-value orders (> $20) contributed a disproportionate share of platform revenue despite representing a minority of total orders.  
+- High-value orders contributed a disproportionate share of platform revenue despite representing a minority of total orders.  
 - Delivery time variability, rather than food preparation time, emerged as the primary operational bottleneck.  
 - Customer ratings were heavily skewed toward high values, with many orders left unrated, suggesting that feedback did not fully represent all customer experiences.
 - Weekend demand consistently exceeded weekday demand, suggesting opportunities for targeted staffing and promotions.
