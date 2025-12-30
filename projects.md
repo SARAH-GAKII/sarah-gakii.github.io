@@ -23,7 +23,7 @@ title: Projects
 ### Project Overview  
 This project analyzed customer behavior, pricing dynamics, and operational efficiency within an online food delivery platform. Using a real-world transactional dataset, I examined how order value, cuisine type, delivery logistics, and customer feedback influence platform revenue and service performance.
 
-🔗 <img width="400" height="200" alt="FoodHub Analytics Thumbnail" src="assets/FoodHub Project Thumbnail.png" />
+<img width="400" height="200" alt="FoodHub Analytics Thumbnail" src="assets/FoodHub Project Thumbnail.png" />
 
 ### Data & Tools 
 - **Dataset:** A real-world food delivery orders dataset
