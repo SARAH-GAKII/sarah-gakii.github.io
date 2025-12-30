@@ -47,6 +47,7 @@ This project demonstrates how Python-based analytics can translate raw operation
 
 *Note: This project was completed as part of a supervised academic program. A curated portfolio version will be linked later, but I am happy to discuss the analysis, methodology, and insights in more detail upon request.*
 
+---
 
 ## Excel Business Intelligence Dashboard (2025) {#excel-bi-dashboard-2025} 
 
@@ -57,15 +58,13 @@ Developed a full Excel-based Business Intelligence dashboard to demonstrate adva
 -	Transformed raw financial data into an interactive decision-support tool for performance monitoring and strategic insights.
 -	Developed novel numerical algorithms; applied computational modeling to nonlinear boundary problems. 
   
-<img width="400" height="200" alt="image" src="https://github.com/user-attachments/assets/e31d165d-1c4b-4584-9464-499ee260c408" />
+<img width="400" height="200" alt="image" src="assets/excel-bi-project.png" />
 
 This project showcases my ability to take raw datasets and build a tool that supports decision-making and business insights.  
 
 🔗 [View the project on GitHub](https://github.com/SARAH-GAKII/Excel-Business-Intelligence-Dashboard-From-Raw-Data-to-Insight)  
 
-
 ---
-
 
 ## Tourism Attractions Capping Numbers  
 
