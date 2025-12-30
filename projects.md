@@ -45,7 +45,7 @@ This project demonstrates how Python-based analytics can translate raw operation
 
 *Note: This project was completed as part of a supervised academic program. A curated portfolio version will be linked later, but I am happy to discuss the analysis, methodology, and insights in more detail upon request.*
 
-<img width="400" height="200" alt="image" src="https://github.com/user-attachments/assets/foodHub-project-thumbnail.png" />
+<img width="400" height="200" alt="image" src="https://github.com/user-attachments/assets/foodhub-project-thumbnail.png" />
 
 ## Excel Business Intelligence Dashboard (2025) {#excel-bi-dashboard-2025} 
 
