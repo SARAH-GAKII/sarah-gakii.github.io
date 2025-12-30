@@ -6,14 +6,46 @@ title: Projects
 <div class="page-shell">
   <aside class="sidebar">
     <h2>Quick jumps</h2>
+    <a href="#foodhub-customer-&-operations-analytics-2025">FoodHub Customer & Operations Analytics (2025)</a>
     <a href="#excel-bi-dashboard-2025">Excel Business Intelligence Dashboard (2025)</a>
-    <a href="#tourism-attractions-capping-numbers">Tourism Attractions Capping Numbers</a>
+    <a href="#tourism-attractions-capping-numbers">Tourism Attractions Capping Numbers </a>
     <a href="#a-stochastic-version-of-a-competing-species-model">A Stochastic Version of a Competing Species Model</a>
   </aside>
 
   <div class="content" markdown="1">
 
 # Selected Projects
+
+## FoodHub Customer & Operations Analytics (2025) 
+
+*Applied AI & Data Science Program — MIT Professional Education (delivered via Great Learning)*
+
+### Project Overview  
+This project analyzed customer behavior, pricing dynamics, and operational efficiency within an online food delivery platform. Using a real-world transactional dataset, I examined how order value, cuisine type, delivery logistics, and customer feedback influence platform revenue and service performance.
+
+### Data & Tools 
+- **Dataset:** A real-world food delivery orders dataset
+- **Programming:** Python  
+- **Libraries:** Pandas, NumPy, Matplotlib, Seaborn  
+
+### Methodology  
+- Analyzed a real-world food delivery dataset using Python libraries to study customer behavior, pricing patterns, ratings bias, and operational performance.
+- Performed data cleaning, missing-value handling, exploratory, and multivariate data analysis to study pricing distributions, demand concentration, delivery and preparation times, and cuisine-level trends.
+- Applied correlation analysis and segmentation techniques to investigate relationships between operational metrics and customer behavior.
+- Implemented a rule-based revenue model in Python to estimate platform earnings and delivered data-driven recommendations on staffing, promotions, and revenue optimization.
+
+### Key Insights  
+- High-value orders (> $20) contributed a disproportionate share of platform revenue despite representing a minority of total orders.  
+- Delivery time variability, rather than food preparation time, emerged as the primary operational bottleneck.  
+- Customer ratings were heavily skewed toward high values, with many orders left unrated, suggesting that feedback did not fully represent all customer experiences.
+- Weekend demand consistently exceeded weekday demand, suggesting opportunities for targeted staffing and promotions.
+
+### Outcome  
+This project demonstrates how Python-based analytics can translate raw operational data into actionable insights for revenue optimization, logistics planning, and customer engagement.
+
+*Note: This project was completed as part of a supervised academic program. A curated portfolio version will be linked later, but I am happy to discuss the analysis, methodology, and insights in more detail upon request.*
+
+<img width="400" height="200" alt="image" src="https://github.com/user-attachments/assets/e31d165d-1c4b-4584-9464-499ee260c408" />
 
 ## Excel Business Intelligence Dashboard (2025) {#excel-bi-dashboard-2025} 
 
