@@ -23,7 +23,7 @@ title: Projects
 ### Project Overview  
 This project analyzed customer behavior, pricing dynamics, and operational efficiency within an online food delivery platform. Using a real-world transactional dataset, I examined how order value, cuisine type, delivery logistics, and customer feedback influence platform revenue and service performance.
 
-<img width="400" height="200" alt="FoodHub Analytics Thumbnail" src="assets/FoodHub Project Thumbnail.png" />
+🔗 <img width="400" height="200" alt="FoodHub Analytics Thumbnail" src="assets/FoodHub Project Thumbnail.png" />
 
 ### Data & Tools 
 - **Dataset:** A real-world food delivery orders dataset
@@ -51,7 +51,9 @@ This project demonstrates how Python-based analytics can translate raw operation
 
 ## Excel Business Intelligence Dashboard (2025) {#excel-bi-dashboard-2025} 
 
-Developed a full Excel-based Business Intelligence dashboard to demonstrate advanced data analysis and visualization skills. The project transformed raw financial data into actionable insights through:  
+Developed a full Excel-based Business Intelligence dashboard to demonstrate advanced data analysis and visualization skills. The project transformed raw financial data into actionable insights.  
+
+🔗 [View the project on GitHub](https://github.com/SARAH-GAKII/Excel-Business-Intelligence-Dashboard-From-Raw-Data-to-Insight./tree/main) 
 
 -	Developed an end-to-end Excel-based BI dashboard using PivotTables, PivotCharts, slicers, and calculated fields to analyze multi-dimensional financial data.
 -	Built dynamic KPI panels and trend analyses for revenue, profit, and margins across products, regions, and months.
@@ -60,9 +62,7 @@ Developed a full Excel-based Business Intelligence dashboard to demonstrate adva
   
 <img width="400" height="200" alt="Excel BI Analytics thumbnail" src="assets/excel-bi-project-thumbnail.png" />
 
-This project showcases my ability to take raw datasets and build a tool that supports decision-making and business insights.  
-
-🔗 [View the project on GitHub](https://github.com/SARAH-GAKII/Excel-Business-Intelligence-Dashboard-From-Raw-Data-to-Insight./tree/main)  
+This project showcases my ability to take raw datasets and build a tool that supports decision-making and business insights.   
 
 ---
 
