@@ -92,7 +92,6 @@ I value teaching not just as the transfer of knowledge, but as an opportunity to
 - Operated and monitored automated blow-molding machines for Tier-1 automotive clients.  
 - Partnered with quality teams to reduce scrap rates and ensure compliance with strict automotive standards.  
 - Coordinated with logistics staff to maintain smooth production flow.  
-
     
   </div>
 </div>
