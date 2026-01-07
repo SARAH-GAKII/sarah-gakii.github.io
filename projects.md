@@ -7,7 +7,8 @@ title: Projects
   <aside class="sidebar">
     <h2>Quick jumps</h2>
     <a href="#foodhub-customer-and-business-analytics">FoodHub Customer & Operations Analytics </a>
-    <a href="#excel-bi-dashboard-2025">Excel Business Intelligence Dashboard (2025)</a>
+    <a href="#power-bi-interactive-dashboard">Power BI Interactive Dashboard (Guided Build)</a>
+    <a href="#excel-bi-dashboard">Excel Business Intelligence Dashboard </a>
     <a href="#tourism-attractions-capping-numbers">Tourism Attractions Capping Numbers </a>
     <a href="#a-stochastic-version-of-a-competing-species-model">A Stochastic Version of a Competing Species Model</a>
   </aside>
@@ -49,7 +50,7 @@ This project demonstrates how Python-based analytics can translate raw operation
 
 ---
 
-## Power BI Interactive Dashboard (Guided Build)
+## Power BI Interactive Dashboard (Guided Build) {#power-bi-interactive-dashboard}
 
 Built an interactive Power BI report to practice industry-standard BI workflows using a real-world dataset collected through a survey. The project was developed as a guided implementation following Alex The Analyst’s Power BI tutorial series.
 
@@ -67,7 +68,7 @@ This project highlights my ability to work with real-world data and translate it
 
 ---
 
-## Excel Business Intelligence Dashboard (2025) {#excel-bi-dashboard-2025} 
+## Excel Business Intelligence Dashboard {#excel-bi-dashboard} 
 
 Developed a full Excel-based Business Intelligence dashboard to demonstrate advanced data analysis and visualization skills. The project transformed raw financial data into actionable insights.  
 
