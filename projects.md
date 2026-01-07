@@ -60,7 +60,7 @@ Built an interactive Power BI report to practice industry-standard BI workflows 
 - Developed DAX measures to power KPIs and dynamic aggregations across report views.
 - Built an interactive dashboard with slicers, cross-filtering, and drilldowns to support exploratory analysis.
 
-![Power BI dashboard thumbnail](/assets/images/powerbi-dashboard-thumbnail.png)
+<img width="400" height="200" alt="Power BI dashboard thumbnail" src="assets/powerbi-dashboard-thumbnail.png" />
 
 This project highlights my ability to work with real-world data and translate it into interactive, model-driven business intelligence insights.
 
