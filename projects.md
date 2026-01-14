@@ -32,6 +32,12 @@ This project was motivated by my volunteer experience with Habitat for Humanity,
 - Where does Sandusky County sit relative to neighboring counties and statewide benchmarks?
 - Do rising rents translate into higher rent burden, or is income growth offsetting costs?
 
+### Tools & Skills Demonstrated
+- Power BI data modeling and DAX measures  
+- Time-series and benchmark analysis  
+- Geographic visualization (county-level mapping)  
+- Translating real-world housing data into policy-relevant insights  
+
 ### Key Components
 - Statewide overview of rent, income, home values, and rent-to-income ratios  
 - County-level comparison highlighting dispersion and regional variation  
@@ -55,12 +61,6 @@ This project was motivated by my volunteer experience with Habitat for Humanity,
 - Ohio’s average rent-to-income ratio remains moderate (~15–16%), masking substantial county-level variation  
 - Sandusky County consistently ranks near the middle of Ohio counties, below high-burden benchmarks  
 - Rising rents have largely been offset by income growth at the statewide level, though localized pressures persist 
-
-### Tools & Skills Demonstrated
-- Power BI data modeling and DAX measures  
-- Time-series and benchmark analysis  
-- Geographic visualization (county-level mapping)  
-- Translating real-world housing data into policy-relevant insights  
 
 ---
 
