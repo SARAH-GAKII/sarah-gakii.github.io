@@ -38,10 +38,18 @@ This project was motivated by my volunteer experience with Habitat for Humanity,
 - Sandusky County deep dive with benchmark comparisons (Ohio average, 75th percentile)  
 - Temporal trends (2019–2023) showing stability and shifts in affordability pressure
 
-<video controls playsinline preload="metadata" style="width:100%; border-radius:12px;">
-  <source src="{{ '/assets/ohio-housing-powerbi-demo.mp4' | relative_url }}" type="video/mp4">
-  Your browser does not support the video tag.
+<video
+  autoplay
+  muted
+  loop
+  playsinline
+  preload="metadata"
+  controls
+  style="width:100%; border-radius:12px;"
+>
+  <source src="/assets/ohio-housing-powerbi-demo.mp4" type="video/mp4">
 </video>
+
 
 
 ### Analytical Highlights
