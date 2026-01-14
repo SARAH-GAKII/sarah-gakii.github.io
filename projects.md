@@ -20,7 +20,7 @@ title: Projects
 
 ---
 
-## Ohio Housing Affordability Analysis (Power BI) {#ohio-housing-affordability-powerbi}
+## Ohio Housing Affordability Analysis (Power BI) {#ohio-housing-affordability-analysis-powerbi}
 
 An interactive Power BI dashboard analyzing housing affordability across Ohio counties (2019–2023) using U.S. Census American Community Survey (ACS) data.  
 This project was motivated by my volunteer experience with Habitat for Humanity, and demonstrates how county-level data reveals affordability patterns hidden by statewide averages.
