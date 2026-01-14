@@ -44,8 +44,7 @@ This project was motivated by my volunteer experience with Habitat for Humanity,
   loop
   playsinline
   preload="metadata"
-  controls
-  style="width:100%; border-radius:12px;"
+  style="width:70%; border-radius:12px;"
 >
   <source src="/assets/ohio-housing-powerbi-demo.mp4" type="video/mp4">
 </video>
