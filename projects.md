@@ -17,6 +17,47 @@ title: Projects
 
 # Selected Projects
 
+---
+
+## Ohio Housing Affordability Analysis (Power BI) {#ohio-housing-affordability-powerbi}
+
+An interactive Power BI dashboard analyzing **housing affordability across Ohio counties (2019–2023)** using U.S. Census American Community Survey (ACS) data.  
+This project was motivated by my **volunteer experience with Habitat for Humanity**, and demonstrates how county-level data reveals affordability patterns hidden by statewide averages.
+
+🔗 [View the project on GitHub](https://github.com/SARAH-GAKII/Ohio-Housing-Affordability-2019-2023-PowerBI-Project) 
+
+### Focus & Questions
+- How have rent, income, and affordability evolved across Ohio counties over time?
+- Where does Sandusky County sit relative to neighboring counties and statewide benchmarks?
+- Do rising rents translate into higher rent burden, or is income growth offsetting costs?
+
+### Key Components
+- Statewide overview of rent, income, home values, and rent-to-income ratios  
+- County-level comparison highlighting dispersion and regional variation  
+- Sandusky County deep dive with benchmark comparisons (Ohio average, 75th percentile)  
+- Temporal trends (2019–2023) showing stability and shifts in affordability pressure
+
+<img width="400" height="200" alt="Ohio Housing Affordability Power BI Dashboard preview" src="assets/Ohio Housing Affordability Power BI Thumbnail.png" />
+
+<video controls muted loop style="width:100%; border-radius:12px; margin-top:1rem;">
+  <source src="/assets/ohio-housing-powerbi-demo.mp4" type="video/mp4">
+</video>
+
+
+
+### Analytical Highlights
+- Ohio’s average rent-to-income ratio remains moderate (~15–16%), masking substantial county-level variation  
+- Sandusky County consistently ranks near the middle of Ohio counties, below high-burden benchmarks  
+- Rising rents have largely been offset by income growth at the statewide level, though localized pressures persist 
+
+### Tools & Skills Demonstrated
+- Power BI data modeling and DAX measures  
+- Time-series and benchmark analysis  
+- Geographic visualization (county-level mapping)  
+- Translating real-world housing data into policy-relevant insights  
+
+---
+
 ## FoodHub Customer & Business Analytics {#foodhub-customer-and-business-analytics}
 
 *Applied AI & Data Science Program — MIT Professional Education (delivered via Great Learning)*
