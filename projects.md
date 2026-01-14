@@ -6,6 +6,7 @@ title: Projects
 <div class="page-shell">
   <aside class="sidebar">
     <h2>Quick jumps</h2>
+    <a href="#ohio-housing-affordability-analysis-powerbi">Ohio Housing Affordability Analysis (Power BI) </a>
     <a href="#foodhub-customer-and-business-analytics">FoodHub Customer & Operations Analytics </a>
     <a href="#power-bi-interactive-dashboard">Power BI Interactive Dashboard (Guided Build)</a>
     <a href="#excel-bi-dashboard">Excel Business Intelligence Dashboard </a>
@@ -21,8 +22,8 @@ title: Projects
 
 ## Ohio Housing Affordability Analysis (Power BI) {#ohio-housing-affordability-powerbi}
 
-An interactive Power BI dashboard analyzing **housing affordability across Ohio counties (2019–2023)** using U.S. Census American Community Survey (ACS) data.  
-This project was motivated by my **volunteer experience with Habitat for Humanity**, and demonstrates how county-level data reveals affordability patterns hidden by statewide averages.
+An interactive Power BI dashboard analyzing housing affordability across Ohio counties (2019–2023) using U.S. Census American Community Survey (ACS) data.  
+This project was motivated by my volunteer experience with Habitat for Humanity, and demonstrates how county-level data reveals affordability patterns hidden by statewide averages.
 
 🔗 [View the project on GitHub](https://github.com/SARAH-GAKII/Ohio-Housing-Affordability-2019-2023-PowerBI-Project) 
 
@@ -37,13 +38,9 @@ This project was motivated by my **volunteer experience with Habitat for Humanit
 - Sandusky County deep dive with benchmark comparisons (Ohio average, 75th percentile)  
 - Temporal trends (2019–2023) showing stability and shifts in affordability pressure
 
-<img width="400" height="200" alt="Ohio Housing Affordability Power BI Dashboard preview" src="assets/Ohio Housing Affordability Power BI Thumbnail.png" />
-
 <video controls muted loop style="width:100%; border-radius:12px; margin-top:1rem;">
   <source src="/assets/ohio-housing-powerbi-demo.mp4" type="video/mp4">
 </video>
-
-
 
 ### Analytical Highlights
 - Ohio’s average rent-to-income ratio remains moderate (~15–16%), masking substantial county-level variation  
