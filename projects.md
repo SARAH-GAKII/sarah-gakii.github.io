@@ -6,6 +6,7 @@ title: Projects
 <div class="page-shell">
   <aside class="sidebar">
     <h2>Quick jumps</h2>
+    <a href="#ohio_energy_composition_unsupervised_analysis">Ohio Energy Composition Analysis (Unsupervised Learning) {#ohio-energy-unsupervised} </a>
     <a href="#ohio-housing-affordability-analysis-powerbi">Ohio Housing Affordability Analysis (Power BI) </a>
     <a href="#foodhub-customer-and-business-analytics">FoodHub Customer & Operations Analytics </a>
     <a href="#power-bi-interactive-dashboard">Power BI Interactive Dashboard (Guided Build)</a>
@@ -20,7 +21,7 @@ title: Projects
 
 ---
 
-## Ohio Energy Composition Analysis (Unsupervised Learning) {#ohio-energy-unsupervised}
+## Ohio Energy Composition Analysis (Unsupervised Learning) {#ohio_energy_composition_unsupervised_analysis}
 
 This project applies unsupervised learning to explore county-level electricity generation patterns across Ohio using publicly available U.S. Energy Information Administration (EIA) data.  
 Rather than predicting outcomes, the focus is on discovering structure, identifying energy-generation archetypes, and assessing whether meaningful groupings emerge across counties.
