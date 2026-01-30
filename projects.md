@@ -28,6 +28,7 @@ Rather than predicting outcomes, the focus is on discovering structure, identify
 
 🔗 [Repository & full analysis on GitHub](https://github.com/SARAH-GAKII/ohio-energy-composition-unsupervised-learning) 
 
+
 #### Project Focus  
 Ohio’s energy landscape is highly heterogeneous, with generation dominated by different fuel sources. Statewide summaries can mask these differences. This analysis investigates whether counties naturally cluster based on energy composition.
 
@@ -111,8 +112,7 @@ This project was motivated by my volunteer experience with Habitat for Humanity,
 
 ### Project Overview  
 This project analyzed customer behavior, pricing dynamics, and operational efficiency within an online food delivery platform. Using a real-world transactional dataset, I examined how order value, cuisine type, delivery logistics, and customer feedback influence platform revenue and service performance.
-
-<img width="400" height="200" alt="FoodHub Analytics Thumbnail" src="assets/FoodHub Project Thumbnail.png" />
+🔗 [View on Olympus eportfolio](https://olympus.mygreatlearning.com/eportfolio) 
 
 ### Data & Tools 
 - **Dataset:** A real-world food delivery orders dataset
@@ -124,6 +124,8 @@ This project analyzed customer behavior, pricing dynamics, and operational effic
 - Performed data cleaning, missing-value handling, exploratory, and multivariate data analysis to study pricing distributions, demand concentration, delivery and preparation times, and cuisine-level trends.
 - Applied correlation analysis and segmentation techniques to investigate relationships between operational metrics and customer behavior.
 - Implemented a rule-based revenue model in Python to estimate platform earnings and delivered data-driven recommendations on staffing, promotions, and revenue optimization.
+
+<img width="400" height="200" alt="FoodHub Analytics Thumbnail" src="assets/FoodHub Project Thumbnail.png" />
 
 ### Key Insights  
 - High-value orders contributed a disproportionate share of platform revenue despite representing a minority of total orders.  
