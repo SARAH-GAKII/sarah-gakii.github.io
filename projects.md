@@ -90,10 +90,6 @@ Models were evaluated using:
 🔗 [Notebook & repository on GitHub](https://github.com/SARAH-GAKII/amazon-product-recommendation-system/blob/main/Amazon_Product_Recommendation_System.ipynb) 
 
 #### Key Findings
-- User–User Collaborative Filtering: RMSE ≈ 0.98  
-- Item–Item Collaborative Filtering: RMSE ≈ 0.98  
-- Matrix Factorization (SVD): RMSE ≈ 0.90 (best overall performance)
-
 The SVD model achieved the lowest prediction error while maintaining strong recommendation quality, indicating that latent factor models capture user–item preferences more effectively than neighborhood-based methods.
 
 #### Tools and technologies
