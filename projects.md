@@ -6,6 +6,7 @@ title: Projects
 <div class="page-shell">
   <aside class="sidebar">
     <h2>Quick jumps</h2>
+    <a href="#facial-emotion-recognition">Facial Emotion Recognition  </a>
     <a href="#amazon-product-recommendation-system">Amazon Product Recommendation System </a>
     <a href="#ohio_energy_composition_unsupervised_analysis">Ohio Energy Composition Analysis (Unsupervised Learning) </a>
     <a href="#ohio-housing-affordability-analysis-powerbi">Ohio Housing Affordability Analysis (Power BI) </a>
@@ -19,19 +20,55 @@ title: Projects
   <div class="content" markdown="1">
 
 # Selected Projects
+---
+
+## Facial Emotion Recognition (Work in Progress) {#facial-emotion-recognition}
+
+Developing a deep learning computer vision model to automatically recognize human facial emotions from images.
+
+#### Overview
+Human communication relies heavily on non-verbal signals such as facial expressions. Facial Emotion Recognition (FER) is an important area that aims to enable machines to interpret human emotional states through visual cues. This project explores how deep learning models can learn visual patterns associated with different emotions and classify facial expressions automatically.
+
+#### Dataset
+The dataset consists of facial images across four emotion categories:
+- happy  
+- sad  
+- surprise  
+- neutral  
+
+Images are preprocessed and used to train deep learning models for multi-class emotion classification.
+
+#### Approach
+
+The project investigates deep learning architectures for emotion recognition, including:
+- Image preprocessing and augmentation
+- Convolutional Neural Networks (CNNs) for feature extraction
+- Transfer learning architectures
+- Model evaluation using accuracy, precision, recall, and F1-score
+
+#### Current Progress
+- Data preprocessing and dataset exploration  
+- Baseline CNN model implementation  
+- Transfer learning experiments with VGG16, ResNet, and EfficientNet models  
+- Training optimization and overfitting mitigation
+
+#### Tools
+Python, TensorFlow/Keras, OpenCV, NumPy, Matplotlib, Seaborn, Deep Learning, Computer Vision
+
+**Status**
+
+Project currently under development. Final model results and evaluation will be added once experiments are complete.
 
 ---
-## Amazon Product Recommendation System
+## Amazon Product Recommendation System {#amazon-product-recommendation-system}
 
 Built a recommendation system using Amazon product review data to predict user preferences and generate personalized product recommendations.
 
 #### Overview
-
 Recommendation systems help e-commerce platforms reduce information overload by suggesting products that users are most likely to purchase.  
 This project explores collaborative filtering techniques to model user–item interactions and produce personalized recommendations. 
 
 #### Dataset
-
 The dataset contains Amazon electronics product reviews with the following attributes:
 
 - `user_id` – unique user identifier  
@@ -40,7 +77,6 @@ The dataset contains Amazon electronics product reviews with the following attri
 
 
 #### Approach
-
 Multiple recommendation strategies were implemented and evaluated:
 - Popularity-based recommendation (baseline)
 - User–User Collaborative Filtering (KNN)
@@ -56,7 +92,6 @@ Models were evaluated using:
 🔗 [Notebook & repository on GitHub](https://github.com/SARAH-GAKII/amazon-product-recommendation-system/blob/main/Amazon_Product_Recommendation_System.ipynb) 
 
 #### Key Findings
-
 - User–User Collaborative Filtering: RMSE ≈ 0.98  
 - Item–Item Collaborative Filtering: RMSE ≈ 0.98  
 - Matrix Factorization (SVD): RMSE ≈ 0.90 (best overall performance)
@@ -183,7 +218,7 @@ This project analyzed customer behavior, pricing dynamics, and operational effic
 ### Outcome  
 This project demonstrates how Python-based analytics can translate raw operational data into actionable insights for revenue optimization, logistics planning, and customer engagement.
 
-*Note: This project was completed as part of a supervised academic program. A curated portfolio version will be linked later, but I am happy to discuss the analysis, methodology, and insights in more detail upon request.*
+*This project was completed as part of a supervised academic program.*
 
 ---
 
