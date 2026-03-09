@@ -31,11 +31,7 @@ Developing a deep learning computer vision model to automatically recognize huma
 Human communication relies heavily on non-verbal signals such as facial expressions. Facial Emotion Recognition (FER) is an important area that aims to enable machines to interpret human emotional states through visual cues. This project explores how deep learning models can learn visual patterns associated with different emotions and classify facial expressions automatically.
 
 #### Dataset
-The dataset consists of facial images across four emotion categories:
-- happy  
-- sad  
-- surprise  
-- neutral  
+The dataset consists of facial images across four emotion categories: happy, sad, surprise, and neutral. 
 
 Images are preprocessed and used to train deep learning models for multi-class emotion classification.
 
