@@ -107,9 +107,7 @@ Granted by the African Institute for Mathematical Sciences (AIMS) South Africa f
 Recognized during the [20th AIMS South Africa Graduation and Achievement Ceremony](https://aims.ac.za/2023/07/03/aims-south-africa-hosts-its-20th-graduation-and-recognition-of-achievement-ceremony/).  
 
 ---
-{% endcapture %}
-
-{{ main_md | markdownify }}
-
-  </div>
+    {% endcapture %}
+    {{ main_md | markdownify }}
+  </div> 
 </div>
