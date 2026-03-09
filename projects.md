@@ -55,9 +55,7 @@ The project investigates deep learning architectures for emotion recognition, in
 #### Tools
 Python, TensorFlow/Keras, OpenCV, NumPy, Matplotlib, Seaborn, Deep Learning, Computer Vision
 
-**Status**
-
-Project currently under development. Final model results and evaluation will be added once experiments are complete.
+*Project currently under development. Final model results and evaluation will be added once experiments are complete.*
 
 ---
 ## Amazon Product Recommendation System {#amazon-product-recommendation-system}
