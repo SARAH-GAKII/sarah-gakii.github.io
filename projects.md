@@ -21,13 +21,54 @@ title: Projects
 # Selected Projects
 
 ---
-## Amazon Product Recommendation System {#amazon-product-recommendation-system}
-This project develops and evaluates a recommendation system using Amazon product review data. Multiple recommendation strategies are explored, including popularity-based methods and collaborative filtering. A matrix factorization approach using Singular Value Decomposition (SVD) is implemented to learn latent user–item relationships and generate personalized recommendations. Model performance is evaluated using both prediction and ranking metrics such as RMSE, Precision@k, Recall@k, and F1-score@k.
+### Amazon Product Recommendation System
+
+Built a recommendation system using Amazon product review data to predict user preferences and generate personalized product recommendations.
+
+#### Overview
+
+Recommendation systems help e-commerce platforms reduce information overload by suggesting products that users are most likely to purchase.  
+This project explores collaborative filtering techniques to model user–item interactions and produce personalized recommendations. :contentReference[oaicite:0]{index=0}
+
+#### Dataset
+
+The dataset contains Amazon electronics product reviews with the following attributes:
+
+- `user_id` – unique user identifier  
+- `prod_id` – unique product identifier  
+- `rating` – user rating of the product  
+
+
+#### Approach
+
+Multiple recommendation strategies were implemented and evaluated:
+- Popularity-based recommendation (baseline)
+- User–User Collaborative Filtering (KNN)
+- Item–Item Collaborative Filtering (KNN)
+- Matrix Factorization (SVD)
+
+Models were evaluated using:
+- RMSE  
+- Precision@10  
+- Recall@10  
+- F1-score@10
 
 🔗 [Notebook & repository on GitHub](https://github.com/SARAH-GAKII/amazon-product-recommendation-system/blob/main/Amazon_Product_Recommendation_System.ipynb) 
 
+#### Key Findings
+
+The **matrix factorization (SVD)** model achieved the best predictive accuracy:
+| Model | RMSE | Precision | Recall | F1 Score |
+|-------|------|----------|--------|----------|
+| User–User (Tuned) | 0.9791 | 0.842 | 0.808 | 0.825 |
+| Item–Item (Tuned) | 0.9804 | 0.833 | 0.800 | 0.816 |
+| SVD | 0.9114 | 0.854 | 0.802 | 0.827 |
+| SVD (Optimized) | 0.9043 | 0.853 | 0.802 | 0.827 |
+
+SVD captured latent user–item preference patterns and produced the most reliable recommendation performance. :contentReference[oaicite:2]{index=2}
+
 #### Tools and technologies
-Python, pandas, NumPy, scikit-learn, Surprise, Collaborative Filtering, Matrix Factorization (SVD), Precision@k, Recall@k, F1-score@k, RMSE, Matplotlib, Seaborn 
+Python, pandas, NumPy, scikit-learn, Surprise, Collaborative Filtering, Matrix Factorization (SVD), Matplotlib, Seaborn 
 
 
 ---
