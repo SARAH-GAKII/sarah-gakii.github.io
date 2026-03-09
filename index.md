@@ -64,9 +64,9 @@ title: Home
   <div class="content">
     {% capture main_md %}
 # <span id="accent-name">Sarah G. Randol</span> {#about-summary}
-<div class="tagline-animate"> • DATA SCIENCE APPLIED MACHINE LEARNING • STATISTICAL MODELING • APPLIED MATHEMATICS • AI </div>
+<div class="tagline-animate"> • APPLIED DATA SCIENCE • STATISTICAL MODELING • APPLIED MACHINE LEARNING • AI • APPLIED MATHEMATICS </div>
 
-I am an Applied Data Scientist with a strong foundation in applied mathematics, focused on building data driven models that support real world decision making.
+I am a Data Scientist with a strong foundation in applied mathematics, focused on building data driven models that support real world decision making.
 
 My work combines statistical modeling, machine learning, AI, and applied analytics. I approach problems by first understanding how data is generated, what assumptions are involved, and what questions the analysis is meant to answer, before selecting or training models. This perspective is shaped by rigorous mathematical training and hands on experience working end to end with real datasets.
 
