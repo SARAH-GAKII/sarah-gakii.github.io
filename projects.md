@@ -6,6 +6,7 @@ title: Projects
 <div class="page-shell">
   <aside class="sidebar">
     <h2>Quick jumps</h2>
+    <a href="#amazon-product-recommendation-system">Amazon Product Recommendation System {#amazon-product-recommendation-system} </a>
     <a href="#ohio_energy_composition_unsupervised_analysis">Ohio Energy Composition Analysis (Unsupervised Learning) {#ohio-energy-unsupervised} </a>
     <a href="#ohio-housing-affordability-analysis-powerbi">Ohio Housing Affordability Analysis (Power BI) </a>
     <a href="#foodhub-customer-and-business-analytics">FoodHub Customer & Operations Analytics </a>
@@ -20,13 +21,23 @@ title: Projects
 # Selected Projects
 
 ---
+## Amazon Product Recommendation System {#amazon-product-recommendation-system}
+This project develops and evaluates a recommendation system using Amazon product review data. Multiple recommendation strategies are explored, including popularity-based methods and collaborative filtering. A matrix factorization approach using Singular Value Decomposition (SVD) is implemented to learn latent user–item relationships and generate personalized recommendations. Model performance is evaluated using both prediction and ranking metrics such as RMSE, Precision@k, Recall@k, and F1-score@k.
+
+🔗 [Notebook & repository on GitHub](https://github.com/SARAH-GAKII/amazon-product-recommendation-system/blob/main/Amazon_Product_Recommendation_System.ipynb) 
+
+#### Tools and technologies
+Python, pandas, NumPy, scikit-learn, Surprise, Collaborative Filtering, Matrix Factorization (SVD), Precision@k, Recall@k, F1-score@k, RMSE, Matplotlib, Seaborn 
+
+
+---
 
 ## Ohio Energy Composition Analysis (Unsupervised Learning) {#ohio_energy_composition_unsupervised_analysis}
 
 This project applies unsupervised learning to explore county-level electricity generation patterns across Ohio using publicly available U.S. Energy Information Administration (EIA) data.  
 Rather than predicting outcomes, the focus is on discovering structure, identifying energy-generation archetypes, and assessing whether meaningful groupings emerge across counties.
 
-🔗 [Repository & full analysis on GitHub](https://github.com/SARAH-GAKII/ohio-energy-composition-unsupervised-learning) 
+🔗 [Repository & full analysis on GitHub](https://github.com/SARAH-GAKII/ohio-energy-composition-unsupervised-learning/blob/main/ohio_energy_composition_unsupervised_analysis.ipynb) 
 
 
 #### Project Focus  
