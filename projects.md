@@ -119,8 +119,6 @@ This project was motivated by my volunteer experience with Habitat for Humanity,
 
 ## FoodHub Customer & Business Analytics {#foodhub-customer-and-business-analytics}
 
-*Applied AI & Data Science Program — MIT Professional Education (delivered via Great Learning)*
-
 ### Project Overview  
 This project analyzed customer behavior, pricing dynamics, and operational efficiency within an online food delivery platform. Using a real-world transactional dataset, I examined how order value, cuisine type, delivery logistics, and customer feedback influence platform revenue and service performance.
 
