@@ -84,6 +84,7 @@ My work combines statistical modeling, machine learning, AI, and applied analyti
 ## Education {#education}
  **Applied AI & Data Science**, MIT Professional Education (In progress)  
 - Courses taken: Foundations of AI, Data Analysis and Visualization, Graph Theory, Machine Learning,  Introduction to AI on Cloud, Practical Data Science Workflows, Deep Learning, Recommendation Systems, Generative AI & Applied AI Systems
+
 🎓 **M.A., Applied Mathematics & Scientific Computation**, Bowling Green State University (Aug. 2025)  
 - Courses taken: Numerical Analysis series, Real Analysis series, Probability & Statistics series, Linear Algebra with its Applications, Iterative Solutions (MATLAB), Topics in Applied Mathematics (Partial Differential Equations) series, Boundary Value Differential Equations, Curriculum Analytics Classroom Behavior, Overview College Math Teaching
 
