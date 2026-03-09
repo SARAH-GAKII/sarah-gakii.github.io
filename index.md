@@ -64,33 +64,26 @@ title: Home
   <div class="content">
     {% capture main_md %}
 # <span id="accent-name">Sarah G. Randol</span> {#about-summary}
-<div class="tagline-animate"> APPLIED MATHEMATICS • DATA ANALYTICS • MATHEMATICAL MODELING • AI </div>
+<div class="tagline-animate"> • DATA SCIENCE APPLIED MACHINE LEARNING • STATISTICAL MODELING • APPLIED MATHEMATICS • AI </div>
 
+I am a Data Scientist with a strong foundation in applied mathematics, focused on building data driven models that support real world decision making.
 
-I’m an applied mathematician and data analyst with experience spanning mathematical modeling, AI training, and analytics.  
-I recently earned my M.A. in Applied Mathematics & Scientific Computation from Bowling Green State University, where my thesis introduced a Newton–Finite Difference Method for elliptic and parabolic PDEs with nonlinear interface jump conditions.
-
-My work sits at the intersection of research, analytics, and impact. I’ve taught Precalculus, College Algebra, Calculus, and Statistics using active-learning methods, and contributed as a Math & Data Analysis Expert in AI training, shaping high-quality reasoning datasets for advanced models.
+My work combines statistical modeling, machine learning, AI, and applied analytics. I approach problems by first understanding how data is generated, what assumptions are involved, and what questions the analysis is meant to answer, before selecting or training models. This perspective is shaped by rigorous mathematical training and hands on experience working end to end with real datasets.
 
 ---
 
-## Technical Skills {#skills}
-- Analytics & Visualization: Excel, SQL, Power BI, Python
-- Exploratory Data Analysis
-- Python: NumPy, Pandas, Seaborn, Statistics, scikit-learn
-- Modeling & Computing: MATLAB, PDEs, Statistical & Computational Modeling  
-- Machine Learning & AI: Prompt engineering, dataset validation, model evaluation   
-- Computational & Statistical Modeling  
-- Data Cleaning, Transformation & Insights  
-- Business Analytics & Reporting: Dashboards, KPIs, Forecasting  
-- Data Interpretation & Trend Analysis    
-- Hypothesis Testing and Regression Analysis  
-- Research, Technical Writing & Presentation  
-- Education & Mentorship: Teaching, active learning, student support  
+## Professional Focus {#skills}
+- Applied AI & Data Science – Developing data-driven models and analytical workflows that extract meaningful insight from complex datasets.
+- Machine Learning & Statistical Analysis – Applying machine learning and statistical techniques to uncover patterns, support predictions, and inform decisions.
+- Mathematical & Computational Modeling – Designing and analyzing numerical methods, simulations, and mathematical models to study complex systems.
+- Data Analytics & Visualization – Transforming raw data into interpretable insights through exploratory analysis, dashboards, and visual storytelling.
+- Scientific Computing & Numerical Methods – Implementing computational techniques to solve mathematical models and engineering problems.
 
 ---
 
 ## Education {#education}
+ **Applied AI & Data Science**, MIT Professional Education (In progress)  
+- Courses taken: Foundations of AI, Data Analysis and Visualization, Graph Theory, Machine Learning,  Introduction to AI on Cloud, Practical Data Science Workflows, Deep Learning, Recommendation Systems, Generative AI & Applied AI Systems
 🎓 **M.A., Applied Mathematics & Scientific Computation**, Bowling Green State University (Aug. 2025)  
 - Courses taken: Numerical Analysis series, Real Analysis series, Probability & Statistics series, Linear Algebra with its Applications, Iterative Solutions (MATLAB), Topics in Applied Mathematics (Partial Differential Equations) series, Boundary Value Differential Equations, Curriculum Analytics Classroom Behavior, Overview College Math Teaching
 
@@ -115,47 +108,3 @@ Recognized during the [20th AIMS South Africa Graduation and Achievement Ceremon
 
 ---
 
-## Professional Development & Certifications {#professional-development-and-certifications}
-
-### Applied AI & Data Science Program - MIT Professional Education (Nov. 2025 - April. 2026)
-A professional certificate program covering applied machine learning, data engineering, and AI-driven decision-making.  
-Building expertise in supervised and unsupervised learning, model deployment, and ethical AI applications, with an emphasis on translating data into strategic business insights.  
-*Status: In Progress*  
-
-### Introduction to Artificial Intelligence on Cloud - MIT Professional Education (Dec. 2025)
-A professional certificate offered by Great Learning, focused on building, training, and deploying AI/ML solutions in cloud environments, with hands-on exposure to AWS AI services.
-- Covered cloud fundamentals and AI service ecosystems, with emphasis on AWS.
-- Implemented an end-to-end ML workflow: data preparation, model training, prediction, and deployment.
-- Trained and deployed a machine learning model using AWS SageMaker, including pre-built algorithms and custom problem setups.
-- Worked with NLP services (Amazon Textract, Comprehend, Translate) for text extraction, sentiment analysis, and language processing.
-- Explored computer vision services (Amazon Rekognition) for image analysis, face comparison, and text detection in images.
-- Completed hands-on notebooks using XGBoost for model training and prediction, including train/test data pipelines.
-- Evaluated real-world use cases for cloud-based AI APIs and deployment strategies.
-
-<a href="https://www.mygreatlearning.com/certificate/FGBULNYE" target="_blank" rel="noopener">
-  <img src="/assets/intro-ai-cloud-certificate.png"
-       alt="Introduction to Artificial Intelligence on Cloud Certificate"
-       width="120"
-       style="border-radius:12px; margin-right:10px;">
-</a>
-
-
-### Active Learning Certificate Program – BGSU (July 2025) 
-Designed and presented an inclusive active-learning course module for undergraduate mathematics.  
-Explored frameworks for improving student engagement, equity, and performance through experiential learning approaches.  
-
-<a href="https://badgr.com/public/assertions/PT6lV0f6RPeM2ibQ4swgHA" target="_blank" rel="noopener">
-  <img src="https://api.badgr.io/public/assertions/PT6lV0f6RPeM2ibQ4swgHA/image" alt="Active Learning Certificate Program Badge" width="120" style="border-radius:12px; margin-right:10px;">
-</a>
-
-
-### Excel Advanced Analytics Workshop – BGSU (April 2025)
-Hands-on professional workshop focused on advanced data visualization, dashboard design, and analytical reporting using Excel’s Power Query, PivotTables, and custom formulas.  
-
-
-
-
-    {% endcapture %}
-    {{ main_md | markdownify }}
-  </div> 
-</div>
