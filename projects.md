@@ -28,7 +28,7 @@ Built a recommendation system using Amazon product review data to predict user p
 #### Overview
 
 Recommendation systems help e-commerce platforms reduce information overload by suggesting products that users are most likely to purchase.  
-This project explores collaborative filtering techniques to model user–item interactions and produce personalized recommendations. :contentReference[oaicite:0]{index=0}
+This project explores collaborative filtering techniques to model user–item interactions and produce personalized recommendations. 
 
 #### Dataset
 
