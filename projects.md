@@ -23,7 +23,7 @@ title: Projects
 ---
 
 ## Facial Emotion Recognition {#facial-emotion-recognition}
-Status: *Workin Progress*
+Status: *In Progress*
 
 Developing a deep learning computer vision model to automatically recognize human facial emotions from images.
 
