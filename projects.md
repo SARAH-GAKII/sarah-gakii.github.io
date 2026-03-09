@@ -57,7 +57,8 @@ Models were evaluated using:
 
 #### Key Findings
 
-The **matrix factorization (SVD)** model achieved the best predictive accuracy:
+The matrix factorization (SVD) model achieved the best predictive accuracy:
+
 | Model | RMSE | Precision | Recall | F1 Score |
 |-------|------|----------|--------|----------|
 | User–User (Tuned) | 0.9791 | 0.842 | 0.808 | 0.825 |
