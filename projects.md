@@ -57,16 +57,11 @@ Models were evaluated using:
 
 #### Key Findings
 
-The matrix factorization (SVD) model achieved the best predictive accuracy:
+- User–User Collaborative Filtering: RMSE ≈ 0.98  
+- Item–Item Collaborative Filtering: RMSE ≈ 0.98  
+- Matrix Factorization (SVD): RMSE ≈ 0.90 — best overall performance
 
-| Model | RMSE | Precision | Recall | F1 Score |
-|-------|------|----------|--------|----------|
-| User–User (Tuned) | 0.9791 | 0.842 | 0.808 | 0.825 |
-| Item–Item (Tuned) | 0.9804 | 0.833 | 0.800 | 0.816 |
-| SVD | 0.9114 | 0.854 | 0.802 | 0.827 |
-| SVD (Optimized) | 0.9043 | 0.853 | 0.802 | 0.827 |
-
-SVD captured latent user–item preference patterns and produced the most reliable recommendation performance. :contentReference[oaicite:2]{index=2}
+The SVD model achieved the lowest prediction error while maintaining strong recommendation quality, indicating that latent factor models capture user–item preferences more effectively than neighborhood-based methods.
 
 #### Tools and technologies
 Python, pandas, NumPy, scikit-learn, Surprise, Collaborative Filtering, Matrix Factorization (SVD), Matplotlib, Seaborn 
