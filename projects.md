@@ -6,8 +6,8 @@ title: Projects
 <div class="page-shell">
   <aside class="sidebar">
     <h2>Quick jumps</h2>
-    <a href="#amazon-product-recommendation-system">Amazon Product Recommendation System {#amazon-product-recommendation-system} </a>
-    <a href="#ohio_energy_composition_unsupervised_analysis">Ohio Energy Composition Analysis (Unsupervised Learning) {#ohio_energy_composition_unsupervised_analysis} </a>
+    <a href="#amazon-product-recommendation-system">Amazon Product Recommendation System </a>
+    <a href="#ohio_energy_composition_unsupervised_analysis">Ohio Energy Composition Analysis (Unsupervised Learning) </a>
     <a href="#ohio-housing-affordability-analysis-powerbi">Ohio Housing Affordability Analysis (Power BI) </a>
     <a href="#foodhub-customer-and-business-analytics">FoodHub Customer & Operations Analytics </a>
     <a href="#power-bi-interactive-dashboard">Power BI Interactive Dashboard (Guided Build)</a>
