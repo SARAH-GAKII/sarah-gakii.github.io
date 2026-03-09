@@ -21,7 +21,7 @@ title: Projects
 # Selected Projects
 
 ---
-### Amazon Product Recommendation System
+## Amazon Product Recommendation System
 
 Built a recommendation system using Amazon product review data to predict user preferences and generate personalized product recommendations.
 
