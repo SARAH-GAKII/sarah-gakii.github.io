@@ -22,14 +22,14 @@ title: Home
     <hr style="border:none; border-top:1px solid #e5e7eb; margin:.75rem 0 1rem;">
 
     <h3>Projects</h3>
-    <p>Dashboards and simulations that turn raw data into decisions.<br>
+    <p>Problem formulation, model building, evaluation, validation, problem solving.<br>
       <a href="{{ '/projects' | relative_url }}"><strong>See projects →</strong></a>
     </p>
 
     <hr style="border:none; border-top:1px solid #e5e7eb; margin:.75rem 0 1rem;">
 
     <h3>Experience</h3>
-    <p>Data, AI training, teaching, and mentorship across academia and industry.<br>
+    <p>Data, AI training, teaching & mentorship across academia and industry.<br>
       <a href="{{ '/experience' | relative_url }}"><strong>View experience →</strong></a>
     </p>
 
