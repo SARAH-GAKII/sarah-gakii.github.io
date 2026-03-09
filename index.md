@@ -64,7 +64,7 @@ title: Home
   <div class="content">
     {% capture main_md %}
 # <span id="accent-name">Sarah G. Randol</span> {#about-summary}
-<div class="tagline-animate"> • APPLIED DATA SCIENCE • STATISTICAL MODELING • APPLIED MACHINE LEARNING • AI • APPLIED MATHEMATICS </div>
+<div class="tagline-animate"> • DATA SCIENCE • STATISTICAL MODELING • MACHINE LEARNING • AI • APPLIED MATHEMATICS </div>
 
 I am a Data Scientist with a strong foundation in applied mathematics, focused on building data driven models that support real world decision making.
 
