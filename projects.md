@@ -185,7 +185,7 @@ This project was motivated by my volunteer experience with Habitat for Humanity,
 ### Project Overview  
 This project analyzed customer behavior, pricing dynamics, and operational efficiency within an online food delivery platform. Using a real-world transactional dataset, I examined how order value, cuisine type, delivery logistics, and customer feedback influence platform revenue and service performance.
 
-🔗 [View the Project on Olympus eportfolio](https://github.com/SARAH-GAKII/foodhub-customer-business-analytics/blob/main/FoodHub_Data_Analysis_Notebook.ipynb) 
+🔗 [View the Notebook on GitHub](https://github.com/SARAH-GAKII/foodhub-customer-business-analytics/blob/main/FoodHub_Data_Analysis_Notebook.ipynb) 
 
 ### Data & Tools 
 - **Dataset:** A real-world food delivery orders dataset
