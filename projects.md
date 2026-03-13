@@ -17,9 +17,61 @@ title: Projects
     <a href="#a-stochastic-version-of-a-competing-species-model">A Stochastic Version of a Competing Species Model</a>
   </aside>
 
-  <div class="content" markdown="1">
+<div class="content" markdown="1">
 
 # Selected Projects
+
+Browse by project first, then click a card to jump to the details below.
+
+<div class="project-grid">
+
+  <a class="project-card" href="#facial-emotion-recognition">
+    <h3>Facial Emotion Recognition</h3>
+    <p class="project-tools">Python • TensorFlow • OpenCV • Deep Learning</p>
+  </a>
+
+  <a class="project-card" href="#amazon-product-recommendation-system">
+    <h3>Amazon Product Recommendation System</h3>
+    <p class="project-tools">Python • Surprise • SVD • Collaborative Filtering</p>
+  </a>
+
+  <a class="project-card" href="#ohio_energy_composition_unsupervised_analysis">
+    <h3>Ohio Energy Composition Analysis</h3>
+    <p class="project-tools">Python • PCA • t-SNE • Clustering • GeoPandas</p>
+  </a>
+
+  <a class="project-card" href="#ohio-housing-affordability-analysis-powerbi">
+    <h3>Ohio Housing Affordability Analysis</h3>
+    <p class="project-tools">Power BI • DAX • Mapping • Time Series</p>
+  </a>
+
+  <a class="project-card" href="#foodhub-customer-and-business-analytics">
+    <h3>FoodHub Customer &amp; Business Analytics</h3>
+    <p class="project-tools">Python • pandas • EDA • Business Analytics</p>
+  </a>
+
+  <a class="project-card" href="#power-bi-interactive-dashboard">
+    <h3>Power BI Interactive Dashboard</h3>
+    <p class="project-tools">Power BI • Power Query • DAX • Data Modeling</p>
+  </a>
+
+  <a class="project-card" href="#excel-bi-dashboard">
+    <h3>Excel Business Intelligence Dashboard</h3>
+    <p class="project-tools">Excel • PivotTables • PivotCharts • Slicers</p>
+  </a>
+
+  <a class="project-card" href="#tourism-attractions-capping-numbers">
+    <h3>Tourism Attractions Capping Numbers</h3>
+    <p class="project-tools">Mathematical Modeling • Optimization • Research</p>
+  </a>
+
+  <a class="project-card" href="#a-stochastic-version-of-a-competing-species-model">
+    <h3>Competing Species Model</h3>
+    <p class="project-tools">MATLAB • ODEs • Simulation • Modeling</p>
+  </a>
+
+</div>
+
 ---
 
 ## Facial Emotion Recognition {#facial-emotion-recognition}
@@ -171,14 +223,14 @@ This project was motivated by my volunteer experience with Habitat for Humanity,
   <source src="/assets/ohio-housing-powerbi-demo.mp4" type="video/mp4">
 </video>
 
-
-
 ### Analytical Highlights
 - Ohio’s average rent-to-income ratio remains moderate (~15–16%), masking substantial county-level variation  
 - Sandusky County consistently ranks near the middle of Ohio counties, below high-burden benchmarks  
 - Rising rents have largely been offset by income growth at the statewide level, though localized pressures persist 
 
+
 ---
+
 
 ## FoodHub Customer & Business Analytics {#foodhub-customer-and-business-analytics}
 
@@ -230,6 +282,7 @@ This project highlights my ability to work with real-world data and translate it
 
 
 ---
+
 
 ## Excel Business Intelligence Dashboard {#excel-bi-dashboard} 
 
