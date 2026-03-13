@@ -24,47 +24,47 @@ title: Projects
 <div class="card-grid">
 
   <a class="card" href="#facial-emotion-recognition">
-    <h3>Facial Emotion Recognition</h3>
+    <h3 class="card-title">Facial Emotion Recognition</h3>
     <p class="card-meta">Python • TensorFlow • OpenCV • Deep Learning</p>
   </a>
 
   <a class="card" href="#amazon-product-recommendation-system">
-    <h3> Amazon Product Recommendation System</h3>
-    <p class="project-tools">Python • Surprise • SVD • Collaborative Filtering</p>
+    <h3 class="card-title"> Amazon Product Recommendation System</h3>
+    <p class="card-meta">Python • Surprise • SVD • Collaborative Filtering</p>
   </a>
 
   <a class="card" href="#ohio_energy_composition_unsupervised_analysis">
-    <h3>Ohio Energy Composition Analysis</h3>
+    <h3 class="card-title">Ohio Energy Composition Analysis</h3>
     <p class="card-meta">Python • PCA • t-SNE • Clustering • GeoPandas</p>
   </a>
 
   <a class="card" href="#ohio-housing-affordability-analysis-powerbi">
-    <h3>Ohio Housing Affordability Analysis</h3>
+    <h3 class="card-title">Ohio Housing Affordability Analysis</h3>
     <p class="card-meta">Power BI • DAX • Mapping • Time Series</p>
   </a>
 
   <a class="card" href="#foodhub-customer-and-business-analytics">
-    <h3>FoodHub Customer &amp; Business Analytics</h3>
+    <h3 class="card-title">FoodHub Customer &amp; Business Analytics</h3>
     <p class="card-meta">Python • pandas • EDA • Business Analytics</p>
   </a>
 
   <a class="card" href="#power-bi-interactive-dashboard">
-    <h3>Power BI Interactive Dashboard</h3>
+    <h3 class="card-title">Power BI Interactive Dashboard</h3>
     <p class="card-meta">Power BI • Power Query • DAX • Data Modeling</p>
   </a>
 
   <a class="card" href="#excel-bi-dashboard">
-    <h3>Excel Business Intelligence Dashboard</h3>
+    <h3 class="card-title">Excel Business Intelligence Dashboard</h3>
     <p class="card-meta">Excel • PivotTables • PivotCharts • Slicers</p>
   </a>
 
   <a class="card" href="#tourism-attractions-capping-numbers">
-    <h3>Tourism Attractions Capping Numbers</h3>
+    <h3 class="card-title">Tourism Attractions Capping Numbers</h3>
     <p class="card-meta">Mathematical Modeling • Optimization • Research</p>
   </a>
 
   <a class="card" href="#a-stochastic-version-of-a-competing-species-model">
-    <h3>Competing Species Model</h3>
+    <h3 class="card-title">Competing Species Model</h3>
     <p class="card-meta">MATLAB • ODEs • Simulation • Modeling</p>
   </a>
 
