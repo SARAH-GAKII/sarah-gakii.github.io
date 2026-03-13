@@ -6,7 +6,7 @@ title: Projects
 <div class="page-shell">
   <aside class="sidebar">
     <h2>Quick jumps</h2>
-    <a href="#facial-emotion-recognition">Facial Emotion Recognition  </a>
+    <a href="#facial-emotion-recognition">Facial Emotion Recognition </a>
     <a href="#amazon-product-recommendation-system">Amazon Product Recommendation System </a>
     <a href="#ohio_energy_composition_unsupervised_analysis">Ohio Energy Composition Analysis (Unsupervised Learning) </a>
     <a href="#ohio-housing-affordability-analysis-powerbi">Ohio Housing Affordability Analysis (Power BI) </a>
@@ -185,7 +185,7 @@ This project was motivated by my volunteer experience with Habitat for Humanity,
 ### Project Overview  
 This project analyzed customer behavior, pricing dynamics, and operational efficiency within an online food delivery platform. Using a real-world transactional dataset, I examined how order value, cuisine type, delivery logistics, and customer feedback influence platform revenue and service performance.
 
-🔗 [View the Project on Olympus eportfolio](https://olympus.mygreatlearning.com/eportfolio) 
+🔗 [View the Project on Olympus eportfolio](https://github.com/SARAH-GAKII/foodhub-customer-business-analytics/blob/main/FoodHub_Data_Analysis_Notebook.ipynb) 
 
 ### Data & Tools 
 - **Dataset:** A real-world food delivery orders dataset
