@@ -351,3 +351,61 @@ a:hover{
 }
 
 
+/* === Card system === */
+
+.card-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0 2rem;
+}
+
+.card{
+  display: block;
+  background: rgba(255,255,255,0.9);
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+  padding: 1.1rem 1rem;
+  box-shadow: 0 8px 24px rgba(2, 6, 23, .06);
+  text-decoration: none;
+  color: var(--text);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  backdrop-filter: blur(6px);
+}
+
+.card:hover{
+  transform: translateY(-6px);
+  box-shadow: 0 16px 34px rgba(2, 6, 23, .12);
+  border-color: #cbd5e1;
+  text-decoration: none;
+}
+
+.card-title{
+  margin: 0 0 .45rem;
+  font-size: 1.02rem;
+  line-height: 1.35;
+  color: var(--text);
+}
+
+.card-meta{
+  margin: 0;
+  font-size: .92rem;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
+.card:focus,
+.card:focus-visible{
+  outline: 3px solid rgba(124, 58, 237, 0.18);
+  outline-offset: 3px;
+}
+
+@media (max-width: 640px){
+  .card-grid{
+    grid-template-columns: 1fr;
+  }
+
+  .card{
+    padding: 1rem .95rem;
+  }
+}
