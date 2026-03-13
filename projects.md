@@ -21,8 +21,6 @@ title: Projects
 
 # Selected Projects
 
-Browse by project first, then click a card to jump to the details below.
-
 <div class="card-grid">
 
   <a class="card" href="#facial-emotion-recognition">
