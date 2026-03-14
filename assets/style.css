@@ -361,39 +361,66 @@ a:hover{
 }
 
 .card{
+  position: relative;
   display: block;
-  background: rgba(255,255,255,0.9);
-  border: 1px solid #e5e7eb;
-  border-radius: 18px;
-  padding: 1.1rem 1rem;
-  box-shadow: 0 8px 24px rgba(2, 6, 23, .06);
+  background: linear-gradient(180deg, rgba(255,255,255,0.96), rgba(248,250,252,0.95));
+  border: 1px solid rgba(226, 232, 240, 0.95);
+  border-radius: 20px;
+  padding: 1.15rem 1rem 1rem;
+  box-shadow: 0 10px 30px rgba(2, 6, 23, .06);
   text-decoration: none;
   color: var(--text);
-  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
-  backdrop-filter: blur(6px);
+  overflow: hidden;
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+  backdrop-filter: blur(8px);
+}
+
+.card::before{
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 5px;
+  background: linear-gradient(90deg, var(--brand), var(--accent));
+}
+
+.card::after{
+  content: "→";
+  position: absolute;
+  right: 1rem;
+  bottom: .9rem;
+  font-size: 1rem;
+  color: var(--accent);
+  opacity: 0;
+  transform: translateX(-6px);
+  transition: opacity 0.22s ease, transform 0.22s ease;
 }
 
 .card:hover{
-  transform: translateY(-6px);
-  box-shadow: 0 16px 34px rgba(2, 6, 23, .12);
-  border-color: #cbd5e1;
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: 0 18px 38px rgba(2, 6, 23, .12);
+  border-color: rgba(124, 58, 237, 0.22);
   text-decoration: none;
 }
 
+.card:hover::after{
+  opacity: 1;
+  transform: translateX(0);
+}
+
 .card-title{
-  margin: 0 0 .45rem;
-  font-size: 1.02rem;
+  margin: 0 0 .55rem;
+  font-size: 1.06rem;
   line-height: 1.35;
   color: var(--text);
+  padding-right: 1.5rem;
 }
 
 .card-meta{
   margin: 0;
   font-size: .92rem;
-  line-height: 1.5;
+  line-height: 1.55;
   color: var(--muted);
 }
-
 .card:focus,
 .card:focus-visible{
   outline: 3px solid rgba(124, 58, 237, 0.18);
