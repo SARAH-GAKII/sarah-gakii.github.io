@@ -31,7 +31,8 @@ title: Projects
     <p class="card-meta">Power BI • DAX • Mapping • Time Series</p>
   </a>
 
-  <a class="card" href="/projects/foodhub-customer-and-business-analytics">
+  <a class="card has-thumb" href="/projects/foodhub-customer-and-business-analytics">
+    <img class="card-thumb" alt="FoodHub Analytics Thumbnail" src="{{ '/assets/FoodHub Project Thumbnail.png' | relative_url }}" />
     <h3 class="card-title">FoodHub Customer &amp; Business Analytics</h3>
     <p class="card-meta">Python • pandas • EDA • Business Analytics</p>
   </a>
