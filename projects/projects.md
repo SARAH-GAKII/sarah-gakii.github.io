@@ -19,7 +19,7 @@ title: Projects
     <p class="card-meta">Python • Surprise • SVD • Collaborative Filtering</p>
   </a>
 
-  <a class="card" href="/projects/ohio_energy_composition_unsupervised_analysis">
+  <a class="card" href="/projects/ohio-energy-composition-unsupervised-analysis">
     <h3 class="card-title">Ohio Energy Composition Analysis</h3>
     <p class="card-meta">Python • PCA • t-SNE • Clustering • GeoPandas</p>
   </a>
