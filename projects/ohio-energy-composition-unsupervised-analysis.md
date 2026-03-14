@@ -36,7 +36,7 @@ Ohio’s energy landscape is highly heterogeneous, with generation dominated by 
   - Hierarchical Clustering (Ward linkage)  
 - Validated cluster structure using inertia, silhouette scores, dendrogram, and cophenetic correlation
 
-  <img width="400" height="200" alt="ohio_energy_composition_unsupervised_analysis_Thumbnail" src="assets/ohio_energy_composition_unsupervised_analysis_Thumbnail.png" />
+  <img width="400" height="200" alt="ohio_energy_composition_unsupervised_analysis_Thumbnail" src="{{ '/assets/ohio_energy_composition_unsupervised_analysis_Thumbnail.png' | relative_url }}" />
 
 #### Key Insights  
 - Ohio counties consistently separate into five energy archetypes:
