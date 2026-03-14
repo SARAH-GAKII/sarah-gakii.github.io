@@ -4,7 +4,7 @@ title: A Stochastic Version of a Competing Species Model
 ---
 
 
-# A Stochastic Version of a Competing Species Model  
+# A Stochastic Version of a Competing Species Model {#a-stochastic-version-of-a-competing-species-model}
 
 During the Mfano Africa – Oxford Mathematics Virtual Mentorship Programme (2022), I completed a mini research project under the mentorship of Dr. Robert A. McDonald, exploring mathematical models of species competition.  
 
