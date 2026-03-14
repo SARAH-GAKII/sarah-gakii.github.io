@@ -14,12 +14,14 @@ title: Projects
     <p class="card-meta">Python • TensorFlow • OpenCV • Deep Learning • Computer  Vision</p>
   </a>
 
-  <a class="card" href="/projects/amazon-product-recommendation-system">
+  <a class="card has-thumb" href="/projects/amazon-product-recommendation-system">
+    <img class="card-thumb" src="/assets/amazon-project-thumbnail.png" alt="Amazon Product Recommendation System thumbnail">
     <h3 class="card-title"> Amazon Product Recommendation System</h3>
     <p class="card-meta">Python • Surprise • SVD • Collaborative Filtering</p>
   </a>
 
-  <a class="card" href="/projects/ohio-energy-composition-unsupervised-analysis">
+  <a class="card has-thumb" href="/projects/ohio-energy-composition-unsupervised-analysis">
+    <img class="card-thumb" src="assets/ohio_energy_composition_unsupervised_analysis_Thumbnail.png">
     <h3 class="card-title">Ohio Energy Composition Analysis</h3>
     <p class="card-meta">Python • PCA • t-SNE • Clustering • GeoPandas</p>
   </a>
