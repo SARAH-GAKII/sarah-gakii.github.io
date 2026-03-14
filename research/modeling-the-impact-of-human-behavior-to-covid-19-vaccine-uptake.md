@@ -17,15 +17,15 @@ title: Modeling the Impact of Human Behavior to COVID-19 Vaccine Uptake
 
 During the COVID-19 pandemic, one of the biggest challenges was not just vaccine availability, but whether people were willing to take it. Uptake was highly shaped by trust, misinformation, social influence, and perceived risk, among other factors. My research project focused on developing a *Python-based predictive model* that combined *epidemic modeling* with *evolutionary game theory* to capture how human behavior influences vaccine uptake.  
 
-<div style="display:flex; align-items:center; gap:32px; flex-wrap:wrap; margin:24px 0;">
+<div style="display:flex; align-items:flex-start; gap:28px; margin:24px 0;">
 
   <img 
     src="{{ '/assets/AIMS Research Project Thumbnail.png' | relative_url }}" 
     alt="AIMS Research Project Thumbnail"
-    style="width:460px; border-radius:12px;"
+    style="width:360px; border-radius:12px; flex-shrink:0;"
   />
 
-  <div style="max-width:420px; line-height:1.6;">
+  <div style="flex:1; min-width:260px; line-height:1.6;">
 
     <p style="margin:0; font-weight:600;">
       📄 Research project
