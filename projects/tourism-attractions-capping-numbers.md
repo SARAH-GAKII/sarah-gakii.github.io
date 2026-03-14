@@ -7,7 +7,7 @@ title: Tourism Attractions Capping Numbers
 
   <aside class="sidebar">
     <h2>Project Navigation</h2>
-    <a href="/projects/">← Back to Projects</a>
+    <a href="/projects/">← Explore More Projects </a>
   </aside>
 
   <div class="content" markdown="1">
