@@ -24,7 +24,7 @@ This research was later developed into a peer-reviewed journal publication in co
 
   <!-- Abstract screenshot -->
   <img
-    src="{{ '/assets/Newton-FD Method for an Interface Problem with a Nonlinear Jump Condition thumbnail.jpg' | relative_url }}"
+    src="{{ '/assets/Newton-FD Method for an Interface Problem with a Nonlinear Jump Condition thumbnail.png' | relative_url }}"
     alt="Newton-FD Method for an Interface Problem with a Nonlinear Jump Condition thumbnail"
     style="width:420px; border-radius:12px; box-shadow:0 6px 18px rgba(0,0,0,0.08);"
   />
