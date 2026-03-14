@@ -3,7 +3,7 @@ layout: default
 title: Facial Emotion Recognition (Computer Vision)
 ---
 
-# Facial Emotion Recognition {#facial-emotion-recognition}
+# Facial Emotion Recognition
 Status: *In Progress*
 
 Developing a deep learning computer vision model to automatically recognize human facial emotions from images.
