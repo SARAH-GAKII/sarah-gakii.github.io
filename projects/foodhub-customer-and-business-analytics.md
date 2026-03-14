@@ -3,6 +3,15 @@ layout: default
 title: FoodHub Customer & Business Analytics
 ---
 
+<div class="page-shell">
+
+  <aside class="sidebar">
+    <h2>Project Navigation</h2>
+    <a href="/projects/">← Back to Projects</a>
+  </aside>
+
+  <div class="content" markdown="1">
+    
 # FoodHub Customer & Business Analytics {#foodhub-customer-and-business-analytics}
 
 ### Project Overview  
@@ -33,3 +42,6 @@ This project analyzed customer behavior, pricing dynamics, and operational effic
 This project demonstrates how Python-based analytics can translate raw operational data into actionable insights for revenue optimization, logistics planning, and customer engagement.
 
 *This project was completed as part of a supervised academic program.*
+
+  </div>
+</div>
