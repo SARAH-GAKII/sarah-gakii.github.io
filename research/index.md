@@ -10,7 +10,7 @@ title: Research Work
 <div class="card-grid">
 
 <a class="card has-thumb" href="/research/nfdm">
-<img class="card-thumb" alt="Newton Finite Difference Method research thumbnail" src="{{ '/assets/Newton Finite Difference Method research thumbnail.png' | relative_url }}" >
+<img class="card-thumb" alt="Newton Finite Difference Method research thumbnail" src="{{ '/assets/Newton Finite Difference Method research thumbnail.jpg' | relative_url }}" >
 <h3 class="card-title">Newton–Finite Difference Method for PDEs with Nonlinear Interface Jump Conditions</h3>
 <p class="card-meta">PDEs • Numerical Analysis • Finite Difference • Newton Iteration</p>
 </a>
