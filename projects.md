@@ -23,7 +23,7 @@ title: Projects
 
 <div class="card-grid">
 
-  <a class="card" href="#facial-emotion-recognition">
+  <a class="card" href="/projects/facial-emotion-recognition">
     <h3 class="card-title">Facial Emotion Recognition</h3>
     <p class="card-meta">Python • TensorFlow • OpenCV • Deep Learning</p>
   </a>
