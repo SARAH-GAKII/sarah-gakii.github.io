@@ -37,11 +37,11 @@ This research was later developed into a peer-reviewed journal publication in co
       <strong>So-Hsiang Chou and Sarah Gakii</strong>
     </p>
 
-    <p style="margin:4px 0; font-style:italic;">
+    <p style="margin:6px 0; font-style:italic;">
       A Newton-FD Method for an Interface Problem with a Nonlinear Jump Condition
     </p>
 
-    <p style="margin:4px 0 10px 0;">
+    <p style="margin:6px 0 10px 0;">
       Taiwanese Journal of Mathematics
     </p>
 
