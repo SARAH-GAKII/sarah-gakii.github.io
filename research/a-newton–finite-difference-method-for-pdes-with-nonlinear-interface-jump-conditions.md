@@ -26,7 +26,7 @@ This research was later developed into a peer-reviewed journal publication in co
   <img
     src="{{ '/assets/Newton-FD Method for an Interface Problem with a Nonlinear Jump Condition thumbnail.png' | relative_url }}"
     alt="Newton-FD Method for an Interface Problem with a Nonlinear Jump Condition thumbnail"
-    style="width:420px; border-radius:12px; box-shadow:0 6px 18px rgba(0,0,0,0.08);"
+    style="width:420px; height:240px; object-fit:cover; border-radius:12px; box-shadow:0 6px 18px rgba(0,0,0,0.08);"
   />
 
   <!-- Publication block -->
@@ -91,7 +91,7 @@ This research demonstrates how advanced numerical analysis can bridge the gap be
   <img
     src="{{ '/assets/Newton Finite Difference Method research thumbnail.jpg' | relative_url }}"
     alt="Newton Finite Difference Method research thumbnail"
-    style="width:420px; border-radius:12px; box-shadow:0 6px 18px rgba(0,0,0,0.08);"
+    style="width:420px; height:280px; object-fit:cover; border-radius:12px; box-shadow:0 6px 18px rgba(0,0,0,0.08);"
   />
 
   <!-- Masters thesis -->
