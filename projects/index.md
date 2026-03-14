@@ -9,7 +9,7 @@ title: Projects
 
 <div class="card-grid">
 
-  <a class="card" href="/projects/facial-emotion-recognition">
+  <a class="card has-thumb" href="/projects/facial-emotion-recognition">
     <h3 class="card-title">Facial Emotion Recognition</h3>
     <p class="card-meta">Python • TensorFlow • OpenCV • Deep Learning • Computer  Vision</p>
   </a>
@@ -57,12 +57,12 @@ title: Projects
     <p class="card-meta">Excel • PivotTables • PivotCharts • Slicers</p>
   </a>
 
-  <a class="card" href="/projects/tourism-attractions-capping-numbers">
+  <a class="card has-thumb" href="/projects/tourism-attractions-capping-numbers">
     <h3 class="card-title">Tourism Attractions Capping Numbers</h3>
     <p class="card-meta">Mathematical Modeling • Optimization • Research</p>
   </a>
 
-  <a class="card" href="/projects/a-stochastic-version-of-a-competing-species-model">
+  <a class="card has-thumb" href="/projects/a-stochastic-version-of-a-competing-species-model">
     <h3 class="card-title">A Stochastic Version of a Competing Species Model</h3>
     <p class="card-meta">MATLAB • ODEs • Simulation • Modeling</p>
   </a>
