@@ -3,6 +3,15 @@ layout: default
 title: Excel Business Intelligence Dashboard
 ---
 
+<div class="page-shell">
+
+  <aside class="sidebar">
+    <h2>Project Navigation</h2>
+    <a href="/projects/">← Back to Projects</a>
+  </aside>
+
+  <div class="content" markdown="1">
+    
 # Excel Business Intelligence Dashboard {#excel-bi-dashboard}
 
 Developed a full Excel-based Business Intelligence dashboard to demonstrate advanced data analysis and visualization skills. The project transformed raw financial data into actionable insights.  
@@ -16,4 +25,7 @@ Developed a full Excel-based Business Intelligence dashboard to demonstrate adva
   
 <img width="400" height="200" alt="Excel BI Analytics thumbnail" src="assets/excel-bi-project-thumbnail.png" />
 
-This project showcases my ability to take raw datasets and build a tool that supports decision-making and business insights.   
+This project showcases my ability to take raw datasets and build a tool that supports decision-making and business insights.  
+
+  </div>
+</div>
