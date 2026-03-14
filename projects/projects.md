@@ -55,8 +55,5 @@ title: Projects
   </a>
 
 </div>
-
----
-
     
-  </div>
+</div>
