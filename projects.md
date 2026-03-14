@@ -28,7 +28,7 @@ title: Projects
     <p class="card-meta">Python • TensorFlow • OpenCV • Deep Learning</p>
   </a>
 
-  <a class="card" href="#amazon-product-recommendation-system">
+  <a class="card" href="/projects/amazon-product-recommendation-system">
     <h3 class="card-title"> Amazon Product Recommendation System</h3>
     <p class="card-meta">Python • Surprise • SVD • Collaborative Filtering</p>
   </a>
