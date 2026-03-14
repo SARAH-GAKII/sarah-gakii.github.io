@@ -3,7 +3,7 @@ layout: default
 title: Power BI Interactive Dashboard (Guided Build)
 ---
 
-# Power BI Interactive Dashboard (Guided Build)
+# Power BI Interactive Dashboard (Guided Build) {#power-bi-interactive-dashboard}
 
 Built an interactive Power BI report to practice industry-standard BI workflows using a real-world dataset collected through a survey. The project was developed as a guided implementation following Alex The Analyst’s Power BI tutorial series.
 
