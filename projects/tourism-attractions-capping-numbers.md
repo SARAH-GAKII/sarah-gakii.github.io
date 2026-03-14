@@ -3,7 +3,7 @@ layout: default
 title: Tourism Attractions Capping Numbers 
 ---
 
-# Tourism Attractions Capping Numbers  
+# Tourism Attractions Capping Numbers {#tourism-attractions-capping-numbers}
 
 At the Mathematics in Industry Study Group (MISG 2023), I worked with a team tackling a problem brought forward by an industry representative: how to determine fair and effective visitor caps for tourism attractions. This was an open-ended challenge with direct implications for resource management, sustainability, and economic planning.  
 
