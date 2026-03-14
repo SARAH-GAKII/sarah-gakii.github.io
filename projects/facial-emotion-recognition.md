@@ -3,6 +3,15 @@ layout: default
 title: Facial Emotion Recognition (Computer Vision) 
 ---
 
+<div class="page-shell">
+
+  <aside class="sidebar">
+    <h2>Project Navigation</h2>
+    <a href="/projects/">← Back to Projects</a>
+  </aside>
+
+  <div class="content" markdown="1">
+    
 # Facial Emotion Recognition {#facial-emotion-recognition}
 Status: *In Progress*
 
@@ -34,3 +43,6 @@ The project investigates deep learning architectures for emotion recognition, in
 Python, TensorFlow/Keras, OpenCV, NumPy, Matplotlib, Seaborn, Deep Learning, Computer Vision
 
 *Project currently under development. Final model results and evaluation will be added once experiments are complete.*
+
+  </div>
+</div>
