@@ -3,6 +3,15 @@ layout: default
 title: Ohio Housing Affordability Analysis (Power BI)
 ---
 
+<div class="page-shell">
+
+  <aside class="sidebar">
+    <h2>Project Navigation</h2>
+    <a href="/projects/">← Back to Projects</a>
+  </aside>
+
+  <div class="content" markdown="1">
+    
 # Ohio Housing Affordability Analysis (Power BI) {#ohio-housing-affordability-analysis-powerbi}
 
 An interactive Power BI dashboard analyzing housing affordability across Ohio counties (2019–2023) using U.S. Census American Community Survey (ACS) data.  
@@ -43,3 +52,6 @@ This project was motivated by my volunteer experience with Habitat for Humanity,
 - Ohio’s average rent-to-income ratio remains moderate (~15–16%), masking substantial county-level variation  
 - Sandusky County consistently ranks near the middle of Ohio counties, below high-burden benchmarks  
 - Rising rents have largely been offset by income growth at the statewide level, though localized pressures persist 
+
+  </div>
+</div>
