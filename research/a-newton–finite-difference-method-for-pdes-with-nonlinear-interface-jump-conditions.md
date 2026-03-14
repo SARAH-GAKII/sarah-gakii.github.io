@@ -19,6 +19,23 @@ My master’s thesis addressed the challenge of modeling *nonlinear interface ju
 ## Publication
 This research was later developed into a peer-reviewed journal publication in collaboration with my advisor.
 
+<div style="display:flex; align-items:center; gap:24px; flex-wrap:wrap; margin:20px 0;">
+
+  <img 
+    src="{{ '/assets/Newton Finite Difference Method research thumbnail.jpg' | relative_url }}" 
+    alt="Newton Finite Difference Method research thumbnail"
+    style="width:400px; border-radius:10px;"
+  />
+
+  <div style="font-size:1.05rem;">
+    📄 <strong>Published article</strong><br>
+    <a href="https://projecteuclid.org/journalArticle/Download?urlId=10.11650%2Ftjm%2F251105">
+      Read the published paper
+    </a>
+  </div>
+
+</div>
+
 📄 **Published article**  
 **So-Hsiang Chou and Sarah Gakii**  
 *A Newton-FD Method for an Interface Problem with a Nonlinear Jump Condition*  
