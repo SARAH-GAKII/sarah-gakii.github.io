@@ -33,37 +33,37 @@ title: Projects
     <p class="card-meta">Python • Surprise • SVD • Collaborative Filtering</p>
   </a>
 
-  <a class="card" href="#ohio_energy_composition_unsupervised_analysis">
+  <a class="card" href="/projects/ohio_energy_composition_unsupervised_analysis">
     <h3 class="card-title">Ohio Energy Composition Analysis</h3>
     <p class="card-meta">Python • PCA • t-SNE • Clustering • GeoPandas</p>
   </a>
 
-  <a class="card" href="#ohio-housing-affordability-analysis-powerbi">
+  <a class="card" href="/projects/ohio-housing-affordability-analysis-powerbi">
     <h3 class="card-title">Ohio Housing Affordability Analysis</h3>
     <p class="card-meta">Power BI • DAX • Mapping • Time Series</p>
   </a>
 
-  <a class="card" href="#foodhub-customer-and-business-analytics">
+  <a class="card" href="/projects/foodhub-customer-and-business-analytics">
     <h3 class="card-title">FoodHub Customer &amp; Business Analytics</h3>
     <p class="card-meta">Python • pandas • EDA • Business Analytics</p>
   </a>
 
-  <a class="card" href="#power-bi-interactive-dashboard">
+  <a class="card" href="/projects/power-bi-interactive-dashboard">
     <h3 class="card-title">Power BI Interactive Dashboard</h3>
     <p class="card-meta">Power BI • Power Query • DAX • Data Modeling</p>
   </a>
 
-  <a class="card" href="#excel-bi-dashboard">
+  <a class="card" href="/projects/excel-bi-dashboard">
     <h3 class="card-title">Excel Business Intelligence Dashboard</h3>
     <p class="card-meta">Excel • PivotTables • PivotCharts • Slicers</p>
   </a>
 
-  <a class="card" href="#tourism-attractions-capping-numbers">
+  <a class="card" href="/projects/tourism-attractions-capping-numbers">
     <h3 class="card-title">Tourism Attractions Capping Numbers</h3>
     <p class="card-meta">Mathematical Modeling • Optimization • Research</p>
   </a>
 
-  <a class="card" href="#a-stochastic-version-of-a-competing-species-model">
+  <a class="card" href="/projects/a-stochastic-version-of-a-competing-species-model">
     <h3 class="card-title">Competing Species Model</h3>
     <p class="card-meta">MATLAB • ODEs • Simulation • Modeling</p>
   </a>
