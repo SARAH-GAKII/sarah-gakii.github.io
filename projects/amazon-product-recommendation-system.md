@@ -3,6 +3,15 @@ layout: default
 title: Amazon Product Recommendation System
 ---
 
+<div class="page-shell">
+
+  <aside class="sidebar">
+    <h2>Project Navigation</h2>
+    <a href="/projects/">← Back to Projects</a>
+  </aside>
+
+  <div class="content" markdown="1">
+    
 # Amazon Product Recommendation System {#amazon-product-recommendation-system}
 
 Built a recommendation system using Amazon product review data to predict user preferences and generate personalized product recommendations.
@@ -39,3 +48,6 @@ The SVD model achieved the lowest prediction error while maintaining strong reco
 
 #### Tools and technologies
 Python, pandas, NumPy, scikit-learn, Surprise, Collaborative Filtering, Matrix Factorization (SVD), Matplotlib, Seaborn 
+
+  </div>
+</div>
