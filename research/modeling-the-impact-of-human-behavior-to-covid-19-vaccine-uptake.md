@@ -17,7 +17,41 @@ title: Modeling the Impact of Human Behavior to COVID-19 Vaccine Uptake
 
 During the COVID-19 pandemic, one of the biggest challenges was not just vaccine availability, but whether people were willing to take it. Uptake was highly shaped by trust, misinformation, social influence, and perceived risk, among other factors. My research project focused on developing a *Python-based predictive model* that combined *epidemic modeling* with *evolutionary game theory* to capture how human behavior influences vaccine uptake.  
 
-<img width="400" height="200" alt="AIMS Research Project Thumbnail" src="{{ '/assets/AIMS Research Project Thumbnail.png' | relative_url }}" />
+<div style="display:flex; align-items:center; gap:32px; flex-wrap:wrap; margin:24px 0;">
+
+  <img 
+    src="{{ '/assets/AIMS Research Project Thumbnail.png' | relative_url }}" 
+    alt="AIMS Research Project Thumbnail"
+    style="width:460px; border-radius:12px;"
+  />
+
+  <div style="max-width:420px; line-height:1.6;">
+
+    <p style="margin:0; font-weight:600;">
+      📄 Research project
+    </p>
+
+    <p style="margin:6px 0 0 0;">
+      <strong>Sarah Gakii</strong>
+    </p>
+
+    <p style="margin:4px 0; font-style:italic;">
+      Modeling the Impact of Human Behavior on COVID-19 Vaccine Uptake
+    </p>
+
+    <p style="margin:4px 0 10px 0;">
+      African Institute for Mathematical Sciences (AIMS)
+    </p>
+
+    <p style="margin:0;">
+      🔗 <a href="https://drive.google.com/file/d/19TXbXPjAJ3T5Eq59psV8N86TiFoCG8ht/view">
+      Explore the full research project
+      </a>
+    </p>
+
+  </div>
+
+</div>
 
 ### The Problem  
 Classical epidemic models often assume vaccines are uniformly adopted once available. In reality, vaccination is a strategic choice: individuals weigh perceived benefits, risks, and costs of vaccination vs non-vaccination. This mismatch can lead to models that *underpredict infection peaks* or *overestimate the success* of vaccine campaigns.  
@@ -40,8 +74,7 @@ This research highlights how mathematical models of human behavior can strengthe
 
 
 *Grateful to Dr. Josephine Kagunda, whose thoughtful supervision, sharp insights, and constant encouragement made this project both rigorous and deeply rewarding.* 
-
-📄 [Explore the full research project on AIMS Thesis Repository](https://drive.google.com/file/d/19TXbXPjAJ3T5Eq59psV8N86TiFoCG8ht/view)  
+ 
 
    </div>
 </div>
