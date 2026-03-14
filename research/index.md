@@ -22,28 +22,20 @@ title: Research Work
 </a>
 
 <a class="card has-thumb" href="/research/a-mathematical-model-for-crime-with-cooperative-policing">
-<img class="card-thumb" src="/assets/crime-model-thumbnail.png" alt="Crime modeling research thumbnail">
 <h3 class="card-title">A Mathematical Model for Crime with Cooperative Policing</h3>
 <p class="card-meta">Dynamical Systems • Differential Equations • Public Policy Modeling</p>
 </a>
 
 <a class="card has-thumb" href="/research/green-roofs-to-mitigate-the-urban-heat-island">
-<img class="card-thumb" src="/assets/green-roof-thumbnail.png" alt="Green roof heat transfer research thumbnail">
 <h3 class="card-title">Green Roofs to Mitigate the Urban Heat Island</h3>
 <p class="card-meta">Heat Transfer PDE • Climate Modeling • Numerical Methods</p>
 </a>
 
-<a class="card" href="/research/academic-workshops">
+<a class="card has-thumb" href="/research/academic-workshops">
 <h3 class="card-title">Academic Workshops & Research Schools</h3>
 <p class="card-meta">AMU School • MISG • Africa Scientifique • Mfano Africa</p>
 </a>
 
 </div>
 
-</div>
-
-
-
-
-  </div>
 </div>
