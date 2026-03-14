@@ -3,7 +3,7 @@ layout: default
 title: Amazon Product Recommendation System
 ---
 
-# Amazon Product Recommendation System
+# Amazon Product Recommendation System {#amazon-product-recommendation-system}
 
 Built a recommendation system using Amazon product review data to predict user preferences and generate personalized product recommendations.
 
