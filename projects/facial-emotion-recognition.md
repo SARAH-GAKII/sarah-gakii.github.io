@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Facial Emotion Recognition (Computer Vision)
+title: Facial Emotion Recognition (Computer Vision) {#facial-emotion-recognition}
 ---
 
 # Facial Emotion Recognition
