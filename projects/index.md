@@ -41,7 +41,8 @@ title: Projects
     <p class="card-meta">Power BI • Power Query • DAX • Data Modeling</p>
   </a>
 
-  <a class="card" href="/projects/excel-bi-dashboard">
+  <a class="card has-thumb" href="/projects/excel-bi-dashboard">
+    <img class="card-thumb" alt="Excel BI Analytics thumbnail" src="{{'/assets/excel-bi-project-thumbnail.png' | relative_url }}" />
     <h3 class="card-title">Excel Business Intelligence Dashboard</h3>
     <p class="card-meta">Excel • PivotTables • PivotCharts • Slicers</p>
   </a>
