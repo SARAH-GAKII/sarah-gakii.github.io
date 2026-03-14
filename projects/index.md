@@ -21,7 +21,7 @@ title: Projects
   </a>
 
   <a class="card has-thumb" href="/projects/ohio-energy-composition-unsupervised-analysis">
-    <img class="card-thumb" src="assets/ohio_energy_composition_unsupervised_analysis_Thumbnail.png">
+    <img class="card-thumb" src="{{ '/assets/ohio_energy_composition_unsupervised_analysis_Thumbnail.png' | relative_url }}" alt="Ohio Energy Composition Analysis thumbnail">
     <h3 class="card-title">Ohio Energy Composition Analysis</h3>
     <p class="card-meta">Python • PCA • t-SNE • Clustering • GeoPandas</p>
   </a>
