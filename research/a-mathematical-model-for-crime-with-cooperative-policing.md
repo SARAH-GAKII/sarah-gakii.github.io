@@ -12,7 +12,7 @@ title: A Mathematical Model for Crime with Cooperative Policing
 
   <div class="content" markdown="1">
 
-# A Mathematical Model for Crime with Cooperative Policing {a-mathematical-model-for-crime-with-cooperative-policing}
+# A Mathematical Model for Crime with Cooperative Policing
 
 Crime prevention isn’t only about catching criminals — it’s also about how police forces work together. At the African Mathematical Schools (AMS) 2023, I collaborated in a group project under the supervision of Prof. Farai Nyabadza to study the impact of cooperative policing on crime dynamics.  
 
