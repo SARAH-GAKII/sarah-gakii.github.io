@@ -57,10 +57,6 @@ nav ul{ display:flex; gap:1rem; list-style:none; padding:0; margin-left:1rem; }
 nav a{ color: var(--muted); padding:.5rem .8rem; border-radius:10px; }
 nav a:hover{ background:#eef2ff; color:#111827; }
 
-/* --- Cards --- */
-.card{ background: var(--panel); border:1px solid #e5e7eb; border-radius: var(--radius); box-shadow: var(--shadow); }
-.meta{ color: var(--muted); }
-
 /* --- Hero (kept for other pages that use it) --- */
 .hero{ display:grid; gap:2rem; grid-template-columns: minmax(160px,24%) 1fr; align-items:start; padding:3.5rem 0 2.5rem; min-height: clamp(520px,60vh,720px); }
 .hero .intro{ padding:2rem; }
