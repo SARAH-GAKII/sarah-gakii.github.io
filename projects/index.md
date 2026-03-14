@@ -26,7 +26,15 @@ title: Projects
     <p class="card-meta">Python • PCA • t-SNE • Clustering • GeoPandas</p>
   </a>
 
-  <a class="card" href="/projects/ohio-housing-affordability-analysis-powerbi">
+  <a class="card has-thumb" href="/projects/ohio-housing-affordability-analysis-powerbi">
+      <video class="card-thumb"
+         autoplay
+         muted
+         loop
+         playsinline
+         preload="metadata">
+    <source src="{{ '/assets/ohio-housing-powerbi-demo.mp4' | relative_url }}" type="video/mp4">
+  </video>
     <h3 class="card-title">Ohio Housing Affordability Analysis</h3>
     <p class="card-meta">Power BI • DAX • Mapping • Time Series</p>
   </a>
