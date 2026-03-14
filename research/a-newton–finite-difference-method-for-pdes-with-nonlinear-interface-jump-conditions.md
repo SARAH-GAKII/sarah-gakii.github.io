@@ -24,8 +24,8 @@ This research was later developed into a peer-reviewed journal publication in co
 
   <!-- Abstract screenshot -->
   <img
-    src="{{ '/assets/Newton Finite Difference Method research thumbnail.jpg' | relative_url }}"
-    alt="Newton Finite Difference Method research thumbnail"
+    src="{{ '/assets/Newton-FD Method for an Interface Problem with a Nonlinear Jump Condition thumbnail.jpg' | relative_url }}"
+    alt="Newton-FD Method for an Interface Problem with a Nonlinear Jump Condition thumbnail"
     style="width:420px; border-radius:12px; box-shadow:0 6px 18px rgba(0,0,0,0.08);"
   />
 
@@ -85,12 +85,44 @@ This research demonstrates how advanced numerical analysis can bridge the gap be
 
 *Special thanks to my advisor, Dr. So-Hsiang Chou, whose mentorship not only strengthened the quality of this research but also shaped me as a mathematician and researcher.*
 
-**Keywords:** PDEs, Interface conditions, Finite difference, Newton iteration, Numerical analysis  
+<div style="display:flex; align-items:flex-start; gap:32px; margin:28px 0;">
 
-📄 **Master’s thesis**  
-*A Newton–Finite Difference Method for PDEs with Nonlinear Interface Jump Conditions*  
-Bowling Green State University 
-📄 [Read the full masters thesis on OhioLINK](http://rave.ohiolink.edu/etdc/view?acc_num=bgsu1750284991046446)
+  <!-- Abstract screenshot -->
+  <img
+    src="{{ '/assets/Newton Finite Difference Method research thumbnail.jpg' | relative_url }}"
+    alt="Newton Finite Difference Method research thumbnail"
+    style="width:420px; border-radius:12px; box-shadow:0 6px 18px rgba(0,0,0,0.08);"
+  />
+
+  <!-- Masters thesis -->
+  <div style="max-width:380px; line-height:1.6;">
+
+    <p style="margin:0; font-weight:600;">
+      📄 Master’s thesis
+    </p>
+
+    <p style="margin:6px 0 0 0;">
+      <strong>So-Hsiang Chou and Sarah Gakii</strong>
+    </p>
+
+    <p style="margin:6px 0; font-style:italic;">
+      A Newton–Finite Difference Method for PDEs with Nonlinear Interface Jump Conditions
+    </p>
+
+    <p style="margin:6px 0 12px 0;">
+      Bowling Green State University
+    </p>
+
+    <p style="margin:0;">
+      🔗 <a href="http://rave.ohiolink.edu/etdc/view?acc_num=bgsu1750284991046446">
+      Read the full masters thesis on OhioLINK
+      </a>
+    </p>
+
+  </div>
+
+</div> 
+
 
   </div>
 </div>
