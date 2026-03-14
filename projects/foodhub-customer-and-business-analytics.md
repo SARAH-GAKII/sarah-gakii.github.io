@@ -30,7 +30,7 @@ This project analyzed customer behavior, pricing dynamics, and operational effic
 - Applied correlation analysis and segmentation techniques to investigate relationships between operational metrics and customer behavior.
 - Implemented a rule-based revenue model in Python to estimate platform earnings and delivered data-driven recommendations on staffing, promotions, and revenue optimization.
 
-<img width="400" height="200" alt="FoodHub Analytics Thumbnail" src="assets/FoodHub Project Thumbnail.png" />
+<img width="400" height="200" alt="FoodHub Analytics Thumbnail" src="{{ '/assets/FoodHub Project Thumbnail.png' | relative_url }}" />
 
 ### Key Insights  
 - High-value orders contributed a disproportionate share of platform revenue despite representing a minority of total orders.  
