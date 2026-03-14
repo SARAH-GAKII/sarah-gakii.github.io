@@ -3,6 +3,15 @@ layout: default
 title: Power BI Interactive Dashboard (Guided Build)
 ---
 
+<div class="page-shell">
+
+  <aside class="sidebar">
+    <h2>Project Navigation</h2>
+    <a href="/projects/">← Back to Projects</a>
+  </aside>
+
+  <div class="content" markdown="1">
+
 # Power BI Interactive Dashboard (Guided Build) {#power-bi-interactive-dashboard}
 
 Built an interactive Power BI report to practice industry-standard BI workflows using a real-world dataset collected through a survey. The project was developed as a guided implementation following Alex The Analyst’s Power BI tutorial series.
@@ -17,3 +26,6 @@ Built an interactive Power BI report to practice industry-standard BI workflows 
 <img width="400" height="200" alt="Power BI dashboard thumbnail" src="assets/powerbi-dashboard-thumbnail.png" />
 
 This project highlights my ability to work with real-world data and translate it into interactive, model-driven business intelligence insights.
+
+  </div>
+</div>
