@@ -19,32 +19,45 @@ My master’s thesis addressed the challenge of modeling *nonlinear interface ju
 ## Publication
 This research was later developed into a peer-reviewed journal publication in collaboration with my advisor.
 
-<div style="display:flex; align-items:center; gap:24px; flex-wrap:wrap; margin:20px 0;">
+<div style="display:flex; align-items:center; gap:32px; flex-wrap:wrap; margin:24px 0;">
 
   <img 
     src="{{ '/assets/Newton Finite Difference Method research thumbnail.jpg' | relative_url }}" 
     alt="Newton Finite Difference Method research thumbnail"
-    style="width:400px; border-radius:10px;"
+    style="width:460px; border-radius:12px;"
   />
 
-  <div style="font-size:1.05rem;">
-    📄 <strong>Published article</strong><br>
-    <a href="https://projecteuclid.org/journalArticle/Download?urlId=10.11650%2Ftjm%2F251105">
+  <div style="max-width:420px; line-height:1.6;">
+
+    <p style="margin:0; font-weight:600;">
+      📄 Published article
+    </p>
+
+    <p style="margin:6px 0 0 0;">
+      <strong>So-Hsiang Chou and Sarah Gakii</strong>
+    </p>
+
+    <p style="margin:4px 0; font-style:italic;">
+      A Newton-FD Method for an Interface Problem with a Nonlinear Jump Condition
+    </p>
+
+    <p style="margin:4px 0 10px 0;">
+      Taiwanese Journal of Mathematics
+    </p>
+
+    <p style="margin:0;">
+      🔗 <a href="https://projecteuclid.org/journalArticle/Download?urlId=10.11650%2Ftjm%2F251105">
       Read the published paper
-    </a>
+      </a>
+    </p>
+
   </div>
 
 </div>
 
-📄 **Published article**  
-**So-Hsiang Chou and Sarah Gakii**  
-*A Newton-FD Method for an Interface Problem with a Nonlinear Jump Condition*  
-Taiwanese Journal of Mathematics  
-🔗 [Read the published paper](https://projecteuclid.org/journalArticle/Download?urlId=10.11650%2Ftjm%2F251105)
 
 The journal paper builds upon the numerical framework introduced in my master’s thesis and presents the method, analysis, and numerical experiments in a formal research publication. The work demonstrates how Newton iteration can be incorporated directly into finite difference schemes to accurately resolve nonlinear interface jump conditions in both elliptic and parabolic partial differential equations.
 
-<img width="400" height="200" alt="Newton Finite Difference Method research thumbnail" src="{{ '/assets/Newton Finite Difference Method research thumbnail.jpg' | relative_url }}" />
 
 ### The Problem  
 At an interface, two domains with different material properties or physical behaviors meet. In many cases, the jump in solution or flux across that interface is nonlinear, meaning it cannot be captured with simple linear assumptions. Traditional finite difference and interface methods struggle here, either losing accuracy or requiring huge computational costs.  
