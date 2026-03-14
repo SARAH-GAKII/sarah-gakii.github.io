@@ -35,11 +35,11 @@ During the COVID-19 pandemic, one of the biggest challenges was not just vaccine
       <strong>Sarah Gakii</strong>
     </p>
 
-    <p style="margin:4px 0; font-style:italic;">
+    <p style="margin:6px 0; font-style:italic;">
       Modeling the Impact of Human Behavior on COVID-19 Vaccine Uptake
     </p>
 
-    <p style="margin:4px 0 10px 0;">
+    <p style="margin:6px 0 10px 0;">
       African Institute for Mathematical Sciences (AIMS)
     </p>
 
