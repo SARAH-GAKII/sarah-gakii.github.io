@@ -15,7 +15,6 @@ title: Projects
   </a>
 
   <a class="card has-thumb" href="/projects/amazon-product-recommendation-system">
-    <img class="card-thumb" src="/assets/amazon-project-thumbnail.png" alt="Amazon Product Recommendation System thumbnail">
     <h3 class="card-title"> Amazon Product Recommendation System</h3>
     <p class="card-meta">Python • Surprise • SVD • Collaborative Filtering</p>
   </a>
