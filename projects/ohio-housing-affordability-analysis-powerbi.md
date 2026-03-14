@@ -44,7 +44,7 @@ This project was motivated by my volunteer experience with Habitat for Humanity,
   preload="metadata"
   style="width:70%; border-radius:12px;"
 >
-  <source src="/assets/ohio-housing-powerbi-demo.mp4" type="video/mp4">
+  <source src="{{ '/assets/ohio-housing-powerbi-demo.mp4' | relative_url }}" type="video/mp4">
 </video>
 
 
