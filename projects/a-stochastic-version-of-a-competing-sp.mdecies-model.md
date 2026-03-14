@@ -3,6 +3,14 @@ layout: default
 title: A Stochastic Version of a Competing Species Model
 ---
 
+<div class="page-shell">
+
+  <aside class="sidebar">
+    <h2>Project Navigation</h2>
+    <a href="/projects/">← Back to Projects</a>
+  </aside>
+
+  <div class="content" markdown="1">
 
 # A Stochastic Version of a Competing Species Model {#a-stochastic-version-of-a-competing-species-model}
 
@@ -26,3 +34,6 @@ The project examined the competition between native red squirrels and invasive g
 This project strengthened my ability to translate ecological principles into dynamical systems models, perform computational simulations, and present technical findings in an international mentorship setting.  
 
 **Mentor:** Dr. Robert A. McDonald  
+
+  </div>
+</div>
