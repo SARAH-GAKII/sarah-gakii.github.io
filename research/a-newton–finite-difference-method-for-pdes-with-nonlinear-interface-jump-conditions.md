@@ -12,7 +12,8 @@ title: A Newton–Finite Difference Method for PDEs with Nonlinear Interface Jum
 
   <div class="content" markdown="1">
 
-# A Newton–Finite Difference Method for PDEs with Nonlinear Interface Jump Conditions {#a-newton–finite-difference-method-for-pdes-with-nonlinear-interface-jump-conditions} 
+# A Newton–Finite Difference Method for PDEs with Nonlinear Interface Jump Conditions 
+
 **From cracked bridges to solar panels to the blood–brain barrier — boundaries matter.**  
 My master’s thesis addressed the challenge of modeling *nonlinear interface jump conditions* in *elliptic and parabolic PDEs*, where standard numerical schemes often break down.  
 
