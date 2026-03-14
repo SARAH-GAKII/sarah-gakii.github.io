@@ -13,7 +13,7 @@ title: Green Roofs to Mitigate the Urban Heat Island
   <div class="content" markdown="1">
 
 
-# Green Roofs to Mitigate the Urban Heat Island {green-roofs-to-mitigate-the-urban-heat-island} 
+# Green Roofs to Mitigate the Urban Heat Island 
 
 As part of the Mathematics in Industry Study Group (MISG 2023) in South Africa, I collaborated with peers and industry experts on a project examining the role of green roofs in reducing the Urban Heat Island effect.  
 
