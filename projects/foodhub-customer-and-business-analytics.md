@@ -3,7 +3,7 @@ layout: default
 title: FoodHub Customer & Business Analytics
 ---
 
-# FoodHub Customer & Business Analytics {foodhub-customer-and-business-analytics}
+# FoodHub Customer & Business Analytics {#foodhub-customer-and-business-analytics}
 
 ### Project Overview  
 This project analyzed customer behavior, pricing dynamics, and operational efficiency within an online food delivery platform. Using a real-world transactional dataset, I examined how order value, cuisine type, delivery logistics, and customer feedback influence platform revenue and service performance.
