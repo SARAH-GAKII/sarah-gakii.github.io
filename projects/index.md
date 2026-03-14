@@ -45,7 +45,8 @@ title: Projects
     <p class="card-meta">Python • pandas • EDA • Business Analytics</p>
   </a>
 
-  <a class="card" href="/projects/power-bi-interactive-dashboard">
+  <a class="card has-thumb" href="/projects/power-bi-interactive-dashboard">
+    <img class="card-thumb" alt="Power BI dashboard thumbnail" src="{{ '/assets/powerbi-dashboard-thumbnail.png' | relative_url }}" />
     <h3 class="card-title">Power BI Interactive Dashboard</h3>
     <p class="card-meta">Power BI • Power Query • DAX • Data Modeling</p>
   </a>
