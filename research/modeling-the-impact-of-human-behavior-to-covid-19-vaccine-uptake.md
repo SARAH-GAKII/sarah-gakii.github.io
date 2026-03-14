@@ -22,7 +22,7 @@ During the COVID-19 pandemic, one of the biggest challenges was not just vaccine
   <img 
     src="{{ '/assets/AIMS Research Project Thumbnail.png' | relative_url }}" 
     alt="AIMS Research Project Thumbnail"
-    style="width:360px; border-radius:12px; flex-shrink:0;"
+    style="width:360px; height:240px; object-fit:cover; border-radius:12px; flex-shrink:0;"
   />
 
   <div style="flex:1; min-width:260px; line-height:1.6;">
