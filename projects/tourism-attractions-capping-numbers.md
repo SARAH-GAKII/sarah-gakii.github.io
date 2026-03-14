@@ -3,6 +3,15 @@ layout: default
 title: Tourism Attractions Capping Numbers 
 ---
 
+<div class="page-shell">
+
+  <aside class="sidebar">
+    <h2>Project Navigation</h2>
+    <a href="/projects/">← Back to Projects</a>
+  </aside>
+
+  <div class="content" markdown="1">
+    
 # Tourism Attractions Capping Numbers {#tourism-attractions-capping-numbers}
 
 At the Mathematics in Industry Study Group (MISG 2023), I worked with a team tackling a problem brought forward by an industry representative: how to determine fair and effective visitor caps for tourism attractions. This was an open-ended challenge with direct implications for resource management, sustainability, and economic planning.  
@@ -22,3 +31,5 @@ This project was a valuable opportunity to apply mathematical thinking to a live
 - Team-based research under tight deadlines.  
 - Communicating technical approaches to both academic and industry audiences.
 
+  </div>
+</div>
