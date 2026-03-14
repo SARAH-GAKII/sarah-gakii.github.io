@@ -7,7 +7,7 @@ title: A Newton–Finite Difference Method for PDEs with Nonlinear Interface Jum
 
   <aside class="sidebar">
     <h2>Research Navigation</h2>
-    <a href="/research/">← Explore More Projects </a>
+    <a href="/research/">← Explore More Research Work </a>
   </aside>
 
   <div class="content" markdown="1">
