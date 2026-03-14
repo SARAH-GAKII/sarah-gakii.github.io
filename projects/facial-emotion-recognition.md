@@ -1,0 +1,48 @@
+---
+layout: default
+title: Facial Emotion Recognition (Computer Vision) 
+---
+
+<div class="page-shell">
+
+  <aside class="sidebar">
+    <h2>Project Navigation</h2>
+    <a href="/projects/">← Explore More Projects </a>
+  </aside>
+
+  <div class="content" markdown="1">
+    
+# Facial Emotion Recognition {#facial-emotion-recognition}
+Status: *In Progress*
+
+Developing a deep learning computer vision model to automatically recognize human facial emotions from images.
+
+#### Overview
+Human communication relies heavily on non-verbal signals such as facial expressions. Facial Emotion Recognition (FER) is an important area that aims to enable machines to interpret human emotional states through visual cues. This project explores how deep learning models can learn visual patterns associated with different emotions and classify facial expressions automatically.
+
+#### Dataset
+The dataset consists of facial images across four emotion categories: happy, sad, surprise, and neutral. 
+
+Images are preprocessed and used to train deep learning models for multi-class emotion classification.
+
+#### Approach
+
+The project investigates deep learning architectures for emotion recognition, including:
+- Image preprocessing and augmentation
+- Convolutional Neural Networks (CNNs) for feature extraction
+- Transfer learning architectures
+- Model evaluation using accuracy, precision, recall, and F1-score
+
+#### Current Progress
+- Data preprocessing and dataset exploration  
+- Baseline CNN model implementation  
+- Transfer learning experiments with VGG16, ResNet, and EfficientNet models  
+- Training optimization and overfitting mitigation
+
+#### Tools
+Python, TensorFlow/Keras, OpenCV, NumPy, Matplotlib, Seaborn, Deep Learning, Computer Vision
+
+*Project currently under development. Final model results and evaluation will be added once experiments are complete.*
+
+  </div>
+</div>
