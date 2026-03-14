@@ -50,7 +50,7 @@ title: Projects
   </a>
 
   <a class="card" href="/projects/a-stochastic-version-of-a-competing-species-model">
-    <h3 class="card-title">Competing Species Model</h3>
+    <h3 class="card-title">A Stochastic Version of a Competing Species Model</h3>
     <p class="card-meta">MATLAB • ODEs • Simulation • Modeling</p>
   </a>
 
