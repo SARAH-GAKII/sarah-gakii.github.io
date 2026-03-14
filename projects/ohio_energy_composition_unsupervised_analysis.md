@@ -3,7 +3,7 @@ layout: default
 title: Ohio Energy Composition Analysis (Unsupervised Learning)
 ---
 
-# Ohio Energy Composition Analysis (Unsupervised Learning)
+# Ohio Energy Composition Analysis (Unsupervised Learning) {#ohio_energy_composition_unsupervised_analysis}
 
 This project applies unsupervised learning to explore county-level electricity generation patterns across Ohio using publicly available U.S. Energy Information Administration (EIA) data.  
 Rather than predicting outcomes, the focus is on discovering structure, identifying energy-generation archetypes, and assessing whether meaningful groupings emerge across counties.
