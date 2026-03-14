@@ -12,7 +12,7 @@ title: Academic Workshops & Research Schools
 
   <div class="content" markdown="1">
 
-# Academic Workshops & Research Schools {#academic-workshops}
+# Academic Workshops & Research Schools 
 
 ### African Mathematical Modeling Union (AMU) School – Nairobi, Kenya (2023)
 Participated in an intensive modeling program bringing together researchers and students from across Africa.  
