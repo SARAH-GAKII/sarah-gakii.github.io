@@ -3,7 +3,7 @@ layout: default
 title: Excel Business Intelligence Dashboard
 ---
 
-# Excel Business Intelligence Dashboard
+# Excel Business Intelligence Dashboard {#excel-bi-dashboard}
 
 Developed a full Excel-based Business Intelligence dashboard to demonstrate advanced data analysis and visualization skills. The project transformed raw financial data into actionable insights.  
 
