@@ -13,7 +13,7 @@ title: Modeling the Impact of Human Behavior to COVID-19 Vaccine Uptake
   <div class="content" markdown="1">
 
 
-# Modeling the Impact of Human Behavior to COVID-19 Vaccine Uptake {modeling-the-impact-of-human-behavior-to-covid-19-vaccine-uptake}
+# Modeling the Impact of Human Behavior to COVID-19 Vaccine Uptake
 
 During the COVID-19 pandemic, one of the biggest challenges was not just vaccine availability, but whether people were willing to take it. Uptake was highly shaped by trust, misinformation, social influence, and perceived risk, among other factors. My research project focused on developing a *Python-based predictive model* that combined *epidemic modeling* with *evolutionary game theory* to capture how human behavior influences vaccine uptake.  
 
