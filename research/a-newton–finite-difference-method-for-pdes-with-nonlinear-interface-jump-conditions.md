@@ -19,15 +19,17 @@ My master’s thesis addressed the challenge of modeling *nonlinear interface ju
 ## Publication
 This research was later developed into a peer-reviewed journal publication in collaboration with my advisor.
 
-<div style="display:flex; align-items:center; gap:32px; flex-wrap:wrap; margin:24px 0;">
+<div style="display:flex; align-items:flex-start; gap:32px; margin:28px 0;">
 
-  <img 
-    src="{{ '/assets/Newton Finite Difference Method research thumbnail.jpg' | relative_url }}" 
-    alt="Newton Finite Difference Method research thumbnail"
-    style="width:460px; border-radius:12px;"
+  <!-- Abstract screenshot -->
+  <img
+    src="{{ '/assets/abstract-screenshot.png' | relative_url }}"
+    alt="Paper abstract screenshot"
+    style="width:420px; border-radius:12px; box-shadow:0 6px 18px rgba(0,0,0,0.08);"
   />
 
-  <div style="max-width:420px; line-height:1.6;">
+  <!-- Publication block -->
+  <div style="max-width:380px; line-height:1.6;">
 
     <p style="margin:0; font-weight:600;">
       📄 Published article
@@ -41,7 +43,7 @@ This research was later developed into a peer-reviewed journal publication in co
       A Newton-FD Method for an Interface Problem with a Nonlinear Jump Condition
     </p>
 
-    <p style="margin:6px 0 10px 0;">
+    <p style="margin:6px 0 12px 0;">
       Taiwanese Journal of Mathematics
     </p>
 
