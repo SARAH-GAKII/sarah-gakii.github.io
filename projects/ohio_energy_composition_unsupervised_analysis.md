@@ -3,6 +3,15 @@ layout: default
 title: Ohio Energy Composition Analysis (Unsupervised Learning)
 ---
 
+<div class="page-shell">
+
+  <aside class="sidebar">
+    <h2>Project Navigation</h2>
+    <a href="/projects/">← Back to Projects</a>
+  </aside>
+
+  <div class="content" markdown="1">
+    
 # Ohio Energy Composition Analysis (Unsupervised Learning) {#ohio_energy_composition_unsupervised_analysis}
 
 This project applies unsupervised learning to explore county-level electricity generation patterns across Ohio using publicly available U.S. Energy Information Administration (EIA) data.  
@@ -41,3 +50,6 @@ Ohio’s energy landscape is highly heterogeneous, with generation dominated by 
 
 #### Tools & Techniques  
 Python, pandas, NumPy, scikit-learn, scikit-learn-extra, PCA, t-SNE, K-Means, K-Medoids, Hierarchical Clustering, GeoPandas, Matplotlib, Seaborn
+
+  </div>
+</div>
