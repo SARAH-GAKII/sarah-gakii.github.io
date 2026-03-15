@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Professional & Industry
+title: Data Science, AI, Technical
 ---
 
 <div class="page-shell">
