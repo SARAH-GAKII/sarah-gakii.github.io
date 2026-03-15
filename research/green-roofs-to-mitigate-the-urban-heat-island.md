@@ -9,7 +9,7 @@ title: Green Roofs to Mitigate the Urban Heat Island
   <div class="section-nav-inner">
     <p class="section-nav-label">Explore</p>
     <h2>Research</h2>
-    <a class="section-nav-link" href="/research/">← Explore more research work</a>
+    <a class="section-nav-link" href="/research/">← More research work</a>
   </div>
 </aside>
 
