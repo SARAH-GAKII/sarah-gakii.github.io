@@ -3,7 +3,7 @@ layout: default
 title: Projects
 ---
 
-<div class="content" markdown="1">
+<div class="content wide-page" markdown="1">
 
 # Selected Projects
 
