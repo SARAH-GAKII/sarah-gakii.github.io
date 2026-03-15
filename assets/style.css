@@ -680,7 +680,3 @@ a:hover{
   color: var(--brand);
 }
 
-.mini-card-grid-awards .mini-card[open] summary::after{
-  background: rgba(22,163,74,.08);
-  color: var(--brand);
-}
