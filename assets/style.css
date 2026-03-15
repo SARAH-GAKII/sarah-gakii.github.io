@@ -545,3 +545,107 @@ a:hover{
     margin-right: 0;
   }
 }
+
+
+/* === Mini expandable cards === */
+
+.mini-card-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+  margin: 1rem 0 2rem;
+}
+
+.mini-card{
+  background: linear-gradient(180deg, rgba(255,255,255,0.96), rgba(248,250,252,0.94));
+  border: 1px solid rgba(226,232,240,0.95);
+  border-radius: 18px;
+  box-shadow: 0 10px 26px rgba(2, 6, 23, .06);
+  overflow: hidden;
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+
+.mini-card:hover{
+  transform: translateY(-4px);
+  box-shadow: 0 16px 34px rgba(2, 6, 23, .10);
+  border-color: rgba(124, 58, 237, 0.18);
+}
+
+.mini-card summary{
+  list-style: none;
+  cursor: pointer;
+  padding: 1rem 1rem .95rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: .3rem;
+}
+
+.mini-card summary::-webkit-details-marker{
+  display: none;
+}
+
+.mini-card summary::after{
+  content: "+";
+  position: absolute;
+  top: .95rem;
+  right: 1rem;
+  width: 28px;
+  height: 28px;
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 1rem;
+  transition: transform .2s ease, background .2s ease, color .2s ease;
+}
+
+.mini-card[open] summary::after{
+  content: "–";
+  transform: rotate(0deg);
+  background: rgba(124,58,237,.08);
+  color: var(--accent);
+}
+
+.mini-card-title{
+  display: block;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.35;
+  color: var(--text);
+  padding-right: 2.25rem;
+}
+
+.mini-card-meta{
+  display: block;
+  font-size: .9rem;
+  color: var(--muted);
+  line-height: 1.45;
+}
+
+.mini-card-body{
+  padding: 0 1rem 1rem;
+  border-top: 1px solid #eef2f7;
+  color: #334155;
+}
+
+.mini-card-body p{
+  margin: .85rem 0 0;
+}
+
+.mini-card-body p:first-child{
+  margin-top: .9rem;
+}
+
+.mini-card-grid-awards{
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+@media (max-width: 640px){
+  .mini-card-grid{
+    grid-template-columns: 1fr;
+  }
+}
