@@ -82,7 +82,7 @@ My work combines statistical modeling, machine learning, AI, and applied analyti
 ---
 
 ## Education {#education}
-<div class="mini-card-grid">
+<div class="mini-card-grid mini-card-accent-purple">
 
   <details class="mini-card">
     <summary>
@@ -134,7 +134,7 @@ My work combines statistical modeling, machine learning, AI, and applied analyti
 
 ## Awards & Recognitions {#awards-and-recognitions}
 
-<div class="mini-card-grid mini-card-grid-awards">
+<div class="mini-card-grid mini-card-accent-green">
 
   <details class="mini-card">
     <summary>
