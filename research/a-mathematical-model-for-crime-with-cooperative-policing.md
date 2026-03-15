@@ -8,8 +8,8 @@ title: A Mathematical Model for Crime with Cooperative Policing
 <aside class="sidebar section-nav">
   <div class="section-nav-inner">
     <p class="section-nav-label">Explore</p>
-    <h2>More Research Work</h2>
-    <a class="section-nav-link" href="/research/">← Explore Research</a>
+    <h2>Research</h2>
+    <a class="section-nav-link" href="/research/">← Explore more research work</a>
   </div>
 </aside>
 
