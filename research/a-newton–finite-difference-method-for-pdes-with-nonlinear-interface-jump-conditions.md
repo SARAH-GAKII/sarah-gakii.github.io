@@ -5,10 +5,13 @@ title: A Newton–Finite Difference Method for PDEs with Nonlinear Interface Jum
 
 <div class="page-shell">
 
-  <aside class="sidebar">
-    <h2>Research Navigation</h2>
-    <a href="/research/">← Explore More Research Work </a>
-  </aside>
+<aside class="sidebar section-nav">
+  <div class="section-nav-inner">
+    <p class="section-nav-label">Explore</p>
+    <h2>Research</h2>
+    <a class="section-nav-link" href="/research/">← Explore more research work</a>
+  </div>
+</aside>
 
   <div class="content" markdown="1">
 
