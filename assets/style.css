@@ -628,7 +628,6 @@ a:hover{
 
 .mini-card-body{
   padding: 0 1rem 1rem;
-  border-top: 1px solid #eef2f7;
   color: #334155;
 }
 
@@ -680,3 +679,16 @@ a:hover{
   color: var(--brand);
 }
 
+/* === Mini card smooth expand animation === */
+
+.mini-card-body{
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: max-height .35s ease, opacity .25s ease;
+}
+
+.mini-card[open] .mini-card-body{
+  max-height: 600px;   /* large enough for content */
+  opacity: 1;
+}
