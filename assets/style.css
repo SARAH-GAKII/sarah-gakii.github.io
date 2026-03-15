@@ -649,3 +649,26 @@ a:hover{
     grid-template-columns: 1fr;
   }
 }
+
+
+/* Section-specific accents for mini cards */
+.mini-card-grid-education .mini-card{
+  border-top: 4px solid rgba(124, 58, 237, 0.22);
+}
+
+.mini-card-grid-awards .mini-card{
+  border-top: 4px solid rgba(22, 163, 74, 0.22);
+}
+
+.mini-card-grid-education .mini-card summary::after{
+  color: var(--accent);
+}
+
+.mini-card-grid-awards .mini-card summary::after{
+  color: var(--brand);
+}
+
+.mini-card-grid-awards .mini-card[open] summary::after{
+  background: rgba(22,163,74,.08);
+  color: var(--brand);
+}
