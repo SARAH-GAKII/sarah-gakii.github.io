@@ -9,7 +9,7 @@ title: Industrial Operations & Manufacturing
   <div class="section-nav-inner">
     <p class="section-nav-label">Explore</p>
     <h2>More</h2>
-    <a class="section-nav-link" href="/research/">← Back</a>
+    <a class="section-nav-link" href="/experience/">← Back</a>
   </div>
 </aside>
 
