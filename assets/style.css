@@ -155,6 +155,11 @@ a:hover{
   margin-inline: auto;
   padding-inline: 1rem;
 }
+.prose > .projects-overview{
+  max-width: 1400px;
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
 @media (max-width: 480px){
   .prose > :not(.page-shell){ padding-inline: 1.25rem; }
 }
