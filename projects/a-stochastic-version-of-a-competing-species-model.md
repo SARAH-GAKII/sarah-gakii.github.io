@@ -5,9 +5,12 @@ title: A Stochastic Version of a Competing Species Model
 
 <div class="page-shell">
 
-  <aside class="sidebar">
-    <h2>Project Navigation</h2>
-    <a href="/projects/">← Explore More Projects </a>
+  <aside class="sidebar section-nav">
+    <div class="section-nav-inner">
+      <p class="section-nav-label">Explore</p>
+      <h2>Project Gallery</h2>
+      <a class="section-nav-link" href="/projects/">← Explore More Projects</a>
+    </div>
   </aside>
 
   <div class="content" markdown="1">
