@@ -82,30 +82,83 @@ My work combines statistical modeling, machine learning, AI, and applied analyti
 ---
 
 ## Education {#education}
- **Applied AI & Data Science**, MIT Professional Education (In progress)  
-- Courses taken: Foundations of AI, Data Analysis and Visualization, Graph Theory, Machine Learning,  Introduction to AI on Cloud, Practical Data Science Workflows, Deep Learning, Recommendation Systems, Generative AI & Applied AI Systems
+<div class="mini-card-grid mini-card-accent-purple">
 
-🎓 **M.A., Applied Mathematics & Scientific Computation**, Bowling Green State University (Aug. 2025)  
-- Courses taken: Numerical Analysis series, Real Analysis series, Probability & Statistics series, Linear Algebra with its Applications, Iterative Solutions (MATLAB), Topics in Applied Mathematics (Partial Differential Equations) series, Boundary Value Differential Equations, Curriculum Analytics Classroom Behavior, Overview College Math Teaching
+  <details class="mini-card">
+    <summary>
+      <span class="mini-card-title">Applied AI &amp; Data Science</span>
+      <span class="mini-card-meta">MIT Professional Education • In Progress</span>
+    </summary>
+    <div class="mini-card-body">
+      <p>Advanced professional program focused on applied AI, machine learning, deep learning, recommendation systems, generative AI, and production-oriented data science workflows.</p>
+      <p><strong>Courses:</strong> Foundations of AI, Data Analysis and Visualization, Graph Theory, Machine Learning, Introduction to AI on Cloud, Practical Data Science Workflows, Deep Learning, Recommendation Systems, Generative AI &amp; Applied AI Systems.</p>
+    </div>
+  </details>
 
-🎓 **M.S., Mathematical Sciences**, Stellenbosch University - African Institute for Mathematical Sciences (AIMS) Program, South Africa (June 2023)  
-- Courses taken: Intro. to Programming using Python, Machine Learning for Particle Physics, NetworkX, Experimental mathematics with SageMath, Statistics (Intro to Statistical analysis using R), Computing & Latex, Mathematical Problem Solving, Concepts and Problem Solving in Physics, Open Quantum Systems, Lie Groups and Lie Algebra, Graph Theory, Numerical Mathematics, Measurement Interpretation & Mathematics, Analytical Techniques in Mathematical Biology, Algebraic Biology, Analytical Techniques in Mathematical Biology, Applying Logic, Algebraic Methods
+  <details class="mini-card">
+    <summary>
+      <span class="mini-card-title">M.A. Applied Mathematics &amp; Scientific Computation</span>
+      <span class="mini-card-meta">Bowling Green State University • Aug. 2025</span>
+    </summary>
+    <div class="mini-card-body">
+      <p>Graduate training in numerical analysis, PDEs, probability, statistics, and applied mathematical modeling, with strong preparation in scientific computation and teaching practice.</p>
+      <p><strong>Courses:</strong> Numerical Analysis series, Real Analysis series, Probability &amp; Statistics series, Linear Algebra with its Applications, Iterative Solutions (MATLAB), Topics in Applied Mathematics (Partial Differential Equations) series, Boundary Value Differential Equations, Curriculum Analytics Classroom Behavior, Overview College Math Teaching.</p>
+    </div>
+  </details>
 
-🎓 **B.S., Mathematics (Pure & Applied)**, The Technical University of Kenya (July 2021)
-- Courses taken: Analytical Geometry series, Differential Geometry, Calculus series, Numerical Analysis series, Methods of Applied Mathematics series, Mathematical Modeling, Simulation and Modeling, Fluid Mechanics series, ODEs series, PDES series, Prob. & Stats series, Test of Hypothesis, Theory of Estimation, Intro. to Computers series, Data Structures & Algorithms, Database Systems, Scientific Programming, Object Oriented Programming, Information Systems Applications, Linear Programming series, Linear Algebra series, Discrete Mathematics, Algebraic Structures, Vector Analysis, Topological Concepts series, Elements of Set Theory, Number Theory series, Functional Analysis, Complex Analysis series, Measure and Integration, Ring Theory, Topology, Real Analysis series, Group Theory series, History of Mathematics series, Critical & Creative Thinking, Society and Culture, Communication Skills, Entrepreneurship & Business Studies, Health Education
+  <details class="mini-card">
+    <summary>
+      <span class="mini-card-title">M.S. Mathematical Sciences</span>
+      <span class="mini-card-meta">Stellenbosch University / AIMS South Africa • June 2023</span>
+    </summary>
+    <div class="mini-card-body">
+      <p>Intensive interdisciplinary master’s program combining mathematics, computing, physics, statistics, logic, and mathematical biology in a problem-solving-focused environment.</p>
+      <p><strong>Courses:</strong> Intro. to Programming using Python, Machine Learning for Particle Physics, NetworkX, Experimental Mathematics with SageMath, Statistics, Computing &amp; LaTeX, Mathematical Problem Solving, Concepts and Problem Solving in Physics, Open Quantum Systems, Lie Groups and Lie Algebra, Graph Theory, Numerical Mathematics, Measurement Interpretation &amp; Mathematics, Analytical Techniques in Mathematical Biology, Algebraic Biology, Applying Logic, Algebraic Methods.</p>
+    </div>
+  </details>
+
+  <details class="mini-card">
+    <summary>
+      <span class="mini-card-title">B.S. Mathematics (Pure &amp; Applied)</span>
+      <span class="mini-card-meta">The Technical University of Kenya • July 2021</span>
+    </summary>
+    <div class="mini-card-body">
+      <p>Broad undergraduate foundation in pure mathematics, applied mathematics, statistics, programming, and computational methods.</p>
+      <p><strong>Selected coursework:</strong> Calculus, Differential Geometry, Numerical Analysis, Methods of Applied Mathematics, Mathematical Modeling, Fluid Mechanics, ODEs, PDEs, Probability &amp; Statistics, Test of Hypothesis, Theory of Estimation, Data Structures &amp; Algorithms, Database Systems, Scientific Programming, Object Oriented Programming, Linear Programming, Linear Algebra, Discrete Mathematics, Algebraic Structures, Topology, Real Analysis, Complex Analysis, Functional Analysis, Group Theory, Ring Theory.</p>
+    </div>
+  </details>
+
+</div>
 
 ---
 
 ## Awards & Recognitions {#awards-and-recognitions}
 
-### James Robert & Gretchen Overman Graduate Scholarship – BGSU (2024)
-Awarded by the Department of Mathematics and Statistics at Bowling Green State University in recognition of academic excellence.  
-Featured in the department’s [2023–2024 News & Highlights](https://www.bgsu.edu/arts-and-sciences/mathematics-and-statistics/department-and-alumni-news/2023-2024.html), which spotlighted student achievements, faculty recognition, and research contributions.
+<div class="mini-card-grid mini-card-accent-green">
 
+  <details class="mini-card">
+    <summary>
+      <span class="mini-card-title">James Robert &amp; Gretchen Overman Graduate Scholarship</span>
+      <span class="mini-card-meta">Bowling Green State University • 2024</span>
+    </summary>
+    <div class="mini-card-body">
+      <p>Awarded by the Department of Mathematics and Statistics at Bowling Green State University in recognition of academic excellence.</p>
+      <p><a href="https://www.bgsu.edu/arts-and-sciences/mathematics-and-statistics/department-and-alumni-news/2023-2024.html">View department recognition</a></p>
+    </div>
+  </details>
 
-### Paul G. Allen Family Foundation Scholarship – AIMS South Africa (2023)
-Granted by the African Institute for Mathematical Sciences (AIMS) South Africa for academic excellence and for my research project *“Modeling the Impact of Human Behaviour on COVID-19 Vaccine Uptake”* during the structured Master’s program in Mathematical Sciences.  
-Recognized during the [20th AIMS South Africa Graduation and Achievement Ceremony](https://aims.ac.za/2023/07/03/aims-south-africa-hosts-its-20th-graduation-and-recognition-of-achievement-ceremony/).  
+  <details class="mini-card">
+    <summary>
+      <span class="mini-card-title">Paul G. Allen Family Foundation Scholarship</span>
+      <span class="mini-card-meta">AIMS South Africa • 2023</span>
+    </summary>
+    <div class="mini-card-body">
+      <p>Granted for academic excellence and for the research project <em>Modeling the Impact of Human Behaviour on COVID-19 Vaccine Uptake</em> during the structured Master’s program in Mathematical Sciences.</p>
+      <p><a href="https://aims.ac.za/2023/07/03/aims-south-africa-hosts-its-20th-graduation-and-recognition-of-achievement-ceremony/">View recognition</a></p>
+    </div>
+  </details>
+
+</div> 
 
 ---
     {% endcapture %}
