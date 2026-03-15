@@ -651,20 +651,32 @@ a:hover{
 }
 
 
-/* Section-specific accents for mini cards */
-.mini-card-grid-education .mini-card{
+/* === Mini card accent modifiers === */
+
+.mini-card-accent-purple .mini-card{
   border-top: 4px solid rgba(124, 58, 237, 0.22);
 }
 
-.mini-card-grid-awards .mini-card{
-  border-top: 4px solid rgba(22, 163, 74, 0.22);
-}
-
-.mini-card-grid-education .mini-card summary::after{
+.mini-card-accent-purple .mini-card summary::after{
   color: var(--accent);
 }
 
-.mini-card-grid-awards .mini-card summary::after{
+.mini-card-accent-purple .mini-card[open] summary::after{
+  background: rgba(124,58,237,.08);
+  color: var(--accent);
+}
+
+
+.mini-card-accent-green .mini-card{
+  border-top: 4px solid rgba(22, 163, 74, 0.22);
+}
+
+.mini-card-accent-green .mini-card summary::after{
+  color: var(--brand);
+}
+
+.mini-card-accent-green .mini-card[open] summary::after{
+  background: rgba(22,163,74,.08);
   color: var(--brand);
 }
 
