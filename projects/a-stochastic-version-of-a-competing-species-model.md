@@ -9,7 +9,7 @@ title: A Stochastic Version of a Competing Species Model
     <div class="section-nav-inner">
       <p class="section-nav-label">Explore</p>
       <h2>Project Gallery</h2>
-      <a class="section-nav-link" href="/projects/">← Explore More Projects</a>
+      <a class="section-nav-link" href="/projects/">←  More Projects</a>
     </div>
   </aside>
 
