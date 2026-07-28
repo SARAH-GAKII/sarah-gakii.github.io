@@ -1,0 +1,114 @@
+---
+const year = new Date().getFullYear();
+
+const columns = [
+  {
+    heading: 'Platform',
+    links: [
+      { label: 'Capabilities', href: '#capabilities' },
+      { label: 'Work', href: '#work' },
+      { label: 'Approach', href: '#approach' },
+      { label: 'Research', href: '#research' },
+    ],
+  },
+  {
+    heading: 'Connect',
+    links: [
+      { label: 'LinkedIn', href: 'https://www.linkedin.com/in/sarah-gakii/', external: true },
+      { label: 'GitHub', href: 'https://github.com/SARAH-GAKII', external: true },
+      { label: 'Email', href: 'mailto:sarah.gakii.v@gmail.com' },
+    ],
+  },
+];
+---
+
+<footer class="site-footer section--dark">
+  <div class="container site-footer__grid">
+    <div class="site-footer__intro">
+      <span class="site-footer__name">Sarah G. Randol</span>
+      <p class="text-muted site-footer__mission">
+        Exploring, demonstrating, and communicating the practical power of analytical thinking —
+        mathematics, optimization, data science, and AI applied to real decisions.
+      </p>
+    </div>
+
+    {columns.map((column) => (
+      <nav class="site-footer__column" aria-label={column.heading}>
+        <h3>{column.heading}</h3>
+        <ul>
+          {column.links.map((link) => (
+            <li>
+              <a href={link.href} target={link.external ? '_blank' : undefined} rel={link.external ? 'noopener' : undefined}>
+                {link.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+    ))}
+  </div>
+
+  <div class="container site-footer__bottom">
+    <p class="text-muted">&copy; {year} Sarah G. Randol. All rights reserved.</p>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    padding-block: var(--space-10) var(--space-6);
+  }
+
+  .site-footer__grid {
+    display: grid;
+    gap: var(--space-8);
+    padding-bottom: var(--space-8);
+    border-bottom: 1px solid var(--border-on-dark);
+  }
+
+  .site-footer__name {
+    font-family: var(--font-serif);
+    font-size: var(--text-lg);
+    font-weight: 600;
+  }
+
+  .site-footer__mission {
+    margin-top: var(--space-3);
+    max-width: 26rem;
+    font-size: var(--text-sm);
+    line-height: var(--leading-normal);
+  }
+
+  .site-footer__column h3 {
+    font-family: var(--font-sans);
+    font-size: var(--text-xs);
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--text-muted-on-dark);
+    margin-bottom: var(--space-4);
+  }
+
+  .site-footer__column ul {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+
+  .site-footer__column a:hover {
+    color: var(--accent-on-dark);
+  }
+
+  .site-footer__bottom {
+    padding-top: var(--space-6);
+  }
+
+  .site-footer__bottom p {
+    font-size: var(--text-xs);
+  }
+
+  @media (min-width: 720px) {
+    .site-footer__grid {
+      grid-template-columns: 1.4fr 1fr 1fr;
+    }
+  }
+</style>

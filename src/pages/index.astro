@@ -1,17 +1,453 @@
 ---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Button from '../components/ui/Button.astro';
+import SectionHeading from '../components/ui/SectionHeading.astro';
+import CapabilityCard from '../components/cards/CapabilityCard.astro';
+import CaseStudyCard from '../components/cards/CaseStudyCard.astro';
+import EngagementCard from '../components/cards/EngagementCard.astro';
 
+const problems = [
+  'Which markets, assets, or projects deserve investment when resources and time are limited?',
+  'How do you forecast demand, price, or behavior well enough to act on it?',
+  'How do you turn a large, messy, or incomplete dataset into a decision-ready model?',
+  'How do you extract a reliable signal — a classification, a recommendation, a forecast — from real-world data?',
+  'How do you know a model is actually right, and how much should it be trusted?',
+];
+
+const capabilities = [
+  {
+    index: '01',
+    title: 'Optimization & Decision Systems',
+    description:
+      'Formulating constraints, objectives, and trade-offs into models that support real decisions under scarcity.',
+  },
+  {
+    index: '02',
+    title: 'Applied AI & Machine Learning',
+    description:
+      'Building and evaluating models — from classification to recommendation — grounded in how the underlying data was generated.',
+  },
+  {
+    index: '03',
+    title: 'Analytics & Business Intelligence',
+    description:
+      'Turning operational and market data into dashboards and metrics that hold up under scrutiny.',
+  },
+  {
+    index: '04',
+    title: 'Mathematical & Computational Modeling',
+    description:
+      "Using differential equations, numerical methods, and simulation to study systems that don't have closed-form answers.",
+  },
+  {
+    index: '05',
+    title: 'Forecasting & Planning',
+    description:
+      'Structuring uncertain futures — markets, demand, behavior — into models that support planning, not just prediction.',
+  },
+  {
+    index: '06',
+    title: 'Data Products & Visualization',
+    description:
+      'Turning models and analysis into interpretable, decision-ready visual tools.',
+  },
+];
+
+const caseStudies = [
+  {
+    title: 'Ohio Housing Affordability Analysis',
+    problem: 'Where is housing becoming unaffordable across Ohio, and for whom?',
+    methods: 'Power BI · DAX · Mapping · Time Series',
+  },
+  {
+    title: 'Ohio Energy Composition Analysis',
+    problem: "What structure exists in Ohio's regional energy mix, and how does it cluster?",
+    methods: 'Python · PCA · t-SNE · Clustering · GeoPandas',
+  },
+  {
+    title: 'Facial Emotion Recognition',
+    problem: 'Can a model reliably classify emotional expression from images in real time?',
+    methods: 'Python · TensorFlow/Keras · OpenCV · Transfer Learning',
+  },
+  {
+    title: 'Amazon Product Recommendation System',
+    problem: 'How do you recommend the right product from sparse, incomplete user signal?',
+    methods: 'Python · Surprise · SVD · Collaborative Filtering',
+  },
+  {
+    title: 'Battery Storage Optimization',
+    problem: 'When should a storage asset charge and discharge against real electricity-market prices?',
+    methods: 'Electricity-Market Data · Optimization',
+    status: 'in development' as const,
+  },
+];
+
+const research = [
+  {
+    title: 'Newton–Finite Difference Method for PDEs with Nonlinear Interface Jump Conditions',
+    tag: 'PDEs · Numerical Analysis · Newton Iteration',
+  },
+  {
+    title: 'Modeling the Impact of Human Behavior on COVID-19 Vaccine Uptake',
+    tag: 'Epidemic Modeling · Evolutionary Game Theory',
+  },
+  {
+    title: 'A Mathematical Model for Crime with Cooperative Policing',
+    tag: 'Dynamical Systems · Public Policy Modeling',
+  },
+];
+
+const approach = [
+  {
+    index: '01',
+    title: 'Understand the decision',
+    description: 'Start with the decision being made, not the dataset — what question actually needs answering, and by whom.',
+  },
+  {
+    index: '02',
+    title: 'Understand the data',
+    description: 'Trace how the data was generated and what assumptions that implies before choosing a method.',
+  },
+  {
+    index: '03',
+    title: 'Model & analyze',
+    description: 'Select or build the model — statistical, optimization, or machine learning — that matches the structure of the problem.',
+  },
+  {
+    index: '04',
+    title: 'Validate',
+    description: 'Test assumptions, check limitations, and confirm the model holds up before trusting it.',
+  },
+  {
+    index: '05',
+    title: 'Communicate & support the decision',
+    description: 'Translate results into something a decision-maker can actually act on.',
+  },
+];
+
+const engagementPaths = [
+  {
+    audience: 'Hiring managers & recruiters',
+    description: 'Evidence of how I structure ambiguous problems and ship analytical work that holds up.',
+    ctaLabel: 'Discuss a role',
+  },
+  {
+    audience: 'Business leaders & collaborators',
+    description: 'A partner for analytics, optimization, or AI work tied to a real operational decision.',
+    ctaLabel: 'Start a conversation',
+  },
+  {
+    audience: 'Technical reviewers',
+    description: 'Methodology, assumptions, and validation available on request for any project shown here.',
+    ctaLabel: 'Ask about the method',
+  },
+];
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout
+  title="Sarah G. Randol — Applied Mathematics, Optimization & AI"
+  description="A digital home for advanced analytical thinking: mathematics, optimization, data science, and AI applied to real organizational decisions."
+>
+  <!-- Hero -->
+  <section class="hero section--dark section">
+    <div class="container hero__grid">
+      <span class="eyebrow">Applied Mathematics · Optimization · AI</span>
+      <h1 class="hero__headline">Turning complex problems into decisions you can act on.</h1>
+      <p class="hero__subhead text-muted prose-width">
+        I build mathematical models, optimization systems, and applied AI tools that help
+        organizations structure ambiguity, forecast what's coming, and make better decisions
+        with the data they already have.
+      </p>
+      <div class="hero__actions">
+        <Button href="#work">See the work</Button>
+        <Button href="#capabilities" variant="secondary">How I can help</Button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Problems / decisions -->
+  <section class="section">
+    <div class="container">
+      <SectionHeading
+        eyebrow="Where this becomes useful"
+        title="Problems worth solving carefully"
+        description="Complex organizational problems can be made clearer, more structured, and more actionable through rigorous analytical thinking."
+      />
+      <ul class="problems-list">
+        {problems.map((problem) => (
+          <li class="problems-list__item">
+            <p>{problem}</p>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <!-- Capabilities -->
+  <section id="capabilities" class="section section--muted">
+    <div class="container">
+      <SectionHeading
+        eyebrow="Capabilities"
+        title="What I help organizations do"
+        description="Not a technology list — a set of capabilities applied to real decisions."
+      />
+      <div class="capability-grid">
+        {capabilities.map((capability) => (
+          <CapabilityCard index={capability.index} title={capability.title} description={capability.description} />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Selected work -->
+  <section id="work" class="section">
+    <div class="container">
+      <SectionHeading
+        eyebrow="Selected work"
+        title="Evidence, not claims"
+        description="Full case-study write-ups — methodology, assumptions, validation, and results — are in development. Each project below is real, completed work."
+      />
+      <div class="case-study-grid">
+        {caseStudies.map((project) => (
+          <CaseStudyCard title={project.title} problem={project.problem} methods={project.methods} status={project.status} />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Approach -->
+  <section id="approach" class="section section--dark">
+    <div class="container">
+      <SectionHeading
+        eyebrow="How I work"
+        title="An approach built on structure before speed"
+        description="I approach problems by first understanding how data is generated, what assumptions are involved, and what questions the analysis is meant to answer — before selecting or training a model."
+      />
+      <ol class="approach-list">
+        {approach.map((step) => (
+          <li class="approach-list__item">
+            <span class="approach-list__index" aria-hidden="true">{step.index}</span>
+            <div>
+              <h3>{step.title}</h3>
+              <p class="text-muted">{step.description}</p>
+            </div>
+          </li>
+        ))}
+      </ol>
+    </div>
+  </section>
+
+  <!-- Tools / products teaser -->
+  <section class="section section--tight section--muted">
+    <div class="container tools-teaser">
+      <div>
+        <span class="eyebrow">Tools &amp; products</span>
+        <h2>Interactive analytical tools are in development.</h2>
+        <p class="text-muted prose-width">
+          Optimization applications and analytical products will appear here as they're ready.
+          Nothing is presented as a live offering until it actually is one.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Research -->
+  <section id="research" class="section">
+    <div class="container">
+      <SectionHeading
+        eyebrow="Research"
+        title="Mathematical & computational research"
+        description="Published and graduate research spanning PDEs, epidemic modeling, and dynamical systems."
+      />
+      <div class="research-grid">
+        {research.map((item) => (
+          <article class="research-card">
+            <h3>{item.title}</h3>
+            <p class="text-muted research-card__tag">{item.tag}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Engagement paths -->
+  <section class="section section--dark">
+    <div class="container">
+      <SectionHeading
+        eyebrow="Get involved"
+        title="A few ways to engage"
+      />
+      <div class="engagement-grid">
+        {engagementPaths.map((path) => (
+          <EngagementCard audience={path.audience} description={path.description} ctaLabel={path.ctaLabel} />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Closing CTA / contact -->
+  <section id="contact" class="section closing-cta">
+    <div class="container closing-cta__inner">
+      <h2>Have a problem worth structuring carefully?</h2>
+      <p class="text-muted prose-width">
+        Reach out about a role, a project, or a question about the methodology behind any work shown here.
+      </p>
+      <div class="hero__actions">
+        <Button href="mailto:sarah.gakii.v@gmail.com">Email me</Button>
+        <Button href="https://www.linkedin.com/in/sarah-gakii/" variant="secondary" external>Connect on LinkedIn</Button>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .hero__grid {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-5);
+    max-width: 46rem;
+  }
+
+  .hero__headline {
+    font-size: var(--text-3xl);
+    color: var(--text-on-dark);
+  }
+
+  .hero__subhead {
+    font-size: var(--text-md);
+    line-height: var(--leading-snug);
+  }
+
+  .hero__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-4);
+    margin-top: var(--space-2);
+  }
+
+  .problems-list {
+    display: grid;
+    gap: var(--space-4);
+  }
+
+  .problems-list__item {
+    padding: var(--space-5) var(--space-6);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+  }
+
+  .problems-list__item p {
+    font-family: var(--font-serif);
+    font-size: var(--text-md);
+    line-height: var(--leading-snug);
+  }
+
+  .capability-grid {
+    display: grid;
+    gap: var(--space-5);
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  }
+
+  .case-study-grid {
+    display: grid;
+    gap: var(--space-5);
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  }
+
+  .approach-list {
+    display: grid;
+    gap: var(--space-6);
+  }
+
+  .approach-list__item {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: var(--space-5);
+    align-items: baseline;
+    padding-bottom: var(--space-6);
+    border-bottom: 1px solid var(--border-on-dark);
+  }
+
+  .approach-list__item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .approach-list__index {
+    font-family: var(--font-serif);
+    font-size: var(--text-lg);
+    color: var(--accent-on-dark);
+  }
+
+  .approach-list__item h3 {
+    font-size: var(--text-md);
+    color: var(--text-on-dark);
+    margin-bottom: var(--space-2);
+  }
+
+  .approach-list__item p {
+    font-size: var(--text-sm);
+    line-height: var(--leading-normal);
+  }
+
+  .tools-teaser h2 {
+    font-size: var(--text-xl);
+    margin-block: var(--space-3);
+  }
+
+  .research-grid {
+    display: grid;
+    gap: var(--space-5);
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  }
+
+  .research-card {
+    padding: var(--space-6);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+  }
+
+  .research-card h3 {
+    font-family: var(--font-serif);
+    font-size: var(--text-md);
+    line-height: var(--leading-snug);
+    margin-bottom: var(--space-3);
+  }
+
+  .research-card__tag {
+    font-size: var(--text-xs);
+    letter-spacing: 0.02em;
+  }
+
+  .engagement-grid {
+    display: grid;
+    gap: var(--space-5);
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  }
+
+  .closing-cta__inner {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-5);
+    text-align: center;
+    align-items: center;
+  }
+
+  .closing-cta__inner h2 {
+    font-size: var(--text-2xl);
+  }
+
+  @media (min-width: 640px) {
+    .problems-list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 860px) {
+    .approach-list__item {
+      grid-template-columns: 4rem 1fr;
+    }
+  }
+</style>

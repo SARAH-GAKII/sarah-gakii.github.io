@@ -22,3 +22,7 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# Local reference materials
+Portfolio Development Handbook.docx
+sarah-gakii.github.io-main.zip

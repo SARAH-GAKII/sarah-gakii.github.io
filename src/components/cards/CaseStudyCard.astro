@@ -1,0 +1,57 @@
+---
+interface Props {
+  title: string;
+  problem: string;
+  methods: string;
+  status?: 'in development';
+}
+
+const { title, problem, methods, status } = Astro.props;
+---
+
+<article class="case-study-card">
+  {status && <span class="case-study-card__status">{status}</span>}
+  <h3>{title}</h3>
+  <p class="case-study-card__problem">{problem}</p>
+  <p class="case-study-card__methods text-muted">{methods}</p>
+</article>
+
+<style>
+  .case-study-card {
+    padding: var(--space-6);
+    border-radius: var(--radius-md);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    height: 100%;
+  }
+
+  .case-study-card__status {
+    align-self: flex-start;
+    font-size: var(--text-xs);
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--accent-warm);
+    border: 1px solid var(--accent-warm);
+    border-radius: 999px;
+    padding: 0.2rem 0.65rem;
+  }
+
+  .case-study-card h3 {
+    font-size: var(--text-md);
+  }
+
+  .case-study-card__problem {
+    font-size: var(--text-sm);
+    line-height: var(--leading-normal);
+  }
+
+  .case-study-card__methods {
+    margin-top: auto;
+    font-size: var(--text-xs);
+    letter-spacing: 0.02em;
+  }
+</style>

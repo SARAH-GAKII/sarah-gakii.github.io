@@ -1,0 +1,200 @@
+---
+const navItems = [
+  { label: 'Capabilities', href: '#capabilities' },
+  { label: 'Work', href: '#work' },
+  { label: 'Approach', href: '#approach' },
+  { label: 'Research', href: '#research' },
+];
+---
+
+<header class="site-header">
+  <div class="container site-header__row">
+    <a class="site-header__mark" href="#top">
+      <span class="site-header__name">Sarah G. Randol</span>
+      <span class="site-header__tagline">Applied Mathematics &amp; Analytical Systems</span>
+    </a>
+
+    <button
+      class="site-header__toggle"
+      id="nav-toggle"
+      aria-expanded="false"
+      aria-controls="primary-navigation"
+    >
+      <span class="visually-hidden">Toggle navigation menu</span>
+      <span class="site-header__toggle-bar" aria-hidden="true"></span>
+    </button>
+
+    <nav
+      class="site-header__nav"
+      id="primary-navigation"
+      aria-label="Primary"
+      data-nav-panel
+    >
+      <ul>
+        {navItems.map((item) => (
+          <li>
+            <a href={item.href}>{item.label}</a>
+          </li>
+        ))}
+      </ul>
+      <a class="site-header__cta" href="#contact">Start a conversation</a>
+    </nav>
+  </div>
+</header>
+
+<script>
+  const toggle = document.getElementById('nav-toggle');
+  const panel = document.querySelector('[data-nav-panel]');
+
+  toggle?.addEventListener('click', () => {
+    const isOpen = toggle.getAttribute('aria-expanded') === 'true';
+    toggle.setAttribute('aria-expanded', String(!isOpen));
+    panel?.classList.toggle('is-open', !isOpen);
+  });
+
+  panel?.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => {
+      toggle?.setAttribute('aria-expanded', 'false');
+      panel.classList.remove('is-open');
+    });
+  });
+</script>
+
+<style>
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(250, 249, 246, 0.9);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .site-header__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-block: var(--space-4);
+  }
+
+  .site-header__mark {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+  }
+
+  .site-header__name {
+    font-family: var(--font-serif);
+    font-weight: 600;
+    font-size: var(--text-md);
+  }
+
+  .site-header__tagline {
+    font-size: var(--text-xs);
+    color: var(--text-muted-on-paper);
+  }
+
+  .site-header__toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.75rem;
+    height: 2.75rem;
+    border-radius: var(--radius-sm);
+  }
+
+  .site-header__toggle-bar,
+  .site-header__toggle-bar::before,
+  .site-header__toggle-bar::after {
+    display: block;
+    width: 1.25rem;
+    height: 2px;
+    background: var(--ink-900);
+    border-radius: 1px;
+  }
+
+  .site-header__toggle-bar {
+    position: relative;
+  }
+
+  .site-header__toggle-bar::before,
+  .site-header__toggle-bar::after {
+    content: '';
+    position: absolute;
+    left: 0;
+  }
+
+  .site-header__toggle-bar::before {
+    top: -6px;
+  }
+
+  .site-header__toggle-bar::after {
+    top: 6px;
+  }
+
+  .site-header__nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    padding: var(--space-4) var(--gutter) var(--space-6);
+  }
+
+  .site-header__nav.is-open {
+    display: block;
+  }
+
+  .site-header__nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    margin-bottom: var(--space-5);
+  }
+
+  .site-header__nav a {
+    font-size: var(--text-md);
+  }
+
+  .site-header__cta {
+    display: inline-flex;
+    padding: 0.75rem 1.25rem;
+    background: var(--accent);
+    color: var(--text-on-dark);
+    border-radius: var(--radius-sm);
+    font-weight: 600;
+    font-size: var(--text-sm);
+  }
+
+  @media (min-width: 860px) {
+    .site-header__toggle {
+      display: none;
+    }
+
+    .site-header__nav {
+      display: flex;
+      position: static;
+      align-items: center;
+      gap: var(--space-8);
+      background: transparent;
+      border: none;
+      padding: 0;
+    }
+
+    .site-header__nav ul {
+      flex-direction: row;
+      gap: var(--space-6);
+      margin-bottom: 0;
+    }
+
+    .site-header__nav a:hover {
+      color: var(--accent);
+    }
+
+    .site-header__cta {
+      padding: 0.6rem 1.1rem;
+    }
+  }
+</style>

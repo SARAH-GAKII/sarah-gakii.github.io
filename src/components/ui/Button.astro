@@ -1,0 +1,76 @@
+---
+interface Props {
+  href: string;
+  variant?: 'primary' | 'secondary' | 'ghost';
+  external?: boolean;
+}
+
+const { href, variant = 'primary', external = false } = Astro.props;
+---
+
+<a
+  class={`primary-action primary-action--${variant}`}
+  href={href}
+  target={external ? '_blank' : undefined}
+  rel={external ? 'noopener' : undefined}
+>
+  <slot />
+</a>
+
+<style>
+  .primary-action {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    padding: 0.85rem 1.5rem;
+    border-radius: var(--radius-sm);
+    font-size: var(--text-sm);
+    font-weight: 600;
+    white-space: nowrap;
+    transition: background-color var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast);
+    border: 1px solid transparent;
+  }
+
+  .primary-action--primary {
+    background: var(--accent);
+    color: var(--text-on-dark);
+  }
+
+  .primary-action--primary:hover {
+    background: var(--accent-strong);
+  }
+
+  .primary-action--secondary {
+    border-color: var(--border);
+    color: var(--text-on-paper);
+  }
+
+  .section--dark .primary-action--secondary {
+    border-color: var(--border-on-dark);
+    color: var(--text-on-dark);
+  }
+
+  .primary-action--secondary:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+
+  .section--dark .primary-action--secondary:hover {
+    border-color: var(--accent-on-dark);
+    color: var(--accent-on-dark);
+  }
+
+  .primary-action--ghost {
+    padding-inline: 0;
+    color: var(--accent);
+  }
+
+  .section--dark .primary-action--ghost {
+    color: var(--accent-on-dark);
+  }
+
+  .primary-action--ghost:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+</style>
