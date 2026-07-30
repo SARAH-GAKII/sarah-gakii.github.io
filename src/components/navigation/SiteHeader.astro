@@ -1,15 +1,18 @@
 ---
 const navItems = [
-  { label: 'Capabilities', href: '#capabilities' },
-  { label: 'Work', href: '#work' },
-  { label: 'Approach', href: '#approach' },
-  { label: 'Research', href: '#research' },
+  { label: 'Home', href: '/' },
+  { label: 'Work', href: '/work/' },
+  { label: 'Research', href: '/research/' },
+  { label: 'About', href: '/about/' },
 ];
+
+const currentPath = Astro.url.pathname;
+const isActive = (href: string) => (href === '/' ? currentPath === '/' : currentPath.startsWith(href));
 ---
 
 <header class="site-header">
   <div class="container site-header__row">
-    <a class="site-header__mark" href="#top">
+    <a class="site-header__mark" href="/">
       <span class="site-header__name">Sarah G. Randol</span>
       <span class="site-header__tagline">Applied Mathematics &amp; Analytical Systems</span>
     </a>
@@ -33,11 +36,11 @@ const navItems = [
       <ul>
         {navItems.map((item) => (
           <li>
-            <a href={item.href}>{item.label}</a>
+            <a href={item.href} aria-current={isActive(item.href) ? 'page' : undefined}>{item.label}</a>
           </li>
         ))}
       </ul>
-      <a class="site-header__cta" href="#contact">Start a conversation</a>
+      <a class="site-header__cta" href="/contact/">Start a conversation</a>
     </nav>
   </div>
 </header>
@@ -190,6 +193,10 @@ const navItems = [
     }
 
     .site-header__nav a:hover {
+      color: var(--accent);
+    }
+
+    .site-header__nav a[aria-current='page'] {
       color: var(--accent);
     }
 

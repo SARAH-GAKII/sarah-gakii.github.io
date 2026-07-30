@@ -1,0 +1,123 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SectionBackLink from '../../components/navigation/SectionBackLink.astro';
+
+export async function getStaticPaths() {
+  const projects = await getCollection('work');
+  return projects.map((project) => ({
+    params: { slug: project.id },
+    props: { project },
+  }));
+}
+
+const { project } = Astro.props;
+const { Content } = await render(project);
+const { title, summary, problem, methods, status, links } = project.data;
+---
+
+<BaseLayout
+  title={`${title} — Sarah G. Randol`}
+  description={summary}
+>
+  <article class="project-detail section">
+    <div class="container project-detail__grid">
+      <aside class="project-detail__aside">
+        <SectionBackLink href="/work/" label="More work" />
+      </aside>
+
+      <div class="project-detail__content">
+        {status === 'in development' && <span class="project-detail__status">In development</span>}
+        <span class="eyebrow">{methods.join(' · ')}</span>
+        <h1>{title}</h1>
+        {problem && <p class="project-detail__problem prose-width">{problem}</p>}
+
+        <div class="prose">
+          <Content />
+        </div>
+
+        {links.length > 0 && (
+          <ul class="project-detail__links">
+            {links.map((link) => (
+              <li>
+                <a
+                  href={link.href}
+                  target={link.href.startsWith('http') ? '_blank' : undefined}
+                  rel={link.href.startsWith('http') ? 'noopener' : undefined}
+                >
+                  {link.label} <span aria-hidden="true">&rarr;</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        )}
+      </div>
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .project-detail__grid {
+    display: grid;
+    gap: var(--space-8);
+  }
+
+  .project-detail__status {
+    display: inline-flex;
+    align-self: flex-start;
+    font-size: var(--text-xs);
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--accent-warm);
+    border: 1px solid var(--accent-warm);
+    border-radius: 999px;
+    padding: 0.2rem 0.65rem;
+    margin-bottom: var(--space-3);
+  }
+
+  .project-detail__content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-5);
+  }
+
+  .project-detail__content h1 {
+    font-size: var(--text-2xl);
+    max-width: 34rem;
+  }
+
+  .project-detail__problem {
+    font-family: var(--font-serif);
+    font-size: var(--text-md);
+    line-height: var(--leading-snug);
+    color: var(--text-muted-on-paper);
+  }
+
+  .project-detail__links {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    padding-top: var(--space-4);
+    border-top: 1px solid var(--border);
+  }
+
+  .project-detail__links a {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-weight: 600;
+    color: var(--accent);
+  }
+
+  .project-detail__links a:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+
+  @media (min-width: 860px) {
+    .project-detail__grid {
+      grid-template-columns: 12rem 1fr;
+    }
+  }
+</style>

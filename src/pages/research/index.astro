@@ -1,0 +1,44 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/sections/PageHero.astro';
+import ResearchCard from '../../components/cards/ResearchCard.astro';
+
+const items = (await getCollection('research')).sort((a, b) => a.data.order - b.data.order);
+---
+
+<BaseLayout
+  title="Research — Sarah G. Randol"
+  description="Published and graduate research in PDEs, numerical analysis, epidemic modeling, and dynamical systems, plus academic workshops and research schools."
+>
+  <PageHero
+    eyebrow="Research"
+    title="Mathematical & computational research"
+    description="Published and graduate research spanning partial differential equations, numerical analysis, epidemic modeling, and dynamical systems."
+    motif="network"
+  />
+
+  <section class="section">
+    <div class="container">
+      <div class="research-grid">
+        {items.map((item) => (
+          <ResearchCard
+            slug={item.id}
+            title={item.data.title}
+            summary={item.data.summary}
+            tags={item.data.tags}
+            thumbnail={item.data.thumbnail}
+          />
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .research-grid {
+    display: grid;
+    gap: var(--space-6);
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  }
+</style>

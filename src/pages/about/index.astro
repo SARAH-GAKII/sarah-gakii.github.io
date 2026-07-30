@@ -1,0 +1,473 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SectionHeading from '../../components/ui/SectionHeading.astro';
+import MediaGallery from '../../components/media/MediaGallery.astro';
+import Button from '../../components/ui/Button.astro';
+import {
+  bio,
+  focusAreas,
+  education,
+  awards,
+  experience,
+  teachingPhilosophy,
+  community,
+  beyondTheResume,
+} from '../../data/about';
+
+const approach = [
+  { index: '01', title: 'Understand the decision', description: 'Start with the decision being made, not the dataset — what question actually needs answering, and by whom.' },
+  { index: '02', title: 'Understand the data', description: 'Trace how the data was generated and what assumptions that implies before choosing a method.' },
+  { index: '03', title: 'Model & analyze', description: 'Select or build the model — statistical, optimization, or machine learning — that matches the structure of the problem.' },
+  { index: '04', title: 'Validate', description: 'Test assumptions, check limitations, and confirm the model holds up before trusting it.' },
+  { index: '05', title: 'Communicate & support the decision', description: 'Translate results into something a decision-maker can actually act on.' },
+];
+---
+
+<BaseLayout
+  title="About — Sarah G. Randol"
+  description="Applied mathematician and data scientist working across mathematics, optimization, data science, and AI — background, education, and experience."
+>
+  <!-- Intro -->
+  <section class="section about-intro">
+    <div class="container about-intro__grid">
+      <div class="about-intro__portrait">
+        <img src={bio.headshot} alt={`Portrait of ${bio.name}`} />
+      </div>
+      <div class="about-intro__copy">
+        <span class="eyebrow">About</span>
+        <h1>{bio.name}</h1>
+        <p class="prose-width">{bio.summary}</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Focus areas -->
+  <section class="section section--muted">
+    <div class="container">
+      <SectionHeading eyebrow="Professional focus" title="Where the work concentrates" />
+      <ul class="focus-list">
+        {focusAreas.map((item) => {
+          const [label, ...rest] = item.split(' — ');
+          return (
+            <li>
+              <strong>{label}</strong> — {rest.join(' — ')}
+            </li>
+          );
+        })}
+      </ul>
+    </div>
+  </section>
+
+  <!-- Approach -->
+  <section class="section section--dark">
+    <div class="container">
+      <SectionHeading
+        eyebrow="How I work"
+        title="An approach built on structure before speed"
+        description="I approach problems by understanding how data is generated and what questions the analysis needs to answer — before selecting or training a model."
+      />
+      <ol class="approach-list">
+        {approach.map((step) => (
+          <li class="approach-list__item">
+            <span class="approach-list__index" aria-hidden="true">{step.index}</span>
+            <div>
+              <h3>{step.title}</h3>
+              <p class="text-muted">{step.description}</p>
+            </div>
+          </li>
+        ))}
+      </ol>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section class="section">
+    <div class="container">
+      <SectionHeading eyebrow="Education" title="Academic background" />
+      <div class="detail-card-grid">
+        {education.map((entry) => (
+          <details class="detail-card">
+            <summary>
+              <span class="detail-card__title">{entry.title}</span>
+              <span class="detail-card__meta">{entry.meta}</span>
+            </summary>
+            <div class="detail-card__body">
+              <p>{entry.description}</p>
+              <p class="detail-card__courses"><strong>Courses:</strong> {entry.courses}</p>
+            </div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section class="section section--muted">
+    <div class="container">
+      <SectionHeading eyebrow="Experience" title="Professional history" />
+      <div class="experience-groups">
+        {experience.map((group) => (
+          <div class="experience-group">
+            <h3>{group.category}</h3>
+            <p class="text-muted experience-group__meta">{group.meta}</p>
+            <div class="experience-group__entries">
+              {group.entries.map((entry) => (
+                <article class="experience-entry">
+                  <h4>{entry.role}</h4>
+                  <p class="experience-entry__org text-muted">{entry.org}</p>
+                  <ul>
+                    {entry.bullets.map((bullet) => (
+                      <li>{bullet}</li>
+                    ))}
+                  </ul>
+                </article>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div class="teaching-philosophy">
+        <h3>Teaching & mentorship</h3>
+        <p>{teachingPhilosophy}</p>
+        <div class="teaching-philosophy__badges">
+          <img src="/images/about/active-learning-badge.png" alt="Active Learning Certificate Program badge, BGSU" loading="lazy" />
+          <img src="/images/about/intro-ai-cloud-certificate.png" alt="Introduction to AI on Cloud certificate" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Awards -->
+  <section class="section">
+    <div class="container">
+      <SectionHeading eyebrow="Awards & recognition" title="Recognition along the way" />
+      <div class="detail-card-grid">
+        {awards.map((award) => (
+          <details class="detail-card">
+            <summary>
+              <span class="detail-card__title">{award.title}</span>
+              <span class="detail-card__meta">{award.meta}</span>
+            </summary>
+            <div class="detail-card__body">
+              <p>{award.description}</p>
+              {award.link && (
+                <p><a href={award.link.href} target="_blank" rel="noopener">{award.link.label} &rarr;</a></p>
+              )}
+            </div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Community -->
+  <section class="section section--muted">
+    <div class="container">
+      <SectionHeading eyebrow="Community engagement" title="Beyond the technical work" />
+      <div class="community-grid">
+        {community.map((item) => (
+          <article class="community-card">
+            <h3>{item.title}</h3>
+            <p class="community-card__meta text-muted">{item.meta}</p>
+            <p>{item.description}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Beyond the resume -->
+  <section class="section">
+    <div class="container">
+      <SectionHeading eyebrow="Beyond the resume" title="Workshops, teaching, and collaboration" />
+      <MediaGallery items={beyondTheResume} />
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section section--dark closing-cta">
+    <div class="container closing-cta__inner">
+      <h2>Have a problem worth structuring carefully?</h2>
+      <div class="hero__actions">
+        <Button href="/contact/">Get in touch</Button>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .about-intro__grid {
+    display: grid;
+    gap: var(--space-8);
+    align-items: center;
+  }
+
+  .about-intro__portrait img {
+    width: 100%;
+    max-width: 18rem;
+    border-radius: var(--radius-lg);
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+  }
+
+  .about-intro__copy {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+  }
+
+  .about-intro__copy h1 {
+    font-size: var(--text-2xl);
+  }
+
+  .about-intro__copy p {
+    font-size: var(--text-md);
+    line-height: var(--leading-snug);
+    color: var(--text-muted-on-paper);
+  }
+
+  .focus-list {
+    display: grid;
+    gap: var(--space-4);
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  }
+
+  .focus-list li {
+    padding: var(--space-5);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    font-size: var(--text-sm);
+    line-height: var(--leading-normal);
+  }
+
+  .approach-list {
+    display: grid;
+    gap: var(--space-6);
+  }
+
+  .approach-list__item {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: var(--space-5);
+    align-items: baseline;
+    padding-bottom: var(--space-6);
+    border-bottom: 1px solid var(--border-on-dark);
+  }
+
+  .approach-list__item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .approach-list__index {
+    font-family: var(--font-serif);
+    font-size: var(--text-lg);
+    color: var(--accent-on-dark);
+  }
+
+  .approach-list__item h3 {
+    font-size: var(--text-md);
+    color: var(--text-on-dark);
+    margin-bottom: var(--space-2);
+  }
+
+  .approach-list__item p {
+    font-size: var(--text-sm);
+    line-height: var(--leading-normal);
+  }
+
+  .detail-card-grid {
+    display: grid;
+    gap: var(--space-4);
+  }
+
+  .detail-card {
+    padding: var(--space-5) var(--space-6);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+  }
+
+  .detail-card summary {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: var(--space-3);
+    cursor: pointer;
+    list-style: none;
+  }
+
+  .detail-card summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .detail-card__title {
+    font-family: var(--font-serif);
+    font-size: var(--text-md);
+    font-weight: 600;
+  }
+
+  .detail-card__meta {
+    font-size: var(--text-xs);
+    color: var(--text-muted-on-paper);
+  }
+
+  .detail-card__body {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    margin-top: var(--space-4);
+    font-size: var(--text-sm);
+    line-height: var(--leading-normal);
+  }
+
+  .detail-card__body a {
+    color: var(--accent);
+  }
+
+  .experience-groups {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8);
+  }
+
+  .experience-group h3 {
+    font-size: var(--text-lg);
+  }
+
+  .experience-group__meta {
+    margin-top: var(--space-2);
+    font-size: var(--text-sm);
+  }
+
+  .experience-group__entries {
+    display: grid;
+    gap: var(--space-5);
+    margin-top: var(--space-5);
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  }
+
+  .experience-entry {
+    padding: var(--space-5);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+  }
+
+  .experience-entry h4 {
+    font-size: var(--text-base);
+  }
+
+  .experience-entry__org {
+    margin-top: var(--space-1);
+    font-size: var(--text-xs);
+  }
+
+  .experience-entry ul {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    margin-top: var(--space-3);
+    list-style: disc;
+    padding-left: var(--space-4);
+  }
+
+  .experience-entry li {
+    font-size: var(--text-sm);
+    line-height: var(--leading-normal);
+  }
+
+  .teaching-philosophy {
+    margin-top: var(--space-8);
+    padding-top: var(--space-8);
+    border-top: 1px solid var(--border);
+    max-width: var(--content-width);
+  }
+
+  .teaching-philosophy h3 {
+    font-size: var(--text-lg);
+    margin-bottom: var(--space-3);
+  }
+
+  .teaching-philosophy p {
+    font-size: var(--text-sm);
+    line-height: var(--leading-normal);
+  }
+
+  .teaching-philosophy__badges {
+    display: flex;
+    gap: var(--space-5);
+    margin-top: var(--space-5);
+  }
+
+  .teaching-philosophy__badges img {
+    height: 4.5rem;
+    width: auto;
+    border-radius: var(--radius-sm);
+  }
+
+  .community-grid {
+    display: grid;
+    gap: var(--space-5);
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  }
+
+  .community-card {
+    padding: var(--space-6);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+  }
+
+  .community-card h3 {
+    font-size: var(--text-base);
+  }
+
+  .community-card__meta {
+    margin: var(--space-2) 0 var(--space-3);
+    font-size: var(--text-xs);
+  }
+
+  .community-card p:last-child {
+    font-size: var(--text-sm);
+    line-height: var(--leading-normal);
+  }
+
+  .closing-cta__inner {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-5);
+    text-align: center;
+    align-items: center;
+  }
+
+  .closing-cta__inner h2 {
+    font-size: var(--text-2xl);
+    color: var(--text-on-dark);
+  }
+
+  .hero__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-4);
+    justify-content: center;
+  }
+
+  @media (min-width: 720px) {
+    .about-intro__grid {
+      grid-template-columns: 18rem 1fr;
+    }
+  }
+
+  @media (min-width: 860px) {
+    .approach-list__item {
+      grid-template-columns: 4rem 1fr;
+    }
+
+    .detail-card-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+</style>

@@ -1,0 +1,46 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/sections/PageHero.astro';
+import ProjectCard from '../../components/cards/ProjectCard.astro';
+
+const projects = (await getCollection('work')).sort((a, b) => a.data.order - b.data.order);
+---
+
+<BaseLayout
+  title="Work — Sarah G. Randol"
+  description="Completed analytics, optimization, machine learning, and mathematical modeling projects — evidence of capability, not claims."
+>
+  <PageHero
+    eyebrow="Work"
+    title="Evidence, not claims"
+    description="Completed analytics, optimization, machine learning, and dashboard projects. Each one is real, finished work — methodology, data, and results included."
+    motif="optimization"
+  />
+
+  <section class="section">
+    <div class="container">
+      <div class="work-grid">
+        {projects.map((project) => (
+          <ProjectCard
+            slug={project.id}
+            title={project.data.title}
+            summary={project.data.summary}
+            methods={project.data.methods}
+            status={project.data.status}
+            thumbnail={project.data.thumbnail}
+            video={project.data.video}
+          />
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .work-grid {
+    display: grid;
+    gap: var(--space-6);
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  }
+</style>

@@ -1,0 +1,66 @@
+---
+import OptimizationMotif from '../decorative/OptimizationMotif.astro';
+import NetworkMotif from '../decorative/NetworkMotif.astro';
+
+interface Props {
+  eyebrow: string;
+  title: string;
+  description?: string;
+  motif?: 'optimization' | 'network' | 'none';
+}
+
+const { eyebrow, title, description, motif = 'none' } = Astro.props;
+---
+
+<section class="page-hero section--dark">
+  {motif !== 'none' && (
+    <div class="page-hero__motif">
+      {motif === 'optimization' ? <OptimizationMotif /> : <NetworkMotif />}
+    </div>
+  )}
+  <div class="container page-hero__inner">
+    <span class="eyebrow">{eyebrow}</span>
+    <h1>{title}</h1>
+    {description && <p class="text-muted prose-width page-hero__description">{description}</p>}
+  </div>
+</section>
+
+<style>
+  .page-hero {
+    position: relative;
+    padding-block: var(--space-10) var(--space-10);
+    overflow: hidden;
+  }
+
+  .page-hero__motif {
+    position: absolute;
+    inset: 0;
+    color: var(--text-on-dark);
+    pointer-events: none;
+    mask-image: linear-gradient(to left, black 30%, transparent 85%);
+  }
+
+  .page-hero__inner {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+  }
+
+  .page-hero h1 {
+    font-size: var(--text-2xl);
+    color: var(--text-on-dark);
+    max-width: 34rem;
+  }
+
+  .page-hero__description {
+    font-size: var(--text-md);
+    line-height: var(--leading-snug);
+  }
+
+  @media (min-width: 860px) {
+    .page-hero {
+      padding-block: var(--space-12) var(--space-10);
+    }
+  }
+</style>

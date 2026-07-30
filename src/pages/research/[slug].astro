@@ -1,0 +1,97 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SectionBackLink from '../../components/navigation/SectionBackLink.astro';
+
+export async function getStaticPaths() {
+  const items = await getCollection('research');
+  return items.map((item) => ({
+    params: { slug: item.id },
+    props: { item },
+  }));
+}
+
+const { item } = Astro.props;
+const { Content } = await render(item);
+const { title, summary, tags, links } = item.data;
+---
+
+<BaseLayout title={`${title} — Sarah G. Randol`} description={summary}>
+  <article class="research-detail section">
+    <div class="container research-detail__grid">
+      <aside class="research-detail__aside">
+        <SectionBackLink href="/research/" label="More research" />
+      </aside>
+
+      <div class="research-detail__content">
+        <span class="eyebrow">{tags.join(' · ')}</span>
+        <h1>{title}</h1>
+
+        <div class="prose">
+          <Content />
+        </div>
+
+        {links.length > 0 && (
+          <ul class="research-detail__links">
+            {links.map((link) => (
+              <li>
+                <a
+                  href={link.href}
+                  target={link.href.startsWith('http') ? '_blank' : undefined}
+                  rel={link.href.startsWith('http') ? 'noopener' : undefined}
+                >
+                  {link.label} <span aria-hidden="true">&rarr;</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        )}
+      </div>
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .research-detail__grid {
+    display: grid;
+    gap: var(--space-8);
+  }
+
+  .research-detail__content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-5);
+  }
+
+  .research-detail__content h1 {
+    font-size: var(--text-2xl);
+    max-width: 36rem;
+  }
+
+  .research-detail__links {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    padding-top: var(--space-4);
+    border-top: 1px solid var(--border);
+  }
+
+  .research-detail__links a {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-weight: 600;
+    color: var(--accent);
+  }
+
+  .research-detail__links a:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+
+  @media (min-width: 860px) {
+    .research-detail__grid {
+      grid-template-columns: 12rem 1fr;
+    }
+  }
+</style>
