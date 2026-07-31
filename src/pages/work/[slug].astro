@@ -33,7 +33,13 @@ const { title, summary, problem, methods, status, video, links } = project.data;
         {problem && <p class="project-detail__problem prose-width">{problem}</p>}
 
         {video && (
-          <video class="project-detail__video" controls preload="metadata">
+          <video
+            class="project-detail__video"
+            controls
+            preload="metadata"
+            disablepictureinpicture
+            controlslist="nodownload noplaybackrate nofullscreen"
+          >
             <source src={video} type="video/mp4" />
           </video>
         )}

@@ -1,0 +1,72 @@
+---
+import type { ExperienceEntry } from '../../data/about';
+
+interface Props {
+  entries: ExperienceEntry[];
+}
+
+const { entries } = Astro.props;
+---
+
+<div class="role-list">
+  {entries.map((entry) => (
+    <article class="role-entry">
+      <div class="role-entry__head">
+        <h4>{entry.role}</h4>
+        <p class="text-muted">{entry.org}</p>
+      </div>
+      <ul>
+        {entry.bullets.map((bullet) => (
+          <li>{bullet}</li>
+        ))}
+      </ul>
+    </article>
+  ))}
+</div>
+
+<style>
+  .role-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-5);
+  }
+
+  .role-entry {
+    padding-top: var(--space-5);
+    border-top: 1px solid var(--border);
+  }
+
+  .role-list .role-entry:first-child {
+    padding-top: 0;
+    border-top: none;
+  }
+
+  .role-entry__head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: var(--space-2) var(--space-4);
+  }
+
+  .role-entry h4 {
+    font-size: var(--text-base);
+  }
+
+  .role-entry__head p {
+    font-size: var(--text-xs);
+  }
+
+  .role-entry ul {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    margin-top: var(--space-3);
+    list-style: disc;
+    padding-left: var(--space-4);
+  }
+
+  .role-entry li {
+    font-size: var(--text-sm);
+    line-height: var(--leading-normal);
+  }
+</style>

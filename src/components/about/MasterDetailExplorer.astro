@@ -1,0 +1,236 @@
+---
+interface ExplorerItem {
+  id: string;
+  title: string;
+  meta: string;
+}
+
+interface Props {
+  items: ExplorerItem[];
+}
+
+const { items } = Astro.props;
+---
+
+<div class="explorer" data-explorer style={`--explorer-columns:${items.length}`}>
+  <div class="explorer__selector" data-explorer-selector role="group" aria-label="Categories">
+    {items.map((item) => (
+      <button
+        type="button"
+        class="explorer__card"
+        data-explorer-card
+        data-target={item.id}
+        id={`card-${item.id}`}
+        aria-pressed="false"
+        aria-controls={`panel-${item.id}`}
+      >
+        <span class="explorer__card-title">{item.title}</span>
+        <span class="explorer__card-meta">{item.meta}</span>
+        <span class="explorer__card-affordance" aria-hidden="true">&rarr;</span>
+      </button>
+    ))}
+  </div>
+
+  <div class="explorer__panels" data-explorer-panels>
+    <button type="button" class="explorer__reset" data-explorer-reset>
+      &larr; Back to overview
+    </button>
+
+    {items.map((item) => (
+      <div
+        class="explorer__panel"
+        id={`panel-${item.id}`}
+        data-explorer-panel={item.id}
+        role="region"
+        aria-labelledby={`panel-${item.id}-heading`}
+        hidden
+      >
+        <h3 id={`panel-${item.id}-heading`} class="explorer__panel-heading">{item.title}</h3>
+        <slot name={item.id} />
+      </div>
+    ))}
+  </div>
+</div>
+
+<script>
+  document.querySelectorAll<HTMLElement>('[data-explorer]').forEach((root) => {
+    const cards = Array.from(root.querySelectorAll<HTMLButtonElement>('[data-explorer-card]'));
+    const panels = Array.from(root.querySelectorAll<HTMLElement>('[data-explorer-panel]'));
+    const resetBtn = root.querySelector<HTMLButtonElement>('[data-explorer-reset]');
+
+    const select = (id: string) => {
+      root.classList.add('is-selected');
+      cards.forEach((card) => {
+        const active = card.dataset.target === id;
+        card.setAttribute('aria-pressed', String(active));
+        card.classList.toggle('is-active', active);
+      });
+      panels.forEach((panel) => {
+        panel.hidden = panel.dataset.explorerPanel !== id;
+      });
+    };
+
+    const reset = () => {
+      root.classList.remove('is-selected');
+      cards.forEach((card) => {
+        card.setAttribute('aria-pressed', 'false');
+        card.classList.remove('is-active');
+      });
+      panels.forEach((panel) => {
+        panel.hidden = true;
+      });
+    };
+
+    cards.forEach((card) => {
+      card.addEventListener('click', () => {
+        if (card.classList.contains('is-active')) {
+          reset();
+          card.focus();
+        } else {
+          select(card.dataset.target ?? '');
+        }
+      });
+    });
+
+    resetBtn?.addEventListener('click', () => {
+      reset();
+      cards[0]?.focus();
+    });
+  });
+</script>
+
+<style>
+  .explorer {
+    display: grid;
+    grid-template-columns: repeat(var(--explorer-columns, 3), minmax(0, 1fr));
+    gap: var(--space-5);
+    align-items: stretch;
+  }
+
+  .explorer__selector {
+    display: contents;
+  }
+
+  .explorer__card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-2);
+    width: 100%;
+    padding: var(--space-5);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    text-align: left;
+    cursor: pointer;
+    transition: border-color var(--transition-fast), background var(--transition-fast), box-shadow var(--transition-fast);
+  }
+
+  .explorer__card:hover {
+    border-color: var(--border-strong);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .explorer__card:focus-visible {
+    outline: 2px solid var(--accent-on-dark);
+    outline-offset: 3px;
+  }
+
+  .explorer__card.is-active {
+    border-color: var(--accent);
+    background: var(--surface-muted);
+  }
+
+  .explorer__card-title {
+    font-family: var(--font-serif);
+    font-size: var(--text-base);
+    font-weight: 600;
+    line-height: var(--leading-snug);
+  }
+
+  .explorer__card-meta {
+    font-size: var(--text-xs);
+    color: var(--text-muted-on-paper);
+  }
+
+  .explorer__card-affordance {
+    margin-top: auto;
+    padding-top: var(--space-2);
+    color: var(--accent);
+    font-size: var(--text-sm);
+  }
+
+  .explorer__card.is-active .explorer__card-affordance {
+    transform: rotate(90deg);
+  }
+
+  .explorer__panels {
+    display: none;
+  }
+
+  .explorer__reset {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    margin-bottom: var(--space-5);
+    font-size: var(--text-xs);
+    font-weight: 600;
+    color: var(--accent);
+    cursor: pointer;
+  }
+
+  .explorer__reset:hover {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  .explorer__reset:focus-visible {
+    outline: 2px solid var(--accent-on-dark);
+    outline-offset: 3px;
+    border-radius: var(--radius-sm);
+  }
+
+  .explorer__panel-heading {
+    font-size: var(--text-lg);
+    margin-bottom: var(--space-5);
+  }
+
+  /* Selected state: sticky left selector + right detail panel */
+  .explorer.is-selected {
+    grid-template-columns: minmax(240px, 30%) 1fr;
+    align-items: start;
+  }
+
+  .explorer.is-selected .explorer__selector {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    position: sticky;
+    top: calc(5rem + var(--space-4));
+    align-self: start;
+  }
+
+  .explorer.is-selected .explorer__panels {
+    display: block;
+    min-width: 0;
+  }
+
+  @media (max-width: 767px) {
+    .explorer,
+    .explorer.is-selected {
+      grid-template-columns: 1fr;
+    }
+
+    .explorer.is-selected .explorer__selector {
+      position: static;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: var(--space-3);
+    }
+
+    .explorer.is-selected .explorer__card {
+      flex: 1 1 auto;
+      min-width: 0;
+    }
+  }
+</style>

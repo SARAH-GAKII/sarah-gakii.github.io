@@ -1,17 +1,11 @@
 export const bio = {
   name: 'Sarah G. Randol',
   headshot: '/images/about/headshot.png',
-  summary:
-    "I am a data scientist with a strong foundation in applied mathematics, focused on building data-driven models that support real-world decision-making. My work combines statistical modeling, machine learning, AI, and applied analytics — approaching problems by first understanding how data is generated, what assumptions are involved, and what questions the analysis is meant to answer, before selecting or training models.",
+  paragraphs: [
+    'I am a Data Scientist with a strong foundation in applied mathematics, focused on building data driven models that support real world decision making.',
+    'My work combines statistical modeling, machine learning, AI, and applied analytics. I approach problems by first understanding how data is generated, what assumptions are involved, and what questions the analysis is meant to answer, before selecting or training models. This perspective is shaped by rigorous mathematical training and hands on experience working end to end with real datasets.',
+  ],
 };
-
-export const focusAreas = [
-  'Applied AI & Data Science — developing data-driven models and analytical workflows that extract meaningful insight from complex datasets.',
-  'Machine Learning & Statistical Analysis — applying machine learning and statistical techniques to uncover patterns, support predictions, and inform decisions.',
-  'Mathematical & Computational Modeling — designing and analyzing numerical methods, simulations, and mathematical models to study complex systems.',
-  'Data Analytics & Visualization — transforming raw data into interpretable insight through exploratory analysis, dashboards, and visual storytelling.',
-  'Scientific Computing & Numerical Methods — implementing computational techniques to solve mathematical models and engineering problems.',
-];
 
 export interface EducationEntry {
   title: string;
@@ -23,7 +17,7 @@ export interface EducationEntry {
 export const education: EducationEntry[] = [
   {
     title: 'Applied AI & Data Science',
-    meta: 'MIT Professional Education · In Progress',
+    meta: 'MIT Professional Education · April 2026',
     description:
       'Advanced professional program focused on applied AI, machine learning, deep learning, recommendation systems, generative AI, and production-oriented data science workflows.',
     courses:
@@ -133,15 +127,16 @@ export const experience: ExperienceGroup[] = [
         org: 'National Social Security Fund (NSSF), Kenya · 2019',
         bullets: [
           'Processed and verified account registrations and identity records.',
-          'Supported issuance of duplicate membership cards, amended member records, and assisted members searching for lost membership numbers.',
-          'Maintained careful documentation and filing for fingerprint record retrieval.',
+          'Handled fingerprinting duties.',
+          'Supported issuance of duplicate membership cards, amended member records, and assisted with searches for members who had lost their membership numbers.',
+          'Maintained careful documentation and filing of fingerprint binder slips for record retrieval.',
         ],
       },
     ],
   },
   {
     category: 'Teaching & Mentorship',
-    meta: 'instruction · active learning · statistics · student mentorship',
+    meta: 'instruction · class management · statistics · active learning · student mentorship',
     entries: [
       {
         role: 'Graduate Teaching Assistant, Mathematics',
@@ -172,7 +167,7 @@ export const experience: ExperienceGroup[] = [
   },
   {
     category: 'Industrial Operations & Manufacturing',
-    meta: 'automotive production · quality assurance · process monitoring',
+    meta: 'automotive production · quality assurance · process monitoring · manufacturing operations',
     entries: [
       {
         role: 'Production Operator (Automotive Manufacturing)',
@@ -188,7 +183,15 @@ export const experience: ExperienceGroup[] = [
 ];
 
 export const teachingPhilosophy =
-  'Teaching is not just the transfer of knowledge but an opportunity to create inclusive, engaging learning spaces — combining clear explanations, active learning, and mentorship to help students build both confidence and problem-solving skills. The Active Learning Certificate Program (BGSU, 2025) sharpened this approach, including designing and presenting an inclusive lesson plan that applied active-learning strategies in practice.';
+  'I value teaching not just as the transfer of knowledge, but as an opportunity to create inclusive, engaging learning spaces. My approach combines clear explanations, active learning, and mentorship to help students build both confidence and problem-solving skills. To strengthen this approach, I completed the Active Learning Certificate Program (BGSU, 2025), where I designed and presented an inclusive lesson plan that applied active learning strategies in practice.';
+
+export const mentoringSupport = {
+  title: 'Mentoring & Student Support',
+  bullets: [
+    'Personalized study plans for students with test anxiety/time-management issues.',
+    'Emphasis on growth mindset and question-driven learning.',
+  ],
+};
 
 export interface CommunityEntry {
   title: string;
@@ -196,37 +199,69 @@ export interface CommunityEntry {
   description: string;
 }
 
-export const community: CommunityEntry[] = [
+export interface CommunityGroup {
+  title: string;
+  entries: CommunityEntry[];
+}
+
+export const habitatForHumanity = {
+  title: 'Habitat for Humanity — Women Build',
+  meta: 'Aug 2025 – Present',
+  intro:
+    'Contributed to residential construction projects as part of Habitat for Humanity’s Women Build initiative. This work supported affordable housing efforts while providing hands-on exposure to building systems and teamwork in the field.',
+  bullets: [
+    'Assisted with siding installation, framing, soffits, and hurricane ties, gaining practical knowledge of structural stability.',
+    'Helped with electrical and plumbing preparations (socket holders, vent pipes, fan mounts).',
+    'Collaborated with skilled supervisors and diverse teams to ensure safe, efficient progress.',
+  ],
+  closing:
+    'This experience connected problem-solving and technical thinking to real-world community impact while working in hands-on environments.',
+  lead: 'Construction lead: Daniel Cane',
+};
+
+export const campusInvolvementIntro =
+  'Beyond structured volunteering, I have taken part in a range of campus and community activities that connected me with people, science, and culture in meaningful ways.';
+
+export const campusInvolvementGroups: CommunityGroup[] = [
   {
-    title: 'Habitat for Humanity — Women Build',
-    meta: 'Aug 2025 – Present',
-    description:
-      'Contributed to residential construction projects supporting affordable housing: siding installation, framing, soffits, and hurricane ties, plus electrical and plumbing preparation, working alongside skilled supervisors and diverse teams. Construction lead: Daniel Cane.',
+    title: 'BGSU Events and Outreach',
+    entries: [
+      {
+        title: 'BGSU Campus Restore',
+        meta: 'Mar 2024, May 2025',
+        description: 'Assisted in a campus-wide sustainability initiative, supporting recycling and reuse efforts.',
+      },
+      {
+        title: 'Bowling Green Community Holiday Parade',
+        meta: 'Nov 2024',
+        description: 'Marched with the community to celebrate local traditions and connect with residents.',
+      },
+      {
+        title: 'Total Solar Eclipse Watch Party',
+        meta: 'Apr 2024 · BGSU',
+        description: 'Helped organize and guide participants during this rare celestial event, sharing in science outreach and community excitement.',
+      },
+      {
+        title: 'Northwest Ohio Science Olympiad',
+        meta: 'Mar 2024 · BGSU',
+        description: 'Volunteered in a STEM competition that brought together students to showcase problem-solving and innovation.',
+      },
+    ],
   },
   {
-    title: 'BGSU Campus Restore',
-    meta: 'Mar 2024, May 2025',
-    description: 'Supported a campus-wide sustainability initiative focused on recycling and reuse.',
-  },
-  {
-    title: 'Total Solar Eclipse Watch Party, BGSU',
-    meta: 'Apr 2024',
-    description: 'Helped organize and guide participants during this rare celestial event as part of science outreach.',
-  },
-  {
-    title: 'Northwest Ohio Science Olympiad, BGSU',
-    meta: 'Mar 2024',
-    description: 'Volunteered at a STEM competition bringing together students to showcase problem-solving and innovation.',
-  },
-  {
-    title: 'Student Leader, AIMS South Africa',
-    meta: '2023',
-    description: 'Provided peer leadership and mentorship during academic and extracurricular activities at the African Institute for Mathematical Sciences.',
-  },
-  {
-    title: 'House of Science, AIMS South Africa',
-    meta: '2022–2023',
-    description: 'Supported science communication and outreach to local communities, helping make mathematics and science more accessible.',
+    title: 'Leadership and Outreach in South Africa',
+    entries: [
+      {
+        title: 'Student Leader, AIMS',
+        meta: '2023 · South Africa',
+        description: 'Provided peer leadership and mentorship during academic and extracurricular activities at the African Institute for Mathematical Sciences.',
+      },
+      {
+        title: 'House of Science, AIMS',
+        meta: '2022–2023 · South Africa',
+        description: 'Supported science communication and outreach to local communities, helping make mathematics and science more accessible.',
+      },
+    ],
   },
 ];
 
@@ -241,6 +276,7 @@ export const beyondTheResume: MediaItem[] = [
   { type: 'video', src: '/videos/teaching.mp4', alt: 'Teaching a mathematics class' },
   { type: 'image', src: '/images/about/collaboration.jpg', alt: 'Academic collaboration with peers' },
   { type: 'image', src: '/images/about/data-work.jpg', alt: 'Working through a data analysis problem' },
+  { type: 'video', src: '/videos/aims-graduation.mp4', alt: 'Graduation ceremony at AIMS South Africa' },
   { type: 'image', src: '/images/about/research.jpg', alt: 'Remote research collaboration' },
 ];
 

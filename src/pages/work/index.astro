@@ -5,6 +5,8 @@ import PageHero from '../../components/sections/PageHero.astro';
 import ProjectCard from '../../components/cards/ProjectCard.astro';
 
 const projects = (await getCollection('work')).sort((a, b) => a.data.order - b.data.order);
+const completedCount = projects.filter((p) => p.data.status === 'completed').length;
+const inDevelopmentCount = projects.length - completedCount;
 ---
 
 <BaseLayout
@@ -14,7 +16,7 @@ const projects = (await getCollection('work')).sort((a, b) => a.data.order - b.d
   <PageHero
     eyebrow="Work"
     title="Evidence, not claims"
-    description="Completed analytics, optimization, machine learning, and dashboard projects. Each one is real, finished work — methodology, data, and results included."
+    description="Analytics, optimization, machine learning, and dashboard projects. Most are finished, real-data case studies — a few are shown in active development."
     motif="optimization"
   />
 
@@ -24,7 +26,8 @@ const projects = (await getCollection('work')).sort((a, b) => a.data.order - b.d
         Every project below shipped against a real dataset and a real constraint — not a tutorial exercise.
       </p>
       <p class="text-muted work-intro__meta">
-        {projects.length} completed projects spanning optimization, applied AI, and decision analytics.
+        {completedCount} completed projects spanning optimization, applied AI, and decision analytics
+        {inDevelopmentCount > 0 && `, plus ${inDevelopmentCount} in active development`}.
       </p>
     </div>
   </section>

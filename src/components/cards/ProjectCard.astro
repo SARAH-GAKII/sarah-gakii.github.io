@@ -20,7 +20,7 @@ const hasMedia = !compact && (thumbnail || video);
       {thumbnail ? (
         <img src={thumbnail} alt="" loading="lazy" />
       ) : (
-        <video autoplay muted loop playsinline preload="metadata">
+        <video muted playsinline preload="metadata" disablepictureinpicture controlslist="nodownload noplaybackrate nofullscreen">
           <source src={video} type="video/mp4" />
         </video>
       )}
