@@ -18,7 +18,18 @@ const projects = (await getCollection('work')).sort((a, b) => a.data.order - b.d
     motif="optimization"
   />
 
-  <section class="section">
+  <section class="section section--tight work-intro">
+    <div class="container work-intro__grid">
+      <p class="work-intro__lede">
+        Every project below shipped against a real dataset and a real constraint — not a tutorial exercise.
+      </p>
+      <p class="text-muted work-intro__meta">
+        {projects.length} completed projects spanning optimization, applied AI, and decision analytics.
+      </p>
+    </div>
+  </section>
+
+  <section class="section section--tight">
     <div class="container">
       <div class="work-grid">
         {projects.map((project) => (
@@ -38,9 +49,35 @@ const projects = (await getCollection('work')).sort((a, b) => a.data.order - b.d
 </BaseLayout>
 
 <style>
+  .work-intro__grid {
+    display: grid;
+    gap: var(--space-4);
+    padding-bottom: var(--space-8);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .work-intro__lede {
+    font-family: var(--font-serif);
+    font-size: var(--text-lg);
+    line-height: var(--leading-snug);
+    max-width: 32rem;
+  }
+
+  .work-intro__meta {
+    font-size: var(--text-sm);
+    max-width: 20rem;
+  }
+
   .work-grid {
     display: grid;
     gap: var(--space-6);
     grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  }
+
+  @media (min-width: 720px) {
+    .work-intro__grid {
+      grid-template-columns: 1fr auto;
+      align-items: end;
+    }
   }
 </style>

@@ -17,12 +17,12 @@ const hasMedia = !compact && (thumbnail || video);
 <a class="project-card" class:list={[{ 'project-card--compact': compact }]} href={`/work/${slug}/`}>
   {hasMedia && (
     <div class="project-card__media">
-      {video ? (
+      {thumbnail ? (
+        <img src={thumbnail} alt="" loading="lazy" />
+      ) : (
         <video autoplay muted loop playsinline preload="metadata">
           <source src={video} type="video/mp4" />
         </video>
-      ) : (
-        <img src={thumbnail} alt="" loading="lazy" />
       )}
     </div>
   )}

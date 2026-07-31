@@ -3,6 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import SectionHeading from '../../components/ui/SectionHeading.astro';
 import MediaGallery from '../../components/media/MediaGallery.astro';
 import Button from '../../components/ui/Button.astro';
+import AxisMotif from '../../components/decorative/AxisMotif.astro';
 import {
   bio,
   focusAreas,
@@ -29,6 +30,9 @@ const approach = [
 >
   <!-- Intro -->
   <section class="section about-intro">
+    <div class="about-intro__motif" aria-hidden="true">
+      <AxisMotif />
+    </div>
     <div class="container about-intro__grid">
       <div class="about-intro__portrait">
         <img src={bio.headshot} alt={`Portrait of ${bio.name}`} />
@@ -49,8 +53,9 @@ const approach = [
         {focusAreas.map((item) => {
           const [label, ...rest] = item.split(' — ');
           return (
-            <li>
-              <strong>{label}</strong> — {rest.join(' — ')}
+            <li class="focus-list__item">
+              <span class="focus-list__label">{label}</span>
+              <span class="focus-list__desc">{rest.join(' — ')}</span>
             </li>
           );
         })}
@@ -84,16 +89,16 @@ const approach = [
   <section class="section">
     <div class="container">
       <SectionHeading eyebrow="Education" title="Academic background" />
-      <div class="detail-card-grid">
+      <div class="timeline">
         {education.map((entry) => (
-          <details class="detail-card">
+          <details class="timeline-entry">
             <summary>
-              <span class="detail-card__title">{entry.title}</span>
-              <span class="detail-card__meta">{entry.meta}</span>
+              <span class="timeline-entry__title">{entry.title}</span>
+              <span class="timeline-entry__meta">{entry.meta}</span>
             </summary>
-            <div class="detail-card__body">
+            <div class="timeline-entry__body">
               <p>{entry.description}</p>
-              <p class="detail-card__courses"><strong>Courses:</strong> {entry.courses}</p>
+              <p class="timeline-entry__courses"><strong>Courses:</strong> {entry.courses}</p>
             </div>
           </details>
         ))}
@@ -142,14 +147,14 @@ const approach = [
   <section class="section">
     <div class="container">
       <SectionHeading eyebrow="Awards & recognition" title="Recognition along the way" />
-      <div class="detail-card-grid">
+      <div class="timeline">
         {awards.map((award) => (
-          <details class="detail-card">
+          <details class="timeline-entry">
             <summary>
-              <span class="detail-card__title">{award.title}</span>
-              <span class="detail-card__meta">{award.meta}</span>
+              <span class="timeline-entry__title">{award.title}</span>
+              <span class="timeline-entry__meta">{award.meta}</span>
             </summary>
-            <div class="detail-card__body">
+            <div class="timeline-entry__body">
               <p>{award.description}</p>
               {award.link && (
                 <p><a href={award.link.href} target="_blank" rel="noopener">{award.link.label} &rarr;</a></p>
@@ -190,14 +195,30 @@ const approach = [
     <div class="container closing-cta__inner">
       <h2>Have a problem worth structuring carefully?</h2>
       <div class="hero__actions">
-        <Button href="/contact/">Get in touch</Button>
+        <Button href="#site-footer">Get in touch</Button>
       </div>
     </div>
   </section>
 </BaseLayout>
 
 <style>
+  .about-intro {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .about-intro__motif {
+    position: absolute;
+    inset: -15% -10% -15% auto;
+    width: 55%;
+    color: var(--accent);
+    opacity: 0.5;
+    pointer-events: none;
+    mask-image: linear-gradient(to left, black 20%, transparent 80%);
+  }
+
   .about-intro__grid {
+    position: relative;
     display: grid;
     gap: var(--space-8);
     align-items: center;
@@ -228,18 +249,32 @@ const approach = [
   }
 
   .focus-list {
-    display: grid;
-    gap: var(--space-4);
-    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    display: flex;
+    flex-direction: column;
   }
 
-  .focus-list li {
-    padding: var(--space-5);
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: var(--radius-md);
+  .focus-list__item {
+    display: grid;
+    gap: var(--space-2);
+    padding-block: var(--space-6);
+    border-top: 1px solid var(--border);
+  }
+
+  .focus-list__item:last-child {
+    border-bottom: 1px solid var(--border);
+  }
+
+  .focus-list__label {
+    font-family: var(--font-serif);
+    font-size: var(--text-md);
+    font-weight: 600;
+  }
+
+  .focus-list__desc {
     font-size: var(--text-sm);
     line-height: var(--leading-normal);
+    color: var(--text-muted-on-paper);
+    max-width: 36rem;
   }
 
   .approach-list {
@@ -278,19 +313,21 @@ const approach = [
     line-height: var(--leading-normal);
   }
 
-  .detail-card-grid {
-    display: grid;
-    gap: var(--space-4);
+  .timeline {
+    display: flex;
+    flex-direction: column;
   }
 
-  .detail-card {
-    padding: var(--space-5) var(--space-6);
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: var(--radius-md);
+  .timeline-entry {
+    padding-block: var(--space-6);
+    border-top: 1px solid var(--border-strong);
   }
 
-  .detail-card summary {
+  .timeline-entry:last-child {
+    border-bottom: 1px solid var(--border-strong);
+  }
+
+  .timeline-entry summary {
     display: flex;
     flex-wrap: wrap;
     align-items: baseline;
@@ -299,31 +336,32 @@ const approach = [
     list-style: none;
   }
 
-  .detail-card summary::-webkit-details-marker {
+  .timeline-entry summary::-webkit-details-marker {
     display: none;
   }
 
-  .detail-card__title {
+  .timeline-entry__title {
     font-family: var(--font-serif);
     font-size: var(--text-md);
     font-weight: 600;
   }
 
-  .detail-card__meta {
+  .timeline-entry__meta {
     font-size: var(--text-xs);
     color: var(--text-muted-on-paper);
   }
 
-  .detail-card__body {
+  .timeline-entry__body {
     display: flex;
     flex-direction: column;
     gap: var(--space-3);
     margin-top: var(--space-4);
     font-size: var(--text-sm);
     line-height: var(--leading-normal);
+    max-width: 42rem;
   }
 
-  .detail-card__body a {
+  .timeline-entry__body a {
     color: var(--accent);
   }
 
@@ -343,17 +381,18 @@ const approach = [
   }
 
   .experience-group__entries {
-    display: grid;
-    gap: var(--space-5);
+    display: flex;
+    flex-direction: column;
     margin-top: var(--space-5);
-    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
   }
 
   .experience-entry {
-    padding: var(--space-5);
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: var(--radius-md);
+    padding-block: var(--space-6);
+    border-top: 1px solid var(--border);
+  }
+
+  .experience-entry:last-child {
+    border-bottom: 1px solid var(--border);
   }
 
   .experience-entry h4 {
@@ -372,11 +411,20 @@ const approach = [
     margin-top: var(--space-3);
     list-style: disc;
     padding-left: var(--space-4);
+    max-width: 40rem;
   }
 
   .experience-entry li {
     font-size: var(--text-sm);
     line-height: var(--leading-normal);
+  }
+
+  @media (min-width: 860px) {
+    .experience-entry {
+      display: grid;
+      grid-template-columns: 14rem 1fr;
+      gap: var(--space-6);
+    }
   }
 
   .teaching-philosophy {
@@ -410,15 +458,13 @@ const approach = [
 
   .community-grid {
     display: grid;
-    gap: var(--space-5);
-    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    gap: var(--space-6) var(--space-8);
+    grid-template-columns: 1fr;
   }
 
   .community-card {
-    padding: var(--space-6);
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: var(--radius-md);
+    padding-top: var(--space-5);
+    border-top: 1px solid var(--border);
   }
 
   .community-card h3 {
@@ -466,7 +512,18 @@ const approach = [
       grid-template-columns: 4rem 1fr;
     }
 
-    .detail-card-grid {
+    .timeline-entry summary {
+      display: grid;
+      grid-template-columns: 14rem 1fr;
+      align-items: baseline;
+    }
+
+    .focus-list__item {
+      grid-template-columns: 16rem 1fr;
+      align-items: baseline;
+    }
+
+    .community-grid {
       grid-template-columns: repeat(2, 1fr);
     }
   }

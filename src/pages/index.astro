@@ -3,10 +3,7 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Button from '../components/ui/Button.astro';
 import SectionHeading from '../components/ui/SectionHeading.astro';
-import CapabilityCard from '../components/cards/CapabilityCard.astro';
 import ProjectCard from '../components/cards/ProjectCard.astro';
-import ResearchCard from '../components/cards/ResearchCard.astro';
-import EngagementCard from '../components/cards/EngagementCard.astro';
 import OptimizationMotif from '../components/decorative/OptimizationMotif.astro';
 
 const problems = [
@@ -94,8 +91,10 @@ const featuredResearch = (await getCollection('research'))
       <OptimizationMotif />
     </div>
     <div class="container hero__grid">
-      <span class="eyebrow">A digital home for advanced analytical thinking</span>
-      <h1 class="hero__headline">Turning complex problems into decisions you can act on.</h1>
+      <h1 class="hero__identity">A digital home for advanced analytical thinking.</h1>
+      <p class="hero__headline prose-width">
+        Turning complex problems into decisions you can act on.
+      </p>
       <p class="hero__subhead text-muted prose-width">
         I build mathematical models, optimization systems, and applied AI tools that help
         organizations structure ambiguity, forecast what's coming, and make better decisions
@@ -117,8 +116,9 @@ const featuredResearch = (await getCollection('research'))
         description="Complex organizational problems can be made clearer, more structured, and more actionable through rigorous analytical thinking."
       />
       <ul class="problems-list">
-        {problems.map((problem) => (
+        {problems.map((problem, i) => (
           <li class="problems-list__item">
+            <span class="problems-list__index" aria-hidden="true">{String(i + 1).padStart(2, '0')}</span>
             <p>{problem}</p>
           </li>
         ))}
@@ -134,11 +134,17 @@ const featuredResearch = (await getCollection('research'))
         title="What I help organizations do"
         description="Not a technology list — a set of capabilities applied to real decisions."
       />
-      <div class="capability-grid">
+      <ol class="capability-list">
         {capabilities.map((capability) => (
-          <CapabilityCard index={capability.index} title={capability.title} description={capability.description} />
+          <li class="capability-list__item">
+            <span class="capability-list__index" aria-hidden="true">{capability.index}</span>
+            <div class="capability-list__body">
+              <h3>{capability.title}</h3>
+              <p class="text-muted">{capability.description}</p>
+            </div>
+          </li>
         ))}
-      </div>
+      </ol>
     </div>
   </section>
 
@@ -151,15 +157,17 @@ const featuredResearch = (await getCollection('research'))
         description="A sample of completed projects. Every one shown here is real, finished work."
       />
       <div class="work-preview-grid">
-        {featuredProjects.map((project) => (
-          <ProjectCard
-            slug={project.id}
-            title={project.data.title}
-            summary={project.data.summary}
-            methods={project.data.methods}
-            status={project.data.status}
-            thumbnail={project.data.thumbnail}
-          />
+        {featuredProjects.map((project, i) => (
+          <div class:list={['work-preview-grid__item', { 'work-preview-grid__item--feature': i === 0 }]}>
+            <ProjectCard
+              slug={project.id}
+              title={project.data.title}
+              summary={project.data.summary}
+              methods={project.data.methods}
+              status={project.data.status}
+              thumbnail={project.data.thumbnail}
+            />
+          </div>
         ))}
       </div>
       <div class="section-cta">
@@ -176,11 +184,20 @@ const featuredResearch = (await getCollection('research'))
         title="Mathematical & computational research"
         description="Published and graduate research spanning PDEs, epidemic modeling, and dynamical systems."
       />
-      <div class="research-preview-grid">
+      <ul class="research-teaser-list">
         {featuredResearch.map((item) => (
-          <ResearchCard slug={item.id} title={item.data.title} summary={item.data.summary} tags={item.data.tags} compact />
+          <li class="research-teaser-list__item">
+            <a href={`/research/${item.id}/`} class="research-teaser-list__link">
+              <span class="research-teaser-list__heading">
+                <h3>{item.data.title}</h3>
+                <span class="research-teaser-list__tags">{item.data.tags.join(' · ')}</span>
+              </span>
+              <p class="text-muted research-teaser-list__summary">{item.data.summary}</p>
+              <span class="research-teaser-list__arrow" aria-hidden="true">&rarr;</span>
+            </a>
+          </li>
         ))}
-      </div>
+      </ul>
       <div class="section-cta">
         <Button href="/research/" variant="ghost">See all research &rarr;</Button>
       </div>
@@ -194,11 +211,18 @@ const featuredResearch = (await getCollection('research'))
         eyebrow="Get involved"
         title="A few ways to engage"
       />
-      <div class="engagement-grid">
+      <ul class="engagement-list">
         {engagementPaths.map((path) => (
-          <EngagementCard audience={path.audience} description={path.description} ctaLabel={path.ctaLabel} />
+          <li class="engagement-list__item">
+            <h3>{path.audience}</h3>
+            <p class="text-muted">{path.description}</p>
+            <a class="engagement-list__link" href="#site-footer">
+              {path.ctaLabel}
+              <span aria-hidden="true">&rarr;</span>
+            </a>
+          </li>
         ))}
-      </div>
+      </ul>
     </div>
   </section>
 
@@ -210,8 +234,8 @@ const featuredResearch = (await getCollection('research'))
         Reach out about a role, a project, or a question about the methodology behind any work shown here.
       </p>
       <div class="hero__actions">
-        <Button href="mailto:sarah.gakii.v@gmail.com">Email me</Button>
-        <Button href="/contact/" variant="secondary">More ways to connect</Button>
+        <Button href="#site-footer">Get in touch</Button>
+        <Button href="/about/" variant="secondary">More on how I work</Button>
       </div>
     </div>
   </section>
@@ -225,10 +249,11 @@ const featuredResearch = (await getCollection('research'))
 
   .hero__motif {
     position: absolute;
-    inset: 0;
+    inset: -10% -20% -10% auto;
+    width: 78%;
     color: var(--text-on-dark);
     pointer-events: none;
-    mask-image: linear-gradient(to left, black 30%, transparent 85%);
+    mask-image: linear-gradient(to left, black 45%, transparent 92%);
   }
 
   .hero__grid {
@@ -236,12 +261,21 @@ const featuredResearch = (await getCollection('research'))
     display: flex;
     flex-direction: column;
     gap: var(--space-5);
-    max-width: 46rem;
+    max-width: 50rem;
+  }
+
+  .hero__identity {
+    font-size: var(--text-display);
+    line-height: var(--leading-tight);
+    color: var(--text-on-dark);
+    max-width: 22ch;
   }
 
   .hero__headline {
-    font-size: var(--text-3xl);
-    color: var(--text-on-dark);
+    font-family: var(--font-serif);
+    font-size: var(--text-lg);
+    line-height: var(--leading-snug);
+    color: var(--accent-on-dark);
   }
 
   .hero__subhead {
@@ -256,50 +290,177 @@ const featuredResearch = (await getCollection('research'))
     margin-top: var(--space-2);
   }
 
+  /* Problems list — typographic ledger, no boxes */
   .problems-list {
-    display: grid;
-    gap: var(--space-4);
+    display: flex;
+    flex-direction: column;
   }
 
   .problems-list__item {
-    padding: var(--space-5) var(--space-6);
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: var(--radius-md);
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: var(--space-5);
+    align-items: baseline;
+    padding-block: var(--space-6);
+    border-top: 1px solid var(--border);
+  }
+
+  .problems-list__item:last-child {
+    border-bottom: 1px solid var(--border);
+  }
+
+  .problems-list__index {
+    font-family: var(--font-serif);
+    font-size: var(--text-lg);
+    color: var(--accent);
   }
 
   .problems-list__item p {
     font-family: var(--font-serif);
     font-size: var(--text-md);
     line-height: var(--leading-snug);
+    max-width: 40rem;
   }
 
-  .capability-grid {
+  /* Capabilities — numbered row index, no cards */
+  .capability-list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .capability-list__item {
     display: grid;
-    gap: var(--space-5);
-    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    grid-template-columns: auto 1fr;
+    gap: var(--space-6);
+    padding-block: var(--space-6);
+    border-top: 1px solid var(--border-strong);
   }
 
+  .capability-list__item:last-child {
+    border-bottom: 1px solid var(--border-strong);
+  }
+
+  .capability-list__index {
+    font-family: var(--font-serif);
+    font-size: var(--text-lg);
+    color: var(--accent);
+  }
+
+  .capability-list__body h3 {
+    font-size: var(--text-md);
+    margin-bottom: var(--space-2);
+  }
+
+  .capability-list__body p {
+    max-width: 34rem;
+    font-size: var(--text-sm);
+    line-height: var(--leading-normal);
+  }
+
+  /* Selected work — asymmetric feature + two supporting */
   .work-preview-grid {
     display: grid;
     gap: var(--space-5);
-    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    grid-template-columns: 1fr;
   }
 
-  .research-preview-grid {
-    display: grid;
-    gap: var(--space-5);
-    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  .work-preview-grid__item {
+    height: 100%;
   }
 
   .section-cta {
     margin-top: var(--space-8);
   }
 
-  .engagement-grid {
+  /* Research teaser — horizontal editorial list */
+  .research-teaser-list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .research-teaser-list__item {
+    border-top: 1px solid var(--border);
+  }
+
+  .research-teaser-list__item:last-child {
+    border-bottom: 1px solid var(--border);
+  }
+
+  .research-teaser-list__link {
     display: grid;
-    gap: var(--space-5);
+    grid-template-columns: 1fr;
+    gap: var(--space-3);
+    padding-block: var(--space-6);
+    position: relative;
+  }
+
+  .research-teaser-list__heading {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+  }
+
+  .research-teaser-list__heading h3 {
+    font-size: var(--text-md);
+  }
+
+  .research-teaser-list__tags {
+    font-size: var(--text-xs);
+    letter-spacing: 0.02em;
+    color: var(--text-muted-on-paper);
+  }
+
+  .research-teaser-list__summary {
+    font-size: var(--text-sm);
+    line-height: var(--leading-normal);
+    max-width: 40rem;
+  }
+
+  .research-teaser-list__arrow {
+    display: none;
+  }
+
+  .research-teaser-list__link:hover .research-teaser-list__heading h3 {
+    color: var(--accent);
+  }
+
+  /* Engagement paths — plain list, no borders */
+  .engagement-list {
+    display: grid;
+    gap: var(--space-8);
     grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  }
+
+  .engagement-list__item {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+
+  .engagement-list__item h3 {
+    font-size: var(--text-md);
+    color: var(--text-on-dark);
+  }
+
+  .engagement-list__item p {
+    font-size: var(--text-sm);
+    line-height: var(--leading-normal);
+  }
+
+  .engagement-list__link {
+    margin-top: auto;
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-size: var(--text-sm);
+    font-weight: 600;
+    color: var(--accent-on-dark);
+    padding-top: var(--space-2);
+  }
+
+  .engagement-list__link:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px;
   }
 
   .closing-cta__inner {
@@ -315,8 +476,26 @@ const featuredResearch = (await getCollection('research'))
   }
 
   @media (min-width: 640px) {
-    .problems-list {
-      grid-template-columns: repeat(2, 1fr);
+    .research-teaser-list__link {
+      grid-template-columns: 1fr 1.2fr;
+      align-items: center;
+      gap: var(--space-6);
+    }
+  }
+
+  @media (min-width: 860px) {
+    .capability-list__item {
+      grid-template-columns: 4rem 1fr;
+    }
+
+    .work-preview-grid {
+      grid-template-columns: 1.3fr 1fr;
+      grid-template-rows: repeat(2, auto);
+    }
+
+    .work-preview-grid__item--feature {
+      grid-column: 1;
+      grid-row: 1 / 3;
     }
   }
 </style>

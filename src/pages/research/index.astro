@@ -18,7 +18,19 @@ const items = (await getCollection('research')).sort((a, b) => a.data.order - b.
     motif="network"
   />
 
-  <section class="section">
+  <section class="section section--tight research-intro">
+    <div class="container research-intro__grid">
+      <p class="research-intro__lede">
+        Research developed through graduate coursework, published collaboration, and intensive
+        modeling workshops — not just coursework exercises.
+      </p>
+      <p class="text-muted research-intro__meta">
+        {items.length} research projects and academic programs.
+      </p>
+    </div>
+  </section>
+
+  <section class="section section--tight">
     <div class="container">
       <div class="research-grid">
         {items.map((item) => (
@@ -36,9 +48,35 @@ const items = (await getCollection('research')).sort((a, b) => a.data.order - b.
 </BaseLayout>
 
 <style>
+  .research-intro__grid {
+    display: grid;
+    gap: var(--space-4);
+    padding-bottom: var(--space-8);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .research-intro__lede {
+    font-family: var(--font-serif);
+    font-size: var(--text-lg);
+    line-height: var(--leading-snug);
+    max-width: 32rem;
+  }
+
+  .research-intro__meta {
+    font-size: var(--text-sm);
+    max-width: 20rem;
+  }
+
   .research-grid {
     display: grid;
     gap: var(--space-6);
     grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  }
+
+  @media (min-width: 720px) {
+    .research-intro__grid {
+      grid-template-columns: 1fr auto;
+      align-items: end;
+    }
   }
 </style>

@@ -11,13 +11,12 @@ methods:
 status: completed
 order: 1
 thumbnail: /images/work/fer-confusion-matrix.png
+video: /videos/fer-slides.mp4
 links:
   - label: View project notebook on GitHub
     href: https://github.com/SARAH-GAKII/facial-emotion-recognition/blob/main/Facial_Emotion_Detection_Notebook.ipynb
   - label: Download presentation slides (PDF)
     href: /documents/fer-presentation.pdf
-  - label: Watch project slides (video)
-    href: /videos/fer-slides.mp4
 ---
 
 ## Overview

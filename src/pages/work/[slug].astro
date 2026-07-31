@@ -13,7 +13,7 @@ export async function getStaticPaths() {
 
 const { project } = Astro.props;
 const { Content } = await render(project);
-const { title, summary, problem, methods, status, links } = project.data;
+const { title, summary, problem, methods, status, video, links } = project.data;
 ---
 
 <BaseLayout
@@ -31,6 +31,12 @@ const { title, summary, problem, methods, status, links } = project.data;
         <span class="eyebrow">{methods.join(' · ')}</span>
         <h1>{title}</h1>
         {problem && <p class="project-detail__problem prose-width">{problem}</p>}
+
+        {video && (
+          <video class="project-detail__video" controls preload="metadata">
+            <source src={video} type="video/mp4" />
+          </video>
+        )}
 
         <div class="prose">
           <Content />
@@ -92,6 +98,13 @@ const { title, summary, problem, methods, status, links } = project.data;
     font-size: var(--text-md);
     line-height: var(--leading-snug);
     color: var(--text-muted-on-paper);
+  }
+
+  .project-detail__video {
+    width: 100%;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border);
+    background: var(--ink-950);
   }
 
   .project-detail__links {
