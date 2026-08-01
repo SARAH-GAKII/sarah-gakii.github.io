@@ -6,6 +6,7 @@ import SectionHeading from '../components/ui/SectionHeading.astro';
 import HeroDecisionPath from '../components/home/HeroDecisionPath.astro';
 import AnalyticalModule from '../components/home/AnalyticalModule.astro';
 import CapabilityMosaic from '../components/home/CapabilityMosaic.astro';
+import ResearchPreviewCircle from '../components/home/ResearchPreviewCircle.astro';
 
 const analyticalModules = [
   {
@@ -76,16 +77,33 @@ const fer = allProjects.find((p) => p.id === 'facial-emotion-recognition')!;
 const amazonRec = allProjects.find((p) => p.id === 'amazon-product-recommendation-system')!;
 
 const allResearch = await getCollection('research');
-const newtonFd = allResearch.find((r) => r.id === 'newton-fd-method-nonlinear-interface')!;
 
-const researchPreviewSlugs = ['covid-19-vaccine-uptake-behavior', 'crime-cooperative-policing-model', 'green-roofs-urban-heat-island'];
+const researchPreviewSlugs = [
+  'newton-fd-method-nonlinear-interface',
+  'covid-19-vaccine-uptake-behavior',
+  'crime-cooperative-policing-model',
+  'green-roofs-urban-heat-island',
+];
 const researchPreview = researchPreviewSlugs
   .map((slug) => allResearch.find((r) => r.id === slug))
   .filter((r): r is NonNullable<typeof r> => Boolean(r));
-const researchQuestions: Record<string, string> = {
-  'covid-19-vaccine-uptake-behavior': 'What if vaccine uptake is treated as a strategic choice, not a given?',
-  'crime-cooperative-policing-model': 'Does cooperation between police units change the predicted dynamics of crime?',
-  'green-roofs-urban-heat-island': "How much of a green roof's cooling effect holds up under a full heat-transfer model?",
+const researchMeta: Record<string, { variant: 'nfdm' | 'vaccine' | 'policing' | 'greenroof'; question: string }> = {
+  'newton-fd-method-nonlinear-interface': {
+    variant: 'nfdm',
+    question: 'What happens when a smooth numerical solution meets a nonlinear interface jump?',
+  },
+  'covid-19-vaccine-uptake-behavior': {
+    variant: 'vaccine',
+    question: 'What changes when vaccine uptake is modeled as a strategic behavioral choice, not a given?',
+  },
+  'crime-cooperative-policing-model': {
+    variant: 'policing',
+    question: 'How does cooperation between police units change the predicted dynamics of crime?',
+  },
+  'green-roofs-urban-heat-island': {
+    variant: 'greenroof',
+    question: "How much cooling holds up when a green roof is tested against a full heat-transfer model?",
+  },
 };
 ---
 
@@ -133,9 +151,9 @@ const researchQuestions: Record<string, string> = {
   <section id="capabilities" class="section section--tight section--lavender capabilities">
     <div class="container">
       <SectionHeading
-        eyebrow="Capabilities"
-        title="Capabilities at a glance"
-        description="Six capabilities, one throughline — applied to real decisions, not listed as a technology inventory."
+        eyebrow="Capabilities at a glance"
+        title="The analytical toolkit"
+        
       />
       <CapabilityMosaic capabilities={capabilities} />
     </div>
@@ -146,8 +164,8 @@ const researchQuestions: Record<string, string> = {
     <div class="container">
       <SectionHeading
         eyebrow="Selected work"
-        title="Evidence in practice"
-        description="A few analytical stories, not the complete collection. Full case studies live on the Work page."
+        title="Where analysis becomes tangible"
+        
       />
       <div class="evidence-grid">
         <a class="evidence-card evidence-card--feature" href={`/work/${ohioHousing.id}/`}>
@@ -176,7 +194,7 @@ const researchQuestions: Record<string, string> = {
             <p class="evidence-card__tag">Decision analysis</p>
             <h3 class="evidence-card__curiosity">Statewide averages say Ohio's rent burden is moderate. County-level data tells a more complicated story.</h3>
             <p class="evidence-card__context text-muted">An interactive Power BI analysis of rent, income, and affordability across Ohio counties (2019–2023), with a county-level deep dive.</p>
-            <span class="evidence-card__action">Explore the analysis &rarr;</span>
+            <span class="evidence-card__action">Explore the analysis</span>
           </div>
         </a>
 
@@ -190,7 +208,7 @@ const researchQuestions: Record<string, string> = {
             <p class="evidence-card__tag">Computer vision</p>
             <h3 class="evidence-card__curiosity">When does a smile stop looking like happiness to a model?</h3>
             <p class="evidence-card__context text-muted">Comparing convolutional neural-network approaches for classifying facial emotion from grayscale images.</p>
-            <span class="evidence-card__action">See how the models compared &rarr;</span>
+            <span class="evidence-card__action">See how the models compared</span>
           </div>
         </a>
 
@@ -224,40 +242,12 @@ const researchQuestions: Record<string, string> = {
             <p class="evidence-card__tag">Recommendation systems</p>
             <h3 class="evidence-card__curiosity">What does a useful recommendation require when user signals are sparse?</h3>
             <p class="evidence-card__context text-muted">Comparing collaborative-filtering methods for ranking products from incomplete interaction data.</p>
-            <span class="evidence-card__action">Explore the recommendation system &rarr;</span>
-          </div>
-        </a>
-
-        <a class="evidence-card evidence-card--strip" href={`/research/${newtonFd.id}/`}>
-          <div class="evidence-card__visual evidence-card__visual--mesh" aria-hidden="true">
-            <svg viewBox="0 0 400 100" preserveAspectRatio="xMidYMid slice">
-              <g stroke="currentColor" stroke-width="0.7" opacity="0.4" fill="none">
-                {Array.from({ length: 8 }).map((_, i) => (
-                  <line x1={10 + i * 25} y1="8" x2={10 + i * 25} y2="92" />
-                ))}
-                {Array.from({ length: 5 }).map((_, i) => (
-                  <line x1="10" y1={8 + i * 21} x2="190" y2={8 + i * 21} />
-                ))}
-                {Array.from({ length: 13 }).map((_, i) => (
-                  <line x1={215 + i * 14} y1="8" x2={215 + i * 14} y2="92" />
-                ))}
-                {Array.from({ length: 5 }).map((_, i) => (
-                  <line x1="215" y1={8 + i * 21} x2="390" y2={8 + i * 21} />
-                ))}
-              </g>
-              <path d="M200,4 C 194,32 206,58 199,96" stroke="currentColor" stroke-width="1.8" fill="none" opacity="0.8" />
-            </svg>
-          </div>
-          <div class="evidence-card__body">
-            <p class="evidence-card__tag">Numerical research</p>
-            <h3 class="evidence-card__curiosity">What happens when a smooth numerical solution meets a nonlinear interface jump?</h3>
-            <p class="evidence-card__context text-muted">A numerical method for PDEs with nonlinear interface jump conditions, later developed into a peer-reviewed publication.</p>
-            <span class="evidence-card__action">Explore the research &rarr;</span>
+            <span class="evidence-card__action">Explore the recommendation system</span>
           </div>
         </a>
       </div>
       <div class="section-cta">
-        <Button href="/work/" variant="ghost">View all work &rarr;</Button>
+        <Button href="/work/" variant="ghost">View all work</Button>
       </div>
     </div>
   </section>
@@ -268,20 +258,25 @@ const researchQuestions: Record<string, string> = {
       <SectionHeading
         eyebrow="Research"
         title="Research preview"
-        description="A quieter, publication-oriented record — mathematical questions, methods, and models."
+        
       />
       <div class="research-preview__grid">
         {researchPreview.map((item) => (
-          <a class="research-preview__item" href={`/research/${item.id}/`}>
-            <p class="research-preview__domain">{item.data.tags[0]}</p>
-            <h3>{item.data.title}</h3>
-            <p class="research-preview__question">{researchQuestions[item.id]}</p>
-            <span class="research-preview__action">Read the research &rarr;</span>
-          </a>
+          <article class="research-preview__item">
+            <a class="research-preview__link" href={`/research/${item.id}/`}>
+              <div class:list={['research-preview__circle', `research-preview__circle--${researchMeta[item.id].variant}`]}>
+                <ResearchPreviewCircle variant={researchMeta[item.id].variant} />
+              </div>
+              <p class="research-preview__domain">{item.data.tags[0]}</p>
+              <h3 class="research-preview__title">{item.data.title}</h3>
+              <p class="research-preview__question">{researchMeta[item.id].question}</p>
+              <span class="research-preview__action">Read the research</span>
+            </a>
+          </article>
         ))}
       </div>
       <div class="section-cta">
-        <Button href="/research/" variant="ghost">Explore all research &rarr;</Button>
+        <Button href="/research/" variant="ghost">Explore all research</Button>
       </div>
     </div>
   </section>
@@ -353,7 +348,7 @@ const researchQuestions: Record<string, string> = {
     grid-template-columns: 1fr;
   }
 
-  /* Evidence in practice */
+  /* Selected work */
   .evidence-grid {
     display: grid;
     gap: var(--space-5);
@@ -402,21 +397,6 @@ const researchQuestions: Record<string, string> = {
 
   .evidence-card--tall .evidence-card__visual {
     aspect-ratio: 4 / 5;
-  }
-
-  .evidence-card--strip {
-    flex-direction: row;
-  }
-
-  .evidence-card--strip .evidence-card__visual {
-    aspect-ratio: auto;
-    width: 40%;
-    flex-shrink: 0;
-  }
-
-  .evidence-card--strip .evidence-card__body {
-    flex: 1;
-    justify-content: center;
   }
 
   .evidence-card__body {
@@ -472,16 +452,53 @@ const researchQuestions: Record<string, string> = {
   /* Research preview */
   .research-preview__grid {
     display: grid;
-    gap: var(--space-6);
+    gap: var(--space-8) var(--space-5);
     grid-template-columns: 1fr;
   }
 
-  .research-preview__item {
-    padding-top: var(--space-5);
-    border-top: 1px solid var(--border-strong);
+  .research-preview__link {
     display: flex;
     flex-direction: column;
-    gap: var(--space-2);
+    align-items: center;
+    text-align: center;
+    gap: var(--space-3);
+  }
+
+  .research-preview__link:focus-visible {
+    outline: 2px solid var(--focus);
+    outline-offset: 4px;
+    border-radius: var(--radius-sm);
+  }
+
+  .research-preview__circle {
+    width: 100%;
+    max-width: 13rem;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    overflow: hidden;
+    background: var(--surface);
+    padding: 12%;
+    margin-bottom: var(--space-2);
+    box-shadow: 0 0 0 0 transparent;
+    transition: box-shadow var(--transition-base), transform var(--transition-base);
+  }
+
+  .research-preview__circle--vaccine {
+    background: var(--surface-lavender);
+  }
+
+  .research-preview__circle--policing {
+    background: var(--surface-blue-gray);
+  }
+
+  .research-preview__circle--greenroof {
+    background: var(--surface-sage);
+  }
+
+  .research-preview__link:hover .research-preview__circle,
+  .research-preview__link:focus-visible .research-preview__circle {
+    box-shadow: 0 0 0 4px var(--border-strong);
+    transform: translateY(-2px);
   }
 
   .research-preview__domain {
@@ -491,12 +508,14 @@ const researchQuestions: Record<string, string> = {
     color: var(--text-muted-on-paper);
   }
 
-  .research-preview__item h3 {
+  .research-preview__title {
     font-size: var(--text-md);
     line-height: var(--leading-snug);
+    color: var(--text-on-paper);
   }
 
-  .research-preview__item:hover h3 {
+  .research-preview__link:hover .research-preview__title,
+  .research-preview__link:focus-visible .research-preview__title {
     color: var(--accent);
   }
 
@@ -505,14 +524,20 @@ const researchQuestions: Record<string, string> = {
     font-size: var(--text-sm);
     line-height: var(--leading-normal);
     color: var(--text-muted-on-paper);
+    max-width: 22rem;
   }
 
   .research-preview__action {
-    margin-top: auto;
-    padding-top: var(--space-2);
+    margin-top: var(--space-1);
     font-size: var(--text-xs);
     font-weight: 600;
     color: var(--accent);
+  }
+
+  .research-preview__link:hover .research-preview__action,
+  .research-preview__link:focus-visible .research-preview__action {
+    text-decoration: underline;
+    text-underline-offset: 3px;
   }
 
   /* Tablet */
@@ -523,12 +548,6 @@ const researchQuestions: Record<string, string> = {
 
     .research-preview__grid {
       grid-template-columns: repeat(2, 1fr);
-    }
-  }
-
-  @media (min-width: 768px) {
-    .research-preview__grid {
-      grid-template-columns: repeat(3, 1fr);
     }
   }
 
@@ -553,29 +572,25 @@ const researchQuestions: Record<string, string> = {
       grid-template-columns: repeat(4, 1fr);
     }
 
+    .research-preview__grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
     .evidence-grid {
       grid-template-columns: repeat(4, 1fr);
-      grid-template-rows: auto auto;
+      align-items: start;
     }
 
     .evidence-card--feature {
       grid-column: 1 / 3;
-      grid-row: 1;
     }
 
     .evidence-card--square {
       grid-column: 3 / 4;
-      grid-row: 1;
     }
 
     .evidence-card--tall {
       grid-column: 4 / 5;
-      grid-row: 1 / 3;
-    }
-
-    .evidence-card--strip {
-      grid-column: 1 / 4;
-      grid-row: 2;
     }
   }
 </style>

@@ -26,14 +26,13 @@ const { items } = Astro.props;
       >
         <span class="explorer__card-title">{item.title}</span>
         <span class="explorer__card-meta">{item.meta}</span>
-        <span class="explorer__card-affordance" aria-hidden="true">&rarr;</span>
       </button>
     ))}
   </div>
 
   <div class="explorer__panels" data-explorer-panels>
     <button type="button" class="explorer__reset" data-explorer-reset>
-      &larr; Back to overview
+      Back to overview
     </button>
 
     {items.map((item) => (
@@ -153,25 +152,12 @@ const { items } = Astro.props;
     color: var(--text-muted-on-paper);
   }
 
-  .explorer__card-affordance {
-    margin-top: auto;
-    padding-top: var(--space-2);
-    color: var(--accent);
-    font-size: var(--text-sm);
-  }
-
-  .explorer__card.is-active .explorer__card-affordance {
-    transform: rotate(90deg);
-  }
-
   .explorer__panels {
     display: none;
   }
 
   .explorer__reset {
-    display: inline-flex;
-    align-items: center;
-    gap: var(--space-2);
+    display: inline-block;
     margin-bottom: var(--space-5);
     font-size: var(--text-xs);
     font-weight: 600;

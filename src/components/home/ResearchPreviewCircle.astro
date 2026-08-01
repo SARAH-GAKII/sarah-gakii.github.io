@@ -1,0 +1,146 @@
+---
+// Original circular research visuals — one distinct analytical concept per research item,
+// legible when cropped to a circle. Purely decorative; the surrounding card text carries
+// the actual meaning.
+interface Props {
+  variant: 'nfdm' | 'vaccine' | 'policing' | 'greenroof';
+}
+
+const { variant } = Astro.props;
+---
+
+<svg class:list={['rpc', `rpc--${variant}`]} viewBox="0 0 100 100" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid meet">
+  {variant === 'nfdm' && (
+    <g>
+      <g class="rpc-grid" stroke="currentColor" stroke-width="0.6">
+        <line x1="12" y1="22" x2="12" y2="78" /><line x1="22" y1="22" x2="22" y2="78" /><line x1="32" y1="22" x2="32" y2="78" />
+        <line x1="10" y1="32" x2="42" y2="32" /><line x1="10" y1="50" x2="42" y2="50" /><line x1="10" y1="68" x2="42" y2="68" />
+        <line x1="62" y1="22" x2="62" y2="78" /><line x1="70" y1="22" x2="70" y2="78" /><line x1="78" y1="22" x2="78" y2="78" /><line x1="86" y1="22" x2="86" y2="78" />
+        <line x1="58" y1="32" x2="90" y2="32" /><line x1="58" y1="50" x2="90" y2="50" /><line x1="58" y1="68" x2="90" y2="68" />
+      </g>
+      <path class="rpc-interface" d="M50,12 L46,32 L52,50 L47,68 L50,88" fill="none" stroke-width="1.1" />
+      <path class="rpc-accent" d="M16,46 Q28,38 42,44" fill="none" stroke-width="1.6" />
+      <path class="rpc-accent" d="M58,58 Q72,44 86,48" fill="none" stroke-width="1.6" />
+      <circle class="rpc-accent-fill" cx="42" cy="44" r="1.8" />
+      <circle class="rpc-accent-fill" cx="58" cy="58" r="1.8" />
+    </g>
+  )}
+
+  {variant === 'vaccine' && (
+    <g>
+      <line class="rpc-axis" x1="12" y1="86" x2="88" y2="86" stroke-width="0.5" />
+      <path class="rpc-accent" d="M15,68 C35,50 55,34 86,18" fill="none" stroke-width="1.6" />
+      <path class="rpc-faint" d="M15,52 C35,62 55,70 86,80" fill="none" stroke-width="1.3" stroke-dasharray="2 3" />
+      <g class="rpc-connectors" stroke-width="0.7">
+        <line x1="40" y1="58" x2="48" y2="49" />
+        <line x1="60" y1="66" x2="52" y2="58" />
+      </g>
+      <g class="rpc-accent-fill">
+        <circle cx="15" cy="68" r="1.9" /><circle cx="50" cy="41" r="1.9" /><circle cx="86" cy="18" r="1.9" />
+      </g>
+    </g>
+  )}
+
+  {variant === 'policing' && (
+    <g>
+      <g class="rpc-nodes-soft">
+        <circle cx="24" cy="24" r="2" /><circle cx="33" cy="17" r="2" /><circle cx="19" cy="35" r="2" />
+        <circle cx="76" cy="24" r="2" /><circle cx="67" cy="17" r="2" /><circle cx="81" cy="35" r="2" />
+      </g>
+      <g class="rpc-links" stroke-width="0.6">
+        <line x1="33" y1="17" x2="67" y2="17" />
+        <line x1="24" y1="24" x2="76" y2="24" />
+        <line x1="19" y1="35" x2="81" y2="35" />
+      </g>
+      <path class="rpc-accent" d="M14,54 C34,57 56,73 88,81" fill="none" stroke-width="1.6" />
+      <path class="rpc-faint" d="M14,54 C34,51 56,44 88,40" fill="none" stroke-width="1.3" stroke-dasharray="2 3" />
+    </g>
+  )}
+
+  {variant === 'greenroof' && (
+    <g>
+      <g class="rpc-rays" stroke-width="0.8">
+        <line x1="26" y1="10" x2="26" y2="27" /><line x1="44" y1="6" x2="44" y2="25" />
+        <line x1="62" y1="10" x2="62" y2="27" /><line x1="76" y1="16" x2="76" y2="29" />
+      </g>
+      <path class="rpc-accent" d="M10,32 Q18,25 26,32 Q34,25 42,32 Q50,25 58,32 Q66,25 74,32 Q82,25 90,32" fill="none" stroke-width="1.6" />
+      <rect class="rpc-roof" x="10" y="32" width="80" height="9" />
+      <g class="rpc-flow" stroke-width="0.7" stroke-dasharray="1.5 2">
+        <line x1="30" y1="45" x2="30" y2="60" /><line x1="50" y1="45" x2="50" y2="62" /><line x1="70" y1="45" x2="70" y2="60" />
+      </g>
+      <path class="rpc-faint" d="M12,76 Q30,70 50,74 Q70,78 88,71" fill="none" stroke-width="1" />
+    </g>
+  )}
+</svg>
+
+<style>
+  .rpc {
+    width: 100%;
+    height: 100%;
+    color: var(--text-muted-on-paper);
+  }
+
+  .rpc-grid,
+  .rpc-axis,
+  .rpc-rays,
+  .rpc-flow {
+    stroke: currentColor;
+    fill: none;
+    opacity: 0.4;
+  }
+
+  .rpc-interface {
+    stroke: currentColor;
+    fill: none;
+    opacity: 0.55;
+  }
+
+  .rpc-nodes-soft {
+    fill: currentColor;
+    opacity: 0.45;
+  }
+
+  .rpc-links {
+    stroke: currentColor;
+    fill: none;
+    opacity: 0.4;
+  }
+
+  .rpc-connectors {
+    stroke: currentColor;
+    fill: none;
+    opacity: 0.45;
+  }
+
+  .rpc-faint {
+    stroke: currentColor;
+    opacity: 0.4;
+  }
+
+  .rpc-roof {
+    fill: currentColor;
+    opacity: 0.16;
+  }
+
+  .rpc-accent,
+  .rpc-accent-fill {
+    color: var(--accent);
+  }
+
+  .rpc--vaccine .rpc-accent,
+  .rpc--vaccine .rpc-accent-fill,
+  .rpc--greenroof .rpc-accent,
+  .rpc--greenroof .rpc-accent-fill {
+    color: var(--accent-primary);
+  }
+
+  .rpc-accent {
+    stroke: currentColor;
+    opacity: 0.85;
+  }
+
+  .rpc-accent-fill {
+    fill: currentColor;
+    opacity: 0.9;
+  }
+</style>

@@ -5,8 +5,6 @@ import PageHero from '../../components/sections/PageHero.astro';
 import ProjectCard from '../../components/cards/ProjectCard.astro';
 
 const projects = (await getCollection('work')).sort((a, b) => a.data.order - b.data.order);
-const completedCount = projects.filter((p) => p.data.status === 'completed').length;
-const inDevelopmentCount = projects.length - completedCount;
 ---
 
 <BaseLayout
@@ -15,24 +13,12 @@ const inDevelopmentCount = projects.length - completedCount;
 >
   <PageHero
     eyebrow="Work"
-    title="Evidence, not claims"
-    description="Analytics, optimization, machine learning, and dashboard projects. Most are finished, real-data case studies — a few are shown in active development."
+    title="Analytical work, applied"
+    description="A collection of analytical projects built to solve real problems using mathematics, optimization, AI, and data."
     motif="optimization"
   />
 
-  <section class="section section--tight work-intro">
-    <div class="container work-intro__grid">
-      <p class="work-intro__lede">
-        Every project below shipped against a real dataset and a real constraint — not a tutorial exercise.
-      </p>
-      <p class="text-muted work-intro__meta">
-        {completedCount} completed projects spanning optimization, applied AI, and decision analytics
-        {inDevelopmentCount > 0 && `, plus ${inDevelopmentCount} in active development`}.
-      </p>
-    </div>
-  </section>
-
-  <section class="section section--tight">
+  <section class="section work-projects">
     <div class="container">
       <div class="work-grid">
         {projects.map((project) => (
@@ -52,35 +38,13 @@ const inDevelopmentCount = projects.length - completedCount;
 </BaseLayout>
 
 <style>
-  .work-intro__grid {
-    display: grid;
-    gap: var(--space-4);
-    padding-bottom: var(--space-8);
-    border-bottom: 1px solid var(--border);
-  }
-
-  .work-intro__lede {
-    font-family: var(--font-serif);
-    font-size: var(--text-lg);
-    line-height: var(--leading-snug);
-    max-width: 32rem;
-  }
-
-  .work-intro__meta {
-    font-size: var(--text-sm);
-    max-width: 20rem;
+  .work-projects {
+    padding-block: clamp(1.5rem, 2.5vw + 1rem, 3rem) clamp(2.5rem, 4vw + 1rem, 4.5rem);
   }
 
   .work-grid {
     display: grid;
     gap: var(--space-6);
     grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
-  }
-
-  @media (min-width: 720px) {
-    .work-intro__grid {
-      grid-template-columns: 1fr auto;
-      align-items: end;
-    }
   }
 </style>

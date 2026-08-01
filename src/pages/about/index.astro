@@ -111,7 +111,7 @@ const beyondItems = [
             <p class="recognition-card__meta text-muted">{award.meta}</p>
             <p>{award.description}</p>
             {award.link && (
-              <a href={award.link.href} target="_blank" rel="noopener">{award.link.label} &rarr;</a>
+              <a href={award.link.href} target="_blank" rel="noopener">{award.link.label}</a>
             )}
           </article>
         ))}
@@ -336,6 +336,12 @@ const beyondItems = [
     font-size: var(--text-sm);
     font-weight: 600;
     color: var(--accent);
+  }
+
+  .recognition-card a:hover,
+  .recognition-card a:focus-visible {
+    text-decoration: underline;
+    text-underline-offset: 3px;
   }
 
   /* Professional History extras (slotted into MasterDetailExplorer) */
