@@ -281,7 +281,7 @@ export const beyondTheResume: MediaItem[] = [
 ];
 
 export const contactLinks = {
-  email: 'sarah.gakii.v@gmail.com',
+  email: 'gakiisarah251@gmail.com',
   linkedin: 'https://www.linkedin.com/in/sarah-gakii/',
   github: 'https://github.com/SARAH-GAKII',
 };

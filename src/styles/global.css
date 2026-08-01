@@ -119,6 +119,23 @@ button:focus-visible,
   background: var(--surface-muted);
 }
 
+.section--lavender {
+  background: var(--surface-lavender);
+}
+
+.section--blue-gray {
+  background: var(--surface-blue-gray);
+}
+
+.section--sage {
+  background: var(--surface-sage);
+}
+
+/* Pair with .section--dark for text-color cascade; this only overrides the background. */
+.section--indigo-deep {
+  background: var(--surface-indigo-deep);
+}
+
 .eyebrow {
   display: inline-flex;
   align-items: center;

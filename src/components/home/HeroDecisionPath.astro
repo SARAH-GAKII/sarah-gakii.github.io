@@ -1,0 +1,145 @@
+---
+// Original hero visualization: an asymmetric decision landscape. Irregular, partially
+// cropped contour regions suggest a complex problem space; a faint coordinate field grounds
+// it analytically; several alternative directions are explored (short faint stubs from
+// scattered candidate points) while one path bends as it meets a feasible-region boundary
+// and settles on a single accent-marked decision. Distinct from the shared OptimizationMotif
+// used elsewhere (Work/Research page heroes), which is left untouched.
+---
+
+<svg class="hero-decision-path" viewBox="0 0 480 420" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid meet">
+  <g class="hdp-field" stroke="currentColor" stroke-width="0.5">
+    <line x1="0" y1="60" x2="480" y2="60" />
+    <line x1="0" y1="210" x2="480" y2="210" />
+    <line x1="0" y1="360" x2="480" y2="360" />
+    <line x1="100" y1="0" x2="100" y2="420" />
+    <line x1="240" y1="0" x2="240" y2="420" />
+    <line x1="380" y1="0" x2="380" y2="420" />
+  </g>
+
+  <g class="hdp-contours" fill="none" stroke="currentColor" stroke-width="0.9">
+    <path d="M60,-15 C140,5 210,-8 260,30 C300,60 280,110 220,120 C150,128 90,105 70,65 C55,35 40,5 60,-15 Z" opacity="0.22" />
+    <path d="M300,140 C380,120 440,175 428,235 C418,290 350,320 280,305 C225,292 195,245 212,205 C226,172 260,152 300,140 Z" opacity="0.18" />
+    <path d="M-10,280 C35,265 80,283 90,325 C98,360 65,392 20,388 C-18,384 -28,332 -10,280 Z" opacity="0.16" />
+  </g>
+
+  <path class="hdp-boundary" d="M140,240 L245,215 L315,265 L280,350 L180,360 L120,305 Z" fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="3 6" />
+
+  <g class="hdp-stubs" fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="2 4">
+    <path d="M65,95 C85,115 100,130 108,145" />
+    <path d="M375,75 C355,100 340,120 330,140" />
+    <path d="M405,220 C375,235 350,250 335,265" />
+    <path d="M85,345 C115,335 140,325 158,315" />
+  </g>
+
+  <g class="hdp-ticks" stroke="currentColor" stroke-width="0.8">
+    <line x1="365" y1="75" x2="385" y2="75" />
+    <line x1="375" y1="65" x2="375" y2="85" />
+    <line x1="75" y1="345" x2="95" y2="345" />
+    <line x1="85" y1="335" x2="85" y2="355" />
+  </g>
+
+  <g class="hdp-alt-nodes" fill="currentColor">
+    <circle cx="65" cy="95" r="3.5" />
+    <circle cx="375" cy="75" r="3.5" />
+    <circle cx="405" cy="220" r="3.5" />
+    <circle cx="85" cy="345" r="3.5" />
+  </g>
+
+  <path class="hdp-winning-path" d="M240,95 C242,150 258,185 245,215 C235,245 250,275 245,300" fill="none" stroke-width="1.8" stroke-dasharray="320" stroke-dashoffset="320" />
+
+  <circle class="hdp-selected-ring" cx="245" cy="300" r="14" fill="none" stroke-width="1.2" />
+  <circle class="hdp-selected-node" cx="245" cy="300" r="6" />
+</svg>
+
+<style>
+  .hero-decision-path {
+    width: 100%;
+    height: 100%;
+    color: var(--text-on-dark);
+  }
+
+  .hdp-field {
+    opacity: 0.07;
+  }
+
+  .hdp-boundary {
+    color: var(--text-on-dark);
+    opacity: 0;
+    animation: hdp-fade-in 1.8s ease-out 0.2s forwards;
+  }
+
+  .hdp-stubs {
+    opacity: 0.32;
+  }
+
+  .hdp-ticks {
+    opacity: 0.4;
+  }
+
+  .hdp-alt-nodes {
+    opacity: 0.55;
+  }
+
+  .hdp-winning-path {
+    stroke: var(--accent-on-dark);
+    opacity: 0.9;
+    animation: hdp-draw 2.6s ease-out 0.6s forwards;
+  }
+
+  .hdp-selected-ring {
+    stroke: var(--accent-on-dark);
+    opacity: 0;
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: hdp-reveal-ring 1s ease-out 3s forwards;
+  }
+
+  .hdp-selected-node {
+    fill: var(--accent-on-dark);
+    opacity: 0;
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: hdp-reveal 1s ease-out 3.1s forwards;
+  }
+
+  @keyframes hdp-draw {
+    from {
+      stroke-dashoffset: 320;
+    }
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+
+  @keyframes hdp-reveal {
+    from {
+      opacity: 0;
+      transform: scale(0.85);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes hdp-reveal-ring {
+    from {
+      opacity: 0;
+      transform: scale(0.85);
+    }
+    to {
+      opacity: 0.55;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes hdp-fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 0.3;
+    }
+  }
+</style>

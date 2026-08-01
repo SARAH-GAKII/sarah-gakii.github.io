@@ -3,14 +3,31 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Button from '../components/ui/Button.astro';
 import SectionHeading from '../components/ui/SectionHeading.astro';
-import ProjectCard from '../components/cards/ProjectCard.astro';
-import OptimizationMotif from '../components/decorative/OptimizationMotif.astro';
+import HeroDecisionPath from '../components/home/HeroDecisionPath.astro';
+import AnalyticalModule from '../components/home/AnalyticalModule.astro';
+import CapabilityMosaic from '../components/home/CapabilityMosaic.astro';
 
-const problems = [
-  'Which markets, assets, or projects deserve investment when resources and time are limited?',
-  'How do you forecast demand, price, or behavior well enough to act on it?',
-  'How do you turn a large, messy, or incomplete dataset into a decision-ready model?',
-  'How do you know a model is actually right, and how much should it be trusted?',
+const analyticalModules = [
+  {
+    variant: 'allocation' as const,
+    label: 'Investment & allocation',
+    question: 'Which markets, assets, or projects deserve investment when resources and time are limited?',
+  },
+  {
+    variant: 'forecasting' as const,
+    label: 'Forecasting under uncertainty',
+    question: 'How do you forecast demand, price, or behavior well enough to act on it?',
+  },
+  {
+    variant: 'data' as const,
+    label: 'Decision-ready data',
+    question: 'How do you turn a large, messy, or incomplete dataset into a decision-ready model?',
+  },
+  {
+    variant: 'validation' as const,
+    label: 'Model confidence',
+    question: 'How do you know a model is actually right, and how much should it be trusted?',
+  },
 ];
 
 const capabilities = [
@@ -52,33 +69,24 @@ const capabilities = [
   },
 ];
 
-const engagementPaths = [
-  {
-    audience: 'Hiring managers & recruiters',
-    description: 'Evidence of how I structure ambiguous problems and ship analytical work that holds up.',
-    ctaLabel: 'Discuss a role',
-  },
-  {
-    audience: 'Business leaders & collaborators',
-    description: 'A partner for analytics, optimization, or AI work tied to a real operational decision.',
-    ctaLabel: 'Start a conversation',
-  },
-  {
-    audience: 'Technical reviewers',
-    description: 'Methodology, assumptions, and validation available on request for any project shown here.',
-    ctaLabel: 'Ask about the method',
-  },
-];
-
-const featuredProjectSlugs = ['facial-emotion-recognition', 'ohio-housing-affordability-analysis', 'ohio-energy-composition-analysis'];
 const allProjects = await getCollection('work');
-const featuredProjects = featuredProjectSlugs
-  .map((slug) => allProjects.find((p) => p.id === slug))
-  .filter((p): p is NonNullable<typeof p> => Boolean(p));
 
-const featuredResearch = (await getCollection('research'))
-  .sort((a, b) => a.data.order - b.data.order)
-  .slice(0, 3);
+const ohioHousing = allProjects.find((p) => p.id === 'ohio-housing-affordability-analysis')!;
+const fer = allProjects.find((p) => p.id === 'facial-emotion-recognition')!;
+const amazonRec = allProjects.find((p) => p.id === 'amazon-product-recommendation-system')!;
+
+const allResearch = await getCollection('research');
+const newtonFd = allResearch.find((r) => r.id === 'newton-fd-method-nonlinear-interface')!;
+
+const researchPreviewSlugs = ['covid-19-vaccine-uptake-behavior', 'crime-cooperative-policing-model', 'green-roofs-urban-heat-island'];
+const researchPreview = researchPreviewSlugs
+  .map((slug) => allResearch.find((r) => r.id === slug))
+  .filter((r): r is NonNullable<typeof r> => Boolean(r));
+const researchQuestions: Record<string, string> = {
+  'covid-19-vaccine-uptake-behavior': 'What if vaccine uptake is treated as a strategic choice, not a given?',
+  'crime-cooperative-policing-model': 'Does cooperation between police units change the predicted dynamics of crime?',
+  'green-roofs-urban-heat-island': "How much of a green roof's cooling effect holds up under a full heat-transfer model?",
+};
 ---
 
 <BaseLayout
@@ -86,196 +94,241 @@ const featuredResearch = (await getCollection('research'))
   description="A digital home for advanced analytical thinking: mathematics, optimization, data science, and AI applied to real organizational decisions."
 >
   <!-- Hero -->
-  <section class="hero section--dark section">
-    <div class="hero__motif" aria-hidden="true">
-      <OptimizationMotif />
-    </div>
-    <div class="container hero__grid">
-      <h1 class="hero__identity">A digital home for advanced analytical thinking.</h1>
-      <p class="hero__headline prose-width">
-        Turning complex problems into decisions you can act on.
-      </p>
-      <p class="hero__subhead text-muted prose-width">
-        I build mathematical models, optimization systems, and applied AI tools that help
-        organizations structure ambiguity, forecast what's coming, and make better decisions
-        with the data they already have.
-      </p>
-      <div class="hero__actions">
-        <Button href="/work/">See the work</Button>
-        <Button href="#capabilities" variant="secondary">How I can help</Button>
+  <section class="hero section--dark">
+    <div class="hero__layout">
+      <div class="hero__copy">
+        <h1 class="hero__identity">A digital home for<br class="hero__identity-break" /> advanced analytical thinking.</h1>
+        <p class="hero__headline">
+          Turning complex problems into decisions you can act on.
+        </p>
+        <p class="hero__subhead text-muted prose-width">
+          I build mathematical models, optimization systems, and applied AI tools that help
+          organizations structure ambiguity, forecast what's coming, and make better decisions
+          with the data they already have.
+        </p>
+      </div>
+      <div class="hero__visual">
+        <HeroDecisionPath />
       </div>
     </div>
   </section>
 
-  <!-- Problems / decisions -->
-  <section class="section">
+  <!-- Analytical thinking in practice -->
+  <section class="section section--tight section--dark section--indigo-deep analytical-practice">
     <div class="container">
       <SectionHeading
-        eyebrow="Where this becomes useful"
-        title="Problems worth solving carefully"
-        description="Complex organizational problems can be made clearer, more structured, and more actionable through rigorous analytical thinking."
+        eyebrow="Where analysis becomes useful"
+        title="Analytical thinking in practice"
+        description="Analytical work earns its keep when organizations have to decide anyway — under real constraints, incomplete information, uncertainty, or a model that might be wrong."
       />
-      <ul class="problems-list">
-        {problems.map((problem, i) => (
-          <li class="problems-list__item">
-            <span class="problems-list__index" aria-hidden="true">{String(i + 1).padStart(2, '0')}</span>
-            <p>{problem}</p>
-          </li>
+      <div class="analytical-practice__grid">
+        {analyticalModules.map((mod) => (
+          <AnalyticalModule variant={mod.variant} label={mod.label} question={mod.question} />
         ))}
-      </ul>
+      </div>
     </div>
   </section>
 
-  <!-- Capabilities -->
-  <section id="capabilities" class="section section--muted">
+  <!-- Capabilities at a glance -->
+  <section id="capabilities" class="section section--tight section--lavender capabilities">
     <div class="container">
       <SectionHeading
         eyebrow="Capabilities"
-        title="What I help organizations do"
-        description="Not a technology list — a set of capabilities applied to real decisions."
+        title="Capabilities at a glance"
+        description="Six capabilities, one throughline — applied to real decisions, not listed as a technology inventory."
       />
-      <ol class="capability-list">
-        {capabilities.map((capability) => (
-          <li class="capability-list__item">
-            <span class="capability-list__index" aria-hidden="true">{capability.index}</span>
-            <div class="capability-list__body">
-              <h3>{capability.title}</h3>
-              <p class="text-muted">{capability.description}</p>
-            </div>
-          </li>
-        ))}
-      </ol>
+      <CapabilityMosaic capabilities={capabilities} />
     </div>
   </section>
 
-  <!-- Selected work -->
-  <section class="section">
+  <!-- Evidence in practice -->
+  <section class="section section--tight evidence">
     <div class="container">
       <SectionHeading
         eyebrow="Selected work"
-        title="Evidence, not claims"
-        description="A sample of completed projects. Every one shown here is real, finished work."
+        title="Evidence in practice"
+        description="A few analytical stories, not the complete collection. Full case studies live on the Work page."
       />
-      <div class="work-preview-grid">
-        {featuredProjects.map((project, i) => (
-          <div class:list={['work-preview-grid__item', { 'work-preview-grid__item--feature': i === 0 }]}>
-            <ProjectCard
-              slug={project.id}
-              title={project.data.title}
-              summary={project.data.summary}
-              methods={project.data.methods}
-              status={project.data.status}
-              thumbnail={project.data.thumbnail}
-            />
+      <div class="evidence-grid">
+        <a class="evidence-card evidence-card--feature" href={`/work/${ohioHousing.id}/`}>
+          <div class="evidence-card__visual evidence-card__visual--choropleth" aria-hidden="true">
+            <svg viewBox="0 0 200 120" preserveAspectRatio="xMidYMid slice">
+              <g fill="currentColor" stroke="none">
+                <rect x="6" y="6" width="34" height="32" rx="3" opacity="0.25" />
+                <rect x="44" y="6" width="34" height="32" rx="3" opacity="0.4" />
+                <rect x="82" y="6" width="34" height="32" rx="3" opacity="0.3" />
+                <rect x="120" y="6" width="34" height="32" rx="3" opacity="0.5" />
+                <rect x="158" y="6" width="34" height="32" rx="3" opacity="0.2" />
+                <rect x="6" y="42" width="34" height="32" rx="3" opacity="0.35" />
+                <rect x="44" y="42" width="34" height="32" rx="3" opacity="0.22" />
+                <rect x="120" y="42" width="34" height="32" rx="3" opacity="0.3" />
+                <rect x="158" y="42" width="34" height="32" rx="3" opacity="0.45" />
+                <rect x="6" y="78" width="34" height="32" rx="3" opacity="0.4" />
+                <rect x="44" y="78" width="34" height="32" rx="3" opacity="0.28" />
+                <rect x="82" y="78" width="34" height="32" rx="3" opacity="0.35" />
+                <rect x="120" y="78" width="34" height="32" rx="3" opacity="0.22" />
+                <rect x="158" y="78" width="34" height="32" rx="3" opacity="0.4" />
+              </g>
+              <rect x="82" y="42" width="34" height="32" rx="3" fill="none" stroke="currentColor" stroke-width="1.8" />
+            </svg>
           </div>
-        ))}
+          <div class="evidence-card__body">
+            <p class="evidence-card__tag">Decision analysis</p>
+            <h3 class="evidence-card__curiosity">Statewide averages say Ohio's rent burden is moderate. County-level data tells a more complicated story.</h3>
+            <p class="evidence-card__context text-muted">An interactive Power BI analysis of rent, income, and affordability across Ohio counties (2019–2023), with a county-level deep dive.</p>
+            <span class="evidence-card__action">Explore the analysis &rarr;</span>
+          </div>
+        </a>
+
+        <a class="evidence-card evidence-card--square" href={`/work/${fer.id}/`}>
+          {fer.data.thumbnail && (
+            <div class="evidence-card__visual evidence-card__visual--photo">
+              <img src={fer.data.thumbnail} alt="" loading="lazy" />
+            </div>
+          )}
+          <div class="evidence-card__body">
+            <p class="evidence-card__tag">Computer vision</p>
+            <h3 class="evidence-card__curiosity">When does a smile stop looking like happiness to a model?</h3>
+            <p class="evidence-card__context text-muted">Comparing convolutional neural-network approaches for classifying facial emotion from grayscale images.</p>
+            <span class="evidence-card__action">See how the models compared &rarr;</span>
+          </div>
+        </a>
+
+        <a class="evidence-card evidence-card--tall" href={`/work/${amazonRec.id}/`}>
+          <div class="evidence-card__visual evidence-card__visual--matrix" aria-hidden="true">
+            <svg viewBox="0 0 140 200" preserveAspectRatio="xMidYMid slice">
+              <g fill="currentColor">
+                <circle cx="20" cy="20" r="3" opacity="0.15" /><circle cx="45" cy="20" r="3" opacity="0.8" />
+                <circle cx="70" cy="20" r="3" opacity="0.15" /><circle cx="95" cy="20" r="3" opacity="0.15" />
+                <circle cx="20" cy="45" r="3" opacity="0.15" /><circle cx="45" cy="45" r="3" opacity="0.15" />
+                <circle cx="70" cy="45" r="3" opacity="0.8" /><circle cx="95" cy="45" r="3" opacity="0.15" />
+                <circle cx="20" cy="70" r="3" opacity="0.8" /><circle cx="45" cy="70" r="3" opacity="0.15" />
+                <circle cx="70" cy="70" r="3" opacity="0.15" /><circle cx="95" cy="70" r="3" opacity="0.15" />
+                <circle cx="20" cy="95" r="3" opacity="0.15" /><circle cx="45" cy="95" r="3" opacity="0.15" />
+                <circle cx="70" cy="95" r="3" opacity="0.15" /><circle cx="95" cy="95" r="3" opacity="0.8" />
+              </g>
+              <g stroke="currentColor" stroke-width="1" opacity="0.4" fill="none">
+                <line x1="45" y1="20" x2="60" y2="140" />
+                <line x1="70" y1="45" x2="60" y2="155" />
+                <line x1="20" y1="70" x2="60" y2="170" />
+                <line x1="95" y1="95" x2="60" y2="140" />
+              </g>
+              <g fill="currentColor">
+                <rect x="30" y="135" width="60" height="8" rx="2" opacity="0.7" />
+                <rect x="30" y="150" width="42" height="8" rx="2" opacity="0.5" />
+                <rect x="30" y="165" width="28" height="8" rx="2" opacity="0.35" />
+              </g>
+            </svg>
+          </div>
+          <div class="evidence-card__body">
+            <p class="evidence-card__tag">Recommendation systems</p>
+            <h3 class="evidence-card__curiosity">What does a useful recommendation require when user signals are sparse?</h3>
+            <p class="evidence-card__context text-muted">Comparing collaborative-filtering methods for ranking products from incomplete interaction data.</p>
+            <span class="evidence-card__action">Explore the recommendation system &rarr;</span>
+          </div>
+        </a>
+
+        <a class="evidence-card evidence-card--strip" href={`/research/${newtonFd.id}/`}>
+          <div class="evidence-card__visual evidence-card__visual--mesh" aria-hidden="true">
+            <svg viewBox="0 0 400 100" preserveAspectRatio="xMidYMid slice">
+              <g stroke="currentColor" stroke-width="0.7" opacity="0.4" fill="none">
+                {Array.from({ length: 8 }).map((_, i) => (
+                  <line x1={10 + i * 25} y1="8" x2={10 + i * 25} y2="92" />
+                ))}
+                {Array.from({ length: 5 }).map((_, i) => (
+                  <line x1="10" y1={8 + i * 21} x2="190" y2={8 + i * 21} />
+                ))}
+                {Array.from({ length: 13 }).map((_, i) => (
+                  <line x1={215 + i * 14} y1="8" x2={215 + i * 14} y2="92" />
+                ))}
+                {Array.from({ length: 5 }).map((_, i) => (
+                  <line x1="215" y1={8 + i * 21} x2="390" y2={8 + i * 21} />
+                ))}
+              </g>
+              <path d="M200,4 C 194,32 206,58 199,96" stroke="currentColor" stroke-width="1.8" fill="none" opacity="0.8" />
+            </svg>
+          </div>
+          <div class="evidence-card__body">
+            <p class="evidence-card__tag">Numerical research</p>
+            <h3 class="evidence-card__curiosity">What happens when a smooth numerical solution meets a nonlinear interface jump?</h3>
+            <p class="evidence-card__context text-muted">A numerical method for PDEs with nonlinear interface jump conditions, later developed into a peer-reviewed publication.</p>
+            <span class="evidence-card__action">Explore the research &rarr;</span>
+          </div>
+        </a>
       </div>
       <div class="section-cta">
-        <Button href="/work/" variant="ghost">See all work &rarr;</Button>
+        <Button href="/work/" variant="ghost">View all work &rarr;</Button>
       </div>
     </div>
   </section>
 
-  <!-- Research teaser -->
-  <section class="section section--muted">
+  <!-- Research preview -->
+  <section class="section section--tight section--sage research-preview">
     <div class="container">
       <SectionHeading
         eyebrow="Research"
-        title="Mathematical & computational research"
-        description="Published and graduate research spanning PDEs, epidemic modeling, and dynamical systems."
+        title="Research preview"
+        description="A quieter, publication-oriented record — mathematical questions, methods, and models."
       />
-      <ul class="research-teaser-list">
-        {featuredResearch.map((item) => (
-          <li class="research-teaser-list__item">
-            <a href={`/research/${item.id}/`} class="research-teaser-list__link">
-              <span class="research-teaser-list__heading">
-                <h3>{item.data.title}</h3>
-                <span class="research-teaser-list__tags">{item.data.tags.join(' · ')}</span>
-              </span>
-              <p class="text-muted research-teaser-list__summary">{item.data.summary}</p>
-              <span class="research-teaser-list__arrow" aria-hidden="true">&rarr;</span>
-            </a>
-          </li>
+      <div class="research-preview__grid">
+        {researchPreview.map((item) => (
+          <a class="research-preview__item" href={`/research/${item.id}/`}>
+            <p class="research-preview__domain">{item.data.tags[0]}</p>
+            <h3>{item.data.title}</h3>
+            <p class="research-preview__question">{researchQuestions[item.id]}</p>
+            <span class="research-preview__action">Read the research &rarr;</span>
+          </a>
         ))}
-      </ul>
-      <div class="section-cta">
-        <Button href="/research/" variant="ghost">See all research &rarr;</Button>
       </div>
-    </div>
-  </section>
-
-  <!-- Engagement paths -->
-  <section class="section section--dark">
-    <div class="container">
-      <SectionHeading
-        eyebrow="Get involved"
-        title="A few ways to engage"
-      />
-      <ul class="engagement-list">
-        {engagementPaths.map((path) => (
-          <li class="engagement-list__item">
-            <h3>{path.audience}</h3>
-            <p class="text-muted">{path.description}</p>
-            <a class="engagement-list__link" href="#site-footer">
-              {path.ctaLabel}
-              <span aria-hidden="true">&rarr;</span>
-            </a>
-          </li>
-        ))}
-      </ul>
-    </div>
-  </section>
-
-  <!-- Closing CTA / contact -->
-  <section class="section closing-cta">
-    <div class="container closing-cta__inner">
-      <h2>Have a problem worth structuring carefully?</h2>
-      <p class="text-muted prose-width">
-        Reach out about a role, a project, or a question about the methodology behind any work shown here.
-      </p>
-      <div class="hero__actions">
-        <Button href="#site-footer">Get in touch</Button>
-        <Button href="/about/" variant="secondary">More on how I work</Button>
+      <div class="section-cta">
+        <Button href="/research/" variant="ghost">Explore all research &rarr;</Button>
       </div>
     </div>
   </section>
 </BaseLayout>
 
 <style>
+  /* Hero */
   .hero {
     position: relative;
     overflow: hidden;
+    padding-block: clamp(2.5rem, 4vw + 1rem, 4.5rem) clamp(1.75rem, 2.5vw + 1rem, 3rem);
   }
 
-  .hero__motif {
-    position: absolute;
-    inset: -10% -20% -10% auto;
-    width: 78%;
-    color: var(--text-on-dark);
-    pointer-events: none;
-    mask-image: linear-gradient(to left, black 45%, transparent 92%);
-  }
-
-  .hero__grid {
+  .hero__layout {
     position: relative;
+    width: 100%;
+    max-width: 100rem;
+    margin-inline: auto;
+    padding-inline: var(--gutter);
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+    align-items: center;
+  }
+
+  .hero__copy {
     display: flex;
     flex-direction: column;
     gap: var(--space-5);
-    max-width: 50rem;
+    min-width: 0;
   }
 
   .hero__identity {
     font-size: var(--text-display);
     line-height: var(--leading-tight);
     color: var(--text-on-dark);
-    max-width: 22ch;
+  }
+
+  .hero__identity-break {
+    display: none;
   }
 
   .hero__headline {
     font-family: var(--font-serif);
     font-size: var(--text-lg);
     line-height: var(--leading-snug);
-    color: var(--accent-primary-on-dark);
+    color: var(--accent-on-dark);
   }
 
   .hero__subhead {
@@ -283,219 +336,246 @@ const featuredResearch = (await getCollection('research'))
     line-height: var(--leading-snug);
   }
 
-  .hero__actions {
+  .hero__visual {
     display: flex;
-    flex-wrap: wrap;
-    gap: var(--space-4);
-    margin-top: var(--space-2);
+    justify-content: center;
+    align-items: center;
+    max-width: 20rem;
+    max-height: 16rem;
+    margin-inline: auto;
+    opacity: 0.85;
   }
 
-  /* Problems list — typographic ledger, no boxes */
-  .problems-list {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .problems-list__item {
+  /* Analytical thinking in practice */
+  .analytical-practice__grid {
     display: grid;
-    grid-template-columns: auto 1fr;
-    gap: var(--space-5);
-    align-items: baseline;
-    padding-block: var(--space-6);
-    border-top: 1px solid var(--border);
+    gap: var(--space-8) var(--space-6);
+    grid-template-columns: 1fr;
   }
 
-  .problems-list__item:last-child {
-    border-bottom: 1px solid var(--border);
-  }
-
-  .problems-list__index {
-    font-family: var(--font-serif);
-    font-size: var(--text-lg);
-    color: var(--accent);
-  }
-
-  .problems-list__item p {
-    font-family: var(--font-serif);
-    font-size: var(--text-md);
-    line-height: var(--leading-snug);
-    max-width: 40rem;
-  }
-
-  /* Capabilities — numbered row index, no cards */
-  .capability-list {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .capability-list__item {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    gap: var(--space-6);
-    padding-block: var(--space-6);
-    border-top: 1px solid var(--border-strong);
-  }
-
-  .capability-list__item:last-child {
-    border-bottom: 1px solid var(--border-strong);
-  }
-
-  .capability-list__index {
-    font-family: var(--font-serif);
-    font-size: var(--text-lg);
-    color: var(--accent);
-  }
-
-  .capability-list__body h3 {
-    font-size: var(--text-md);
-    margin-bottom: var(--space-2);
-  }
-
-  .capability-list__body p {
-    max-width: 34rem;
-    font-size: var(--text-sm);
-    line-height: var(--leading-normal);
-  }
-
-  /* Selected work — asymmetric feature + two supporting */
-  .work-preview-grid {
+  /* Evidence in practice */
+  .evidence-grid {
     display: grid;
     gap: var(--space-5);
     grid-template-columns: 1fr;
   }
 
-  .work-preview-grid__item {
+  .evidence-card {
+    display: flex;
+    flex-direction: column;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    transition: border-color var(--transition-base), transform var(--transition-base);
+  }
+
+  .evidence-card:hover,
+  .evidence-card:focus-visible {
+    border-color: var(--accent-primary);
+    transform: translateY(-2px);
+  }
+
+  .evidence-card:focus-visible {
+    outline: 2px solid var(--focus);
+    outline-offset: 2px;
+  }
+
+  .evidence-card__visual {
+    aspect-ratio: 16 / 8;
+    background: var(--surface-muted);
+    overflow: hidden;
+    color: var(--accent-primary);
+  }
+
+  .evidence-card__visual svg,
+  .evidence-card__visual img {
+    width: 100%;
     height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .evidence-card--square .evidence-card__visual {
+    aspect-ratio: 1 / 1;
+  }
+
+  .evidence-card--tall .evidence-card__visual {
+    aspect-ratio: 4 / 5;
+  }
+
+  .evidence-card--strip {
+    flex-direction: row;
+  }
+
+  .evidence-card--strip .evidence-card__visual {
+    aspect-ratio: auto;
+    width: 40%;
+    flex-shrink: 0;
+  }
+
+  .evidence-card--strip .evidence-card__body {
+    flex: 1;
+    justify-content: center;
+  }
+
+  .evidence-card__body {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    padding: var(--space-5);
+  }
+
+  .evidence-card__tag {
+    font-size: var(--text-xs);
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--accent-primary);
+  }
+
+  .evidence-card__curiosity {
+    font-family: var(--font-serif);
+    font-weight: 600;
+    font-size: var(--text-base);
+    line-height: var(--leading-snug);
+    color: var(--text-on-paper);
+  }
+
+  .evidence-card--feature .evidence-card__curiosity {
+    font-size: var(--text-lg);
+    max-width: 34rem;
+  }
+
+  .evidence-card__context {
+    font-size: var(--text-sm);
+    line-height: var(--leading-normal);
+  }
+
+  .evidence-card__action {
+    margin-top: auto;
+    padding-top: var(--space-2);
+    font-size: var(--text-sm);
+    font-weight: 600;
+    color: var(--accent);
+  }
+
+  .evidence-card:hover .evidence-card__action {
+    text-decoration: underline;
+    text-underline-offset: 3px;
   }
 
   .section-cta {
     margin-top: var(--space-8);
   }
 
-  /* Research teaser — horizontal editorial list */
-  .research-teaser-list {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .research-teaser-list__item {
-    border-top: 1px solid var(--border);
-  }
-
-  .research-teaser-list__item:last-child {
-    border-bottom: 1px solid var(--border);
-  }
-
-  .research-teaser-list__link {
+  /* Research preview */
+  .research-preview__grid {
     display: grid;
+    gap: var(--space-6);
     grid-template-columns: 1fr;
-    gap: var(--space-3);
-    padding-block: var(--space-6);
-    position: relative;
   }
 
-  .research-teaser-list__heading {
+  .research-preview__item {
+    padding-top: var(--space-5);
+    border-top: 1px solid var(--border-strong);
     display: flex;
     flex-direction: column;
     gap: var(--space-2);
   }
 
-  .research-teaser-list__heading h3 {
-    font-size: var(--text-md);
-  }
-
-  .research-teaser-list__tags {
+  .research-preview__domain {
     font-size: var(--text-xs);
-    letter-spacing: 0.02em;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
     color: var(--text-muted-on-paper);
   }
 
-  .research-teaser-list__summary {
-    font-size: var(--text-sm);
-    line-height: var(--leading-normal);
-    max-width: 40rem;
+  .research-preview__item h3 {
+    font-size: var(--text-md);
+    line-height: var(--leading-snug);
   }
 
-  .research-teaser-list__arrow {
-    display: none;
-  }
-
-  .research-teaser-list__link:hover .research-teaser-list__heading h3 {
+  .research-preview__item:hover h3 {
     color: var(--accent);
   }
 
-  /* Engagement paths — plain list, no borders */
-  .engagement-list {
-    display: grid;
-    gap: var(--space-8);
-    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-  }
-
-  .engagement-list__item {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-3);
-  }
-
-  .engagement-list__item h3 {
-    font-size: var(--text-md);
-    color: var(--text-on-dark);
-  }
-
-  .engagement-list__item p {
+  .research-preview__question {
+    font-family: var(--font-serif);
     font-size: var(--text-sm);
     line-height: var(--leading-normal);
+    color: var(--text-muted-on-paper);
   }
 
-  .engagement-list__link {
+  .research-preview__action {
     margin-top: auto;
-    display: inline-flex;
-    align-items: center;
-    gap: var(--space-2);
-    font-size: var(--text-sm);
-    font-weight: 600;
-    color: var(--accent-on-dark);
     padding-top: var(--space-2);
+    font-size: var(--text-xs);
+    font-weight: 600;
+    color: var(--accent);
   }
 
-  .engagement-list__link:hover {
-    text-decoration: underline;
-    text-underline-offset: 4px;
-  }
-
-  .closing-cta__inner {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-5);
-    text-align: center;
-    align-items: center;
-  }
-
-  .closing-cta__inner h2 {
-    font-size: var(--text-2xl);
-  }
-
+  /* Tablet */
   @media (min-width: 640px) {
-    .research-teaser-list__link {
-      grid-template-columns: 1fr 1.2fr;
-      align-items: center;
-      gap: var(--space-6);
+    .analytical-practice__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .research-preview__grid {
+      grid-template-columns: repeat(2, 1fr);
     }
   }
 
-  @media (min-width: 860px) {
-    .capability-list__item {
-      grid-template-columns: 4rem 1fr;
+  @media (min-width: 768px) {
+    .research-preview__grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  /* Desktop */
+  @media (min-width: 900px) {
+    .hero__identity-break {
+      display: inline;
     }
 
-    .work-preview-grid {
-      grid-template-columns: 1.3fr 1fr;
-      grid-template-rows: repeat(2, auto);
+    .hero__layout {
+      grid-template-columns: 3fr 2fr;
+      gap: var(--space-10);
     }
 
-    .work-preview-grid__item--feature {
-      grid-column: 1;
+    .hero__visual {
+      max-width: none;
+      max-height: 30rem;
+      margin-inline: 0;
+    }
+
+    .analytical-practice__grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .evidence-grid {
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: auto auto;
+    }
+
+    .evidence-card--feature {
+      grid-column: 1 / 3;
+      grid-row: 1;
+    }
+
+    .evidence-card--square {
+      grid-column: 3 / 4;
+      grid-row: 1;
+    }
+
+    .evidence-card--tall {
+      grid-column: 4 / 5;
       grid-row: 1 / 3;
+    }
+
+    .evidence-card--strip {
+      grid-column: 1 / 4;
+      grid-row: 2;
     }
   }
 </style>

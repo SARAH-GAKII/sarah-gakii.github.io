@@ -16,6 +16,17 @@
   --border-on-dark: rgba(250, 249, 246, 0.14);
   --border-strong-on-dark: rgba(250, 249, 246, 0.26);
 
+  /* Color: supporting section atmospheres — very light tints, same luminance family as
+     paper/surface-muted, used to give sections distinct-but-related backgrounds instead of
+     an unbroken run of near-identical light sections. Text tokens remain readable on all of them. */
+  --surface-lavender: #f2f0fa;
+  --surface-blue-gray: #eef1f5;
+  --surface-sage: #eef3ee;
+
+  /* A second dark register, distinct from --ink-950, for sections that should read as a
+     related-but-different dark atmosphere (e.g. an analytical field between hero and content). */
+  --surface-indigo-deep: #1c1840;
+
   /* Color: accent secondary (teal) — CTAs, links, active nav, focus, numbered markers */
   --accent: #1f5c54;
   --accent-strong: #163f3a;
