@@ -85,7 +85,7 @@ button {
 a:focus-visible,
 button:focus-visible,
 [tabindex]:focus-visible {
-  outline: 2px solid var(--accent-on-dark);
+  outline: 2px solid var(--focus);
   outline-offset: 3px;
   border-radius: var(--radius-sm);
 }
@@ -128,11 +128,11 @@ button:focus-visible,
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--accent);
+  color: var(--accent-primary);
 }
 
 .section--dark .eyebrow {
-  color: var(--accent-on-dark);
+  color: var(--accent-primary-on-dark);
 }
 
 .text-muted {

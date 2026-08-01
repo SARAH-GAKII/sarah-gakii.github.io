@@ -16,11 +16,26 @@
   --border-on-dark: rgba(250, 249, 246, 0.14);
   --border-strong-on-dark: rgba(250, 249, 246, 0.26);
 
-  /* Color: accent */
+  /* Color: accent secondary (teal) — CTAs, links, active nav, focus, numbered markers */
   --accent: #1f5c54;
   --accent-strong: #163f3a;
   --accent-on-dark: #6fbfb0;
   --accent-warm: #a97e4c;
+
+  /* Color: accent primary (deep indigo / blue-violet) — section labels, selected states,
+     subtle top borders, occasional headings. Restrained inspiration from the previous
+     portfolio's purple, tuned darker/desaturated to stay credible and quiet. */
+  --accent-primary: #453e9e;
+  --accent-primary-strong: #332d79;
+  --accent-primary-on-dark: #a79eec;
+
+  /* Color: accent tertiary (restrained royal blue) — sparing use in decorative linework */
+  --accent-tertiary: #3b5bdb;
+
+  /* Semantic aliases (same physical colors, named for their role) */
+  --focus: var(--accent-on-dark);
+  --link: var(--accent);
+  --link-hover: var(--accent-strong);
 
   /* Text */
   --text-on-paper: var(--ink-900);

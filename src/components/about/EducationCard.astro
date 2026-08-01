@@ -24,7 +24,7 @@ const { title, meta, description, courses } = Astro.props;
   .edu-card {
     background: var(--surface);
     border: 1px solid var(--border);
-    border-top: 3px solid var(--accent);
+    border-top: 3px solid var(--accent-primary);
     border-radius: var(--radius-md);
     transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
   }
@@ -69,7 +69,7 @@ const { title, meta, description, courses } = Astro.props;
   }
 
   .edu-card summary:focus-visible {
-    outline: 2px solid var(--accent-on-dark);
+    outline: 2px solid var(--focus);
     outline-offset: 3px;
     border-radius: var(--radius-sm);
   }

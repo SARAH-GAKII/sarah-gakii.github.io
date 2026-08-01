@@ -19,12 +19,12 @@ import {
   beyondTheResume,
 } from '../../data/about';
 
-const approach = [
-  { index: '01', title: 'Understand the decision', description: 'Start with the decision being made, not the dataset — what question actually needs answering, and by whom.' },
-  { index: '02', title: 'Understand the data', description: 'Trace how the data was generated and what assumptions that implies before choosing a method.' },
-  { index: '03', title: 'Model & analyze', description: 'Select or build the model — statistical, optimization, or machine learning — that matches the structure of the problem.' },
-  { index: '04', title: 'Validate', description: 'Test assumptions, check limitations, and confirm the model holds up before trusting it.' },
-  { index: '05', title: 'Communicate & support the decision', description: 'Translate results into something a decision-maker can actually act on.' },
+const professionalFocus = [
+  { index: '01', title: 'Applied AI & Data Science', description: 'Developing data-driven models and analytical workflows that extract meaningful insight from complex datasets.' },
+  { index: '02', title: 'Machine Learning & Statistical Analysis', description: 'Applying machine learning and statistical techniques to uncover patterns, support predictions, and inform decisions.' },
+  { index: '03', title: 'Mathematical & Computational Modeling', description: 'Designing and analyzing numerical methods, simulations, and mathematical models to study complex systems.' },
+  { index: '04', title: 'Data Analytics & Visualization', description: 'Transforming raw data into interpretable insights through exploratory analysis, dashboards, and visual storytelling.' },
+  { index: '05', title: 'Scientific Computing & Numerical Methods', description: 'Implementing computational techniques to solve mathematical models and engineering problems.' },
 ];
 
 const slugify = (value: string) => value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
@@ -70,12 +70,12 @@ const beyondItems = [
     </div>
   </section>
 
-  <!-- How I Work -->
+  <!-- Professional Focus -->
   <section class="section section--tight section--dark">
     <div class="container">
-      <SectionHeading eyebrow="How I work" title="Structure before speed" />
+      <SectionHeading eyebrow="Professional focus" title="Professional Focus" />
       <ol class="method-path">
-        {approach.map((step) => (
+        {professionalFocus.map((step) => (
           <li class="method-path__step">
             <span class="method-path__marker" aria-hidden="true">{step.index}</span>
             <div class="method-path__content">
@@ -206,7 +206,7 @@ const beyondItems = [
     position: absolute;
     inset: -15% -10% -15% auto;
     width: 55%;
-    color: var(--accent);
+    color: var(--accent-tertiary);
     opacity: 0.4;
     pointer-events: none;
     mask-image: linear-gradient(to left, black 20%, transparent 80%);
@@ -247,7 +247,7 @@ const beyondItems = [
     object-fit: cover;
   }
 
-  /* How I work */
+  /* Professional focus */
   .method-path {
     display: flex;
     flex-direction: column;
@@ -463,11 +463,11 @@ const beyondItems = [
   }
 
   .ribbon-section {
-    padding-top: var(--space-6);
+    padding-block: var(--space-5) var(--space-6);
   }
 
   .ribbon-section .container {
-    margin-bottom: var(--space-5);
+    margin-bottom: var(--space-4);
   }
 
   @media (min-width: 720px) {
