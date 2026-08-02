@@ -132,7 +132,7 @@ const researchMeta: Record<string, { variant: 'nfdm' | 'vaccine' | 'policing' | 
   </section>
 
   <!-- Analytical thinking in practice -->
-  <section class="section section--tight section--dark section--indigo-deep analytical-practice">
+  <section class="section section--tight analytical-practice">
     <div class="container">
       <SectionHeading
         eyebrow="Where analysis becomes useful"
@@ -148,7 +148,7 @@ const researchMeta: Record<string, { variant: 'nfdm' | 'vaccine' | 'policing' | 
   </section>
 
   <!-- Capabilities at a glance -->
-  <section id="capabilities" class="section section--tight section--lavender capabilities">
+  <section id="capabilities" class="section section--tight section--blue-tint capabilities">
     <div class="container">
       <SectionHeading
         eyebrow="Capabilities at a glance"
@@ -160,7 +160,7 @@ const researchMeta: Record<string, { variant: 'nfdm' | 'vaccine' | 'policing' | 
   </section>
 
   <!-- Evidence in practice -->
-  <section class="section section--tight evidence">
+  <section class="section section--tight section--lavender-tint evidence">
     <div class="container">
       <SectionHeading
         eyebrow="Selected work"
@@ -253,7 +253,7 @@ const researchMeta: Record<string, { variant: 'nfdm' | 'vaccine' | 'policing' | 
   </section>
 
   <!-- Research preview -->
-  <section class="section section--tight section--sage research-preview">
+  <section class="section section--tight research-preview">
     <div class="container">
       <SectionHeading
         eyebrow="Research"
@@ -323,7 +323,7 @@ const researchMeta: Record<string, { variant: 'nfdm' | 'vaccine' | 'policing' | 
     font-family: var(--font-serif);
     font-size: var(--text-lg);
     line-height: var(--leading-snug);
-    color: var(--accent-on-dark);
+    color: var(--accent-primary-on-dark);
   }
 
   .hero__subhead {
@@ -367,7 +367,7 @@ const researchMeta: Record<string, { variant: 'nfdm' | 'vaccine' | 'policing' | 
 
   .evidence-card:hover,
   .evidence-card:focus-visible {
-    border-color: var(--accent-primary);
+    border-color: var(--accent);
     transform: translateY(-2px);
   }
 
@@ -481,18 +481,6 @@ const researchMeta: Record<string, { variant: 'nfdm' | 'vaccine' | 'policing' | 
     margin-bottom: var(--space-2);
     box-shadow: 0 0 0 0 transparent;
     transition: box-shadow var(--transition-base), transform var(--transition-base);
-  }
-
-  .research-preview__circle--vaccine {
-    background: var(--surface-lavender);
-  }
-
-  .research-preview__circle--policing {
-    background: var(--surface-blue-gray);
-  }
-
-  .research-preview__circle--greenroof {
-    background: var(--surface-sage);
   }
 
   .research-preview__link:hover .research-preview__circle,

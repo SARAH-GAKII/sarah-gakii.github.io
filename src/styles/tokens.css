@@ -1,47 +1,44 @@
 :root {
-  /* Color: ink (near-black, cool) */
-  --ink-950: #0b0e13;
-  --ink-900: #12151c;
-  --ink-800: #1c212b;
-  --ink-700: #363c47;
-  --ink-500: #666d78;
-  --ink-300: #9aa0aa;
+  /* Color: ink — deep navy is the darkest register sitewide. No pure black anywhere. */
+  --ink-950: #16243d;
+  --ink-900: #1c2f4d;
+  --ink-800: #24395e;
+  --ink-500: #53637a;
+  --ink-300: #8997ab;
 
-  /* Color: paper (warm neutral light) */
-  --paper: #faf9f6;
-  --surface: #ffffff;
-  --surface-muted: #f1efe9;
-  --border: #e3e0d8;
-  --border-strong: #c9c3b5;
-  --border-on-dark: rgba(250, 249, 246, 0.14);
-  --border-strong-on-dark: rgba(250, 249, 246, 0.26);
+  /* Color: paper (warm ivory, light register) — pure white avoided where possible */
+  --paper: #f8f7f4;
+  --surface: #fcfcfb;
+  --surface-muted: #eeece4;
+  --border: #d9dfe5;
+  --border-strong: #bcc6d0;
+  --border-on-dark: rgba(248, 247, 244, 0.14);
+  --border-strong-on-dark: rgba(248, 247, 244, 0.26);
 
-  /* Color: supporting section atmospheres — very light tints, same luminance family as
-     paper/surface-muted, used to give sections distinct-but-related backgrounds instead of
-     an unbroken run of near-identical light sections. Text tokens remain readable on all of them. */
-  --surface-lavender: #f2f0fa;
-  --surface-blue-gray: #eef1f5;
-  --surface-sage: #eef3ee;
+  /* Color: section atmospheres — very light, low-saturation tints in the same luminance
+     family as paper, giving sections distinct-but-related backgrounds instead of an
+     unbroken run of near-identical light sections. Text tokens stay readable on all. */
+  --surface-blue-tint: #eef4f7;
+  --surface-lavender-tint: #f2f0fb;
 
-  /* A second dark register, distinct from --ink-950, for sections that should read as a
-     related-but-different dark atmosphere (e.g. an analytical field between hero and content). */
-  --surface-indigo-deep: #1c1840;
+  /* Elevated dark surface, distinct from --ink-950, for sections/tiles that should read as a
+     related-but-different dark atmosphere within the same navy family. */
+  --surface-dark-elevated: var(--ink-900);
 
-  /* Color: accent secondary (teal) — CTAs, links, active nav, focus, numbered markers */
-  --accent: #1f5c54;
-  --accent-strong: #163f3a;
-  --accent-on-dark: #6fbfb0;
+  /* Color: interactive accent (teal) — the functional thread: links, hover states, focus,
+     active nav, secondary/ghost actions. Appears constantly, in small doses, everywhere. */
+  --accent: #2b6d67;
+  --accent-strong: #1f4f4b;
+  --accent-on-dark: #6caea8;
+
+  /* Color: primary accent (violet) — the brand-signature color: primary CTAs, eyebrows/
+     section labels, and analytical-highlight moments in diagrams. Used deliberately, not everywhere. */
+  --accent-primary: #5c47c6;
+  --accent-primary-strong: #4a38a3;
+  --accent-primary-on-dark: #8a7dec;
+
+  /* Color: status accent (warm amber) — "in development" labeling only */
   --accent-warm: #a97e4c;
-
-  /* Color: accent primary (deep indigo / blue-violet) — section labels, selected states,
-     subtle top borders, occasional headings. Restrained inspiration from the previous
-     portfolio's purple, tuned darker/desaturated to stay credible and quiet. */
-  --accent-primary: #453e9e;
-  --accent-primary-strong: #332d79;
-  --accent-primary-on-dark: #a79eec;
-
-  /* Color: accent tertiary (restrained royal blue) — sparing use in decorative linework */
-  --accent-tertiary: #3b5bdb;
 
   /* Semantic aliases (same physical colors, named for their role) */
   --focus: var(--accent-on-dark);
@@ -49,10 +46,10 @@
   --link-hover: var(--accent-strong);
 
   /* Text */
-  --text-on-paper: var(--ink-900);
+  --text-on-paper: var(--ink-950);
   --text-muted-on-paper: var(--ink-500);
-  --text-on-dark: #f4f2ec;
-  --text-muted-on-dark: #a9b0ab;
+  --text-on-dark: #f8f7f4;
+  --text-muted-on-dark: #a9b3c2;
 
   /* Typography */
   --font-serif: 'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, ui-serif, serif;
