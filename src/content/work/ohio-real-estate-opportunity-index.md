@@ -9,7 +9,7 @@ methods:
   - Index Construction
   - GeoPandas
 status: completed
-order: 4.5
+order: 2
 thumbnail: /images/work/ohio-opportunity-index-heatmap.png
 links:
   - label: View the project on GitHub

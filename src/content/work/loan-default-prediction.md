@@ -9,7 +9,7 @@ methods:
   - Random Forest
   - Threshold Tuning
 status: completed
-order: 1.5
+order: 5
 thumbnail: /images/work/loan-default-confusion-matrix.png
 links:
   - label: View project notebook on GitHub

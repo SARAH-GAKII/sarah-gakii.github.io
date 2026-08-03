@@ -8,7 +8,7 @@ methods:
   - SVD
   - Collaborative Filtering
 status: completed
-order: 5
+order: 4
 links:
   - label: Notebook & repository on GitHub
     href: https://github.com/SARAH-GAKII/amazon-product-recommendation-system/blob/main/Amazon_Product_Recommendation_System.ipynb

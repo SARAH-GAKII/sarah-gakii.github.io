@@ -8,7 +8,7 @@ methods:
   - EDA
   - Business Analytics
 status: completed
-order: 6
+order: 7
 thumbnail: /images/work/foodhub-thumbnail.png
 links:
   - label: View the notebook on GitHub

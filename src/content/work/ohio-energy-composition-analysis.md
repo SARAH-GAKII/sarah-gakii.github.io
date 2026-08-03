@@ -9,7 +9,7 @@ methods:
   - Clustering
   - GeoPandas
 status: completed
-order: 4
+order: 8
 thumbnail: /images/work/ohio-energy-composition-thumbnail.png
 links:
   - label: Repository & full analysis on GitHub

@@ -8,7 +8,7 @@ methods:
   - DAX
   - Data Modeling
 status: completed
-order: 7
+order: 9
 thumbnail: /images/work/powerbi-dashboard-thumbnail.png
 links:
   - label: View the project on GitHub

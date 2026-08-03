@@ -6,7 +6,7 @@ methods:
   - Electricity-Market Data
   - Optimization
 status: in development
-order: 2
+order: 1
 links: []
 ---
 

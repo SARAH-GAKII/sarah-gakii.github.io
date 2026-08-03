@@ -9,7 +9,7 @@ methods:
   - Transfer Learning
   - Computer Vision
 status: completed
-order: 1
+order: 3
 thumbnail: /images/work/fer-confusion-matrix.png
 video: /videos/fer-slides.mp4
 links:

@@ -8,7 +8,7 @@ methods:
   - Mapping
   - Time Series
 status: completed
-order: 3
+order: 6
 video: /videos/ohio-housing-powerbi-demo.mp4
 links:
   - label: View the project on GitHub

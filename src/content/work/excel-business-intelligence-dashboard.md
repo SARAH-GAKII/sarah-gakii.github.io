@@ -8,7 +8,7 @@ methods:
   - PivotCharts
   - Slicers
 status: completed
-order: 8
+order: 10
 thumbnail: /images/work/excel-bi-thumbnail.png
 links:
   - label: View the project on GitHub

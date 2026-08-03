@@ -9,12 +9,14 @@ interface Props {
 }
 
 const { slug, title, summary, tags, thumbnail, compact = false } = Astro.props;
+const hasMediaSlot = Astro.slots.has('media');
+const hasMedia = !compact && (hasMediaSlot || thumbnail);
 ---
 
 <a class="research-card" class:list={[{ 'research-card--compact': compact }]} href={`/research/${slug}/`}>
-  {!compact && thumbnail && (
+  {hasMedia && (
     <div class="research-card__media">
-      <img src={thumbnail} alt="" loading="lazy" />
+      {hasMediaSlot ? <slot name="media" /> : <img src={thumbnail} alt="" loading="lazy" />}
     </div>
   )}
 
@@ -48,7 +50,8 @@ const { slug, title, summary, tags, thumbnail, compact = false } = Astro.props;
     overflow: hidden;
   }
 
-  .research-card__media img {
+  .research-card__media img,
+  .research-card__media video {
     width: 100%;
     height: 100%;
     object-fit: cover;

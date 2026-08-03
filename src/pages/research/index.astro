@@ -21,15 +21,39 @@ const items = (await getCollection('research')).sort((a, b) => a.data.order - b.
   <section class="section section--blue-tint research-projects">
     <div class="container">
       <div class="research-grid">
-        {items.map((item) => (
-          <ResearchCard
-            slug={item.id}
-            title={item.data.title}
-            summary={item.data.summary}
-            tags={item.data.tags}
-            thumbnail={item.data.thumbnail}
-          />
-        ))}
+        {items.map((item) =>
+          item.id === 'covid-19-vaccine-uptake-behavior' ? (
+            <ResearchCard
+              slug={item.id}
+              title={item.data.title}
+              summary={item.data.summary}
+              tags={item.data.tags}
+              thumbnail={item.data.thumbnail}
+            >
+              <video
+                slot="media"
+                src="/media/research/epidemic-teaser.mp4"
+                autoplay
+                muted
+                loop
+                playsinline
+                preload="metadata"
+                disablepictureinpicture
+                controlslist="nodownload noplaybackrate nofullscreen"
+                tabindex="-1"
+                aria-hidden="true"
+              ></video>
+            </ResearchCard>
+          ) : (
+            <ResearchCard
+              slug={item.id}
+              title={item.data.title}
+              summary={item.data.summary}
+              tags={item.data.tags}
+              thumbnail={item.data.thumbnail}
+            />
+          )
+        )}
       </div>
     </div>
   </section>
