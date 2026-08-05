@@ -3,6 +3,7 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PageHero from '../../components/sections/PageHero.astro';
 import ProjectCard from '../../components/cards/ProjectCard.astro';
+import HoverPlayVideo from '../../components/shared/HoverPlayVideo.astro';
 
 const projects = (await getCollection('work')).sort((a, b) => a.data.order - b.data.order);
 ---
@@ -30,12 +31,15 @@ const projects = (await getCollection('work')).sort((a, b) => a.data.order - b.d
             status={project.data.status}
             thumbnail={project.data.thumbnail}
             video={project.data.video}
+            forceVideo={project.id === 'facial-emotion-recognition'}
           />
         ))}
       </div>
     </div>
   </section>
 </BaseLayout>
+
+<HoverPlayVideo />
 
 <style>
   .work-projects {

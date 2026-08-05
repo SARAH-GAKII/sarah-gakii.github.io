@@ -8,16 +8,31 @@ interface Props {
   thumbnail?: string;
   video?: string;
   compact?: boolean;
+  forceVideo?: boolean;
 }
 
-const { slug, title, summary, methods, status, thumbnail, video, compact = false } = Astro.props;
+const { slug, title, summary, methods, status, thumbnail, video, compact = false, forceVideo = false } = Astro.props;
 const hasMedia = !compact && (thumbnail || video);
+const showVideo = forceVideo && Boolean(video);
 ---
 
 <a class="project-card" class:list={[{ 'project-card--compact': compact }]} href={`/work/${slug}/`}>
   {hasMedia && (
     <div class="project-card__media">
-      {thumbnail ? (
+      {showVideo ? (
+        <video
+          muted
+          loop
+          playsinline
+          preload="metadata"
+          disablepictureinpicture
+          controlslist="nodownload noplaybackrate nofullscreen"
+          tabindex="-1"
+          aria-hidden="true"
+        >
+          <source src={video} type="video/mp4" />
+        </video>
+      ) : thumbnail ? (
         <img src={thumbnail} alt="" loading="lazy" />
       ) : (
         <video muted playsinline preload="metadata" disablepictureinpicture controlslist="nodownload noplaybackrate nofullscreen">

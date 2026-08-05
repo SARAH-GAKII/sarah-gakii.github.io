@@ -11,6 +11,7 @@ methods:
 status: completed
 order: 2
 thumbnail: /images/work/ohio-opportunity-index-heatmap.png
+video: /videos/ohio-real-estate-analytics-demo.mp4
 links:
   - label: View the project on GitHub
     href: https://github.com/SARAH-GAKII/ohio-real-estate-opportunity-index

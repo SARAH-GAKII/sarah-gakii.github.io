@@ -3,6 +3,7 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PageHero from '../../components/sections/PageHero.astro';
 import ResearchCard from '../../components/cards/ResearchCard.astro';
+import HoverPlayVideo from '../../components/shared/HoverPlayVideo.astro';
 
 const items = (await getCollection('research')).sort((a, b) => a.data.order - b.data.order);
 
@@ -78,45 +79,7 @@ const researchMedia: Record<string, ResearchMedia> = {
   </section>
 </BaseLayout>
 
-<script>
-  // Research video visualizations don't autoplay. On hover-capable pointers
-  // (and when motion isn't reduced) they play on hover/focus of the whole
-  // card — not just the media area — and pause, holding the current frame,
-  // on mouseleave/blur from the card. On touch devices, and whenever
-  // prefers-reduced-motion is set, playback is never triggered passively —
-  // a tap/click anywhere on the card explicitly toggles play/pause instead
-  // (and is kept from also following the card's link, since the whole card
-  // is an <a>).
-  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const touchPrimary = window.matchMedia('(hover: none)').matches;
-  const tapToggle = touchPrimary || reduceMotion;
-
-  document.querySelectorAll<HTMLElement>('.research-card').forEach((card) => {
-    const video = card.querySelector('video');
-    if (!video) return;
-
-    const play = () => {
-      video.play().catch(() => {});
-    };
-    const pause = () => {
-      video.pause();
-    };
-
-    if (tapToggle) {
-      card.addEventListener('click', (event) => {
-        event.preventDefault();
-        event.stopPropagation();
-        if (video.paused) play();
-        else pause();
-      });
-    } else {
-      card.addEventListener('mouseenter', play);
-      card.addEventListener('mouseleave', pause);
-      card.addEventListener('focus', play);
-      card.addEventListener('blur', pause);
-    }
-  });
-</script>
+<HoverPlayVideo />
 
 <style>
   .research-projects {
