@@ -5,6 +5,23 @@ import PageHero from '../../components/sections/PageHero.astro';
 import ResearchCard from '../../components/cards/ResearchCard.astro';
 
 const items = (await getCollection('research')).sort((a, b) => a.data.order - b.data.order);
+
+// Per-item media overrides: research entries that use a video visualization
+// instead of the default static thumbnail, keyed by content-collection slug.
+interface ResearchMedia {
+  video: string;
+  orientation?: 'horizontal';
+  mediaFit?: 'contain';
+}
+const researchMedia: Record<string, ResearchMedia> = {
+  'covid-19-vaccine-uptake-behavior': { video: '/media/research/epidemic-network-teaser.mp4' },
+  'newton-fd-method-nonlinear-interface': { video: '/media/research/bridge-interface-teaser.mp4' },
+  'academic-workshops-research-schools': {
+    video: '/media/research/presentation-teaser.mp4',
+    orientation: 'horizontal',
+    mediaFit: 'contain',
+  },
+};
 ---
 
 <BaseLayout
@@ -21,19 +38,21 @@ const items = (await getCollection('research')).sort((a, b) => a.data.order - b.
   <section class="section section--blue-tint research-projects">
     <div class="container">
       <div class="research-grid">
-        {items.map((item) =>
-          item.id === 'covid-19-vaccine-uptake-behavior' ? (
+        {items.map((item) => {
+          const media = researchMedia[item.id];
+          return media ? (
             <ResearchCard
               slug={item.id}
               title={item.data.title}
               summary={item.data.summary}
               tags={item.data.tags}
               thumbnail={item.data.thumbnail}
+              orientation={media.orientation}
+              mediaFit={media.mediaFit}
             >
               <video
                 slot="media"
-                src="/media/research/epidemic-teaser.mp4"
-                autoplay
+                src={media.video}
                 muted
                 loop
                 playsinline
@@ -52,12 +71,52 @@ const items = (await getCollection('research')).sort((a, b) => a.data.order - b.
               tags={item.data.tags}
               thumbnail={item.data.thumbnail}
             />
-          )
-        )}
+          );
+        })}
       </div>
     </div>
   </section>
 </BaseLayout>
+
+<script>
+  // Research video visualizations don't autoplay. On hover-capable pointers
+  // (and when motion isn't reduced) they play on hover/focus of the whole
+  // card — not just the media area — and pause, holding the current frame,
+  // on mouseleave/blur from the card. On touch devices, and whenever
+  // prefers-reduced-motion is set, playback is never triggered passively —
+  // a tap/click anywhere on the card explicitly toggles play/pause instead
+  // (and is kept from also following the card's link, since the whole card
+  // is an <a>).
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const touchPrimary = window.matchMedia('(hover: none)').matches;
+  const tapToggle = touchPrimary || reduceMotion;
+
+  document.querySelectorAll<HTMLElement>('.research-card').forEach((card) => {
+    const video = card.querySelector('video');
+    if (!video) return;
+
+    const play = () => {
+      video.play().catch(() => {});
+    };
+    const pause = () => {
+      video.pause();
+    };
+
+    if (tapToggle) {
+      card.addEventListener('click', (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+        if (video.paused) play();
+        else pause();
+      });
+    } else {
+      card.addEventListener('mouseenter', play);
+      card.addEventListener('mouseleave', pause);
+      card.addEventListener('focus', play);
+      card.addEventListener('blur', pause);
+    }
+  });
+</script>
 
 <style>
   .research-projects {

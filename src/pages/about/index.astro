@@ -1,7 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import SectionHeading from '../../components/ui/SectionHeading.astro';
-import MediaRibbon from '../../components/media/MediaRibbon.astro';
 import AxisMotif from '../../components/decorative/AxisMotif.astro';
 import EducationCard from '../../components/about/EducationCard.astro';
 import MasterDetailExplorer from '../../components/about/MasterDetailExplorer.astro';
@@ -16,7 +15,6 @@ import {
   habitatForHumanity,
   campusInvolvementIntro,
   campusInvolvementGroups,
-  beyondTheResume,
 } from '../../data/about';
 
 const professionalFocus = [
@@ -185,14 +183,6 @@ const beyondItems = [
         </Fragment>
       </MasterDetailExplorer>
     </div>
-  </section>
-
-  <!-- Ambient media ribbon -->
-  <section class="section section--tight ribbon-section">
-    <div class="container">
-      <span class="eyebrow">Beyond the resume</span>
-    </div>
-    <MediaRibbon items={beyondTheResume} />
   </section>
 </BaseLayout>
 
@@ -466,14 +456,6 @@ const beyondItems = [
   .community-compact-list strong {
     font-weight: 600;
     color: var(--text-on-paper);
-  }
-
-  .ribbon-section {
-    padding-block: var(--space-5) var(--space-6);
-  }
-
-  .ribbon-section .container {
-    margin-bottom: var(--space-4);
   }
 
   @media (min-width: 720px) {

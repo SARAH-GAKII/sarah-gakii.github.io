@@ -40,8 +40,6 @@ The thesis designed and implemented a Newton–Finite Difference Method (NFDM) t
 
 The method was tested against a series of benchmark problems with known exact solutions, allowing rigorous error analysis. Results showed consistent convergence rates and improved stability compared to conventional schemes.
 
-![Master's thesis cover](/images/research/newton-fd-thesis.jpg)
-
 ## Why it matters
 
 - **Materials science:** in a bridge built from layered materials, how stress jumps across a crack boundary determines whether it stays harmless or becomes a safety issue.

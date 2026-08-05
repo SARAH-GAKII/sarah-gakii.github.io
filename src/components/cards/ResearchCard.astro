@@ -6,16 +6,25 @@ interface Props {
   tags: string[];
   thumbnail?: string;
   compact?: boolean;
+  orientation?: 'horizontal';
+  mediaFit?: 'contain';
 }
 
-const { slug, title, summary, tags, thumbnail, compact = false } = Astro.props;
+const { slug, title, summary, tags, thumbnail, compact = false, orientation, mediaFit } = Astro.props;
 const hasMediaSlot = Astro.slots.has('media');
 const hasMedia = !compact && (hasMediaSlot || thumbnail);
 ---
 
-<a class="research-card" class:list={[{ 'research-card--compact': compact }]} href={`/research/${slug}/`}>
+<a
+  class="research-card"
+  class:list={[
+    { 'research-card--compact': compact },
+    orientation === 'horizontal' && 'research-card--horizontal',
+  ]}
+  href={`/research/${slug}/`}
+>
   {hasMedia && (
-    <div class="research-card__media">
+    <div class:list={['research-card__media', mediaFit === 'contain' && 'research-card__media--contain']}>
       {hasMediaSlot ? <slot name="media" /> : <img src={thumbnail} alt="" loading="lazy" />}
     </div>
   )}
@@ -50,11 +59,22 @@ const hasMedia = !compact && (hasMediaSlot || thumbnail);
     overflow: hidden;
   }
 
-  .research-card__media img,
-  .research-card__media video {
+  /* The vaccine/Newton-FD/Academic-Workshops videos are authored in the
+     research index page and passed in through the `media` slot, so they
+     carry that page's own Astro scope attribute, not this component's —
+     a plain scoped selector can never match them. :global() opts these
+     rules out of scoping so they reach the actual <video> node instead. */
+  .research-card__media :global(img),
+  .research-card__media :global(video) {
+    display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+
+  .research-card__media--contain :global(img),
+  .research-card__media--contain :global(video) {
+    object-fit: contain;
   }
 
   .research-card__body {
@@ -81,5 +101,34 @@ const hasMedia = !compact && (hasMediaSlot || thumbnail);
     font-size: var(--text-xs);
     letter-spacing: 0.02em;
     color: var(--text-muted-on-paper);
+  }
+
+  /* Horizontal variant: spans two of the grid's own tracks (not an
+     arbitrary width) and switches to a two-column grid internally —
+     video left, content right.
+
+     The media pane is a square (aspect-ratio: 1/1). Its width is already
+     one grid column (half of the two-column span), so a square ratio
+     makes its height match that same width — "approximately one
+     standard card's width" — without hardcoding a rem value or
+     calc()-ing against a sibling track. That gives the pane a real,
+     definite size that doesn't depend on the video's own intrinsic
+     dimensions or on flex/grid stretch, so width:100%/height:100% with
+     object-fit:contain (the default --contain behavior above) can safely
+     letterbox the video inside it — centered by object-position's own
+     default, on the pane's existing neutral background — with no
+     cropping, no stretching, and none of the earlier circular-sizing
+     bug. Below the breakpoint it falls back to the default stacked
+     layout above. */
+  @media (min-width: 640px) {
+    .research-card--horizontal {
+      grid-column: span 2;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .research-card--horizontal .research-card__media {
+      aspect-ratio: 1 / 1;
+    }
   }
 </style>

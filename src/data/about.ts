@@ -265,21 +265,6 @@ export const campusInvolvementGroups: CommunityGroup[] = [
   },
 ];
 
-export interface MediaItem {
-  type: 'image' | 'video';
-  src: string;
-  alt: string;
-}
-
-export const beyondTheResume: MediaItem[] = [
-  { type: 'image', src: '/images/about/workshop.jpg', alt: 'Presenting at an academic workshop' },
-  { type: 'video', src: '/videos/teaching.mp4', alt: 'Teaching a mathematics class' },
-  { type: 'image', src: '/images/about/collaboration.jpg', alt: 'Academic collaboration with peers' },
-  { type: 'image', src: '/images/about/data-work.jpg', alt: 'Working through a data analysis problem' },
-  { type: 'video', src: '/videos/aims-graduation.mp4', alt: 'Graduation ceremony at AIMS South Africa' },
-  { type: 'image', src: '/images/about/research.jpg', alt: 'Remote research collaboration' },
-];
-
 export const contactLinks = {
   email: 'gakiisarah251@gmail.com',
   linkedin: 'https://www.linkedin.com/in/sarah-gakii/',
