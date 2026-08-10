@@ -216,7 +216,6 @@ export const habitatForHumanity = {
   ],
   closing:
     'This experience connected problem-solving and technical thinking to real-world community impact while working in hands-on environments.',
-  lead: 'Construction lead: Daniel Cane',
 };
 
 export const campusInvolvementIntro =
@@ -266,7 +265,6 @@ export const campusInvolvementGroups: CommunityGroup[] = [
 ];
 
 export const contactLinks = {
-  email: 'gakiisarah251@gmail.com',
   linkedin: 'https://www.linkedin.com/in/sarah-gakii/',
   github: 'https://github.com/SARAH-GAKII',
 };

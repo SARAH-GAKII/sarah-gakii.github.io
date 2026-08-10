@@ -49,7 +49,98 @@ const { title, summary, tags, links } = item.data;
       </div>
     </div>
   </article>
+
+  <dialog class="pdf-modal" aria-label="Presentation preview">
+    <button type="button" class="pdf-modal__close" aria-label="Close presentation preview">&times;</button>
+    <iframe class="pdf-modal__frame" title="Presentation PDF" loading="lazy"></iframe>
+  </dialog>
 </BaseLayout>
+
+<script>
+  // Any PDF linked from a research write-up opens in this in-page modal
+  // instead of navigating away, so the page (and its scroll position)
+  // stays exactly as it was. Native <dialog>.showModal() already centers
+  // itself, dims the page via ::backdrop, closes on Escape, and traps
+  // focus within itself — the only behavior added here is closing on a
+  // backdrop click, locking body scroll while open, lazy-loading the PDF
+  // only once opened, and returning focus to whichever link opened it.
+  const dialog = document.querySelector<HTMLDialogElement>('.pdf-modal');
+  const frame = dialog?.querySelector<HTMLIFrameElement>('.pdf-modal__frame');
+  const closeBtn = dialog?.querySelector<HTMLButtonElement>('.pdf-modal__close');
+  const pdfLinks = document.querySelectorAll<HTMLAnchorElement>('.prose a[href$=".pdf"]');
+
+  if (dialog && frame && closeBtn && pdfLinks.length > 0) {
+    let trigger: HTMLElement | null = null;
+    let savedScrollY = 0;
+
+    // A plain `body { overflow: hidden }` toggle isn't safe here: this
+    // page has no explicit overflow on <html>, so per the CSS overflow-
+    // propagation rules the body's overflow becomes the viewport's, and
+    // browsers can reset the scroll offset to 0 the instant that happens
+    // — with no way to recover the old position afterward. Fixing the
+    // body in place at its current offset (and restoring scrollTo on
+    // close) avoids that entirely.
+    const lockScroll = () => {
+      savedScrollY = window.scrollY;
+      // Fixing the body also removes the page's own scrollbar, which
+      // shifts content width by the scrollbar's size — padding the same
+      // amount back in keeps everything from reflowing sideways while
+      // the modal is open.
+      const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+      document.body.style.position = 'fixed';
+      document.body.style.top = `-${savedScrollY}px`;
+      document.body.style.left = '0';
+      document.body.style.right = '0';
+      if (scrollbarWidth > 0) document.body.style.paddingRight = `${scrollbarWidth}px`;
+    };
+
+    const unlockScroll = () => {
+      document.body.style.position = '';
+      document.body.style.top = '';
+      document.body.style.left = '';
+      document.body.style.right = '';
+      document.body.style.paddingRight = '';
+      // Instant, not smooth (the site sets `scroll-behavior: smooth`
+      // globally) — restoring position on close should be an immediate
+      // jump back, not a visible re-scroll animation.
+      window.scrollTo({ top: savedScrollY, behavior: 'instant' });
+    };
+
+    const openModal = (link: HTMLAnchorElement) => {
+      trigger = link;
+      // #toolbar=0&navpanes=0 is a long-standing convention respected by
+      // Chrome's and Firefox's built-in PDF viewers to hide their own
+      // toolbar chrome. It's cosmetic, not a restriction — the PDF is
+      // still a public file at its own URL either way.
+      frame.src = `${link.href}#toolbar=0&navpanes=0`;
+      lockScroll();
+      dialog.showModal();
+    };
+
+    pdfLinks.forEach((link) => {
+      link.addEventListener('click', (event) => {
+        event.preventDefault();
+        openModal(link);
+      });
+    });
+
+    closeBtn.addEventListener('click', () => dialog.close());
+
+    // A click that lands on the dialog element itself (not its content)
+    // is a click on the ::backdrop.
+    dialog.addEventListener('click', (event) => {
+      if (event.target === dialog) dialog.close();
+    });
+
+    // Fires on every close path — button, backdrop click, or Escape —
+    // so cleanup only needs to live in one place.
+    dialog.addEventListener('close', () => {
+      unlockScroll();
+      frame.src = '';
+      trigger?.focus();
+    });
+  }
+</script>
 
 <style>
   .research-detail__grid {
@@ -90,6 +181,59 @@ const { title, summary, tags, links } = item.data;
   @media (min-width: 860px) {
     .research-detail__grid {
       grid-template-columns: 12rem 1fr;
+    }
+  }
+
+  .pdf-modal {
+    position: relative;
+    width: min(56rem, 92vw);
+    height: min(44rem, 88vh);
+    padding: 0;
+    border: none;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    overflow: hidden;
+  }
+
+  .pdf-modal::backdrop {
+    background: rgba(22, 36, 61, 0.6);
+  }
+
+  .pdf-modal__frame {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+
+  .pdf-modal__close {
+    position: absolute;
+    top: var(--space-3);
+    right: var(--space-3);
+    z-index: 1;
+    width: 2.25rem;
+    height: 2.25rem;
+    display: grid;
+    place-items: center;
+    border-radius: 999px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    color: var(--text-on-paper);
+    font-size: 1.25rem;
+    line-height: 1;
+    transition: border-color var(--transition-fast), color var(--transition-fast);
+  }
+
+  .pdf-modal__close:hover,
+  .pdf-modal__close:focus-visible {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+
+  @media (max-width: 640px) {
+    .pdf-modal {
+      width: 94vw;
+      height: 80vh;
     }
   }
 </style>

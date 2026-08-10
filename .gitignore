@@ -23,6 +23,9 @@ pnpm-debug.log*
 # jetbrains setting folder
 .idea/
 
+# VS Code editor settings
+.vscode/
+
 # Local reference materials
 Portfolio Development Handbook.docx
 sarah-gakii.github.io-main.zip
