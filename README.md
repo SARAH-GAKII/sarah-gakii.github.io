@@ -1,20 +1,13 @@
 # Professional Platform
 
-A digital home for advanced analytical thinking.
+Personal professional platform focused on applied mathematics, optimization, analytics, data science, artificial intelligence, and decision systems.
 
-This repository contains the source code for my professional platform, built with Astro.
-
-The platform explores how mathematics, optimization, analytics, data science, machine learning, and AI support better decisions and solve meaningful organizational problems.
-
-## Current Status
-
-🚧 Under active development
+The site presents selected work, research, and technical projects centered on using analytical methods to solve meaningful organizational problems.
 
 ## Technology
 
 - Astro
 - TypeScript
-- Modern CSS
+- Custom CSS
 - Minimal JavaScript
-- GitHub
-- Vercel
+- GitHub Pages
