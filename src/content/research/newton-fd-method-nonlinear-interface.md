@@ -19,7 +19,7 @@ links:
 
 ## Publication
 
-This research was later developed into a peer-reviewed journal publication in collaboration with the thesis advisor.
+This research was later developed into a peer-reviewed journal publication in collaboration with my thesis advisor, **So-Hsiang Chou**.
 
 **So-Hsiang Chou and Sarah Gakii** — *A Newton-FD Method for an Interface Problem with a Nonlinear Jump Condition* — Taiwanese Journal of Mathematics.
 

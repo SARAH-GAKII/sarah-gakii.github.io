@@ -5,7 +5,8 @@ tags:
   - Dynamical Systems
   - Differential Equations
   - Public Policy Modeling
-order: 3
+order: 2
+thumbnail: /images/research/city-chess.png
 links: []
 ---
 

@@ -14,4 +14,5 @@ links: []
 
 This project formulates a battery dispatch problem as an optimization model: given historical or real-time electricity-market prices, when should a storage asset charge, hold, or discharge to maximize value while respecting the asset's physical constraints (capacity, charge/discharge rate, round-trip efficiency)?
 
-This case study is in active development. A full write-up — data sources, formulation, constraints, and results — will replace this placeholder once the work is complete.
+This case study is in active development.
+

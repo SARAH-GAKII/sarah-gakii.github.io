@@ -5,7 +5,7 @@ tags:
   - Epidemic Modeling
   - Evolutionary Game Theory
   - Behavioral Dynamics
-order: 2
+order: 3
 thumbnail: /images/research/covid-vaccine-uptake.png
 links:
   - label: Explore the full research project
