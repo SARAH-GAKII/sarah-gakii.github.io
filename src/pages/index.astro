@@ -7,7 +7,6 @@ import HeroDecisionPath from '../components/home/HeroDecisionPath.astro';
 import AnalyticalModule from '../components/home/AnalyticalModule.astro';
 import CapabilityMosaic from '../components/home/CapabilityMosaic.astro';
 import ResearchPreviewCircle from '../components/home/ResearchPreviewCircle.astro';
-import FacialAnalysisMotif from '../components/home/FacialAnalysisMotif.astro';
 
 const analyticalModules = [
   {
@@ -171,25 +170,7 @@ const researchMeta: Record<string, { variant: 'nfdm' | 'vaccine' | 'policing' | 
       <div class="evidence-grid">
         <a class="evidence-card" href={`/work/${ohioRealEstate.id}/`}>
           <div class="evidence-card__visual evidence-card__visual--choropleth" aria-hidden="true">
-            <svg viewBox="0 0 200 120" preserveAspectRatio="xMidYMid slice">
-              <g fill="currentColor" stroke="none">
-                <rect x="6" y="6" width="34" height="32" rx="3" opacity="0.25" />
-                <rect x="44" y="6" width="34" height="32" rx="3" opacity="0.4" />
-                <rect x="82" y="6" width="34" height="32" rx="3" opacity="0.3" />
-                <rect x="120" y="6" width="34" height="32" rx="3" opacity="0.5" />
-                <rect x="158" y="6" width="34" height="32" rx="3" opacity="0.2" />
-                <rect x="6" y="42" width="34" height="32" rx="3" opacity="0.35" />
-                <rect x="44" y="42" width="34" height="32" rx="3" opacity="0.22" />
-                <rect x="120" y="42" width="34" height="32" rx="3" opacity="0.3" />
-                <rect x="158" y="42" width="34" height="32" rx="3" opacity="0.45" />
-                <rect x="6" y="78" width="34" height="32" rx="3" opacity="0.4" />
-                <rect x="44" y="78" width="34" height="32" rx="3" opacity="0.28" />
-                <rect x="82" y="78" width="34" height="32" rx="3" opacity="0.35" />
-                <rect x="120" y="78" width="34" height="32" rx="3" opacity="0.22" />
-                <rect x="158" y="78" width="34" height="32" rx="3" opacity="0.4" />
-              </g>
-              <rect x="82" y="42" width="34" height="32" rx="3" fill="none" stroke="currentColor" stroke-width="1.8" />
-            </svg>
+            <img src="/images/home/opportunity-index-grid.png" alt="" loading="lazy" />
           </div>
           <div class="evidence-card__body">
             <p class="evidence-card__tag">Investment analysis</p>
@@ -200,8 +181,8 @@ const researchMeta: Record<string, { variant: 'nfdm' | 'vaccine' | 'policing' | 
         </a>
 
         <a class="evidence-card" href={`/work/${fer.id}/`}>
-          <div class="evidence-card__visual evidence-card__visual--face">
-            <FacialAnalysisMotif />
+          <div class="evidence-card__visual evidence-card__visual--face" aria-hidden="true">
+            <img src="/images/home/facial-emotion-recognition-visual.png" alt="" loading="lazy" />
           </div>
           <div class="evidence-card__body">
             <p class="evidence-card__tag">Computer vision</p>
@@ -213,27 +194,7 @@ const researchMeta: Record<string, { variant: 'nfdm' | 'vaccine' | 'policing' | 
 
         <a class="evidence-card" href={`/work/${amazonRec.id}/`}>
           <div class="evidence-card__visual evidence-card__visual--network" aria-hidden="true">
-            <svg viewBox="0 0 200 125" preserveAspectRatio="xMidYMid slice">
-              <g stroke="currentColor" stroke-width="0.8" opacity="0.35" fill="none">
-                <line x1="34" y1="30" x2="97" y2="62" />
-                <line x1="34" y1="95" x2="97" y2="62" />
-                <line x1="58" y1="45" x2="97" y2="62" />
-                <line x1="58" y1="82" x2="97" y2="62" />
-              </g>
-              <g fill="currentColor">
-                <circle cx="20" cy="18" r="2.6" opacity="0.15" /><circle cx="34" cy="30" r="2.6" opacity="0.8" />
-                <circle cx="20" cy="45" r="2.6" opacity="0.15" /><circle cx="58" cy="45" r="2.6" opacity="0.8" />
-                <circle cx="20" cy="70" r="2.6" opacity="0.15" /><circle cx="58" cy="82" r="2.6" opacity="0.8" />
-                <circle cx="20" cy="95" r="2.6" opacity="0.15" /><circle cx="34" cy="95" r="2.6" opacity="0.8" />
-                <circle cx="20" cy="110" r="2.6" opacity="0.15" />
-              </g>
-              <circle cx="97" cy="62" r="3.4" fill="currentColor" opacity="0.9" />
-              <g fill="currentColor">
-                <rect x="120" y="45" width="62" height="7" rx="2" opacity="0.7" />
-                <rect x="120" y="59" width="44" height="7" rx="2" opacity="0.5" />
-                <rect x="120" y="73" width="28" height="7" rx="2" opacity="0.35" />
-              </g>
-            </svg>
+            <img src="/images/home/recommendation-signal-inference.png" alt="" loading="lazy" />
           </div>
           <div class="evidence-card__body">
             <p class="evidence-card__tag">Recommendation systems</p>
@@ -387,6 +348,30 @@ const researchMeta: Record<string, { variant: 'nfdm' | 'vaccine' | 'policing' | 
     height: 100%;
     object-fit: cover;
     display: block;
+  }
+
+  /* FER photograph: faded to a pale lavender wash so the face and its
+     landmark overlay read as soft/atmospheric rather than a dominant
+     photograph, matching the abstract illustrations beside it. The face
+     sits in the right two-thirds of the source frame, so object-position
+     is biased right (rather than center) to keep it in frame at the
+     narrower compact-card widths where the crop is horizontal. */
+  .evidence-card__visual--face {
+    position: relative;
+  }
+
+  .evidence-card__visual--face img {
+    object-position: 75% 42%;
+    filter: saturate(0.6) brightness(1.05) contrast(0.9);
+  }
+
+  .evidence-card__visual--face::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--surface-lavender-tint);
+    opacity: 0.4;
+    pointer-events: none;
   }
 
   .evidence-card__body {
@@ -583,21 +568,6 @@ const researchMeta: Record<string, { variant: 'nfdm' | 'vaccine' | 'policing' | 
     .evidence-card:hover .evidence-card__curiosity,
     .evidence-card:focus-visible .evidence-card__curiosity {
       font-size: var(--text-md);
-    }
-
-    /* Facial-landmark motif: a restrained nudge on hover/focus suggesting
-       the model is examining features, not an expression change. Reaches
-       into the child component's scoped classes, so :global() is required. */
-    .evidence-card:hover :global(.fam-brow-l),
-    .evidence-card:focus-visible :global(.fam-brow-l),
-    .evidence-card:hover :global(.fam-brow-r),
-    .evidence-card:focus-visible :global(.fam-brow-r) {
-      transform: translateY(-1.5px);
-    }
-
-    .evidence-card:hover :global(.fam-mouth-center),
-    .evidence-card:focus-visible :global(.fam-mouth-center) {
-      transform: translateY(1.5px) scale(1.15);
     }
   }
 </style>
