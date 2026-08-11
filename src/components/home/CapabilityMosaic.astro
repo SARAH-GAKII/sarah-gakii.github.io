@@ -44,6 +44,16 @@ const { capabilities } = Astro.props;
   // transition from, so the cards just appear already in place and the
   // animation looks like it "isn't working." Waiting two frames guarantees
   // the hidden state is painted at least once before the observer can act.
+  //
+  // Run-once lifetime: intentionally scoped to this single script
+  // execution only (the `observer` const and the "has it fired" state
+  // live purely in this closure + the live DOM's classList). Nothing is
+  // written to localStorage/sessionStorage/cookies, so a full reload —
+  // even one that lands with this section already scrolled into view via
+  // browser scroll restoration — always starts a fresh observer with no
+  // memory of any previous page instance, and the double rAF above still
+  // guarantees a painted "before" frame first. The result: replay-proof
+  // within one page load, but always eligible again after a refresh.
   const mosaic = document.querySelector<HTMLElement>('.cap-mosaic');
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -125,16 +135,32 @@ const { capabilities } = Astro.props;
 
   /* Scroll-triggered entrance: cards assemble from the left, once, then
      stay static. Scoped under .js-animate so the un-enhanced/no-JS state
-     is simply the cards' normal, fully visible layout above. */
+     is simply the cards' normal, fully visible layout above.
+
+     The transition lives on .is-visible (the target state), not on the
+     hidden base rule. If it lived on the hidden rule instead, adding
+     .js-animate alone would itself start a 900ms transition FROM the
+     default visible state TO opacity: 0 — a fade-out nobody asked for.
+     That's harmless when the row is far below the fold (the fade-out
+     finishes long before the user scrolls to it), but if the row is
+     already in view on page load — e.g. after a reload that restores
+     scroll position — .is-visible gets added moments later and
+     interrupts that fade-out almost immediately, so the whole animation
+     collapses into an imperceptible flicker instead of a visible entrance.
+     Declaring the transition only on .is-visible means the hidden state
+     is always an instant, untransitioned snap, and the one real
+     transition every time is the 0 → 1 entrance itself. */
   .cap-mosaic.js-animate .cap-mosaic__cell {
     opacity: 0;
     transform: translateX(-70px);
-    transition: opacity 900ms cubic-bezier(0.4, 0, 0.2, 1), transform 900ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .cap-mosaic.js-animate .cap-mosaic__cell.is-visible {
     opacity: 1;
     transform: translateX(0);
+    transition-property: opacity, transform;
+    transition-duration: 900ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .cap-mosaic.js-animate .cap-mosaic__cell:nth-child(1) { transition-delay: 0ms; }

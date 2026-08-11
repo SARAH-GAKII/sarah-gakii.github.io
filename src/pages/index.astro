@@ -10,11 +10,6 @@ import ResearchPreviewCircle from '../components/home/ResearchPreviewCircle.astr
 
 const analyticalModules = [
   {
-    variant: 'allocation' as const,
-    label: 'Investment & allocation',
-    question: 'Which markets, assets, or projects deserve investment when resources and time are limited?',
-  },
-  {
     variant: 'forecasting' as const,
     label: 'Forecasting under uncertainty',
     question: 'How do you forecast demand, price, or behavior well enough to act on it?',
@@ -29,15 +24,14 @@ const analyticalModules = [
     label: 'Model confidence',
     question: 'How do you know a model is actually right, and how much should it be trusted?',
   },
+  {
+    variant: 'allocation' as const,
+    label: 'Investment & allocation',
+    question: 'Which markets, assets, or projects deserve investment when resources and time are limited?',
+  },
 ];
 
 const capabilities = [
-  {
-    index: '01',
-    title: 'Optimization & Decision Systems',
-    description:
-      'Formulating constraints, objectives, and trade-offs into models that support real decisions under scarcity.',
-  },
   {
     index: '02',
     title: 'Applied AI & Machine Learning',
@@ -67,6 +61,12 @@ const capabilities = [
     title: 'Data Products & Visualization',
     description:
       'Turning models and analysis into interpretable, decision-ready visual tools.',
+  },
+  {
+    index: '01',
+    title: 'Optimization & Decision Systems',
+    description:
+      'Formulating constraints, objectives, and trade-offs into models that support real decisions under scarcity.',
   },
 ];
 
@@ -254,6 +254,27 @@ const researchMeta: Record<string, { variant: 'nfdm' | 'vaccine' | 'policing' | 
   // or link inside it, so a future <img>/<video> dropped into the circle
   // just moves along with its parent — the animation never touches or
   // assumes anything about the circle's contents.
+  //
+  // Run-once lifetime: intentionally scoped to this single script
+  // execution only (the `observer` const and the "has it fired" state
+  // live purely in this closure + the live DOM's classList). Nothing is
+  // written to localStorage/sessionStorage/cookies, so a full reload —
+  // even one that lands with this section already scrolled into view via
+  // browser scroll restoration — always starts a fresh observer with no
+  // memory of any previous page instance, and the double rAF below still
+  // guarantees a painted "before" frame first. The result: replay-proof
+  // within one page load, but always eligible again after a refresh.
+  //
+  // Each item is observed individually (not just the grid as a whole).
+  // Observing only the container meant "is the container 25% visible"
+  // could be satisfied by item 1 alone whenever the row is taller than
+  // the viewport — e.g. reloading with scroll restored partway down a
+  // wrapped/stacked layout — which revealed every item at once even
+  // though items 2–4 were still off-screen, so their transition ran (and
+  // finished) before the user ever scrolled to see it. Watching each
+  // item's own visibility means an item only reveals once it is actually
+  // in view, while the existing per-item transition-delay still gives
+  // the same left-to-right stagger whenever items do become visible together.
   const researchGrid = document.querySelector<HTMLElement>('.research-preview__grid');
   const researchPrefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -267,19 +288,23 @@ const researchMeta: Record<string, { variant: 'nfdm' | 'vaccine' | 'policing' | 
         researchGrid.classList.add('js-animate');
 
         const items = researchGrid.querySelectorAll<HTMLElement>('.research-preview__item');
+        let revealedCount = 0;
 
         const observer = new IntersectionObserver(
           (entries) => {
-            const [entry] = entries;
-            if (entry.isIntersecting) {
-              items.forEach((item) => item.classList.add('is-visible'));
-              observer.disconnect();
-            }
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                observer.unobserve(entry.target);
+                revealedCount += 1;
+                if (revealedCount === items.length) observer.disconnect();
+              }
+            });
           },
           { threshold: 0.25, rootMargin: '0px 0px -10% 0px' }
         );
 
-        observer.observe(researchGrid);
+        items.forEach((item) => observer.observe(item));
       });
     });
   }
@@ -547,22 +572,41 @@ const researchMeta: Record<string, { variant: 'nfdm' | 'vaccine' | 'policing' | 
   /* Entrance: each complete research item (circle, domain, title,
      question, link — everything inside the <article>) moves as one unit.
      Scoped under .js-animate so the un-enhanced/no-JS state is simply the
-     grid's normal, fully visible layout above. */
+     grid's normal, fully visible layout above.
+
+     The transition lives on .is-visible (the target state), not on the
+     hidden base rule — see the Analytical Toolkit section for the full
+     explanation. In short: putting it on the hidden rule instead makes
+     adding .js-animate itself kick off a transition FROM the default
+     visible state, which is invisible when the row is below the fold
+     (it finishes long before the user scrolls there) but breaks the
+     animation if the row is already in view on load — e.g. a reload that
+     restores scroll position — because .is-visible then interrupts that
+     fade-out moments later, collapsing it into an imperceptible flicker
+     instead of a real entrance.
+
+     transition-delay is scoped to the same .is-visible-qualified selector
+     as the rest of the transition (rather than a separate, unqualified
+     :nth-child rule) so all four transition sub-properties activate
+     together, atomically, per item — nothing for an item to inherit
+     ambiguously before it actually becomes visible. */
   .research-preview__grid.js-animate .research-preview__item {
     opacity: 0;
     transform: translateX(-70px);
-    transition: opacity 680ms cubic-bezier(0.4, 0, 0.2, 1), transform 680ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .research-preview__grid.js-animate .research-preview__item.is-visible {
     opacity: 1;
     transform: translateX(0);
+    transition-property: opacity, transform;
+    transition-duration: 680ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  .research-preview__grid.js-animate .research-preview__item:nth-child(1) { transition-delay: 0ms; }
-  .research-preview__grid.js-animate .research-preview__item:nth-child(2) { transition-delay: 120ms; }
-  .research-preview__grid.js-animate .research-preview__item:nth-child(3) { transition-delay: 240ms; }
-  .research-preview__grid.js-animate .research-preview__item:nth-child(4) { transition-delay: 360ms; }
+  .research-preview__grid.js-animate .research-preview__item.is-visible:nth-child(1) { transition-delay: 0ms; }
+  .research-preview__grid.js-animate .research-preview__item.is-visible:nth-child(2) { transition-delay: 120ms; }
+  .research-preview__grid.js-animate .research-preview__item.is-visible:nth-child(3) { transition-delay: 240ms; }
+  .research-preview__grid.js-animate .research-preview__item.is-visible:nth-child(4) { transition-delay: 360ms; }
 
   @media (max-width: 639px) {
     .research-preview__grid.js-animate .research-preview__item {
