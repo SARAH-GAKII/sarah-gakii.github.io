@@ -3,7 +3,6 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Button from '../components/ui/Button.astro';
 import SectionHeading from '../components/ui/SectionHeading.astro';
-import HeroDecisionPath from '../components/home/HeroDecisionPath.astro';
 import AnalyticalModule from '../components/home/AnalyticalModule.astro';
 import CapabilityMosaic from '../components/home/CapabilityMosaic.astro';
 import ResearchPreviewCircle from '../components/home/ResearchPreviewCircle.astro';
@@ -146,7 +145,17 @@ const researchPreviewMedia: Record<string, ResearchPreviewMedia> = {
         </p>
       </div>
       <div class="hero__visual">
-        <HeroDecisionPath />
+        <video
+          class="hero__visual-video"
+          src="/media/home/analytical-thinking-hero.mp4"
+          muted
+          loop
+          playsinline
+          preload="auto"
+          disablepictureinpicture
+          tabindex="-1"
+          aria-hidden="true"
+        ></video>
       </div>
     </div>
   </section>
@@ -291,6 +300,62 @@ const researchPreviewMedia: Record<string, ResearchPreviewMedia> = {
 </BaseLayout>
 
 <script>
+  // Hero video: plays continuously (native `loop`) for as long as the hero
+  // remains in view. Muted/no controls throughout; this is the hero's
+  // visual artwork, not a media player.
+  //
+  // Playback is driven entirely by IntersectionObserver + document
+  // visibility, not by the native `autoplay` attribute (deliberately
+  // omitted from the markup) — that keeps "only play while actually in
+  // view" an absolute guarantee rather than something racing against the
+  // browser's own autoplay timing. `loop` still handles restarting at the
+  // end of each cycle on its own; no `ended` handling is needed for that.
+  const heroVideo = document.querySelector<HTMLVideoElement>('.hero__visual-video');
+  const heroPrefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (heroVideo && !heroPrefersReducedMotion) {
+    let isInView = false;
+
+    heroVideo.muted = true;
+
+    const playSafely = () => {
+      heroVideo.play().catch(() => {
+        // Autoplay can still be refused; the video just stays on its
+        // current frame — no error surfaced, no retry.
+      });
+    };
+
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          const [entry] = entries;
+          isInView = entry.isIntersecting;
+          if (isInView) {
+            if (!document.hidden) playSafely();
+          } else {
+            heroVideo.pause(); // currentTime untouched — resumes from here
+          }
+        },
+        { threshold: 0.5 }
+      );
+      observer.observe(heroVideo);
+    } else {
+      // No IntersectionObserver support: fall back to always-in-view.
+      isInView = true;
+      playSafely();
+    }
+
+    document.addEventListener('visibilitychange', () => {
+      if (document.hidden) {
+        heroVideo.pause();
+      } else if (isInView) {
+        playSafely();
+      }
+    });
+  }
+</script>
+
+<script>
   // Same left-to-right stagger-reveal philosophy as the Analytical Toolkit
   // section, applied independently here: its own container, its own
   // IntersectionObserver, its own "run once" state. Kept as a small,
@@ -388,7 +453,12 @@ const researchPreviewMedia: Record<string, ResearchPreviewMedia> = {
   }
 
   .hero__identity {
-    font-size: var(--text-display);
+    /* Scoped override of --text-display (not a token edit — that token
+       has no other consumers, but keeping this local avoids any future
+       ambiguity): same clamp shape, min bound (mobile) left untouched,
+       max bound (desktop) reduced ~8.7% so the headline doesn't dominate
+       the now-larger hero visualization as much. */
+    font-size: clamp(3rem, 2.2rem + 3.4vw, 5.15rem);
     line-height: var(--leading-tight);
     color: var(--text-on-dark);
   }
@@ -413,10 +483,22 @@ const researchPreviewMedia: Record<string, ResearchPreviewMedia> = {
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 20rem;
-    max-height: 16rem;
-    margin-inline: auto;
+    width: min(100%, 24rem);
+    max-height: 25rem;
+    margin-inline: -1.25rem;
     opacity: 0.85;
+  }
+
+  .hero__visual-video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    /* Softens the video's own opaque rectangular edge into the hero
+       background rather than the file itself needing to change: the
+       center stays fully clear, and only the outer perimeter fades to
+       transparent, letting the hero's own background show through. */
+    mask-image: radial-gradient(ellipse closest-side at center, black 60%, transparent 100%);
+    -webkit-mask-image: radial-gradient(ellipse closest-side at center, black 60%, transparent 100%);
   }
 
   /* Analytical thinking in practice */
@@ -690,6 +772,11 @@ const researchPreviewMedia: Record<string, ResearchPreviewMedia> = {
 
   /* Tablet */
   @media (min-width: 640px) {
+    .hero__visual {
+      width: min(75%, 27.5rem);
+      margin-inline: auto;
+    }
+
     .analytical-practice__grid {
       grid-template-columns: repeat(2, 1fr);
     }
@@ -706,14 +793,14 @@ const researchPreviewMedia: Record<string, ResearchPreviewMedia> = {
     }
 
     .hero__layout {
-      grid-template-columns: 3fr 2fr;
+      grid-template-columns: 1.2fr 1fr;
       gap: var(--space-10);
     }
 
     .hero__visual {
-      max-width: none;
-      max-height: 30rem;
-      margin-inline: 0;
+      width: auto;
+      max-height: 40rem;
+      margin-inline: -3.25rem;
     }
 
     .analytical-practice__grid {
