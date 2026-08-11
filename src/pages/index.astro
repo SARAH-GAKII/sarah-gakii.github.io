@@ -7,6 +7,7 @@ import HeroDecisionPath from '../components/home/HeroDecisionPath.astro';
 import AnalyticalModule from '../components/home/AnalyticalModule.astro';
 import CapabilityMosaic from '../components/home/CapabilityMosaic.astro';
 import ResearchPreviewCircle from '../components/home/ResearchPreviewCircle.astro';
+import FacialAnalysisMotif from '../components/home/FacialAnalysisMotif.astro';
 
 const analyticalModules = [
   {
@@ -72,7 +73,7 @@ const capabilities = [
 
 const allProjects = await getCollection('work');
 
-const ohioHousing = allProjects.find((p) => p.id === 'ohio-housing-affordability-analysis')!;
+const ohioRealEstate = allProjects.find((p) => p.id === 'ohio-real-estate-opportunity-index')!;
 const fer = allProjects.find((p) => p.id === 'facial-emotion-recognition')!;
 const amazonRec = allProjects.find((p) => p.id === 'amazon-product-recommendation-system')!;
 
@@ -168,7 +169,7 @@ const researchMeta: Record<string, { variant: 'nfdm' | 'vaccine' | 'policing' | 
         
       />
       <div class="evidence-grid">
-        <a class="evidence-card evidence-card--feature" href={`/work/${ohioHousing.id}/`}>
+        <a class="evidence-card" href={`/work/${ohioRealEstate.id}/`}>
           <div class="evidence-card__visual evidence-card__visual--choropleth" aria-hidden="true">
             <svg viewBox="0 0 200 120" preserveAspectRatio="xMidYMid slice">
               <g fill="currentColor" stroke="none">
@@ -191,50 +192,46 @@ const researchMeta: Record<string, { variant: 'nfdm' | 'vaccine' | 'policing' | 
             </svg>
           </div>
           <div class="evidence-card__body">
-            <p class="evidence-card__tag">Decision analysis</p>
-            <h3 class="evidence-card__curiosity">Statewide averages say Ohio's rent burden is moderate. County-level data tells a more complicated story.</h3>
-            <p class="evidence-card__context text-muted">An interactive Power BI analysis of rent, income, and affordability across Ohio counties (2019–2023), with a county-level deep dive.</p>
-            <span class="evidence-card__action">Explore the analysis</span>
+            <p class="evidence-card__tag">Investment analysis</p>
+            <h3 class="evidence-card__curiosity">Which Ohio counties actually look strongest once every signal is weighed together?</h3>
+            <p class="evidence-card__context text-muted">A weighted, county-level index comparing investment potential across all 88 Ohio counties.</p>
+            <span class="evidence-card__action">Explore the opportunity index</span>
           </div>
         </a>
 
-        <a class="evidence-card evidence-card--square" href={`/work/${fer.id}/`}>
-          {fer.data.thumbnail && (
-            <div class="evidence-card__visual evidence-card__visual--photo">
-              <img src={fer.data.thumbnail} alt="" loading="lazy" />
-            </div>
-          )}
+        <a class="evidence-card" href={`/work/${fer.id}/`}>
+          <div class="evidence-card__visual evidence-card__visual--face">
+            <FacialAnalysisMotif />
+          </div>
           <div class="evidence-card__body">
             <p class="evidence-card__tag">Computer vision</p>
-            <h3 class="evidence-card__curiosity">When does a smile stop looking like happiness to a model?</h3>
+            <h3 class="evidence-card__curiosity">Can a model tell what a face is expressing, or only what it looks like?</h3>
             <p class="evidence-card__context text-muted">Comparing convolutional neural-network approaches for classifying facial emotion from grayscale images.</p>
             <span class="evidence-card__action">See how the models compared</span>
           </div>
         </a>
 
-        <a class="evidence-card evidence-card--tall" href={`/work/${amazonRec.id}/`}>
-          <div class="evidence-card__visual evidence-card__visual--matrix" aria-hidden="true">
-            <svg viewBox="0 0 140 200" preserveAspectRatio="xMidYMid slice">
-              <g fill="currentColor">
-                <circle cx="20" cy="20" r="3" opacity="0.15" /><circle cx="45" cy="20" r="3" opacity="0.8" />
-                <circle cx="70" cy="20" r="3" opacity="0.15" /><circle cx="95" cy="20" r="3" opacity="0.15" />
-                <circle cx="20" cy="45" r="3" opacity="0.15" /><circle cx="45" cy="45" r="3" opacity="0.15" />
-                <circle cx="70" cy="45" r="3" opacity="0.8" /><circle cx="95" cy="45" r="3" opacity="0.15" />
-                <circle cx="20" cy="70" r="3" opacity="0.8" /><circle cx="45" cy="70" r="3" opacity="0.15" />
-                <circle cx="70" cy="70" r="3" opacity="0.15" /><circle cx="95" cy="70" r="3" opacity="0.15" />
-                <circle cx="20" cy="95" r="3" opacity="0.15" /><circle cx="45" cy="95" r="3" opacity="0.15" />
-                <circle cx="70" cy="95" r="3" opacity="0.15" /><circle cx="95" cy="95" r="3" opacity="0.8" />
-              </g>
-              <g stroke="currentColor" stroke-width="1" opacity="0.4" fill="none">
-                <line x1="45" y1="20" x2="60" y2="140" />
-                <line x1="70" y1="45" x2="60" y2="155" />
-                <line x1="20" y1="70" x2="60" y2="170" />
-                <line x1="95" y1="95" x2="60" y2="140" />
+        <a class="evidence-card" href={`/work/${amazonRec.id}/`}>
+          <div class="evidence-card__visual evidence-card__visual--network" aria-hidden="true">
+            <svg viewBox="0 0 200 125" preserveAspectRatio="xMidYMid slice">
+              <g stroke="currentColor" stroke-width="0.8" opacity="0.35" fill="none">
+                <line x1="34" y1="30" x2="97" y2="62" />
+                <line x1="34" y1="95" x2="97" y2="62" />
+                <line x1="58" y1="45" x2="97" y2="62" />
+                <line x1="58" y1="82" x2="97" y2="62" />
               </g>
               <g fill="currentColor">
-                <rect x="30" y="135" width="60" height="8" rx="2" opacity="0.7" />
-                <rect x="30" y="150" width="42" height="8" rx="2" opacity="0.5" />
-                <rect x="30" y="165" width="28" height="8" rx="2" opacity="0.35" />
+                <circle cx="20" cy="18" r="2.6" opacity="0.15" /><circle cx="34" cy="30" r="2.6" opacity="0.8" />
+                <circle cx="20" cy="45" r="2.6" opacity="0.15" /><circle cx="58" cy="45" r="2.6" opacity="0.8" />
+                <circle cx="20" cy="70" r="2.6" opacity="0.15" /><circle cx="58" cy="82" r="2.6" opacity="0.8" />
+                <circle cx="20" cy="95" r="2.6" opacity="0.15" /><circle cx="34" cy="95" r="2.6" opacity="0.8" />
+                <circle cx="20" cy="110" r="2.6" opacity="0.15" />
+              </g>
+              <circle cx="97" cy="62" r="3.4" fill="currentColor" opacity="0.9" />
+              <g fill="currentColor">
+                <rect x="120" y="45" width="62" height="7" rx="2" opacity="0.7" />
+                <rect x="120" y="59" width="44" height="7" rx="2" opacity="0.5" />
+                <rect x="120" y="73" width="28" height="7" rx="2" opacity="0.35" />
               </g>
             </svg>
           </div>
@@ -350,9 +347,9 @@ const researchMeta: Record<string, { variant: 'nfdm' | 'vaccine' | 'policing' | 
 
   /* Selected work */
   .evidence-grid {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     gap: var(--space-5);
-    grid-template-columns: 1fr;
   }
 
   .evidence-card {
@@ -362,7 +359,8 @@ const researchMeta: Record<string, { variant: 'nfdm' | 'vaccine' | 'policing' | 
     border: 1px solid var(--border);
     border-radius: var(--radius-md);
     overflow: hidden;
-    transition: border-color var(--transition-base), transform var(--transition-base);
+    transition: border-color var(--transition-base), transform var(--transition-base),
+      flex-basis 380ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .evidence-card:hover,
@@ -391,14 +389,6 @@ const researchMeta: Record<string, { variant: 'nfdm' | 'vaccine' | 'policing' | 
     display: block;
   }
 
-  .evidence-card--square .evidence-card__visual {
-    aspect-ratio: 1 / 1;
-  }
-
-  .evidence-card--tall .evidence-card__visual {
-    aspect-ratio: 4 / 5;
-  }
-
   .evidence-card__body {
     display: flex;
     flex-direction: column;
@@ -420,11 +410,7 @@ const researchMeta: Record<string, { variant: 'nfdm' | 'vaccine' | 'policing' | 
     font-size: var(--text-base);
     line-height: var(--leading-snug);
     color: var(--text-on-paper);
-  }
-
-  .evidence-card--feature .evidence-card__curiosity {
-    font-size: var(--text-lg);
-    max-width: 34rem;
+    transition: font-size 380ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .evidence-card__context {
@@ -565,20 +551,53 @@ const researchMeta: Record<string, { variant: 'nfdm' | 'vaccine' | 'policing' | 
     }
 
     .evidence-grid {
-      grid-template-columns: repeat(4, 1fr);
-      align-items: start;
+      --evidence-compact: 22%;
+      --evidence-expanded: 46%;
+      flex-direction: row;
+      justify-content: center;
+      gap: var(--space-6);
     }
 
-    .evidence-card--feature {
-      grid-column: 1 / 3;
+    .evidence-card {
+      flex: 0 0 var(--evidence-compact);
+      min-width: 0;
+      height: 28rem;
     }
 
-    .evidence-card--square {
-      grid-column: 3 / 4;
+    .evidence-card__visual {
+      aspect-ratio: auto;
+      height: 10rem;
+      flex-shrink: 0;
+    }
+  }
+
+  /* Hover/focus expand — only where there's genuinely room to grow into;
+     the other two cards reposition automatically as a side effect of the
+     flex layout recalculating, so no JS is needed to "move" them. */
+  @media (min-width: 1100px) and (hover: hover) and (pointer: fine) {
+    .evidence-card:hover,
+    .evidence-card:focus-visible {
+      flex-basis: var(--evidence-expanded);
     }
 
-    .evidence-card--tall {
-      grid-column: 4 / 5;
+    .evidence-card:hover .evidence-card__curiosity,
+    .evidence-card:focus-visible .evidence-card__curiosity {
+      font-size: var(--text-md);
+    }
+
+    /* Facial-landmark motif: a restrained nudge on hover/focus suggesting
+       the model is examining features, not an expression change. Reaches
+       into the child component's scoped classes, so :global() is required. */
+    .evidence-card:hover :global(.fam-brow-l),
+    .evidence-card:focus-visible :global(.fam-brow-l),
+    .evidence-card:hover :global(.fam-brow-r),
+    .evidence-card:focus-visible :global(.fam-brow-r) {
+      transform: translateY(-1.5px);
+    }
+
+    .evidence-card:hover :global(.fam-mouth-center),
+    .evidence-card:focus-visible :global(.fam-mouth-center) {
+      transform: translateY(1.5px) scale(1.15);
     }
   }
 </style>
