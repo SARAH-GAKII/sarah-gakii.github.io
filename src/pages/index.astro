@@ -240,6 +240,51 @@ const researchMeta: Record<string, { variant: 'nfdm' | 'vaccine' | 'policing' | 
   </section>
 </BaseLayout>
 
+<script>
+  // Same left-to-right stagger-reveal philosophy as the Analytical Toolkit
+  // section, applied independently here: its own container, its own
+  // IntersectionObserver, its own "run once" state. Kept as a small,
+  // self-contained duplicate rather than a shared utility module — the
+  // toolkit's already-working implementation is left untouched, and two
+  // short, independent copies are simpler than an abstraction built for
+  // only two call sites.
+  //
+  // The entrance class/transform is applied to .research-preview__item
+  // (the outer <article>, one per research entry) rather than the circle
+  // or link inside it, so a future <img>/<video> dropped into the circle
+  // just moves along with its parent — the animation never touches or
+  // assumes anything about the circle's contents.
+  const researchGrid = document.querySelector<HTMLElement>('.research-preview__grid');
+  const researchPrefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (researchGrid && !researchPrefersReducedMotion && 'IntersectionObserver' in window) {
+    // Double rAF: guarantees the pre-entrance (opacity: 0) state is
+    // painted at least once before the observer can react, so there's
+    // always something to visibly transition from — see the Analytical
+    // Toolkit section for the full explanation of why this matters.
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        researchGrid.classList.add('js-animate');
+
+        const items = researchGrid.querySelectorAll<HTMLElement>('.research-preview__item');
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            const [entry] = entries;
+            if (entry.isIntersecting) {
+              items.forEach((item) => item.classList.add('is-visible'));
+              observer.disconnect();
+            }
+          },
+          { threshold: 0.25, rootMargin: '0px 0px -10% 0px' }
+        );
+
+        observer.observe(researchGrid);
+      });
+    });
+  }
+</script>
+
 <style>
   /* Hero */
   .hero {
@@ -497,6 +542,40 @@ const researchMeta: Record<string, { variant: 'nfdm' | 'vaccine' | 'policing' | 
   .research-preview__link:focus-visible .research-preview__action {
     text-decoration: underline;
     text-underline-offset: 3px;
+  }
+
+  /* Entrance: each complete research item (circle, domain, title,
+     question, link — everything inside the <article>) moves as one unit.
+     Scoped under .js-animate so the un-enhanced/no-JS state is simply the
+     grid's normal, fully visible layout above. */
+  .research-preview__grid.js-animate .research-preview__item {
+    opacity: 0;
+    transform: translateX(-70px);
+    transition: opacity 680ms cubic-bezier(0.4, 0, 0.2, 1), transform 680ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .research-preview__grid.js-animate .research-preview__item.is-visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .research-preview__grid.js-animate .research-preview__item:nth-child(1) { transition-delay: 0ms; }
+  .research-preview__grid.js-animate .research-preview__item:nth-child(2) { transition-delay: 120ms; }
+  .research-preview__grid.js-animate .research-preview__item:nth-child(3) { transition-delay: 240ms; }
+  .research-preview__grid.js-animate .research-preview__item:nth-child(4) { transition-delay: 360ms; }
+
+  @media (max-width: 639px) {
+    .research-preview__grid.js-animate .research-preview__item {
+      transform: translateX(-40px);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .research-preview__grid.js-animate .research-preview__item {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
   }
 
   /* Tablet */

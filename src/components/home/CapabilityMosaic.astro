@@ -1,8 +1,10 @@
 ---
-// Six-capability mosaic. Each tile carries its own capability-specific analytical graphic
-// (not a shared background layer), faintly visible by default and clarifying on hover/focus —
-// pure CSS, no JavaScript required. The two largest tiles use a split/stacked composition so
-// their size is justified by content, not just used to build a silhouette.
+// Six-capability toolkit. Every cell shares one structural treatment — no
+// featured/dark/tinted variants, no illustration — so all six read as
+// equally important. Visual identity comes from typography, a restrained
+// per-card gradient (built from the site's existing pale tokens), and a
+// quiet EducationCard-style top accent rule — not from a "+" expansion or
+// any other interactive affordance.
 interface Capability {
   index: string;
   title: string;
@@ -18,152 +20,81 @@ const { capabilities } = Astro.props;
 
 <div class="cap-mosaic">
   {capabilities.map((capability) => (
-    <article
-      class:list={[
-        'cap-mosaic__cell',
-        `cap-mosaic__cell--c${capability.index}`,
-        capability.index === '01' && 'cap-mosaic__cell--dark',
-        capability.index === '02' && 'cap-mosaic__cell--tinted',
-      ]}
-      tabindex="0"
-    >
-      {capability.index === '01' && (
-        <div class="cap-mosaic__split">
-          <div class="cap-mosaic__text">
-            <h3>{capability.title}</h3>
-            <p>{capability.description}</p>
-          </div>
-          <svg class="cap-mosaic__graphic cap-mosaic__graphic--side" aria-hidden="true" viewBox="0 0 200 260" preserveAspectRatio="xMidYMid meet">
-            <g fill="none" stroke="currentColor" stroke-width="1.1" opacity="0.6">
-              <ellipse cx="100" cy="130" rx="90" ry="110" />
-              <ellipse cx="100" cy="130" rx="65" ry="80" />
-              <ellipse cx="100" cy="130" rx="40" ry="50" />
-            </g>
-            <path d="M22,236 Q46,190 70,168 Q90,150 105,138" fill="none" stroke="currentColor" stroke-width="1.4" stroke-dasharray="2 5" opacity="0.75" />
-            <circle cx="46" cy="196" r="2.4" fill="currentColor" opacity="0.5" />
-            <circle cx="150" cy="70" r="2.4" fill="currentColor" opacity="0.5" />
-            <circle cx="160" cy="190" r="2.4" fill="currentColor" opacity="0.5" />
-            <circle class="cap-mosaic__final-node" cx="105" cy="138" r="5" />
-          </svg>
-        </div>
-      )}
-
-      {capability.index === '02' && (
-        <div class="cap-mosaic__stack">
-          <div class="cap-mosaic__text">
-            <h3>{capability.title}</h3>
-            <p>{capability.description}</p>
-          </div>
-          <svg class="cap-mosaic__graphic cap-mosaic__graphic--lower" aria-hidden="true" viewBox="0 0 260 110" preserveAspectRatio="xMidYMid slice">
-            <g fill="none" stroke="currentColor" stroke-width="1" opacity="0.5">
-              <line x1="35" y1="25" x2="130" y2="12" /><line x1="35" y1="55" x2="130" y2="12" />
-              <line x1="35" y1="55" x2="130" y2="55" /><line x1="35" y1="85" x2="130" y2="55" />
-              <line x1="130" y1="12" x2="220" y2="35" /><line x1="130" y1="55" x2="220" y2="35" />
-              <line x1="130" y1="55" x2="220" y2="80" />
-            </g>
-            <g fill="currentColor" opacity="0.75">
-              <circle cx="35" cy="25" r="3.2" /><circle cx="35" cy="55" r="3.2" /><circle cx="35" cy="85" r="3.2" />
-              <circle cx="130" cy="12" r="3.2" /><circle cx="130" cy="55" r="3.2" />
-              <circle cx="220" cy="35" r="3.2" /><circle cx="220" cy="80" r="3.2" />
-            </g>
-          </svg>
-        </div>
-      )}
-
-      {capability.index !== '01' && capability.index !== '02' && (
-        <Fragment>
-          {capability.index === '03' && (
-            <svg class="cap-mosaic__graphic cap-mosaic__graphic--watermark" aria-hidden="true" viewBox="0 0 300 160" preserveAspectRatio="xMidYMid slice">
-              <g stroke="currentColor" stroke-width="1" opacity="0.5" fill="none">
-                <line x1="40" y1="130" x2="260" y2="130" />
-                <line x1="40" y1="130" x2="40" y2="30" />
-              </g>
-              <g fill="currentColor" opacity="0.55">
-                <rect x="65" y="90" width="16" height="40" />
-                <rect x="95" y="70" width="16" height="60" />
-                <rect x="125" y="105" width="16" height="25" />
-              </g>
-              <g fill="currentColor" opacity="0.7">
-                <circle cx="175" cy="80" r="3" /><circle cx="200" cy="100" r="3" />
-                <circle cx="225" cy="65" r="3" /><circle cx="245" cy="88" r="3" />
-              </g>
-            </svg>
-          )}
-
-          {capability.index === '04' && (
-            <svg class="cap-mosaic__graphic cap-mosaic__graphic--watermark" aria-hidden="true" viewBox="0 0 300 160" preserveAspectRatio="xMidYMid slice">
-              <g stroke="currentColor" stroke-width="0.8" opacity="0.45">
-                {Array.from({ length: 7 }).map((_, i) => (
-                  <line x1={40 + i * 30} y1="25" x2={40 + i * 30} y2="135" />
-                ))}
-                {Array.from({ length: 5 }).map((_, i) => (
-                  <line x1="40" y1={25 + i * 27} x2="220" y2={25 + i * 27} />
-                ))}
-              </g>
-              <path d="M40,115 Q130,55 220,80" fill="none" stroke="currentColor" stroke-width="1.4" opacity="0.65" />
-            </svg>
-          )}
-
-          {capability.index === '05' && (
-            <svg class="cap-mosaic__graphic cap-mosaic__graphic--watermark" aria-hidden="true" viewBox="0 0 300 160" preserveAspectRatio="xMidYMid slice">
-              <path d="M150,95 Q195,80 240,35 L240,80 Q195,115 150,110 Z" fill="currentColor" opacity="0.16" stroke="none" />
-              <path d="M55,125 Q100,75 150,95" fill="none" stroke="currentColor" stroke-width="1.4" opacity="0.65" />
-              <path d="M150,95 Q195,100 240,60" fill="none" stroke="currentColor" stroke-width="1.4" stroke-dasharray="3 4" opacity="0.7" />
-              <circle cx="150" cy="95" r="3.5" fill="currentColor" opacity="0.8" />
-            </svg>
-          )}
-
-          {capability.index === '06' && (
-            <svg class="cap-mosaic__graphic cap-mosaic__graphic--watermark" aria-hidden="true" viewBox="0 0 300 160" preserveAspectRatio="xMidYMid slice">
-              <g stroke="currentColor" stroke-width="0.8" opacity="0.4">
-                <line x1="60" y1="30" x2="60" y2="130" /><line x1="120" y1="30" x2="120" y2="130" />
-                <line x1="180" y1="30" x2="180" y2="130" /><line x1="240" y1="30" x2="240" y2="130" />
-                <line x1="60" y1="45" x2="240" y2="45" /><line x1="60" y1="85" x2="240" y2="85" />
-                <line x1="60" y1="120" x2="240" y2="120" />
-              </g>
-              <g fill="currentColor" opacity="0.7">
-                <circle cx="90" cy="65" r="3.2" /><circle cx="150" cy="100" r="3.2" />
-                <circle cx="180" cy="60" r="3.2" /><circle cx="220" cy="95" r="3.2" />
-              </g>
-              <g stroke="currentColor" stroke-width="1" opacity="0.5">
-                <line x1="90" y1="65" x2="150" y2="100" />
-                <line x1="150" y1="100" x2="180" y2="60" />
-                <line x1="180" y1="60" x2="220" y2="95" />
-              </g>
-            </svg>
-          )}
-
-          <div class="cap-mosaic__text">
-            <h3>{capability.title}</h3>
-            <p>{capability.description}</p>
-          </div>
-        </Fragment>
-      )}
+    <article class="cap-mosaic__cell" tabindex="0">
+      <div class="cap-mosaic__text">
+        <h3>{capability.title}</h3>
+        <p>{capability.description}</p>
+      </div>
     </article>
   ))}
 </div>
 
+<script>
+  // Staggering lives entirely in CSS (transition-delay per nth-child) —
+  // this script's only job is: (a) opt in to the animated state, but
+  // never for reduced-motion users, so the cards' default, pre-JS markup
+  // is always fully visible; and (b) reveal once, the first time a
+  // meaningful portion of the toolkit row scrolls into view.
+  //
+  // The double rAF before wiring anything up matters: if the row happens
+  // to already be within (or very near) the viewport at page load — e.g.
+  // on a tall monitor — IntersectionObserver's first callback can fire
+  // before the browser has ever painted the pre-entrance (opacity: 0)
+  // state. Without a committed "before" frame there's nothing to visibly
+  // transition from, so the cards just appear already in place and the
+  // animation looks like it "isn't working." Waiting two frames guarantees
+  // the hidden state is painted at least once before the observer can act.
+  const mosaic = document.querySelector<HTMLElement>('.cap-mosaic');
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (mosaic && !prefersReducedMotion && 'IntersectionObserver' in window) {
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        mosaic.classList.add('js-animate');
+
+        const cells = mosaic.querySelectorAll<HTMLElement>('.cap-mosaic__cell');
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            const [entry] = entries;
+            if (entry.isIntersecting) {
+              cells.forEach((cell) => cell.classList.add('is-visible'));
+              observer.disconnect();
+            }
+          },
+          // Require the row to be genuinely, meaningfully in view — not
+          // merely touching the bottom edge of the viewport on load.
+          { threshold: 0.25, rootMargin: '0px 0px -10% 0px' }
+        );
+
+        observer.observe(mosaic);
+      });
+    });
+  }
+</script>
+
 <style>
   .cap-mosaic {
     display: grid;
-    gap: var(--space-5);
+    gap: var(--space-4);
     grid-template-columns: 1fr;
   }
 
   .cap-mosaic__cell {
     position: relative;
-    overflow: hidden;
-    padding: var(--space-6);
-    background: var(--surface);
+    min-height: 7rem;
+    padding: var(--space-5);
     border: 1px solid var(--border);
+    border-top: 3px solid var(--accent-primary);
     border-radius: var(--radius-md);
-    transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+    transition: border-color var(--transition-fast), box-shadow var(--transition-fast), transform var(--transition-fast);
   }
 
   .cap-mosaic__cell:hover,
   .cap-mosaic__cell:focus-visible {
-    border-color: var(--accent);
+    border-color: var(--border-strong);
     box-shadow: var(--shadow-sm);
+    transform: translateY(-2px);
   }
 
   .cap-mosaic__cell:focus-visible {
@@ -171,19 +102,15 @@ const { capabilities } = Astro.props;
     outline-offset: 2px;
   }
 
-  .cap-mosaic__cell--dark {
-    background: var(--surface-dark-elevated);
-    border-color: var(--surface-dark-elevated);
-  }
-
-  .cap-mosaic__cell--dark:hover,
-  .cap-mosaic__cell--dark:focus-visible {
-    border-color: var(--accent-on-dark);
-  }
-
-  .cap-mosaic__cell--tinted {
-    background: var(--surface-lavender-tint);
-  }
+  /* Six restrained gradients built from the site's existing pale surface
+     tokens (paper / surface / blue-tint / lavender-tint / muted), just
+     re-angled and recombined per card — one family, quiet variation. */
+  .cap-mosaic__cell:nth-child(1) { background: linear-gradient(135deg, var(--surface) 0%, var(--surface-blue-tint) 100%); }
+  .cap-mosaic__cell:nth-child(2) { background: linear-gradient(135deg, var(--surface) 0%, var(--surface-lavender-tint) 100%); }
+  .cap-mosaic__cell:nth-child(3) { background: linear-gradient(135deg, var(--paper) 0%, var(--surface-muted) 100%); }
+  .cap-mosaic__cell:nth-child(4) { background: linear-gradient(315deg, var(--surface) 0%, var(--surface-lavender-tint) 100%); }
+  .cap-mosaic__cell:nth-child(5) { background: linear-gradient(315deg, var(--surface) 0%, var(--surface-blue-tint) 100%); }
+  .cap-mosaic__cell:nth-child(6) { background: linear-gradient(135deg, var(--surface) 0%, var(--surface-muted) 100%); }
 
   .cap-mosaic__text h3 {
     font-size: var(--text-base);
@@ -196,158 +123,57 @@ const { capabilities } = Astro.props;
     color: var(--text-muted-on-paper);
   }
 
-  .cap-mosaic__cell--dark .cap-mosaic__text h3 {
-    color: var(--text-on-dark);
+  /* Scroll-triggered entrance: cards assemble from the left, once, then
+     stay static. Scoped under .js-animate so the un-enhanced/no-JS state
+     is simply the cards' normal, fully visible layout above. */
+  .cap-mosaic.js-animate .cap-mosaic__cell {
+    opacity: 0;
+    transform: translateX(-70px);
+    transition: opacity 900ms cubic-bezier(0.4, 0, 0.2, 1), transform 900ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  .cap-mosaic__cell--dark .cap-mosaic__text p {
-    color: var(--text-muted-on-dark);
+  .cap-mosaic.js-animate .cap-mosaic__cell.is-visible {
+    opacity: 1;
+    transform: translateX(0);
   }
 
-  .cap-mosaic__cell--c01 .cap-mosaic__text h3,
-  .cap-mosaic__cell--c02 .cap-mosaic__text h3 {
-    font-size: var(--text-lg);
+  .cap-mosaic.js-animate .cap-mosaic__cell:nth-child(1) { transition-delay: 0ms; }
+  .cap-mosaic.js-animate .cap-mosaic__cell:nth-child(2) { transition-delay: 150ms; }
+  .cap-mosaic.js-animate .cap-mosaic__cell:nth-child(3) { transition-delay: 300ms; }
+  .cap-mosaic.js-animate .cap-mosaic__cell:nth-child(4) { transition-delay: 450ms; }
+  .cap-mosaic.js-animate .cap-mosaic__cell:nth-child(5) { transition-delay: 600ms; }
+  .cap-mosaic.js-animate .cap-mosaic__cell:nth-child(6) { transition-delay: 750ms; }
+
+  @media (max-width: 639px) {
+    .cap-mosaic.js-animate .cap-mosaic__cell {
+      transform: translateX(-40px);
+    }
   }
 
-  /* Wide feature tile: text and graphic side by side */
-  .cap-mosaic__split {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-5);
-    height: 100%;
-  }
-
-  .cap-mosaic__split .cap-mosaic__text {
-    max-width: 26rem;
-  }
-
-  .cap-mosaic__graphic--side {
-    width: 100%;
-    max-width: 11rem;
-    align-self: flex-end;
-    color: var(--accent-primary-on-dark);
-    opacity: 0.5;
-    transition: opacity var(--transition-base);
-  }
-
-  .cap-mosaic__cell--c01:hover .cap-mosaic__graphic--side,
-  .cap-mosaic__cell--c01:focus-visible .cap-mosaic__graphic--side {
-    opacity: 0.85;
-  }
-
-  .cap-mosaic__final-node {
-    fill: var(--accent-on-dark);
-  }
-
-  /* Tall/medium tile: text on top, graphic filling the lower area */
-  .cap-mosaic__stack {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-4);
-    height: 100%;
-  }
-
-  .cap-mosaic__graphic--lower {
-    flex: 1;
-    width: 100%;
-    min-height: 5rem;
-    color: var(--accent-primary);
-    opacity: 0.35;
-    transition: opacity var(--transition-base);
-  }
-
-  .cap-mosaic__cell--c02:hover .cap-mosaic__graphic--lower,
-  .cap-mosaic__cell--c02:focus-visible .cap-mosaic__graphic--lower {
-    opacity: 0.65;
-  }
-
-  /* Compact/medium tiles: faint full-tile watermark behind the text */
-  .cap-mosaic__graphic--watermark {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    color: var(--accent-primary);
-    opacity: 0.14;
-    transition: opacity var(--transition-base);
-    pointer-events: none;
-  }
-
-  .cap-mosaic__cell:hover .cap-mosaic__graphic--watermark,
-  .cap-mosaic__cell:focus-visible .cap-mosaic__graphic--watermark {
-    opacity: 0.34;
-  }
-
-  .cap-mosaic__cell:not(.cap-mosaic__cell--c01):not(.cap-mosaic__cell--c02) .cap-mosaic__text {
-    position: relative;
-    z-index: 1;
+  @media (prefers-reduced-motion: reduce) {
+    .cap-mosaic.js-animate .cap-mosaic__cell {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
   }
 
   @media (min-width: 640px) {
     .cap-mosaic {
       grid-template-columns: repeat(2, 1fr);
     }
-
-    .cap-mosaic__cell--c01,
-    .cap-mosaic__cell--c02 {
-      grid-column: 1 / 3;
-    }
-
-    .cap-mosaic__split {
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .cap-mosaic__graphic--side {
-      max-width: 9rem;
-      flex-shrink: 0;
-    }
   }
 
   @media (min-width: 900px) {
     .cap-mosaic {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .cap-mosaic {
       grid-template-columns: repeat(6, 1fr);
-      grid-template-rows: minmax(13rem, auto) minmax(8.5rem, auto);
-      gap: var(--space-5);
-    }
-
-    .cap-mosaic__cell--c01 {
-      grid-column: 1 / 5;
-      grid-row: 1;
-    }
-
-    .cap-mosaic__cell--c02 {
-      grid-column: 5 / 7;
-      grid-row: 1;
-    }
-
-    .cap-mosaic__cell--c04 {
-      grid-column: 1 / 3;
-      grid-row: 2;
-    }
-
-    .cap-mosaic__cell--c03 {
-      grid-column: 3 / 5;
-      grid-row: 2;
-    }
-
-    .cap-mosaic__cell--c05 {
-      grid-column: 5 / 6;
-      grid-row: 2;
-    }
-
-    .cap-mosaic__cell--c06 {
-      grid-column: 6 / 7;
-      grid-row: 2;
-    }
-
-    .cap-mosaic__split {
-      height: 100%;
-    }
-
-    .cap-mosaic__graphic--side {
-      max-width: 12rem;
+      gap: var(--space-4);
     }
   }
 </style>
