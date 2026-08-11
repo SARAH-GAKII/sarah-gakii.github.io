@@ -1,9 +1,11 @@
 ---
-// Shared hover/focus/tap-to-play behavior for any project or research card
-// that contains a video which should stay paused until the visitor
-// interacts with it. Include this once per page (Work, Research) rather
-// than duplicating the interaction logic — it targets both card types by
-// class name and safely no-ops for cards that don't contain a video.
+// Hover/focus/tap-to-play behavior for Work-page project cards that
+// contain a video which should stay paused until the visitor interacts
+// with it. Research-page cards used to share this component too, but
+// their videos now use viewport-driven autoplay instead (see the script
+// in src/pages/research/index.astro) — hover-to-play and viewport-driven
+// playback would otherwise fight over the same <video> element, so this
+// is scoped to .project-card only.
 ---
 
 <script>
@@ -18,7 +20,7 @@
   const touchPrimary = window.matchMedia('(hover: none)').matches;
   const tapToggle = touchPrimary || reduceMotion;
 
-  document.querySelectorAll<HTMLElement>('.research-card, .project-card').forEach((card) => {
+  document.querySelectorAll<HTMLElement>('.project-card').forEach((card) => {
     const video = card.querySelector('video');
     if (!video) return;
 

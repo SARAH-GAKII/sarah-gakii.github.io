@@ -80,8 +80,8 @@ const allResearch = await getCollection('research');
 
 const researchPreviewSlugs = [
   'newton-fd-method-nonlinear-interface',
-  'covid-19-vaccine-uptake-behavior',
   'crime-cooperative-policing-model',
+  'covid-19-vaccine-uptake-behavior',
   'green-roofs-urban-heat-island',
 ];
 const researchPreview = researchPreviewSlugs
@@ -103,6 +103,26 @@ const researchMeta: Record<string, { variant: 'nfdm' | 'vaccine' | 'policing' | 
   'green-roofs-urban-heat-island': {
     variant: 'greenroof',
     question: "How much cooling holds up when a green roof is tested against a full heat-transfer model?",
+  },
+};
+
+// Reuses the exact same local media already used for each project on the
+// Research page itself (see src/pages/research/index.astro for video
+// overrides, and each project's content frontmatter for its thumbnail) —
+// nothing new was generated. Circles fall back to the abstract
+// ResearchPreviewCircle motif for any future preview entry that has
+// neither, so the container works regardless of what a given project has.
+type ResearchPreviewMedia =
+  | { type: 'video'; src: string }
+  | { type: 'image'; src: string; alt?: string; objectPosition?: string };
+const researchPreviewMedia: Record<string, ResearchPreviewMedia> = {
+  'newton-fd-method-nonlinear-interface': { type: 'video', src: '/media/research/bridge-interface-teaser.mp4' },
+  'covid-19-vaccine-uptake-behavior': { type: 'video', src: '/media/research/epidemic-network-teaser.mp4' },
+  'crime-cooperative-policing-model': { type: 'image', src: '/images/research/city-chess.png' },
+  'green-roofs-urban-heat-island': {
+    type: 'image',
+    src: '/images/research/urban-green-roof.png',
+    objectPosition: '65% 45%',
   },
 };
 ---
@@ -219,19 +239,49 @@ const researchMeta: Record<string, { variant: 'nfdm' | 'vaccine' | 'policing' | 
         
       />
       <div class="research-preview__grid">
-        {researchPreview.map((item) => (
-          <article class="research-preview__item">
-            <a class="research-preview__link" href={`/research/${item.id}/`}>
-              <div class:list={['research-preview__circle', `research-preview__circle--${researchMeta[item.id].variant}`]}>
-                <ResearchPreviewCircle variant={researchMeta[item.id].variant} />
-              </div>
-              <p class="research-preview__domain">{item.data.tags[0]}</p>
-              <h3 class="research-preview__title">{item.data.title}</h3>
-              <p class="research-preview__question">{researchMeta[item.id].question}</p>
-              <span class="research-preview__action">Read the research</span>
-            </a>
-          </article>
-        ))}
+        {researchPreview.map((item) => {
+          const media = researchPreviewMedia[item.id];
+          return (
+            <article class="research-preview__item">
+              <a class="research-preview__link" href={`/research/${item.id}/`}>
+                <div
+                  class:list={[
+                    'research-preview__circle',
+                    `research-preview__circle--${researchMeta[item.id].variant}`,
+                    media && 'research-preview__circle--media',
+                  ]}
+                >
+                  {media?.type === 'video' ? (
+                    <video
+                      src={media.src}
+                      autoplay
+                      muted
+                      loop
+                      playsinline
+                      disablepictureinpicture
+                      preload="metadata"
+                      tabindex="-1"
+                      aria-hidden="true"
+                    />
+                  ) : media?.type === 'image' ? (
+                    <img
+                      src={media.src}
+                      alt={media.alt ?? ''}
+                      loading="lazy"
+                      style={media.objectPosition ? `object-position: ${media.objectPosition}` : undefined}
+                    />
+                  ) : (
+                    <ResearchPreviewCircle variant={researchMeta[item.id].variant} />
+                  )}
+                </div>
+                <p class="research-preview__domain">{item.data.tags[0]}</p>
+                <h3 class="research-preview__title">{item.data.title}</h3>
+                <p class="research-preview__question">{researchMeta[item.id].question}</p>
+                <span class="research-preview__action">Read the research</span>
+              </a>
+            </article>
+          );
+        })}
       </div>
       <div class="section-cta">
         <Button href="/research/" variant="ghost">Explore all research</Button>
@@ -524,6 +574,22 @@ const researchMeta: Record<string, { variant: 'nfdm' | 'vaccine' | 'policing' | 
     transition: box-shadow var(--transition-base), transform var(--transition-base);
   }
 
+  /* Photo/video previews fill the circle edge-to-edge rather than sitting
+     inset like the abstract line-art motif, so the 12% padding above is
+     removed only for this variant. */
+  .research-preview__circle--media {
+    padding: 0;
+  }
+
+  .research-preview__circle img,
+  .research-preview__circle video {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
   .research-preview__link:hover .research-preview__circle,
   .research-preview__link:focus-visible .research-preview__circle {
     box-shadow: 0 0 0 4px var(--border-strong);
@@ -599,14 +665,14 @@ const researchMeta: Record<string, { variant: 'nfdm' | 'vaccine' | 'policing' | 
     opacity: 1;
     transform: translateX(0);
     transition-property: opacity, transform;
-    transition-duration: 680ms;
+    transition-duration: 600ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .research-preview__grid.js-animate .research-preview__item.is-visible:nth-child(1) { transition-delay: 0ms; }
-  .research-preview__grid.js-animate .research-preview__item.is-visible:nth-child(2) { transition-delay: 120ms; }
-  .research-preview__grid.js-animate .research-preview__item.is-visible:nth-child(3) { transition-delay: 240ms; }
-  .research-preview__grid.js-animate .research-preview__item.is-visible:nth-child(4) { transition-delay: 360ms; }
+  .research-preview__grid.js-animate .research-preview__item.is-visible:nth-child(2) { transition-delay: 90ms; }
+  .research-preview__grid.js-animate .research-preview__item.is-visible:nth-child(3) { transition-delay: 180ms; }
+  .research-preview__grid.js-animate .research-preview__item.is-visible:nth-child(4) { transition-delay: 270ms; }
 
   @media (max-width: 639px) {
     .research-preview__grid.js-animate .research-preview__item {

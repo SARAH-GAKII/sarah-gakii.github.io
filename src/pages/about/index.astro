@@ -121,7 +121,7 @@ const beyondItems = [
   <section class="section section--tight section--muted">
     <div class="container">
       <SectionHeading eyebrow="Experience" title="Professional history" />
-      <MasterDetailExplorer items={historyItems}>
+      <MasterDetailExplorer items={historyItems} variant="history">
         <Fragment slot={slugify(dataScienceGroup.category)}>
           <RoleList entries={dataScienceGroup.entries} />
         </Fragment>
@@ -157,7 +157,7 @@ const beyondItems = [
   <section class="section section--tight">
     <div class="container">
       <SectionHeading eyebrow="Community" title="Beyond the technical work" />
-      <MasterDetailExplorer items={beyondItems}>
+      <MasterDetailExplorer items={beyondItems} variant="community">
         <Fragment slot="habitat">
           <p class="community-copy">{habitatForHumanity.intro}</p>
           <ul class="community-bullets">

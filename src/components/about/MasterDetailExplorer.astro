@@ -7,12 +7,17 @@ interface ExplorerItem {
 
 interface Props {
   items: ExplorerItem[];
+  variant?: 'history' | 'community';
 }
 
-const { items } = Astro.props;
+const { items, variant } = Astro.props;
 ---
 
-<div class="explorer" data-explorer style={`--explorer-columns:${items.length}`}>
+<div
+  class:list={['explorer', variant && `explorer--${variant}`]}
+  data-explorer
+  style={`--explorer-columns:${items.length}`}
+>
   <div class="explorer__selector" data-explorer-selector role="group" aria-label="Categories">
     {items.map((item) => (
       <button
@@ -111,12 +116,14 @@ const { items } = Astro.props;
   }
 
   .explorer__card {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: var(--space-2);
     width: 100%;
     padding: var(--space-5);
+    padding-right: var(--space-10);
     background: var(--surface);
     border: 1px solid var(--border);
     border-radius: var(--radius-md);
@@ -140,6 +147,37 @@ const { items } = Astro.props;
     background: var(--surface-muted);
   }
 
+  /* "+" expand indicator, same visual language as Academic Background's
+     EducationCard — reflects the card's existing is-active state, which
+     the script above already tracks; this is a purely visual addition,
+     not a new interaction. */
+  .explorer__card::after {
+    content: '+';
+    position: absolute;
+    top: var(--space-4);
+    right: var(--space-4);
+    width: 1.75rem;
+    height: 1.75rem;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    border-radius: 999px;
+    border: 1px solid var(--border-strong);
+    background: var(--surface);
+    color: var(--accent);
+    font-weight: 700;
+    font-size: var(--text-sm);
+    line-height: 1;
+    transition: background var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast);
+  }
+
+  .explorer__card.is-active::after {
+    content: '\2212';
+    background: var(--accent);
+    color: var(--text-on-dark);
+    border-color: var(--accent);
+  }
+
   .explorer__card-title {
     font-family: var(--font-serif);
     font-size: var(--text-base);
@@ -150,6 +188,28 @@ const { items } = Astro.props;
   .explorer__card-meta {
     font-size: var(--text-xs);
     color: var(--text-muted-on-paper);
+  }
+
+  /* History variant: a thin left accent rule as an understated
+     chronological marker, on a faint tonal gradient surface. */
+  .explorer--history .explorer__card {
+    border-left: 3px solid var(--accent-primary);
+    background: linear-gradient(135deg, var(--surface) 0%, var(--surface-muted) 100%);
+  }
+
+  .explorer--history .explorer__card.is-active {
+    background: linear-gradient(135deg, var(--surface-muted) 0%, var(--surface) 100%);
+  }
+
+  /* Community variant: softer corners and a lavender-tinted surface for a
+     slightly more open, editorial feel. */
+  .explorer--community .explorer__card {
+    border-radius: var(--radius-lg);
+    background: linear-gradient(160deg, var(--surface) 0%, var(--surface-lavender-tint) 100%);
+  }
+
+  .explorer--community .explorer__card.is-active {
+    background: linear-gradient(160deg, var(--surface-lavender-tint) 0%, var(--surface) 100%);
   }
 
   .explorer__panels {

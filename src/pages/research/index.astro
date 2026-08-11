@@ -3,7 +3,6 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PageHero from '../../components/sections/PageHero.astro';
 import ResearchCard from '../../components/cards/ResearchCard.astro';
-import HoverPlayVideo from '../../components/shared/HoverPlayVideo.astro';
 
 const items = (await getCollection('research')).sort((a, b) => a.data.order - b.data.order);
 
@@ -79,7 +78,97 @@ const researchMedia: Record<string, ResearchMedia> = {
   </section>
 </BaseLayout>
 
-<HoverPlayVideo />
+<script>
+  // Viewport-driven playback for the Research page's preview videos —
+  // replaces hover-to-play, which doesn't work on touch devices and can't
+  // resume correctly after a reload that lands mid-page. Work-page cards
+  // keep hover-to-play via HoverPlayVideo, untouched by this.
+  //
+  // Each video controls its own playback independently — there is no
+  // "winner," no cross-video comparison. If two or three cards are
+  // meaningfully visible at once, all of them play; that's expected given
+  // the grid layout, not a bug to prevent.
+  const videos = Array.from(document.querySelectorAll<HTMLVideoElement>('.research-card video'));
+
+  if (videos.length > 0) {
+    const VISIBILITY_THRESHOLD = 0.5;
+
+    const playSafely = (video: HTMLVideoElement) => {
+      video.muted = true;
+      video.play().catch(() => {
+        // Autoplay can still be refused (e.g. battery saver); the video
+        // just stays on its current frame — no error surfaced, no retry.
+      });
+    };
+
+    // A one-off, independent visibility check for a single video — used
+    // to re-evaluate on events IntersectionObserver won't reliably fire
+    // for on its own (returning to a hidden tab where nothing scrolled,
+    // or a bfcache-restored page). Still purely per-video: no comparison
+    // to any other video.
+    const isMeaningfullyVisible = (video: HTMLVideoElement) => {
+      const rect = video.getBoundingClientRect();
+      if (rect.height <= 0) return false;
+      const visibleTop = Math.max(rect.top, 0);
+      const visibleBottom = Math.min(rect.bottom, window.innerHeight);
+      const visibleHeight = Math.max(0, visibleBottom - visibleTop);
+      return visibleHeight / rect.height >= VISIBILITY_THRESHOLD;
+    };
+
+    const recheckAll = () => {
+      videos.forEach((video) => {
+        if (isMeaningfullyVisible(video)) {
+          playSafely(video);
+        } else if (!video.paused) {
+          video.pause();
+        }
+      });
+    };
+
+    videos.forEach((video) => {
+      video.muted = true;
+    });
+
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            const video = entry.target as HTMLVideoElement;
+            if (entry.isIntersecting && entry.intersectionRatio >= VISIBILITY_THRESHOLD) {
+              playSafely(video);
+            } else if (!video.paused) {
+              video.pause(); // currentTime is never touched, so it resumes where it left off
+            }
+          });
+        },
+        { threshold: [0, 0.25, 0.5, 0.75, 1] }
+      );
+
+      videos.forEach((video) => observer.observe(video));
+    } else {
+      recheckAll();
+    }
+
+    // A hidden tab shouldn't keep any video playing in the background.
+    // Coming back doesn't blindly resume whatever was playing before —
+    // it re-checks each video's own current visibility independently,
+    // since if nothing scrolled while the tab was hidden, the observer
+    // may have nothing new to report on its own.
+    document.addEventListener('visibilitychange', () => {
+      if (document.hidden) {
+        videos.forEach((video) => {
+          if (!video.paused) video.pause();
+        });
+      } else {
+        recheckAll();
+      }
+    });
+
+    // Covers a bfcache-restored page (back/forward navigation) landing
+    // mid-scroll — same idea as the tab-visibility case above.
+    window.addEventListener('pageshow', recheckAll);
+  }
+</script>
 
 <style>
   .research-projects {
