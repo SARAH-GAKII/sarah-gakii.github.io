@@ -1,72 +1,19 @@
 ---
-// Compact analytical module: an original circular SVG diagram, a short label, and a
+// Compact analytical module: a circular illustrative image, a short label, and a
 // curiosity-driven question. Used on the homepage's "Analytical thinking in practice" section.
+// The image is expected to already carry its own circular visual treatment — this
+// component only sizes and aligns it, it does not add a second circular frame.
 interface Props {
-  variant: 'allocation' | 'forecasting' | 'data' | 'validation';
+  image: string;
   label: string;
   question: string;
 }
 
-const { variant, label, question } = Astro.props;
+const { image, label, question } = Astro.props;
 ---
 
 <article class="analytical-module">
-  <svg class="analytical-module__circle" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
-    <circle class="am-ring" cx="32" cy="32" r="27" fill="none" stroke-width="1" />
-
-    {variant === 'allocation' && (
-      <g>
-        <path class="am-region" d="M32 32 L19 13 A27 27 0 0 1 45 11 Z" opacity="0.16" />
-        <line class="am-line" x1="32" y1="32" x2="19" y2="13" stroke-width="0.9" />
-        <line class="am-line" x1="32" y1="32" x2="45" y2="11" stroke-width="0.9" />
-        <line class="am-line" x1="32" y1="32" x2="13" y2="36" stroke-width="0.9" />
-        <line class="am-line" x1="32" y1="32" x2="47" y2="41" stroke-width="0.9" />
-        <circle class="am-node" cx="19" cy="13" r="2" />
-        <circle class="am-node" cx="45" cy="11" r="2" />
-        <circle class="am-node" cx="13" cy="36" r="2" />
-        <circle class="am-node" cx="47" cy="41" r="2" />
-        <circle class="am-hub" cx="32" cy="32" r="2.6" />
-      </g>
-    )}
-
-    {variant === 'forecasting' && (
-      <g fill="none">
-        <path class="am-band" d="M30 27 Q40 25 52 12 L52 24 Q40 34 30 30 Z" opacity="0.16" stroke="none" />
-        <path class="am-curve" d="M10 41 Q20 22 30 27" stroke-width="1.1" />
-        <path class="am-curve-dashed" d="M30 27 Q41 30 52 17" stroke-width="1.1" stroke-dasharray="2 2.5" />
-        <circle class="am-node" cx="30" cy="27" r="1.8" fill-opacity="1" />
-      </g>
-    )}
-
-    {variant === 'data' && (
-      <g>
-        <circle class="am-node am-node--soft" cx="14" cy="19" r="1.5" />
-        <circle class="am-node am-node--soft" cx="10" cy="31" r="1.5" />
-        <circle class="am-node am-node--soft" cx="16" cy="43" r="1.5" />
-        <circle class="am-node am-node--soft" cx="22" cy="13" r="1.5" />
-        <circle class="am-node am-node--soft" cx="21" cy="27" r="1.5" />
-        <g class="am-grid" stroke-width="0.8" fill="none">
-          <line x1="40" y1="15" x2="40" y2="49" />
-          <line x1="48" y1="15" x2="48" y2="49" />
-          <line x1="34" y1="21" x2="55" y2="21" />
-          <line x1="34" y1="32" x2="55" y2="32" />
-          <line x1="34" y1="43" x2="55" y2="43" />
-        </g>
-      </g>
-    )}
-
-    {variant === 'validation' && (
-      <g>
-        <line class="am-diag" x1="14" y1="47" x2="50" y2="14" stroke-width="0.9" />
-        <circle class="am-node am-node--soft" cx="19" cy="39" r="1.7" />
-        <circle class="am-node am-node--soft" cx="25" cy="32" r="1.7" />
-        <circle class="am-node am-node--soft" cx="33" cy="27" r="1.7" />
-        <circle class="am-node" cx="30" cy="21" r="1.7" />
-        <circle class="am-node am-node--soft" cx="40" cy="19" r="1.7" />
-        <circle class="am-node am-node--soft" cx="44" cy="25" r="1.7" />
-      </g>
-    )}
-  </svg>
+  <img class="analytical-module__icon" src={image} alt="" loading="lazy" decoding="async" />
   <div class="analytical-module__body">
     <span class="analytical-module__label">{label}</span>
     <p class="analytical-module__question">{question}</p>
@@ -81,59 +28,33 @@ const { variant, label, question } = Astro.props;
     gap: var(--space-4);
   }
 
-  .analytical-module__circle {
+  .analytical-module__icon {
     width: 4.5rem;
-    height: 4.5rem;
+    aspect-ratio: 1 / 1;
+    max-width: 100%;
     flex-shrink: 0;
-    color: var(--text-on-paper);
+    object-fit: contain;
   }
 
-  .am-ring {
-    stroke: currentColor;
-    opacity: 0.35;
+  /* Size steps match the section's own grid breakpoints (see
+     .analytical-practice__grid in index.astro: 2 columns at 640px, 4
+     columns at 900px) so the icon grows in step with the layout it's
+     already responding to, reaching 200px at the desktop breakpoint.
+     aspect-ratio (not a fixed height) keeps the square proportions of the
+     source images exact at every step, and max-width: 100% is a pure
+     safety net — it only engages if a grid column is ever narrower than
+     the target size, shrinking the image to fit rather than overflowing
+     its column; at normal desktop widths it has no visible effect. */
+  @media (min-width: 640px) {
+    .analytical-module__icon {
+      width: 8rem;
+    }
   }
 
-  .am-line,
-  .am-diag {
-    stroke: currentColor;
-    opacity: 0.4;
-  }
-
-  .am-node {
-    fill: var(--accent-primary);
-    opacity: 0.9;
-  }
-
-  .am-node--soft {
-    fill: currentColor;
-    opacity: 0.45;
-  }
-
-  .am-hub {
-    fill: var(--accent-primary);
-  }
-
-  .am-region {
-    fill: var(--accent-primary);
-  }
-
-  .am-curve {
-    stroke: currentColor;
-    opacity: 0.6;
-  }
-
-  .am-curve-dashed {
-    stroke: var(--accent-primary);
-    opacity: 0.85;
-  }
-
-  .am-band {
-    fill: var(--accent-primary);
-  }
-
-  .am-grid {
-    stroke: currentColor;
-    opacity: 0.4;
+  @media (min-width: 900px) {
+    .analytical-module__icon {
+      width: 12.5rem;
+    }
   }
 
   .analytical-module__body {

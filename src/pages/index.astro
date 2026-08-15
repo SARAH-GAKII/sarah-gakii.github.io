@@ -9,22 +9,22 @@ import ResearchPreviewCircle from '../components/home/ResearchPreviewCircle.astr
 
 const analyticalModules = [
   {
-    variant: 'data' as const,
+    image: '/images/home/evidence-from-data.png',
     label: 'Making sence of the evidence',
     question: 'Can we turn imperfect, messy information into something we can actually reason from?',
   },
   {
-    variant: 'forecasting' as const,
+    image: '/images/home/forecasting-uncertainty.png',
     label: 'Understanding what might happen',
     question: 'Can we forecast or model what comes next, and represent the uncertainty honestly?',
   },
   {
-    variant: 'validation' as const,
+    image: '/images/home/model-confidence.png',
     label: 'Knowing what to trust',
     question: 'Does the model actually work where it matters, and what happens when it is wrong?',
   },
   {
-    variant: 'allocation' as const,
+    image: '/images/home/decision-under-constraints.png',
     label: 'Deciding what to do',
     question: 'Given the evidence and real constraints, which action, allocation, or trade-off makes the most sense?',
   },
@@ -170,7 +170,7 @@ const researchPreviewMedia: Record<string, ResearchPreviewMedia> = {
       />
       <div class="analytical-practice__grid">
         {analyticalModules.map((mod) => (
-          <AnalyticalModule variant={mod.variant} label={mod.label} question={mod.question} />
+          <AnalyticalModule image={mod.image} label={mod.label} question={mod.question} />
         ))}
       </div>
     </div>
