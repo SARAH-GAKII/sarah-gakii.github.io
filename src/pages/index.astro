@@ -35,13 +35,13 @@ const capabilities = [
     index: '02',
     title: 'Applied AI & Machine Learning',
     description:
-      'Building and evaluating models — from classification to recommendation — grounded in how the underlying data was generated.',
+      'Building and evaluating models for classification, prediction, recommendation, and other applied problems, with careful attention to the data behind them.',
   },
   {
     index: '03',
     title: 'Analytics & Business Intelligence',
     description:
-      'Turning operational and market data into dashboards and metrics that hold up under scrutiny.',
+      'Turning operational and market data into clear metrics and visualizations that support analysis and decision-making.',
   },
   {
     index: '04',
@@ -53,19 +53,19 @@ const capabilities = [
     index: '05',
     title: 'Forecasting & Planning',
     description:
-      'Structuring uncertain futures — markets, demand, behavior — into models that support planning, not just prediction.',
+      'Using historical patterns and relevant drivers to model what may happen next, while accounting for the uncertainty in the forecast.',
   },
   {
     index: '06',
     title: 'Data Products & Visualization',
     description:
-      'Turning models and analysis into interpretable, decision-ready visual tools.',
+      'Turning models and analysis into clear visual and interactive tools to explore results, understand what matters, and use the findings in decision-making.',
   },
   {
     index: '01',
-    title: 'Optimization & Decision Systems',
+    title: 'Data Science & Statistical Analysis',
     description:
-      'Formulating constraints, objectives, and trade-offs into models that support real decisions under scarcity.',
+      'Exploring, cleaning, and analyzing data to uncover patterns, test relationships, and build evidence for further modeling or decisions.',
   },
 ];
 
@@ -89,7 +89,7 @@ const researchPreview = researchPreviewSlugs
 const researchMeta: Record<string, { variant: 'nfdm' | 'vaccine' | 'policing' | 'greenroof'; question: string }> = {
   'newton-fd-method-nonlinear-interface': {
     variant: 'nfdm',
-    question: 'What happens when a smooth numerical solution meets a nonlinear interface jump?',
+    question: 'What happens when a model has to account for a sudden change inside an otherwise continuous system?',
   },
   'covid-19-vaccine-uptake-behavior': {
     variant: 'vaccine',
@@ -101,7 +101,7 @@ const researchMeta: Record<string, { variant: 'nfdm' | 'vaccine' | 'policing' | 
   },
   'green-roofs-urban-heat-island': {
     variant: 'greenroof',
-    question: "How much cooling holds up when a green roof is tested against a full heat-transfer model?",
+    question: "Does a green roof make any difference to the heat absorbed by the building underneath it?",
   },
 };
 
@@ -127,7 +127,7 @@ const researchPreviewMedia: Record<string, ResearchPreviewMedia> = {
 ---
 
 <BaseLayout
-  title="Sarah G. Randol — Applied Mathematics, Optimization & AI"
+  title="Sarah G. Randol — Applied Mathematics & Data Science"
   description="A digital home for advanced analytical thinking: mathematics, optimization, data science, and AI applied to real organizational decisions."
 >
   <!-- Hero -->
@@ -139,9 +139,9 @@ const researchPreviewMedia: Record<string, ResearchPreviewMedia> = {
           Turning complex problems into decisions you can act on.
         </p>
         <p class="hero__subhead text-muted prose-width">
-          I build mathematical models, optimization systems, and applied AI tools that help
-          organizations structure ambiguity, forecast what's coming, and make better decisions
-          with the data they already have.
+          I use mathematical modeling, data science, machine learning, and applied AI 
+          to investigate complex problems, understand the evidence, 
+          and build analyses that support better decisions.
         </p>
       </div>
       <div class="hero__visual">
@@ -166,7 +166,7 @@ const researchPreviewMedia: Record<string, ResearchPreviewMedia> = {
       <SectionHeading
         eyebrow="Where analysis becomes useful"
         title="Analytical thinking in practice"
-        description="Analysis becomes useful when a decision still has to be made despite incomplete information, uncertainty, competing objectives, or a model that may be wrong."
+        description="Analysis becomes useful when a decision still has to be made despite incomplete information, uncertainty, competing objectives, or imperfect models"
       />
       <div class="analytical-practice__grid">
         {analyticalModules.map((mod) => (
@@ -203,8 +203,8 @@ const researchPreviewMedia: Record<string, ResearchPreviewMedia> = {
           </div>
           <div class="evidence-card__body">
             <p class="evidence-card__tag">Investment analysis</p>
-            <h3 class="evidence-card__curiosity">Which Ohio counties actually look strongest once every signal is weighed together?</h3>
-            <p class="evidence-card__context text-muted">A weighted, county-level index comparing investment potential across all 88 Ohio counties.</p>
+            <h3 class="evidence-card__curiosity">When Ohio counties look promising for different reasons, which ones stand out overall?</h3>
+            <p class="evidence-card__context text-muted">A county-level real estate opportunity index combining demographic, housing, and market indicators to compare investment potential across all 88 Ohio counties.</p>
             <span class="evidence-card__action">Explore the opportunity index</span>
           </div>
         </a>
@@ -215,8 +215,8 @@ const researchPreviewMedia: Record<string, ResearchPreviewMedia> = {
           </div>
           <div class="evidence-card__body">
             <p class="evidence-card__tag">Computer vision</p>
-            <h3 class="evidence-card__curiosity">Can a model tell what a face is expressing, or only what it looks like?</h3>
-            <p class="evidence-card__context text-muted">Comparing convolutional neural-network approaches for classifying facial emotion from grayscale images.</p>
+            <h3 class="evidence-card__curiosity">How well can a model recognize emotion from a grayscale image of a face?</h3>
+            <p class="evidence-card__context text-muted">Comparing convolutional neural network architectures for classifying facial expressions from grayscale images.</p>
             <span class="evidence-card__action">See how the models compared</span>
           </div>
         </a>
@@ -228,7 +228,7 @@ const researchPreviewMedia: Record<string, ResearchPreviewMedia> = {
           <div class="evidence-card__body">
             <p class="evidence-card__tag">Recommendation systems</p>
             <h3 class="evidence-card__curiosity">What does a useful recommendation require when user signals are sparse?</h3>
-            <p class="evidence-card__context text-muted">Comparing collaborative-filtering methods for ranking products from incomplete interaction data.</p>
+            <p class="evidence-card__context text-muted">Comparing collaborative filtering methods for predicting user preferences and recommending products from sparse rating data.</p>
             <span class="evidence-card__action">Explore the recommendation system</span>
           </div>
         </a>
@@ -243,8 +243,8 @@ const researchPreviewMedia: Record<string, ResearchPreviewMedia> = {
   <section class="section section--tight research-preview">
     <div class="container">
       <SectionHeading
-        eyebrow="Research"
-        title="Research preview"
+        eyebrow="Research preview"
+        title="Exploring through mathematics"
         
       />
       <div class="research-preview__grid">

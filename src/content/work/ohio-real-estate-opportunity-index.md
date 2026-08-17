@@ -1,7 +1,7 @@
 ---
 title: Ohio Real Estate Opportunity Index
 summary: A weighted, county-level index combining growth, affordability, and housing-market indicators to compare investment potential across the 88 Ohio counties.
-problem: Which Ohio counties show the strongest combination of growth and affordability signals, and how do you compare that fairly across all 88 counties at once?
+problem: When Ohio counties look promising for different reasons, which ones stand out overall?
 methods:
   - Python
   - Power BI
