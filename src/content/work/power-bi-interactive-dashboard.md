@@ -1,7 +1,7 @@
 ---
-title: Power BI Interactive Dashboard
-summary: An interactive Power BI report built from real survey data, practicing industry-standard BI workflows through a guided implementation.
-problem: How do you turn messy survey data into a reliable, model-driven BI report?
+title: Data Professional Survey Dashboard
+summary: An interactive Power BI dashboard built from survey data to explore career roles, programming preferences, demographics, and workplace experiences among data professionals.
+problem: What does working in data actually look like across roles, salaries, tools, and job satisfaction?
 methods:
   - Power BI
   - Power Query
@@ -17,15 +17,42 @@ links:
 
 ## Overview
 
-An interactive Power BI report built to practice industry-standard BI workflows using a real-world survey dataset, developed as a guided implementation following Alex The Analyst's Power BI tutorial series.
+This project is a guided Power BI implementation using survey data from data professionals. Built while following Alex The Analyst's Power BI tutorial, the project provided hands-on practice with the core workflow of preparing data, building report visuals, and organizing them into an interactive dashboard.
 
-## What was built
+## Dashboard Focus
 
-- Cleaned and transformed survey-based data using Power Query, addressing formatting and consistency issues common in real-world inputs
-- Designed a structured data model with relationships to support reliable slicing and filtering
-- Developed DAX measures to power KPIs and dynamic aggregations across report views
-- Built an interactive dashboard with slicers, cross-filtering, and drilldowns to support exploratory analysis
+The report explores several aspects of the survey respondents' professional experiences and backgrounds, including:
 
-![Power BI dashboard overview](/images/work/powerbi-dashboard-thumbnail.png)
+- Current roles within the data profession
+- Favorite programming languages
+- Geographic distribution of respondents
+- Salary satisfaction
+- Work/life balance satisfaction
+- Gender distribution
+- Difficulty experienced when entering the data field
 
-This project demonstrates the ability to work with real-world data and translate it into an interactive, model-driven business intelligence report.
+These views bring multiple dimensions of the survey together into a single report for exploratory analysis.
+
+![Data Professional Survey dashboard](/images/work/powerbi-dashboard-thumbnail.png)
+
+The project provided practical experience with:
+
+- Cleaning and transforming survey data in Power Query
+- Preparing fields for analysis in Power BI
+- Selecting appropriate visual types for different questions
+- Building KPI-style summary views
+- Creating categorical comparisons and distributions
+- Organizing multiple visuals into a coherent dashboard
+- Using Power BI's interactive filtering behavior to explore the data
+
+## Report Design
+
+The final report combines several visualization types, to provide a compact overview of who participated in the survey, the roles and tools represented, and how respondents described different aspects of working in the data profession.
+
+## Project Context
+
+This was a guided learning project rather than an independently designed analysis. Its value in my portfolio is as evidence of foundational Power BI experience that I later applied more independently in projects involving deeper analytical questions and decision-focused dashboard development.
+
+## Tools & Techniques
+
+Power BI, Power Query, Data Cleaning, Data Visualization, Interactive Reporting

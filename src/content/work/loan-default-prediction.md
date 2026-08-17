@@ -1,7 +1,7 @@
 ---
 title: Loan Default Prediction
-summary: A comparison of classification models for predicting home-equity loan default, built for interpretability alongside predictive performance.
-problem: Which home-equity loan applicants are likely to default, and which borrower signals actually predict it?
+summary: A comparison of classification models for predicting home-equity loan default, with attention to model performance, interpretability, and the trade-offs involved in identifying high-risk borrowers.
+problem: What can a borrower’s financial history tell us about a default that hasn’t happened yet?
 methods:
   - Python
   - Scikit-learn
@@ -18,25 +18,41 @@ links:
 
 ## Overview
 
-Lending institutions have to decide whether to approve a loan without being able to observe the future. This project builds and compares several classification models to predict whether a home-equity loan applicant is likely to default, using the HMEQ dataset of historical loan applications. Predictive performance alone wasn't the goal: a lending decision needs a defensible reason, so interpretability was treated as a requirement alongside precision and ROC AUC.
+Loan default prediction is not only a classification problem. The consequences of different errors matter. Missing a borrower who later defaults carries a different cost from flagging a borrower who would have repaid.
+
+This project uses historical home-equity loan data to examine borrower risk signals, compare several classification models, and explore how changing the classification threshold affects the trade-off between identifying more defaulters and incorrectly flagging more non-defaulters.
+
 
 ## Dataset & Target
 
-The HMEQ dataset records 12 borrower and loan characteristics for 5,960 home-equity applicants, including loan amount, property value, existing mortgage balance, debt-to-income ratio (DEBTINC), years at current job (YOJ), and credit history variables (DEROG, DELINQ, NINQ, CLAGE, CLNO). The target, BAD, marks whether a loan was ultimately defaulted or seriously delinquent. The dataset is imbalanced, about 20% of applicants (1,189 of 5,960) defaulted, which shaped both the modeling approach and the choice of evaluation metrics.
+The HMEQ dataset contains 5,960 home-equity loan records with 12 borrower and loan characteristics. These include loan amount, property value, existing mortgage balance, debt-to-income ratio (`DEBTINC`), years at the current job (`YOJ`), and credit-history variables such as `DEROG`, `DELINQ`, `NINQ`, `CLAGE`, and `CLNO`.
+
+The target variable, `BAD`, indicates whether an applicant ultimately defaulted or became seriously delinquent. This occurred in 1,189 cases, approximately 20% of the dataset, creating a substantial class imbalance.
+
 
 ## Exploratory Findings
 
-- `DELINQ` and `DEROG`, the delinquent-credit-line and derogatory-report counts, showed the strongest linear correlation with default (roughly 0.35 and 0.28), followed by `DEBTINC` (roughly 0.20) and `NINQ` (roughly 0.17).
-- Both `DEROG` and `DELINQ` are zero-inflated: most applicants have zero, and default rates jump sharply as soon as either value moves above zero, functioning more like threshold indicators than continuous scores.
-- `DEBTINC`'s distribution separated the two classes clearly, with defaulters skewing toward higher debt-to-income ratios.
-- Missing `DEBTINC` values were not random: applicants missing a debt-to-income figure defaulted at a materially higher rate than those who reported one, so the missing-value pattern itself carries signal.
-- `CLAGE` (age of the oldest credit line) correlated negatively with default (roughly -0.17), longer credit histories corresponded to lower risk, while `LOAN`, `MORTDUE`, and `VALUE` showed little standalone separation between classes and `MORTDUE`/`VALUE` were highly collinear with each other (roughly 0.88).
+Several patterns emerged before modeling:
+
+- `DELINQ` and `DEROG`, which capture delinquent credit lines and major derogatory reports, showed some of the clearest relationships with default.
+- Higher debt-to-income ratios were associated with higher default risk, making `DEBTINC` an important signal throughout the analysis.
+- Longer credit histories, represented by `CLAGE`, were generally associated with lower default rates.
+- Loan amount alone showed relatively little separation between defaulters and non-defaulters compared with measures of debt burden and credit behavior.
+- Missingness was not always neutral. For several financial variables, including `DEBTINC` and property value, whether a value was missing carried information about default risk.
+
+These patterns informed both feature preparation and the later interpretation of the models.
+
 
 ## Modeling Approach
 
-Missing values were handled variable by variable rather than with one blanket rule, based on whether missingness itself carried predictive signal: `DEBTINC`'s missingness was preserved as an indicator rather than imputed away, while a sparser, non-informative variable like `NINQ` was imputed with 0. Outliers were winsorized at the 1st and 99th percentiles rather than removed, limiting the influence of extreme values without discarding observations.
+Missing values were handled according to the behavior of individual variables rather than with a single imputation rule. Where missingness appeared informative, a separate missing-value indicator was retained before imputation.
 
-Five model variants were compared: logistic regression, a baseline decision tree, a tuned decision tree, a random forest, and a tuned random forest. Because a missed defaulter (false negative) is costlier to a lender than an unnecessarily flagged good applicant (false positive), evaluation prioritized recall on the default class alongside precision, F1, and ROC-AUC, and each model's decision threshold was tuned rather than left at the default 0.50.
+Selected continuous variables with extreme values were capped at the upper 99th percentile rather than removing observations, limiting the influence of unusually large values while preserving the records.
+
+Logistic regression, decision tree, and random forest models were then developed and compared, including tuned variants. Because the dataset is imbalanced and the cost of missing a defaulter may be substantial, model evaluation considered precision, recall, F1-score, and ROC-AUC rather than accuracy alone.
+
+Decision thresholds were also examined explicitly. This made it possible to evaluate how each model's behavior changed when greater emphasis was placed on detecting defaulters.
+
 
 ## Model Comparison
 
@@ -48,7 +64,10 @@ Five model variants were compared: logistic regression, a baseline decision tree
 | **Random Forest** | **0.37** | **90.3%** | **75.5%** | **75.9%** | **75.7%** | **95.0%** |
 | Tuned Random Forest | 0.37 | 88.6% | 67.5% | 80.4% | 73.4% | 94.3% |
 
-The baseline Random Forest at a 0.37 threshold gave the strongest overall discrimination (ROC-AUC) and the best balance of precision and recall. The tuned Random Forest traded some precision for higher recall, catching more true defaulters at the cost of flagging more creditworthy applicants for review.
+TThe Random Forest at a 0.37 threshold provided the strongest overall balance in this comparison. It achieved the highest ROC-AUC and F1-score while identifying approximately 76% of defaulters.
+
+The tuned Random Forest at the same threshold increased recall to approximately 80%, but precision fell to approximately 66%. This illustrates the practical consequence of threshold choice: identifying more true defaulters also means flagging more applicants who would not have defaulted.
+
 
 ![Confusion matrix for the selected Random Forest model at a 0.37 threshold](/images/work/loan-default-confusion-matrix.png)
 
@@ -56,15 +75,27 @@ The baseline Random Forest at a 0.37 threshold gave the strongest overall discri
 
 ![Grouped feature importance from the Random Forest model, led by debt-to-income ratio](/images/work/loan-default-key-drivers.png)
 
-Once the Random Forest captures nonlinear structure and feature interactions, debt-to-income ratio dominates the ranking by a wide margin, by nearly three times the importance of the next-ranked feature. Property value, credit history length, existing mortgage balance, delinquent credit lines, and loan amount follow as secondary but meaningful contributors. Demographic and categorical features, job type and loan purpose, ranked lowest, indicating the model distinguishes higher- and lower-risk borrowers primarily through a borrower's current financial position and credit behavior than by who they are or why they're borrowing.
+Debt-to-income ratio emerged as the strongest predictor in the Random Forest, followed by variables including property value, credit-history length, mortgage balance, delinquent credit lines, and loan amount.
 
-## Practical Interpretation & Limitations
+The analysis also showed why missing values should not automatically be treated as a data-cleaning nuisance. Before related engineered features were grouped for interpretation, the missing-value indicator for `DEBTINC` ranked highly in the model, suggesting that the availability of debt-to-income information itself contained predictive signal in this dataset.
 
-Debt-to-income ratio was by far the most influential feature, followed by property value, credit history length, mortgage balance, delinquent credit lines, and loan amount. Before grouping the engineered features, the missing-value indicator for DEBTINC ranked as the single most important individual feature, suggesting that whether debt-to-income information was available carried predictive value in addition to the reported ratio itself.
 
-The choice of threshold is a lending-policy decision. Moving the Random Forest's threshold from 0.50 to 0.37 traded precision for meaningfully higher recall, catching more true defaulters at the cost of flagging more good applicants for additional review. There's no threshold-free "correct" answer, only a trade-off a lender should set deliberately based on the relative cost of a missed default versus a rejected creditworthy applicant.
+## Practical Interpretation
 
-This is a predictive-risk model. The associations identified here, for example between `DEBTINC` and default, are statistical patterns in a specific historical dataset, not proof that changing a borrower's debt-to-income ratio would change their risk. The model is intended to support human underwriting decisions and risk-based review, rather than to automatically approve or deny applicants; any real lending use would need a defined process for human review of borderline cases and ongoing monitoring for drift.
+The analysis points to two different questions: how well a model separates higher-risk from lower-risk applicants, and where the decision threshold should be placed.
+
+The Random Forest produced the strongest overall discrimination, with a ROC-AUC of approximately 0.95. Lowering its classification threshold from 0.50 to 0.37 increased recall from approximately 66% to 76%, while precision fell from approximately 81% to 75%.
+
+Neither threshold is universally correct. The choice depends on the relative cost assigned to missed defaults and false alarms. A lender placing greater emphasis on detecting potential defaults could choose a lower threshold, while accepting that more non-defaulters would also be flagged for review.
+
+
+## Considerations & Next Steps
+
+The results are based on the historical HMEQ dataset, so model performance and predictor relationships reflect the borrower population represented in that data. Before applying the model to a different lending population, its performance would need to be validated on more recent and representative data.
+
+The threshold analysis also shows that model deployment would require an explicit decision policy. A lower threshold identifies more potential defaulters but sends more non-defaulters for additional review, so the operating threshold should reflect the relative cost of those outcomes.
+
+Further development could extend the analysis to model calibration, fairness across relevant borrower groups, stability over time, and monitoring for changes in data and model performance.
 
 ## Tools
 

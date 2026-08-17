@@ -92,6 +92,11 @@ const { title, summary, problem, methods, status, video, links } = project.data;
     display: flex;
     flex-direction: column;
     gap: var(--space-5);
+    /* Lets .prose-image-row (global.css) size itself against this column's
+       actual width via container query units, breaking out of .prose's
+       narrower reading-width cap without affecting this column's own size
+       (already fixed by the grid track, not by its content). */
+    container-type: inline-size;
   }
 
   .project-detail__content h1 {

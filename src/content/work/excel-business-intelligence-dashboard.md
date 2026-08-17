@@ -1,7 +1,7 @@
 ---
 title: Excel Business Intelligence Dashboard
-summary: A full Excel-based BI dashboard transforming raw financial data into an interactive decision-support tool.
-problem: How do you turn raw multi-dimensional financial data into a decision-support tool without a BI platform?
+summary: An interactive Excel dashboard for monitoring revenue, profit, margins, discounts, and performance across products, regions, and time.
+problem: What is really driving revenue and profit across products, regions, and time?
 methods:
   - Excel
   - PivotTables
@@ -17,14 +17,37 @@ links:
 
 ## Overview
 
-A full Excel-based business intelligence dashboard demonstrating advanced data analysis and visualization skills, transforming raw financial data into actionable insight.
+This project turns financial transaction data into an interactive Excel dashboard for examining business performance across products, regions, and time.
 
-## What was built
+The dashboard brings revenue, net revenue, profit, profit margin, discounts, and monthly performance into a single reporting view, with interactive controls that allow the analysis to be filtered by month, product, and region.
 
-- An end-to-end Excel BI dashboard using PivotTables, PivotCharts, slicers, and calculated fields to analyze multi-dimensional financial data
-- Dynamic KPI panels and trend analyses for revenue, profit, and margins across products, regions, and months
-- An interactive decision-support tool for performance monitoring built entirely from raw financial data
+## Dashboard Structure
 
-![Excel BI dashboard overview](/images/work/excel-bi-thumbnail.png)
+The report combines headline KPIs with several views of business performance:
 
-This project shows the ability to take a raw dataset and build a tool that supports decision-making without relying on a dedicated BI platform.
+- Total revenue, net revenue, profit, and average profit margin
+- Monthly net revenue trends by product
+- Total revenue by product
+- Total profit by region
+- Discounts by product
+- Interactive filtering by month, product, and region
+
+![Excel BI dashboard overview](/images/work/excel-bi-dashboard.png)
+
+## Building the Dashboard
+
+The dashboard was built entirely in Excel using PivotTables, PivotCharts, slicers, and calculated fields.
+
+The workflow included data preparation, financial KPI development, PivotTable-based analysis, and interactive reporting through PivotCharts and slicers.
+
+## What the Dashboard Makes Visible
+
+The report makes it possible to move between an overall view of financial performance and more specific questions about individual products, regions, or periods.
+
+Product-level views show differences in revenue and discount activity, while the regional view makes profit performance directly comparable across markets. The monthly trend view adds the time dimension, showing how net revenue changes throughout the year and how those patterns differ by product.
+
+Together, these views provide a compact way to monitor performance and investigate where differences in revenue and profitability are coming from.
+
+## Tools & Techniques
+
+Excel, PivotTables, PivotCharts, Slicers, Calculated Fields, KPI Reporting, Financial Analysis, Interactive Dashboards
