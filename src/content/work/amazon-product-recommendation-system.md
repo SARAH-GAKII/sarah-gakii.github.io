@@ -1,5 +1,5 @@
 ---
-title: Amazon Product Recommendation System
+title: Product Recommendation System
 summary: A recommendation system built on Amazon product review data, comparing collaborative filtering approaches to predict user preferences.
 problem: What does a useful recommendation require when user signals are sparse?
 methods:
