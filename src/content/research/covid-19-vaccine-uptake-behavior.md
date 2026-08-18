@@ -1,10 +1,10 @@
 ---
 title: Modeling the Impact of Human Behavior on COVID-19 Vaccine Uptake
-summary: A predictive model combining epidemic modeling with evolutionary game theory to capture how human behavior shapes vaccine uptake.
+summary: A mathematical study coupling epidemic dynamics with evolutionary game theory to examine how perceived risk and individual decision-making influence vaccination behavior.
 tags:
   - Epidemic Modeling
   - Evolutionary Game Theory
-  - Behavioral Dynamics
+  - Dynamical Systems
 order: 3
 thumbnail: /images/research/covid-vaccine-uptake.png
 links:
@@ -12,30 +12,69 @@ links:
     href: https://drive.google.com/file/d/19TXbXPjAJ3T5Eq59psV8N86TiFoCG8ht/view
 ---
 
-During the COVID-19 pandemic, one of the biggest challenges was not just vaccine availability but whether people were willing to take it. Uptake was shaped by trust, misinformation, social influence, and perceived risk. This research project developed a Python-based predictive model combining epidemic modeling with evolutionary game theory to capture how human behavior influences vaccine uptake.
 
-Completed at the African Institute for Mathematical Sciences (AIMS).
+**What makes someone choose to vaccinate, or change their mind, as an epidemic unfolds?**
+
+During an epidemic, the decision to vaccinate does not happen in isolation. It can change as infection levels rise and fall, as people reassess the risk of infection, and as they observe the choices of others.
+
+This research investigated that relationship by combining an epidemic model with evolutionary game theory. The model treats vaccination as a decision that can change over time, allowing disease prevalence and individual behavior to influence one another.
+
+Completed as part of my structured master's degree at the African Institute for Mathematical Sciences (AIMS), South Africa.
 
 ## The Problem
 
-Classical epidemic models often assume vaccines are adopted uniformly once available. In reality, vaccination is a strategic choice — individuals weigh perceived benefits, risks, and costs of vaccination versus non-vaccination. This mismatch can lead models to underpredict infection peaks or overestimate the success of vaccine campaigns.
+Traditional epidemic models can represent how a disease moves through a population, but vaccination introduces a behavioral question: what determines whether an individual chooses the vaccination strategy in the first place?
 
-## The Approach
+That decision can depend on the perceived cost of vaccination, the perceived consequences of infection, disease prevalence, and the behavior of others.
 
-- Integrated a compartmental epidemic model with behavioral dynamics using evolutionary game theory
-- Represented individuals as "players" choosing between vaccination and non-vaccination, influenced by infection risk, perceived vaccine safety, and peer behavior
-- Simulated multiple scenarios of vaccine acceptance to capture how uptake evolves under different conditions
-- Produced numerical simulations and visualizations of the feedback between epidemic spread and human decision-making
+The goal of this project was to incorporate that decision-making process directly into an epidemic model and investigate how changing vaccination behavior affects disease dynamics.
 
-## Key Insights
+## The Model
 
-- Vaccine uptake is not purely medical — it is also a social process.
-- Peer influence can amplify or suppress uptake depending on initial conditions.
-- If misinformation spreads faster than the virus, uptake collapses and infection peaks rise.
-- Policies that build trust and counter misinformation measurably improve long-term vaccine coverage.
+This research project developed a Python-based mathematical model, implemented in SageMath, combining epidemic modeling with evolutionary game theory to examine how human behavior influences vaccine uptake.
 
-## Broader Impact
+The epidemic component divides the population into susceptible, quarantined, infected, and recovered groups. It accounts for transmission, quarantine, recovery, loss of immunity, mortality, and self-protection measures.
 
-This research shows how mathematical models of human behavior can strengthen public health planning. Linking epidemic dynamics with decision-making processes demonstrates that effective interventions must combine biological tools (vaccines, treatments) with social strategies (education, trust-building, transparent communication).
+The behavioral component uses evolutionary game theory. Susceptible individuals choose between two strategies: considering vaccination or not considering vaccination. Each strategy is assigned a perceived payoff based on the potential productivity loss associated with vaccination or COVID-19 infection.
 
-*With thanks to Dr. Josephine Kagunda for supervision throughout this project.*
+Individuals can change strategies by comparing those payoffs with the strategies of others in the population. This creates a feedback loop: infection prevalence affects the attractiveness of vaccination, while vaccination behavior affects subsequent disease transmission.
+
+## Mathematical Analysis
+
+The analysis:
+
+- established positivity and boundedness of the solutions
+- identified disease-free and endemic equilibrium states
+- derived the basic reproductive number, \(R_0\)
+- investigated local and global stability of disease-free equilibria
+- determined conditions for the existence of an endemic equilibrium
+- examined how vaccination behavior and self-protection enter the disease threshold
+
+The resulting expression for \(R_0\) explicitly connects epidemic transmission with both the proportion considering vaccination and the effectiveness of self-protection.
+
+
+## Numerical Experiments
+
+The research implemented the numerical analysis and simulations in SageMath to investigate the model computationally using parameter values drawn from published studies, model assumptions, and initial population estimates.
+
+Sensitivity analysis showed that increasing either the proportion of vaccinators or the effectiveness of self-protection reduces \(R_0\).
+
+Simulations then explored how different combinations of vaccination behavior and self-protection changed the infected and quarantined populations. Higher levels of either intervention reduced epidemic peaks, while sufficiently strong protection drove infections toward zero.
+
+## What the model revealed
+
+One of the clearest patterns appeared when infection prevalence and vaccination behavior were examined together.
+
+As infections rose, the proportion of susceptible individuals choosing the vaccination strategy also increased. As infections declined, vaccination interest fell. Successive infection waves were accompanied by smaller vaccination peaks, and when perceived infection risk became very low, the modeled population eventually moved away from the vaccination strategy.
+
+The result captures an important behavioral feedback: the apparent success of disease control can itself reduce the perceived incentive to continue protective behavior.
+
+## Why it matters
+
+Public-health interventions operate within populations whose behavior changes in response to the epidemic itself.
+
+This project shows why vaccination behavior cannot always be treated as a fixed external input to an epidemic model. When perceived risk influences individual decisions, disease prevalence and protective behavior can evolve together.
+
+Modeling that interaction provides a way to study questions that sit between epidemiology and human decision-making, and to examine how behavioral responses can alter the trajectory of an outbreak.
+
+*With thanks to Dr. Josephine Wairimu Kagunda for her supervision throughout this research.*
