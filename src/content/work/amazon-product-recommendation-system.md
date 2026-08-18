@@ -9,6 +9,7 @@ methods:
   - Collaborative Filtering
 status: completed
 order: 4
+thumbnail: /images/work/amazon-recommendation-system-thumbnail.png
 links:
   - label: Notebook & repository on GitHub
     href: https://github.com/SARAH-GAKII/amazon-product-recommendation-system/blob/main/Amazon_Product_Recommendation_System.ipynb

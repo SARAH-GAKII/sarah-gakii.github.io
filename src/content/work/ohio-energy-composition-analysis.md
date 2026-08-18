@@ -76,11 +76,11 @@ Comparing multiple algorithms was important: agreement between fundamentally dif
 
 Across the clustering approaches, five interpretable county profiles consistently emerged:
 
-- **Renewables-dominant**
-- **Natural-gas-dominant**
-- **Coal-dominant**
-- **Nuclear-dominant**
-- **Mixed-profile**
+- Renewables-dominant
+- Natural-gas-dominant
+- Coal-dominant
+- Nuclear-dominant
+- Mixed-profile
 
 Natural gas and renewable generation were widespread across the counties in the dataset, while coal and nuclear generation were much more geographically concentrated.
 
