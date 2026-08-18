@@ -50,7 +50,7 @@ const beyondItems = [
   description="Applied mathematician and data scientist working across mathematics, optimization, data science, and AI — background, education, and experience."
 >
   <!-- Intro -->
-  <section class="section section--tight about-intro">
+  <section class="section section--tight section--dark about-intro">
     <div class="about-intro__motif" aria-hidden="true">
       <AxisMotif />
     </div>
@@ -69,7 +69,7 @@ const beyondItems = [
   </section>
 
   <!-- Professional Focus -->
-  <section class="section section--tight section--dark">
+  <section class="section section--tight section--blue-tint">
     <div class="container">
       <SectionHeading eyebrow="Professional focus" title="Where the work comes together" />
       <ol class="method-path">
@@ -196,7 +196,10 @@ const beyondItems = [
     position: absolute;
     inset: -15% -10% -15% auto;
     width: 55%;
-    color: var(--accent-primary);
+    /* Matches the established dark-hero motif treatment used on Work/Research
+       (see .page-hero__motif in PageHero.astro) rather than the violet accent,
+       now that this section sits on the same navy background. */
+    color: var(--text-on-dark);
     opacity: 0.4;
     pointer-events: none;
     mask-image: linear-gradient(to left, black 20%, transparent 80%);
@@ -217,12 +220,13 @@ const beyondItems = [
   .about-intro__copy h1 {
     font-size: var(--text-2xl);
     margin-bottom: var(--space-1);
+    color: var(--text-on-dark);
   }
 
   .about-intro__copy p {
     font-size: var(--text-base);
     line-height: var(--leading-normal);
-    color: var(--text-muted-on-paper);
+    color: var(--text-muted-on-dark);
   }
 
   .about-intro__portrait {
@@ -258,15 +262,15 @@ const beyondItems = [
     width: 2.5rem;
     height: 2.5rem;
     border-radius: 999px;
-    border: 1px solid var(--border-strong-on-dark);
+    border: 1px solid var(--border-strong);
     font-family: var(--font-serif);
     font-size: var(--text-sm);
-    color: var(--accent-on-dark);
+    color: var(--accent);
   }
 
   .method-path__content h3 {
-    font-size: var(--text-sm);
-    color: var(--text-on-dark);
+    font-size: var(--text-md);
+    color: var(--text-on-paper);
   }
 
   .method-path__content p {
@@ -483,7 +487,7 @@ const beyondItems = [
       left: 6%;
       right: 6%;
       height: 1px;
-      background: var(--border-on-dark);
+      background: var(--border-strong);
       z-index: 0;
     }
 
@@ -496,7 +500,7 @@ const beyondItems = [
     }
 
     .method-path__marker {
-      background: var(--ink-950);
+      background: var(--surface-blue-tint);
     }
 
     .method-path__content p {
