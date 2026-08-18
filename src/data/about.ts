@@ -2,8 +2,8 @@ export const bio = {
   name: 'Sarah G. Randol',
   headshot: '/images/about/headshot.png',
   paragraphs: [
-    'I am a Data Scientist with a strong foundation in applied mathematics, focused on building data driven models that support real world decision making.',
-    'My work combines statistical modeling, machine learning, AI, and applied analytics. I approach problems by first understanding how data is generated, what assumptions are involved, and what questions the analysis is meant to answer, before selecting or training models. This perspective is shaped by rigorous mathematical training and hands on experience working end to end with real datasets.',
+    'Data scientist with a background in applied mathematics and scientific computation, working across statistical modeling, machine learning, AI, data analysis, and mathematical modeling.',
+    'My work starts with understanding the problem: how the data was generated, what assumptions the analysis depends on, and what question or decision it needs to support. Models come after that. This approach is shaped by mathematical training and experience across research, analytics, and applied data projects.',
   ],
 };
 
@@ -16,36 +16,36 @@ export interface EducationEntry {
 
 export const education: EducationEntry[] = [
   {
-    title: 'Applied AI & Data Science',
+    title: 'Professional Program Applied AI & Data Science',
     meta: 'MIT Professional Education · April 2026',
     description:
-      'Advanced professional program focused on applied AI, machine learning, deep learning, recommendation systems, generative AI, and production-oriented data science workflows.',
+      'Professional training in applied AI and data science, spanning machine learning, deep learning, recommendation systems, generative AI, and production-oriented data science workflows.',
     courses:
-      'Foundations of AI, Data Analysis and Visualization, Graph Theory, Machine Learning, Introduction to AI on Cloud, Practical Data Science Workflows, Deep Learning, Recommendation Systems, Generative AI & Applied AI Systems.',
+      'Data Analysis and Visualization, Graph Theory, Machine Learning, Introduction to AI on Cloud, Practical Data Science Workflows, Deep Learning, Recommendation Systems, Generative AI & Applied AI Systems.',
   },
   {
     title: 'M.A. Applied Mathematics & Scientific Computation',
     meta: 'Bowling Green State University · Aug. 2025',
     description:
-      'Graduate training in numerical analysis, PDEs, probability, statistics, and applied mathematical modeling, with strong preparation in scientific computation and teaching practice.',
+      'Graduate training in applied mathematics, numerical analysis, differential equations, probability, statistics, and scientific computation, culminating in research on numerical methods for PDEs with nonlinear interface conditions.',
     courses:
-      'Numerical Analysis series, Real Analysis series, Probability & Statistics series, Linear Algebra with its Applications, Iterative Solutions (MATLAB), Topics in Applied Mathematics (PDEs) series, Boundary Value Differential Equations, Curriculum Analytics Classroom Behavior, Overview College Math Teaching.',
+      'Numerical Analysis, Real Analysis, Probability & Statistics, Linear Algebra with Applications, Iterative Methods, Applied Mathematics (PDEs), Boundary Value Differential Equations.',
   },
   {
     title: 'M.S. Mathematical Sciences',
     meta: 'Stellenbosch University / AIMS South Africa · June 2023',
     description:
-      'Intensive interdisciplinary master’s program combining mathematics, computing, physics, statistics, logic, and mathematical biology in a problem-solving-focused environment.',
+      'Intensive interdisciplinary graduate training across mathematics, computation, statistics, physics, and mathematical biology, with an emphasis on mathematical problem solving and applied modeling.',
     courses:
-      'Intro. to Programming using Python, Machine Learning for Particle Physics, NetworkX, Experimental Mathematics with SageMath, Statistics, Computing & LaTeX, Mathematical Problem Solving, Concepts and Problem Solving in Physics, Open Quantum Systems, Lie Groups and Lie Algebra, Graph Theory, Numerical Mathematics, Measurement Interpretation & Mathematics, Analytical Techniques in Mathematical Biology, Algebraic Biology, Applying Logic, Algebraic Methods.',
+      'Python Programming, Machine Learning for Particle Physics, Statistics, Numerical Mathematics, Graph Theory, Mathematical Biology, Experimental Mathematics with SageMath, Open Quantum Systems, Mathematical Problem Solving.',
   },
   {
     title: 'B.S. Mathematics (Pure & Applied)',
     meta: 'The Technical University of Kenya · July 2021',
     description:
-      'Broad undergraduate foundation in pure mathematics, applied mathematics, statistics, programming, and computational methods.',
+      'Broad training across pure and applied mathematics, statistics, numerical methods, mathematical modeling, scientific programming, and computer science.',
     courses:
-      'Calculus, Differential Geometry, Numerical Analysis, Methods of Applied Mathematics, Mathematical Modeling, Fluid Mechanics, ODEs, PDEs, Probability & Statistics, Test of Hypothesis, Theory of Estimation, Data Structures & Algorithms, Database Systems, Scientific Programming, Object Oriented Programming, Linear Programming, Linear Algebra, Discrete Mathematics, Algebraic Structures, Topology, Real Analysis, Complex Analysis, Functional Analysis, Group Theory, Ring Theory.',
+      'Calculus, Numerical Analysis, Mathematical Modeling, ODEs & PDEs, Probability & Statistics, Linear Algebra, Real & Complex Analysis, Scientific Programming, Data Structures & Algorithms, Database Systems.',
   },
 ];
 
@@ -61,7 +61,7 @@ export const awards: AwardEntry[] = [
     title: 'James Robert & Gretchen Overman Graduate Scholarship',
     meta: 'Bowling Green State University · 2024',
     description:
-      'Awarded by the Department of Mathematics and Statistics at Bowling Green State University in recognition of academic excellence.',
+      'Awarded by the Department of Mathematics and Statistics in recognition of academic excellence.',
     link: {
       label: 'View department recognition',
       href: 'https://www.bgsu.edu/arts-and-sciences/mathematics-and-statistics/department-and-alumni-news/2023-2024.html',
@@ -100,36 +100,34 @@ export const experience: ExperienceGroup[] = [
         role: 'Subject Matter Expert (Mathematics & Data Analysis)',
         org: 'Mercor · 2025–Present',
         bullets: [
-          'Developed and validated mathematical and data analysis prompts to train advanced AI models.',
-          'Solved and optimized complex problems in algebra, calculus, and statistics to improve model reasoning.',
-          'Collaborated with a top-tier AI company to ensure high-quality datasets for cutting-edge AI applications.',
+          'Improved AI reasoning reliability and accuracy by designing and validating structured mathematical datasets for production model training.',
+          'Reduced model failure patterns by conducting systematic error analysis and response validation across complex reasoning tasks.',
+          'Strengthened model deployment readiness by delivering high-precision, audit-ready training data in collaboration with cross-functional AI teams.',
         ],
       },
       {
         role: 'Mathematical Reasoning Annotator',
         org: 'Telus International · 2025',
         bullets: [
-          'Designed and reviewed high-level mathematical prompts for AI datasets.',
-          'Annotated reasoning steps to improve accuracy of large language models.',
+          'Evaluated and improved AI response performance by designing and reviewing complex mathematical reasoning prompts.',
+          'Identified model weaknesses through structured error analysis and output validation across multi-step reasoning tasks.',
         ],
       },
       {
         role: 'Junior Data Analyst',
         org: 'Lumira Insights Group, Nairobi · 2020',
         bullets: [
-          'Built a forecasting model to help a client anticipate inventory and staffing needs.',
-          'Cleaned, analyzed, and visualized operational and survey data in Excel.',
-          'Designed dynamic dashboards to track program engagement and resource allocation.',
+          'Improved operational forecasting accuracy by developing Excel-based predictive analysis models for inventory and workforce planning.',
+          'Reduced data inconsistencies by cleaning and structuring multi-source operational datasets.',
+          'Accelerated decision-making by designing interactive KPI dashboards to monitor engagement and resource utilization.',
         ],
       },
       {
         role: 'Data & Records Manager',
         org: 'National Social Security Fund (NSSF), Kenya · 2019',
         bullets: [
-          'Processed and verified account registrations and identity records.',
-          'Handled fingerprinting duties.',
-          'Supported issuance of duplicate membership cards, amended member records, and assisted with searches for members who had lost their membership numbers.',
-          'Maintained careful documentation and filing of fingerprint binder slips for record retrieval.',
+          'Reduced registration errors by verifying and processing structured identity and account records.',
+          'Maintained regulatory compliance through systematic documentation and validation of member data.',
         ],
       },
     ],
@@ -142,25 +140,25 @@ export const experience: ExperienceGroup[] = [
         role: 'Graduate Teaching Assistant, Mathematics',
         org: 'Bowling Green State University · 2023–2025',
         bullets: [
-          'Instructed Precalculus and College Algebra, combining lectures with interactive tutorials.',
-          'Designed and graded assessments, ensuring fair and accurate evaluations.',
-          'Supported faculty through research assistance and administrative tasks.',
+          'Enhanced student performance trends by analyzing assessment data and identifying learning gaps across Precalculus and College Algebra courses.',
+          'Strengthened quantitative reasoning outcomes by integrating applied analytics and structured problem-solving into instruction.',
+          'Supported computational modeling research using MATLAB and numerical methods in scientific computing projects.',
         ],
       },
       {
         role: 'Graduate Assistant, Mathematics',
         org: 'Technical University of Kenya · 2023–2024',
         bullets: [
-          'Led tutorials for Introduction to Statistics, developing and reviewing instructional materials.',
-          'Assessed student progress and provided constructive feedback.',
+          'Strengthened statistical reasoning skills by leading applied Statistics tutorials focused on data interpretation and probability modeling.',
+          'Improved assessment quality by developing and evaluating quantitative problem sets aligned with curriculum standards.',
         ],
       },
       {
         role: 'Graduate Teaching Assistant, Mathematics',
         org: 'Dedan Kimathi University of Technology · 2021–2022',
         bullets: [
-          'Conducted tutorials and lectures in Calculus and Discrete Mathematics.',
-          'Proctored and graded assignments and exams.',
+          'Increased student performance consistency by analyzing assessment data and adjusting instructional focus based on identified gaps.',
+          'Strengthened analytical reasoning skills by delivering structured instruction in Calculus and Discrete Mathematics.',
         ],
       },
     ],
@@ -173,9 +171,9 @@ export const experience: ExperienceGroup[] = [
         role: 'Production Operator (Automotive Manufacturing)',
         org: 'Grammer Americas, Ohio · 2024',
         bullets: [
-          'Operated and monitored automated blow-molding machines for Tier-1 automotive clients.',
-          'Partnered with quality teams to reduce scrap rates and ensure compliance with strict automotive standards.',
-          'Coordinated with logistics staff to maintain smooth production flow.',
+          'Operated and monitored automated blow-molding equipment used in automotive component production.',
+          'Inspected finished components for defects and worked with quality teams to maintain required production and quality standards.',
+          'Coordinated with production and logistics teams to maintain material flow and support continuous manufacturing operations.',
         ],
       },
     ],
@@ -205,21 +203,21 @@ export interface CommunityGroup {
 }
 
 export const habitatForHumanity = {
-  title: 'Habitat for Humanity — Women Build',
+  title: 'Habitat for Humanity | Women Build',
   meta: 'Aug 2025 – Present',
   intro:
-    'Contributed to residential construction projects as part of Habitat for Humanity’s Women Build initiative. This work supported affordable housing efforts while providing hands-on exposure to building systems and teamwork in the field.',
+    'Contribute to residential construction projects supporting affordable housing in the local community, working alongside construction supervisors, skilled tradespeople, and other volunteers at different stages of homebuilding.',
   bullets: [
     'Assisted with siding installation, framing, soffits, and hurricane ties, gaining practical knowledge of structural stability.',
-    'Helped with electrical and plumbing preparations (socket holders, vent pipes, fan mounts).',
-    'Collaborated with skilled supervisors and diverse teams to ensure safe, efficient progress.',
+    'Supported electrical and plumbing preparations including socket holders, fan mounts, vent pipes, and wire stripping.',
+    'Participated in flooring installation and site preparation.',
   ],
   closing:
     'This experience connected problem-solving and technical thinking to real-world community impact while working in hands-on environments.',
 };
 
 export const campusInvolvementIntro =
-  'Beyond structured volunteering, I have taken part in a range of campus and community activities that connected me with people, science, and culture in meaningful ways.';
+  'Beyond structured volunteering, participation in campus and community initiatives has created opportunities to engage with people, science, sustainability, and culture, in meaningful ways.';
 
 export const campusInvolvementGroups: CommunityGroup[] = [
   {
@@ -228,22 +226,22 @@ export const campusInvolvementGroups: CommunityGroup[] = [
       {
         title: 'BGSU Campus Restore',
         meta: 'Mar 2024, May 2025',
-        description: 'Assisted in a campus-wide sustainability initiative, supporting recycling and reuse efforts.',
+        description: 'Supported a campus sustainability initiative centered on collection, recycle and reuse efforts.',
       },
       {
         title: 'Bowling Green Community Holiday Parade',
         meta: 'Nov 2024',
-        description: 'Marched with the community to celebrate local traditions and connect with residents.',
+        description: 'Participated in the local Bowling Green holiday parade with BGSU Global Falcons, representing the university’s international student community.',
       },
       {
         title: 'Total Solar Eclipse Watch Party',
         meta: 'Apr 2024 · BGSU',
-        description: 'Helped organize and guide participants during this rare celestial event, sharing in science outreach and community excitement.',
+        description: 'Helped organize the BGSU eclipse watch event and guided participants during the April 2024 total solar eclipse.',
       },
       {
         title: 'Northwest Ohio Science Olympiad',
         meta: 'Mar 2024 · BGSU',
-        description: 'Volunteered in a STEM competition that brought together students to showcase problem-solving and innovation.',
+        description: 'Supported activities at a regional STEM competition that brought together students to showcase problem-solving and innovation.',
       },
     ],
   },
@@ -253,12 +251,12 @@ export const campusInvolvementGroups: CommunityGroup[] = [
       {
         title: 'Student Leader, AIMS',
         meta: '2023 · South Africa',
-        description: 'Provided peer leadership and mentorship during academic and extracurricular activities at the African Institute for Mathematical Sciences.',
+        description: 'Served in a peer leadership role supporting students and contributing to academic and community activities at AIMS South Africa.',
       },
       {
         title: 'House of Science, AIMS',
         meta: '2022–2023 · South Africa',
-        description: 'Supported science communication and outreach to local communities, helping make mathematics and science more accessible.',
+        description: 'Supported science communication and outreach activities to local communities through AIMS South Africa, helping make mathematics and science more accessible.',
       },
     ],
   },

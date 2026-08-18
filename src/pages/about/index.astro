@@ -18,11 +18,11 @@ import {
 } from '../../data/about';
 
 const professionalFocus = [
-  { index: '01', title: 'Applied AI & Data Science', description: 'Developing data-driven models and analytical workflows that extract meaningful insight from complex datasets.' },
-  { index: '02', title: 'Machine Learning & Statistical Analysis', description: 'Applying machine learning and statistical techniques to uncover patterns, support predictions, and inform decisions.' },
-  { index: '03', title: 'Mathematical & Computational Modeling', description: 'Designing and analyzing numerical methods, simulations, and mathematical models to study complex systems.' },
-  { index: '04', title: 'Data Analytics & Visualization', description: 'Transforming raw data into interpretable insights through exploratory analysis, dashboards, and visual storytelling.' },
-  { index: '05', title: 'Scientific Computing & Numerical Methods', description: 'Implementing computational techniques to solve mathematical models and engineering problems.' },
+  { index: '01', title: 'Applied Data Science & AI', description: 'Building data-driven models and AI applications for prediction, classification, recommendation, and analytical decision support.' },
+  { index: '02', title: 'Machine Learning & Statistical Modeling', description: 'Using statistical and machine learning methods to identify patterns, test relationships, make predictions, and evaluate model performance.' },
+  { index: '03', title: 'Mathematical & Computational Modeling', description: 'Translating real systems into mathematical models to study their behavior, test assumptions, and investigate how outcomes change under different conditions.' },
+  { index: '04', title: 'Data Analytics & Visualization', description: 'Transforming raw data into structured analysis, dashboards, and visualizations that make patterns, comparisons, and decision-relevant information easier to see.' },
+  { index: '05', title: 'Scientific Computing & Numerical Methods', description: 'Developing computational approaches to solve mathematical models and engineering problems.' },
 ];
 
 const slugify = (value: string) => value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
@@ -71,7 +71,7 @@ const beyondItems = [
   <!-- Professional Focus -->
   <section class="section section--tight section--dark">
     <div class="container">
-      <SectionHeading eyebrow="Professional focus" title="Professional Focus" />
+      <SectionHeading eyebrow="Professional focus" title="Where the work comes together" />
       <ol class="method-path">
         {professionalFocus.map((step) => (
           <li class="method-path__step">
@@ -101,7 +101,7 @@ const beyondItems = [
         ))}
       </div>
 
-      <h3 class="recognition-heading">Recognition along the way</h3>
+      <h3 class="recognition-heading">Academic Recognition</h3>
       <div class="recognition-grid">
         {awards.map((award) => (
           <article class="recognition-card">
@@ -156,7 +156,7 @@ const beyondItems = [
   <!-- Beyond the Technical Work -->
   <section class="section section--tight">
     <div class="container">
-      <SectionHeading eyebrow="Community" title="Beyond the technical work" />
+      <SectionHeading eyebrow="Community Engagement" title="Beyond the workplace" />
       <MasterDetailExplorer items={beyondItems} variant="community">
         <Fragment slot="habitat">
           <p class="community-copy">{habitatForHumanity.intro}</p>
