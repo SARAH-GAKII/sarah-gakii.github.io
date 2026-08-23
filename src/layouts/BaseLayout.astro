@@ -2,13 +2,33 @@
 import SiteHeader from '../components/navigation/SiteHeader.astro';
 import SiteFooter from '../components/global/SiteFooter.astro';
 import '../styles/global.css';
+import { contactLinks } from '../data/about';
 
 interface Props {
   title: string;
   description: string;
+  image?: string;
 }
 
-const { title, description } = Astro.props;
+const { title, description, image } = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
+const ogImageURL = image ? new URL(image, Astro.site).toString() : undefined;
+
+const personJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Sarah G. Randol',
+  alternateName: 'Sarah Gakii',
+  url: Astro.site!.toString(),
+  jobTitle: 'Data Scientist and Applied Mathematician',
+  address: {
+    '@type': 'PostalAddress',
+    addressRegion: 'Ohio',
+    addressCountry: 'US',
+  },
+  sameAs: [contactLinks.linkedin, contactLinks.github],
+};
 ---
 
 <html lang="en">
@@ -20,12 +40,15 @@ const { title, description } = Astro.props;
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <meta name="generator" content={Astro.generator} />
+    <link rel="canonical" href={canonicalURL} />
     <title>{title}</title>
     <meta name="description" content={description} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
-    <meta name="twitter:card" content="summary" />
+    <meta property="og:url" content={canonicalURL} />
+    {ogImageURL && <meta property="og:image" content={ogImageURL} />}
+    <script type="application/ld+json" set:html={JSON.stringify(personJsonLd)} is:inline />
   </head>
   <body id="top">
     <a class="skip-link" href="#main-content">Skip to content</a>

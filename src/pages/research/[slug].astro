@@ -13,10 +13,19 @@ export async function getStaticPaths() {
 
 const { item } = Astro.props;
 const { Content } = await render(item);
-const { title, summary, tags, links } = item.data;
+const { title, summary, tags, links, thumbnail } = item.data;
+
+// Shorter, search-snippet-length version of the meta description for the
+// one entry whose frontmatter `summary` runs long. `summary` itself is
+// left untouched since it's also the visible card copy on /research/.
+const metaDescriptionOverrides: Record<string, string> = {
+  'covid-19-vaccine-uptake-behavior':
+    'A mathematical study coupling epidemic dynamics with evolutionary game theory to model how perceived risk shapes vaccination behavior.',
+};
+const metaDescription = metaDescriptionOverrides[item.id] ?? summary;
 ---
 
-<BaseLayout title={`${title} — Sarah G. Randol`} description={summary}>
+<BaseLayout title={`${title} | Sarah G. Randol`} description={metaDescription} image={thumbnail}>
   <article class="research-detail section">
     <div class="container research-detail__grid">
       <aside class="research-detail__aside">

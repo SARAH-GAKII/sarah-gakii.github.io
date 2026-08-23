@@ -13,12 +13,24 @@ export async function getStaticPaths() {
 
 const { project } = Astro.props;
 const { Content } = await render(project);
-const { title, summary, problem, methods, status, video, links } = project.data;
+const { title, summary, problem, methods, status, video, links, thumbnail } = project.data;
+
+// Shorter, search-snippet-length versions of the meta description for
+// pages whose frontmatter `summary` runs long. `summary` itself is left
+// untouched since it's also the visible card copy on /work/.
+const metaDescriptionOverrides: Record<string, string> = {
+  'loan-default-prediction':
+    'A comparison of classification models for predicting home-equity loan default, evaluated on performance, interpretability, and threshold trade-offs.',
+  'power-bi-interactive-dashboard':
+    'A Power BI dashboard built from survey data covering roles, tools, demographics, and workplace experience among data professionals.',
+};
+const metaDescription = metaDescriptionOverrides[project.id] ?? summary;
 ---
 
 <BaseLayout
-  title={`${title} — Sarah G. Randol`}
-  description={summary}
+  title={`${title} | Sarah G. Randol`}
+  description={metaDescription}
+  image={thumbnail}
 >
   <article class="project-detail section">
     <div class="container project-detail__grid">
