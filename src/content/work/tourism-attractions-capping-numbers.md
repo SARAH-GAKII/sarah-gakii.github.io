@@ -7,7 +7,6 @@ methods:
   - Carrying Capacity
   - Compartmental Modeling
   - Linear Programming
-  - Research
 status: completed
 order: 10
 thumbnail: /images/work/tourism-visitor-capacity-thumbnail.png
@@ -16,22 +15,22 @@ links: []
 
 ## Context
 
-This project was developed during the Mathematics in Industry Study Group (MISG 2023) as part of a team working on the problem of capping visitor numbers at tourism attractions.
+Developed during MISG 2023 at AIMS South Africa, this collaborative project addressed an industry-proposed problem on determining sustainable visitor limits for tourist attractions.
 
-The central question was how mathematical modeling could help determine a reasonable visitor limit while accounting for the carrying capacity of an attraction and the movement of visitors through different activities.
+The challenge was to develop a mathematical framework for estimating an attraction's social carrying capacity while accounting for factors such as infrastructure, visitor activities and types, natural-resource vulnerability, accommodation capacity, and management objectives.
 
 ## Project Objectives
 
 The work focused on two related objectives:
 
 - Estimating the social carrying capacity of a tourism attraction
-- Tracking how visitors move through activities over time
+- Modeling how visitors move among activities over time
 
-Rather than treating the visitor cap as a single fixed number chosen in isolation, the project explored how attraction characteristics, visitor density, activity type, resource vulnerability, and management objectives could contribute to the model.
+Rather than treating visitor capacity as a single fixed number, the project considered how attraction characteristics, visitor density, activity type, resource vulnerability, and management policies could contribute to a capacity model.
 
 ## Modeling Approach
 
-An initial carrying-capacity formulation considered:
+An initial carrying-capacity formulation incorporated five factors:
 
 - The area of the protected attraction
 - Visitor density
@@ -39,20 +38,11 @@ An initial carrying-capacity formulation considered:
 - Vulnerability of natural resources
 - Management objectives and policies
 
-The team also explored two possible mathematical approaches for extending the model.
+These variables were combined into an initial formulation for maximum daily visitors, providing a starting point for representing capacity mathematically.
 
-Linear programming was considered as a way to represent activity flow and determine a capping number using existing attraction data.
+Two extensions were then explored. A linear programming approach was proposed to represent activity flows and determine visitor caps using existing reserve data. A compartmental modeling approach was proposed to track movement between activities, examine steady-state behavior, and relate visitor flows to carrying capacity.
 
-A compartmental modeling approach was also proposed to track movement between activities and examine the steady-state behavior of the system, with carrying capacity providing an upper limit on the visitor population.
+## Outcome
+The project translated an open-ended tourism-management problem into a structured mathematical framework connecting visitor capacity, activity flows, environmental vulnerability, and management constraints. The resulting work established an initial carrying-capacity formulation and proposed linear-programming and compartmental-modeling directions for further development with site-specific data.
 
-## Contribution
-
-The project involved translating an open-ended tourism-management question into a mathematical framework, identifying the variables and assumptions that would need to be represented, and exploring alternative approaches for modeling visitor flow and carrying capacity.
-
-The work was developed collaboratively within the MISG team and presented as a proposed modeling framework rather than a fully calibrated operational model.
-
-## Reflection
-
-The project provided experience working with an open-ended applied mathematics problem where the mathematical structure was not given in advance.
-
-It required moving from a practical question about visitor limits to assumptions, variables, constraints, and possible model formulations, while working collaboratively within the time-limited Study Group setting.
+The work required moving from an underspecified real-world question to explicit assumptions, variables, constraints, and candidate mathematical models.

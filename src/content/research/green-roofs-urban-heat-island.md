@@ -12,7 +12,7 @@ links: []
 
 **Can the cooling effect of a green roof be explained and quantified through heat transfer?**
 
-Developed during the Mathematics in Industry Study Group (MISG 2023) at AIMS South Africa, this collaborative project investigated how green roofs influence heat absorption, storage, and release in urban buildings.
+Developed during the Graduate Modeling Camp preceding MISG 2023 at AIMS South Africa, this collaborative project investigated how green roofs influence heat absorption, storage, and release in urban buildings.
 
 ## The Problem
 

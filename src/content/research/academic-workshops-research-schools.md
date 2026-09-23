@@ -28,13 +28,13 @@ The presentation examined the choices involved in building useful biological mod
 [View the presentation](/documents/math-bio-presentation.pdf)  
 
 
-## Mathematics in Industry Study Group (MISG) - South Africa (Jan. 2023)
+## Graduate Modeling Camp & Mathematics in Industry Study Group (MISG) - South Africa (Jan. 2023)
 
-Worked in collaborative teams on open-ended mathematical problems during a two-week intensive study group, developing and presenting work throughout the modeling process.
+Worked in collaborative teams on applied mathematical modeling problems during the Graduate Modeling Camp and MISG at AIMS South Africa, developing mathematical formulations, analytical and numerical approaches, and presenting findings through technical report-back sessions.
 
-- **Green Roofs to Mitigate the Urban Heat Island:** analyzed a heat-transfer model for green-roof substrates, incorporating solar irradiance, convection, radiation, and evapotranspiration. Applied non-dimensionalization, Laplace transforms, and finite-difference methods to obtain analytical and numerical solutions and investigate how vegetation can influence heat absorption, storage, and release. Co-presented the final project report.
+- **Green Roofs to Mitigate the Urban Heat Island (Graduate Modeling Camp project):** analyzed a heat-transfer model for green-roof substrates, incorporating solar irradiance, convection, radiation, and evapotranspiration. Applied non-dimensionalization, Laplace transforms, and finite-difference methods to obtain analytical and numerical solutions and investigate how vegetation can influence heat absorption, storage, and release. Co-presented the final project report.
 
-- **Tourism Attractions Capping Numbers:** worked on an industry-proposed problem concerning fair and sustainable visitor limits for tourism attractions. Explored mathematical formulations balancing environmental impact, visitor experience, carrying capacity, and economic considerations.
+- **Tourism Attractions Capping Numbers (MISG industry problem):** developed a mathematical framework for an industry-proposed problem on sustainable visitor limits at tourist attractions. Formulated social carrying capacity using visitor density, activity type, natural-resource vulnerability, area, and management constraints, and explored linear programming and compartmental modeling approaches for visitor flow and capacity.
 
 ## Mfano Africa - Oxford Mathematics Virtual Mentorship Programme (2022)
 
