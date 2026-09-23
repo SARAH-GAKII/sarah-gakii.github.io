@@ -8,7 +8,7 @@ tags:
 order: 4
 thumbnail: /images/research/urban-green-roof.png
 links:
-  - label: View the proceedings
+  - label: Explore the proceedings
     href: https://www.wits.ac.za/media/wits-university/conferences/misgsa/documents/2023/Proceedings%202023%20-%20Preface.pdf?
 ---
 

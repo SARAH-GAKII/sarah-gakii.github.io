@@ -11,7 +11,7 @@ status: completed
 order: 10
 thumbnail: /images/work/tourism-visitor-capacity-thumbnail.png
 links:
-  - label: View the proceedings
+  - label: Explore the proceedings
     href: https://www.wits.ac.za/media/wits-university/conferences/misgsa/documents/2023/Proceedings%202023%20-%20Preface.pdf?
 ---
 
