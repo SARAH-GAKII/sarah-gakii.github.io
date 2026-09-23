@@ -7,7 +7,9 @@ tags:
   - Numerical Methods
 order: 4
 thumbnail: /images/research/urban-green-roof.png
-links: []
+links:
+  - label: View the proceedings
+    href: https://www.wits.ac.za/media/wits-university/conferences/misgsa/documents/2023/Proceedings%202023%20-%20Preface.pdf?
 ---
 
 **Can the cooling effect of a green roof be explained and quantified through heat transfer?**

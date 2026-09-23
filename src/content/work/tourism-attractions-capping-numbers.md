@@ -10,7 +10,9 @@ methods:
 status: completed
 order: 10
 thumbnail: /images/work/tourism-visitor-capacity-thumbnail.png
-links: []
+links:
+  - label: View the proceedings
+    href: https://www.wits.ac.za/media/wits-university/conferences/misgsa/documents/2023/Proceedings%202023%20-%20Preface.pdf?
 ---
 
 ## Context
@@ -46,3 +48,5 @@ Two extensions were then explored. A linear programming approach was proposed to
 The project translated an open-ended tourism-management problem into a structured mathematical framework connecting visitor capacity, activity flows, environmental vulnerability, and management constraints. The resulting work established an initial carrying-capacity formulation and proposed linear-programming and compartmental-modeling directions for further development with site-specific data.
 
 The work required moving from an underspecified real-world question to explicit assumptions, variables, constraints, and candidate mathematical models.
+
+**Industry Representative:** Dr. Lombuso Precious Shabala, UNISA
